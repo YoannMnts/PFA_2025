@@ -8,14 +8,34 @@ public class PlayerMovement : MonoBehaviour
     private PlayerInput playerInput;
     private Vector2 direction;
     private int speed = 10;
-    private float jumpForce;
+    private float impulsion;
     private bool canHook;
     private bool hookInput;
+    private Rigidbody2D rb2d;
+    private bool isGrounded;
+    private Camera playerCamera;
 
     private void Awake()
     {
         playerInput = GetComponent<PlayerInput>();
-        jumpForce = 20;
+        impulsion = 25;
+        rb2d = GetComponent<Rigidbody2D>();
+        playerCamera = GetComponentInChildren<Camera>();
+    }
+    
+    private void Update()
+    {
+        transform.position += new Vector3(direction.x, 0, 0) * (Time.deltaTime * speed);
+        if (hookInput)
+            transform.position += new Vector3(direction.x, direction.y, 0) * (Time.deltaTime * speed);
+        if (rb2d.linearVelocityY >= 0.2f || rb2d.linearVelocityY < -0.2f)
+        {
+            isGrounded = false;
+        }
+        else
+        {
+            isGrounded = true;
+        }
     }
 
     private void OnTriggerStay2D(Collider2D other)
@@ -31,7 +51,7 @@ public class PlayerMovement : MonoBehaviour
         if (other.CompareTag("CanBeHook"))
         {
             canHook = false;
-            GetComponent<Rigidbody2D>().gravityScale = 2;
+            ResetGravity();
         }
     }
 
@@ -42,9 +62,9 @@ public class PlayerMovement : MonoBehaviour
 
     public void Jump(InputAction.CallbackContext context)
     {
-        if (context.performed)
+        if (context.performed && isGrounded)
         {
-            GetComponent<Rigidbody2D>().AddForceY(jumpForce, ForceMode2D.Impulse);
+            rb2d.AddForceY(impulsion, ForceMode2D.Impulse);
         }
     }
 
@@ -53,25 +73,41 @@ public class PlayerMovement : MonoBehaviour
         if (context.performed && canHook)
         {
             hookInput = true;
-            GetComponent<Rigidbody2D>().gravityScale = 0.01f;
+            rb2d.gravityScale = 0;
         }
 
         if (context.canceled)
         {
          hookInput = false;  
-         GetComponent<Rigidbody2D>().gravityScale = 2;
+         ResetGravity();
         }
     }
 
-    public void Roulade()
+    public void Roulade(InputAction.CallbackContext context)
     {
-        Debug.Log("Roulade");
+        if (context.performed && isGrounded)
+            rb2d.AddForceX(impulsion, ForceMode2D.Impulse);
     }
 
-    private void Update()
+    public void Gliding(InputAction.CallbackContext context)
     {
-        transform.position += new Vector3(direction.x, 0, 0) * (Time.deltaTime * speed);
-        if (hookInput)
-            transform.position += new Vector3(direction.x, direction.y, 0) * (Time.deltaTime * speed);
+        if (context.performed && rb2d.linearVelocityY < -0.2f)
+        {
+            rb2d.gravityScale = 0.2f;
+            Debug.Log("Gliding");
+            playerCamera.orthographicSize = 6;
+        }
+
+        if (context.canceled)
+        {
+            ResetGravity();
+            Debug.Log("StopGliding");
+            playerCamera.orthographicSize = 5;
+        }
+    }
+
+    private void ResetGravity()
+    {
+        rb2d.gravityScale = 2;
     }
 }
