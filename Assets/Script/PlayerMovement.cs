@@ -1,18 +1,38 @@
 using System;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
 public class PlayerMovement : MonoBehaviour
 {
     private PlayerInput playerInput;
-    private GameObject go;
     private Vector2 direction;
     private int speed = 10;
+    private float jumpForce;
+    private bool canHook;
+    private bool hookInput;
 
     private void Awake()
     {
         playerInput = GetComponent<PlayerInput>();
-        go = GameObject.FindGameObjectWithTag("Player");
+        jumpForce = 20;
+    }
+
+    private void OnTriggerStay2D(Collider2D other)
+    {
+        if (other.CompareTag("CanBeHook"))
+        {
+            canHook = true;
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D other)
+    {
+        if (other.CompareTag("CanBeHook"))
+        {
+            canHook = false;
+            GetComponent<Rigidbody2D>().gravityScale = 2;
+        }
     }
 
     public void MoveInput(InputAction.CallbackContext context)
@@ -20,14 +40,27 @@ public class PlayerMovement : MonoBehaviour
         direction = context.ReadValue<Vector2>();
     }
 
-    public void Jump()
+    public void Jump(InputAction.CallbackContext context)
     {
-        Debug.Log("Jump");
+        if (context.performed)
+        {
+            GetComponent<Rigidbody2D>().AddForceY(jumpForce, ForceMode2D.Impulse);
+        }
     }
 
-    public void HookOn()
+    public void HookOn(InputAction.CallbackContext context)
     {
-        Debug.Log("HookOn");
+        if (context.performed && canHook)
+        {
+            hookInput = true;
+            GetComponent<Rigidbody2D>().gravityScale = 0.01f;
+        }
+
+        if (context.canceled)
+        {
+         hookInput = false;  
+         GetComponent<Rigidbody2D>().gravityScale = 2;
+        }
     }
 
     public void Roulade()
@@ -37,6 +70,8 @@ public class PlayerMovement : MonoBehaviour
 
     private void Update()
     {
-        go.transform.position += new Vector3(direction.x, direction.y, 0) * (Time.deltaTime * speed);
+        transform.position += new Vector3(direction.x, 0, 0) * (Time.deltaTime * speed);
+        if (hookInput)
+            transform.position += new Vector3(direction.x, direction.y, 0) * (Time.deltaTime * speed);
     }
 }
