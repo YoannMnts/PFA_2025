@@ -30,6 +30,8 @@ public class PlayerMovement : MonoBehaviour
 
     [SerializeField] 
     private float stopForce;
+    [SerializeField, Range(1, 4)] 
+    private float semiTurnForceMultiplier;
     
     [SerializeField]
     private int maxSpeed = 10;
@@ -54,12 +56,14 @@ public class PlayerMovement : MonoBehaviour
     
     private bool isGrounded;
     private bool isJumping;
+    private bool isWalled;
     private int wantsToJump;
     
     private Camera playerCamera;
 
-
     private Vector2 groundNormal;
+    private Vector2 wallNormal;
+
     private Vector2 targetVelocity;
     private Vector2 inputDirection;
 
@@ -97,6 +101,21 @@ public class PlayerMovement : MonoBehaviour
         HandleJump();
         //HandleSlopes
         HandleMovement();
+        HandleWalls();
+    }
+
+    private void HandleWalls()
+    {
+        ContactFilter2D contactFilter = new ContactFilter2D()
+        {
+            useLayerMask = true,
+            layerMask = groundLayer,
+            useNormalAngle = true,
+            maxNormalAngle = maxGroundAngle,
+            minNormalAngle = minGroundAngle,
+        };
+        
+        int hitCount = rb2d.Cast(-groundNormal , contactFilter, hits, groundCheckRadius);
     }
 
     private void HandleGround()
@@ -145,42 +164,41 @@ public class PlayerMovement : MonoBehaviour
         
         if(inputDirection.sqrMagnitude < .1f)
         {
-            if (Mathf.Abs(rb2d.linearVelocityX) >= .1f)
-            {
-                float dir = -Mathf.Sign(rb2d.linearVelocityX);
-                rb2d.AddForceX(dir * stopForce, ForceMode2D.Force);
-            }
+            if (Mathf.Abs(rb2d.linearVelocityX) >= .1f && isGrounded)
+                StopWithForce(1);
 
             targetVelocity = Vector2.zero;
             return;
         }
         
+        
         targetVelocity = inputDirection * maxSpeed;
 
         bool isGoingBackward = Vector2.Dot(targetVelocity, rb2d.linearVelocity) < 0;
-        if (isGoingBackward)
+        if (isGoingBackward && isGrounded)
         {
-            float dir = -Mathf.Sign(targetVelocity.x);
-            rb2d.AddForceX(dir * stopForce, ForceMode2D.Force);
-            Debug.Log("BACK");
+            StopWithForce(semiTurnForceMultiplier);
         }
         else
         {
             bool needAcc = Mathf.Abs(rb2d.linearVelocityX) < Mathf.Abs(targetVelocity.x);
             if (needAcc)
             {
-                Debug.Log("ACC");
                 float accel = isGrounded ? acceleration : airAcceleration;
-
                 rb2d.AddForceX(targetVelocity.x > 0 ? accel : -accel, ForceMode2D.Force);
             }
             else
             {
-                Debug.Log("DEC");
                 float decel = isGrounded ? deceleration : airDeceleration;
                 rb2d.AddForceX(targetVelocity.x > 0 ? -decel : decel, ForceMode2D.Force);
             }
         }
+    }
+
+    private void StopWithForce(float modifier)
+    {
+        float force = -rb2d.linearVelocity.x * rb2d.mass * stopForce;
+        rb2d.AddForceX(force * modifier);
     }
     /*
     private void OnTriggerStay2D(Collider2D other)
