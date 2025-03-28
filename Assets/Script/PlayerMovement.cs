@@ -37,8 +37,6 @@ public class PlayerMovement : MonoBehaviour
     private int maxSpeed = 10;
     [SerializeField]
     private float jumpForce;
-    [SerializeField]
-    private Vector2 jumpForceVector = new Vector2(20, 20);
     [SerializeField] 
     private float maxFallSpeed = 10;
     
@@ -58,7 +56,14 @@ public class PlayerMovement : MonoBehaviour
     private LayerMask wallLayer;
     [SerializeField, Range(0f, 1f)]
     private float wallCheckRadius;
-    
+    [SerializeField]
+    private float wallAngle;
+    [SerializeField]
+    private float wallNormalJumpForce;
+    [SerializeField, Range(0f, 1f)]
+    private float wallJumpForceMultiplier;
+    [SerializeField, Range(0f, 1f)]
+    private float wallFallSpeedMultiplier;
     
     private bool isGrounded;
     private bool isJumping;
@@ -74,7 +79,7 @@ public class PlayerMovement : MonoBehaviour
     private Vector2 inputDirection;
     
     private RaycastHit2D[] hits;
-    
+
     private void Awake()
     {
         player = GetComponent<Player>();
@@ -99,44 +104,47 @@ public class PlayerMovement : MonoBehaviour
             isJumping = false;
 
         HandleGround();
+        HandleWalls();
 
         if (!isGrounded)
         {
             groundNormal = Vector2.up;
-            rb2d.linearVelocityY = Mathf.Clamp(rb2d.linearVelocityY, -maxFallSpeed, maxFallSpeed);
-            wallNormal = Vector2.left;
+            float fallSpeed = isWalled ? maxFallSpeed * wallFallSpeedMultiplier : maxFallSpeed;
+            if (rb2d.linearVelocityY < -fallSpeed)
+            {
+                rb2d.linearVelocityY = -fallSpeed;
+            }
         }
         
         HandleJump();
         //HandleSlopes
         HandleMovement();
-        HandleWalls();
     }
 
     private void HandleWalls()
     {
+        float dir = Mathf.Sign(Mathf.Abs(rb2d.linearVelocityX) <= 0.1f ? targetVelocity.x : rb2d.linearVelocityX);
+        
+        
         ContactFilter2D contactFilter = new ContactFilter2D()
         {
             useLayerMask = true,
             layerMask = wallLayer,
+            useNormalAngle = true,
+            minNormalAngle = dir > 0 ? 180 - wallAngle : -wallAngle,
+            maxNormalAngle = dir > 0 ? 180 + wallAngle : wallAngle,
         };
-        if (rb2d.linearVelocityX < 0)
-        {
-            int hitCount = rb2d.Cast(-wallNormal , contactFilter, hits, wallCheckRadius); //marche que si on arrive de la gauche
-            isWalled = hitCount > 0;
-        }
-        else
-        {
-            int hitCount = rb2d.Cast(wallNormal , contactFilter, hits, maxSpeed);
-            isWalled = hitCount > 0;
-        }
         
-        float dir = -Mathf.Sign(targetVelocity.x);
-        if (isWalled && wantsToJump > 0) //remplacer wantsToJump
+        int hitCount = rb2d.Cast(Vector2.right * dir, contactFilter, hits, wallCheckRadius);
+        isWalled = hitCount > 0;
+        Vector2 newNormal = Vector2.zero;
+        for (int i = 0; i < hitCount; ++i)
         {
-            jumpForceVector.x *= dir;
-            rb2d.AddForce(jumpForceVector, ForceMode2D.Impulse);
+            newNormal += hits[i].normal;
+            Debug.DrawRay(hits[i].point, hits[i].normal, Color.red);
         }
+
+        wallNormal = newNormal / hitCount;
     }
 
     private void HandleGround()
@@ -171,10 +179,22 @@ public class PlayerMovement : MonoBehaviour
 
     private void HandleJump()
     {
-        if (isGrounded && wantsToJump > 0 && !isJumping)
+        if (wantsToJump > 0)
         {
-            isJumping = true;   
-            rb2d.AddForceY(jumpForce, ForceMode2D.Impulse);
+            if (isGrounded && !isJumping)
+            {
+                isJumping = true;
+                rb2d.AddForceY(jumpForce, ForceMode2D.Impulse);
+            }
+            
+            if (!isGrounded && isWalled) //remplacer wantsToJump
+            {
+                Vector2 direction = wallNormal.normalized * wallNormalJumpForce;
+                direction += Vector2.up * (jumpForce * wallJumpForceMultiplier);
+                rb2d.AddForce(direction, ForceMode2D.Impulse);
+                Debug.DrawRay(transform.position, direction, Color.red, 2);
+                isJumping = true;
+            }
         }
     }
 
