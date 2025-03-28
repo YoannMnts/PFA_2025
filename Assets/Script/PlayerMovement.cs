@@ -37,6 +37,11 @@ public class PlayerMovement : MonoBehaviour
     private int maxSpeed = 10;
     [SerializeField]
     private float jumpForce;
+    [SerializeField]
+    private Vector2 jumpForceVector = new Vector2(20, 20);
+    [SerializeField] 
+    private float maxFallSpeed = 10;
+    
     [Header("Ground check")]
     [SerializeField]
     private LayerMask groundLayer;
@@ -47,11 +52,12 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField]
     private float maxGroundAngle;
     
-    /*
-    private float impulsion;
-    private bool canHook;
-    private bool hookInput;
-    */
+    
+    [Header("Wall check")]
+    [SerializeField]
+    private LayerMask wallLayer;
+    [SerializeField, Range(0f, 1f)]
+    private float wallCheckRadius;
     
     
     private bool isGrounded;
@@ -66,14 +72,13 @@ public class PlayerMovement : MonoBehaviour
 
     private Vector2 targetVelocity;
     private Vector2 inputDirection;
-
+    
     private RaycastHit2D[] hits;
     
     private void Awake()
     {
         player = GetComponent<Player>();
         playerInput = GetComponent<PlayerInput>();
-        //impulsion = 25;
         rb2d = GetComponent<Rigidbody2D>();
         playerCamera = GetComponentInChildren<Camera>();
         hits = new RaycastHit2D[32];
@@ -96,7 +101,11 @@ public class PlayerMovement : MonoBehaviour
         HandleGround();
 
         if (!isGrounded)
+        {
             groundNormal = Vector2.up;
+            rb2d.linearVelocityY = Mathf.Clamp(rb2d.linearVelocityY, -maxFallSpeed, maxFallSpeed);
+            wallNormal = Vector2.left;
+        }
         
         HandleJump();
         //HandleSlopes
@@ -109,13 +118,25 @@ public class PlayerMovement : MonoBehaviour
         ContactFilter2D contactFilter = new ContactFilter2D()
         {
             useLayerMask = true,
-            layerMask = groundLayer,
-            useNormalAngle = true,
-            maxNormalAngle = maxGroundAngle,
-            minNormalAngle = minGroundAngle,
+            layerMask = wallLayer,
         };
+        if (rb2d.linearVelocityX < 0)
+        {
+            int hitCount = rb2d.Cast(-wallNormal , contactFilter, hits, wallCheckRadius); //marche que si on arrive de la gauche
+            isWalled = hitCount > 0;
+        }
+        else
+        {
+            int hitCount = rb2d.Cast(wallNormal , contactFilter, hits, maxSpeed);
+            isWalled = hitCount > 0;
+        }
         
-        int hitCount = rb2d.Cast(-groundNormal , contactFilter, hits, groundCheckRadius);
+        float dir = -Mathf.Sign(targetVelocity.x);
+        if (isWalled && wantsToJump > 0) //remplacer wantsToJump
+        {
+            jumpForceVector.x *= dir;
+            rb2d.AddForce(jumpForceVector, ForceMode2D.Impulse);
+        }
     }
 
     private void HandleGround()
@@ -136,7 +157,7 @@ public class PlayerMovement : MonoBehaviour
         };
         
         int hitCount = rb2d.Cast(-groundNormal , contactFilter, hits, groundCheckRadius);
-
+        
         isGrounded = hitCount > 0;
         if (isGrounded)
         {
@@ -200,43 +221,16 @@ public class PlayerMovement : MonoBehaviour
         float force = -rb2d.linearVelocity.x * rb2d.mass * stopForce;
         rb2d.AddForceX(force * modifier);
     }
-    /*
-    private void OnTriggerStay2D(Collider2D other)
-    {
-        if (other.CompareTag("CanBeHook"))
-        {
-            canHook = true;
-            if (hookInput)
-            {
-                rb2d.gravityScale = 0;
-                transform.position += new Vector3(inputDirection.x, inputDirection.y, 0) * (Time.deltaTime * maxSpeed);
-            }
-        }
-    }
-
-    private void OnTriggerExit2D(Collider2D other)
-    {
-        if (other.CompareTag("CanBeHook"))
-        {
-            canHook = false;
-            ResetGravity();
-        }
-    }
-    */
     
     public void MoveInput(InputAction.CallbackContext context)
     {
         inputDirection = context.ReadValue<Vector2>();
-        /*
-        if (context.performed)
-        {
-            GetComponent<SpriteRenderer>().flipX = inputDirection.x > 0;
-        }*/
     }
 
     public void Jump(InputAction.CallbackContext context)
     {
-        wantsToJump = 6;
+        if(context.performed)
+            wantsToJump = 6;
     }
 /*
     public void HookOn(InputAction.CallbackContext context)
@@ -275,9 +269,5 @@ public class PlayerMovement : MonoBehaviour
             playerCamera.orthographicSize = 5;
         }
     }
-//*/
-    private void ResetGravity()
-    {
-        rb2d.gravityScale = 2;
-    }
+*/
 }
