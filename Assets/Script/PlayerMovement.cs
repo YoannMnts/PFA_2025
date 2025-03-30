@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using Script;
+using Unity.Mathematics;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
@@ -64,11 +65,24 @@ public class PlayerMovement : MonoBehaviour
     private float wallJumpForceMultiplier;
     [SerializeField, Range(0f, 1f)]
     private float wallFallSpeedMultiplier;
+    [SerializeField, Range(0f, 2f)]
+    private float wallJumpSpeedMultiplier;
+    
+    [Header("Glide check")]
+    [SerializeField, Range(0f, 1f)] 
+    private float glidingFallSpeedMultiplier;
+    
+    [Header("Glide check")]
+    [SerializeField] 
+    private float rollingForce;
     
     private bool isGrounded;
     private bool isJumping;
     private bool isWalled;
+    private bool isWantsToGlide;
+    private bool isRolling;
     private int wantsToJump;
+    private int wantsToRolling;
     
     private Camera playerCamera;
 
@@ -99,6 +113,11 @@ public class PlayerMovement : MonoBehaviour
     {
         if(wantsToJump > 0)
             wantsToJump--;
+        
+        if(wantsToRolling > 0)
+            wantsToRolling--;
+        else
+            isRolling = false;
 
         if(isGrounded)
             isJumping = false;
@@ -110,15 +129,42 @@ public class PlayerMovement : MonoBehaviour
         {
             groundNormal = Vector2.up;
             float fallSpeed = isWalled ? maxFallSpeed * wallFallSpeedMultiplier : maxFallSpeed;
+            float jumpWallSpeed = maxFallSpeed * wallJumpSpeedMultiplier;
             if (rb2d.linearVelocityY < -fallSpeed)
             {
                 rb2d.linearVelocityY = -fallSpeed;
             }
+            if (rb2d.linearVelocityY > jumpWallSpeed)
+            {
+                rb2d.linearVelocityY = jumpWallSpeed;
+            }
         }
         
         HandleJump();
+        HandleGliding();
+        HandleRolling();
         //HandleSlopes
         HandleMovement();
+    }
+
+    private void HandleRolling()
+    {
+        float dir = Mathf.Sign(rb2d.linearVelocityX);
+        if (wantsToRolling > 0)
+        {
+            if (isGrounded && !isRolling)
+            {
+                isRolling = true;
+                rb2d.AddForceX(rollingForce * dir, ForceMode2D.Impulse);
+            }
+        }
+    }
+    
+    private void HandleGliding()
+    {
+        float glidingFallSpeed = maxFallSpeed * glidingFallSpeedMultiplier;
+        if (!isWalled && isWantsToGlide && rb2d.linearVelocityY < 0)
+            rb2d.linearVelocityY = -glidingFallSpeed;
     }
 
     private void HandleWalls()
@@ -187,7 +233,7 @@ public class PlayerMovement : MonoBehaviour
                 rb2d.AddForceY(jumpForce, ForceMode2D.Impulse);
             }
             
-            if (!isGrounded && isWalled) //remplacer wantsToJump
+            if (!isGrounded && isWalled) 
             {
                 Vector2 direction = wallNormal.normalized * wallNormalJumpForce;
                 direction += Vector2.up * (jumpForce * wallJumpForceMultiplier);
@@ -249,7 +295,7 @@ public class PlayerMovement : MonoBehaviour
 
     public void Jump(InputAction.CallbackContext context)
     {
-        if(context.performed)
+        if (context.performed)
             wantsToJump = 6;
     }
 /*
@@ -266,28 +312,19 @@ public class PlayerMovement : MonoBehaviour
          ResetGravity();
         }
     }
-
+*/
     public void Roulade(InputAction.CallbackContext context)
     {
-        if (context.performed && isGrounded)
-            rb2d.AddForceX(impulsion, ForceMode2D.Impulse);
+        if (context.performed)
+            wantsToRolling = 60;
     }
 
     public void Gliding(InputAction.CallbackContext context)
     {
-        if (context.performed && rb2d.linearVelocityY < -0.2f)
-        {
-            rb2d.gravityScale = 0.01f;
-            Debug.Log("Gliding");
-            playerCamera.orthographicSize = 6;
-        }
-
+        isWantsToGlide = true;
         if (context.canceled)
         {
-            ResetGravity();
-            Debug.Log("StopGliding");
-            playerCamera.orthographicSize = 5;
+            isWantsToGlide = false;
         }
     }
-*/
 }
