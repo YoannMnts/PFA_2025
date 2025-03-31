@@ -340,6 +340,9 @@ public class PlayerMovement : MonoBehaviour
                 yield break;
             }
 
+            if(rb2d.linearVelocityY > .2f)
+                break;
+            
             var dot = Vector2.Dot(groundNormal.normalized, Vector2.up);
             bool isInSlope = dot < .98f;
             if (!isInSlope)
