@@ -313,7 +313,7 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 */
-    public void Roulade(InputAction.CallbackContext context)
+    public void Rolling(InputAction.CallbackContext context)
     {
         if (context.performed)
             wantsToRolling = 60;

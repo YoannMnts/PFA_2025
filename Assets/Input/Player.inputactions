@@ -33,7 +33,7 @@
                     "initialStateCheck": false
                 },
                 {
-                    "name": "Roulade",
+                    "name": "Rolling",
                     "type": "Button",
                     "id": "9fd687f8-50d1-4306-80ff-c5833a20aa1c",
                     "expectedControlType": "",
@@ -158,7 +158,18 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "Roulade",
+                    "action": "Rolling",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "e36f2544-7cc7-4c1c-b192-4fca796f9537",
+                    "path": "<Keyboard>/r",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Rolling",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -166,6 +177,17 @@
                     "name": "",
                     "id": "a6152bc3-a393-43bb-b93e-b08947895569",
                     "path": "<Gamepad>/rightTrigger",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Gliding",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "ef241f81-9583-4408-a9c2-756de820081f",
+                    "path": "<Keyboard>/shift",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
