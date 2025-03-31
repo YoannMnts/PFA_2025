@@ -20,6 +20,8 @@ public class PlayerMovement : MonoBehaviour
 
 
     [Header("Movement")]
+    [SerializeField] 
+    private float gravityScale = 8;
     [SerializeField]
     private float acceleration;
     [SerializeField]
@@ -51,7 +53,6 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField]
     private float maxGroundAngle;
     
-    
     [Header("Wall check")]
     [SerializeField]
     private LayerMask wallLayer;
@@ -67,18 +68,28 @@ public class PlayerMovement : MonoBehaviour
     private float wallFallSpeedMultiplier;
     [SerializeField, Range(0f, 2f)]
     private float wallJumpSpeedMultiplier;
+    [Header("Climb")]
+    [SerializeField]
+    private float climbForce;
+    [SerializeField]
+    private float climbMaxSpeed;
+    [SerializeField]
+    private float climbAcceleration;
+    [SerializeField]
+    private float climbDeceleration;
     
     [Header("Glide check")]
     [SerializeField, Range(0f, 1f)] 
     private float glidingFallSpeedMultiplier;
     
-    [Header("Glide check")]
+    [Header("Rolling check")]
     [SerializeField] 
     private float rollingForce;
     
     private bool isGrounded;
     private bool isJumping;
     private bool isWalled;
+    private bool isClimbing;
     private bool isWantsToGlide;
     private bool isRolling;
     private int wantsToJump;
@@ -94,6 +105,12 @@ public class PlayerMovement : MonoBehaviour
     
     private RaycastHit2D[] hits;
 
+
+    private void OnValidate()
+    {
+        GetComponent<Rigidbody2D>().gravityScale = gravityScale;
+    }
+
     private void Awake()
     {
         player = GetComponent<Player>();
@@ -101,12 +118,6 @@ public class PlayerMovement : MonoBehaviour
         rb2d = GetComponent<Rigidbody2D>();
         playerCamera = GetComponentInChildren<Camera>();
         hits = new RaycastHit2D[32];
-    }
-
-
-    private void Update()
-    {
-        
     }
 
     private void FixedUpdate()
@@ -125,7 +136,7 @@ public class PlayerMovement : MonoBehaviour
         HandleGround();
         HandleWalls();
 
-        if (!isGrounded)
+        if (!isGrounded && !isClimbing)
         {
             groundNormal = Vector2.up;
             float fallSpeed = isWalled ? maxFallSpeed * wallFallSpeedMultiplier : maxFallSpeed;
@@ -170,8 +181,6 @@ public class PlayerMovement : MonoBehaviour
     private void HandleWalls()
     {
         float dir = Mathf.Sign(Mathf.Abs(rb2d.linearVelocityX) <= 0.1f ? targetVelocity.x : rb2d.linearVelocityX);
-        
-        
         ContactFilter2D contactFilter = new ContactFilter2D()
         {
             useLayerMask = true,
@@ -191,6 +200,19 @@ public class PlayerMovement : MonoBehaviour
         }
 
         wallNormal = newNormal / hitCount;
+        
+        if (isWalled)
+        {
+            float dot = Vector2.Dot(wallNormal, inputDirection);
+            if(dot > 0.2f)
+                isWalled = false;
+            else
+                isClimbing = true;
+        }
+        else
+        {
+            isClimbing = false;
+        }
     }
 
     private void HandleGround()
@@ -241,6 +263,8 @@ public class PlayerMovement : MonoBehaviour
                 Debug.DrawRay(transform.position, direction, Color.red, 2);
                 isJumping = true;
             }
+
+            isClimbing = false;
         }
     }
 
@@ -248,7 +272,54 @@ public class PlayerMovement : MonoBehaviour
     private void HandleMovement()
     {
         inputDirection = Vector2.ClampMagnitude(inputDirection, 1);
+
+        if (isWalled)
+        {
+            rb2d.gravityScale = 0;
+            DoClimbMovement();
+        }
+        else
+        {
+            rb2d.gravityScale = gravityScale;
+            DoNormalMovement();
+        }
+    }
+
+    private void DoClimbMovement()
+    {
+        rb2d.AddForce(-wallNormal * climbForce);
+        Vector2 forward = Vector2.Perpendicular(wallNormal);
         
+        //float verticalAmount = Vector2.Dot(inputDirection, wallNormal);
+        float horizontalAmount = Vector2.Dot(inputDirection, forward);
+
+        float targetClimbMaxSpeed = horizontalAmount * climbMaxSpeed;
+        targetVelocity = forward * targetClimbMaxSpeed;
+        
+        Debug.DrawRay(transform.position, forward, Color.magenta, 2);
+        
+        bool isGoingBackward = Vector2.Dot(targetVelocity, rb2d.linearVelocity) < 0;
+        if (isGoingBackward || Mathf.Abs(horizontalAmount) < .15f)
+            StopWithForce(semiTurnForceMultiplier);
+        else
+        {
+            float lVelX = Vector2.Dot(rb2d.linearVelocity, targetVelocity.normalized);
+            
+            bool needAcc = Mathf.Abs(lVelX) < Mathf.Abs(targetClimbMaxSpeed);
+            if (needAcc)
+            {
+                rb2d.AddForce(targetVelocity.normalized * climbAcceleration, ForceMode2D.Force);
+            }
+            else
+            {
+                rb2d.AddForce(-targetVelocity.normalized * climbDeceleration, ForceMode2D.Force);
+            }
+        }
+        
+    }
+
+    private void DoNormalMovement()
+    {
         if(inputDirection.sqrMagnitude < .1f)
         {
             if (Mathf.Abs(rb2d.linearVelocityX) >= .1f && isGrounded)
@@ -257,7 +328,6 @@ public class PlayerMovement : MonoBehaviour
             targetVelocity = Vector2.zero;
             return;
         }
-        
         
         targetVelocity = inputDirection * maxSpeed;
 
@@ -284,13 +354,23 @@ public class PlayerMovement : MonoBehaviour
 
     private void StopWithForce(float modifier)
     {
-        float force = -rb2d.linearVelocity.x * rb2d.mass * stopForce;
-        rb2d.AddForceX(force * modifier);
+        if (isWalled)
+        {
+            Vector2 stopVelocity = -rb2d.linearVelocity * (rb2d.mass * stopForce);
+            Debug.DrawRay(transform.position, stopVelocity * 20, Color.yellow);
+            rb2d.AddForce(stopVelocity, ForceMode2D.Force);
+        }
+        else
+        {
+            float force = -rb2d.linearVelocity.x * rb2d.mass * stopForce;
+            rb2d.AddForceX(force * modifier);
+        }
     }
     
     public void MoveInput(InputAction.CallbackContext context)
     {
         inputDirection = context.ReadValue<Vector2>();
+
     }
 
     public void Jump(InputAction.CallbackContext context)
@@ -298,21 +378,7 @@ public class PlayerMovement : MonoBehaviour
         if (context.performed)
             wantsToJump = 6;
     }
-/*
-    public void HookOn(InputAction.CallbackContext context)
-    {
-        if (context.performed)
-        {
-            hookInput = true;
-        }
-
-        if (context.canceled)
-        {
-         hookInput = false;  
-         ResetGravity();
-        }
-    }
-*/
+    
     public void Rolling(InputAction.CallbackContext context)
     {
         if (context.performed)

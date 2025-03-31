@@ -24,15 +24,6 @@
                     "initialStateCheck": false
                 },
                 {
-                    "name": "HookOn",
-                    "type": "Button",
-                    "id": "d3891cde-fee4-44e2-ab7d-3863c7cb7a73",
-                    "expectedControlType": "",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": false
-                },
-                {
                     "name": "Rolling",
                     "type": "Button",
                     "id": "9fd687f8-50d1-4306-80ff-c5833a20aa1c",
@@ -137,17 +128,6 @@
                     "processors": "",
                     "groups": "",
                     "action": "Jump",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "11aa92f0-5fee-44ba-80e8-208db6b24585",
-                    "path": "<Gamepad>/rightShoulder",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "HookOn",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
