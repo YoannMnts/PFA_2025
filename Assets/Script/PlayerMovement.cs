@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using Script;
 using Unity.Mathematics;
@@ -10,9 +11,21 @@ using UnityEngine.Serialization;
 [RequireComponent(typeof(Player))]
 public class PlayerMovement : MonoBehaviour
 {
-    public bool IsGrounded => isGrounded;
-    private Vector2 CurrentVelocity => rb2d.linearVelocity;
+    #region Properties
+    public Vector2 CurrentVelocity => rb2d.linearVelocity;
+    public Vector2 TargetVelocity => targetVelocity;
+    public Vector2 WallNormal => wallNormal;
+    public Vector2 InputDirection => inputDirection;
+    public Vector2 GroundNormal => groundNormal;
     
+    public bool IsGrounded => isGrounded;
+    public bool IsClimbing => isClimbing;
+    public bool IsWalled => isWalled;
+    public bool IsRolling => isWalled;
+    public Rigidbody2D Rb2d => rb2d;
+    #endregion
+    
+    private PlayerAnimatorController animatorController;
     private PlayerInput playerInput;
     private Rigidbody2D rb2d;
     private Player player;
@@ -20,6 +33,8 @@ public class PlayerMovement : MonoBehaviour
 
 
     [Header("Movement")]
+    [SerializeField]
+    private GameObject normalCollider;
     [SerializeField] 
     private float gravityScale = 8;
     [SerializeField]
@@ -68,6 +83,7 @@ public class PlayerMovement : MonoBehaviour
     private float wallFallSpeedMultiplier;
     [SerializeField, Range(0f, 2f)]
     private float wallJumpSpeedMultiplier;
+    
     [Header("Climb")]
     [SerializeField]
     private float climbForce;
@@ -81,10 +97,22 @@ public class PlayerMovement : MonoBehaviour
     [Header("Glide check")]
     [SerializeField, Range(0f, 1f)] 
     private float glidingFallSpeedMultiplier;
-    
-    [Header("Rolling check")]
+
+    [Header("Rolling check")] 
+    [SerializeField]
+    private GameObject rollCollider;
+    [SerializeField]
+    private float initialRollSpeedModifier;
     [SerializeField] 
     private float rollingForce;
+    [SerializeField] 
+    private float minRollTime;
+    [SerializeField] 
+    private float rollHeightCheck;
+    [SerializeField] 
+    private float stopRollTime;
+    [SerializeField] 
+    private AnimationCurve stopRollCurve;
     
     private bool isGrounded;
     private bool isJumping;
@@ -92,8 +120,9 @@ public class PlayerMovement : MonoBehaviour
     private bool isClimbing;
     private bool isWantsToGlide;
     private bool isRolling;
+    
     private int wantsToJump;
-    private int wantsToRolling;
+    private int wantsToRoll;
     
     private Camera playerCamera;
 
@@ -102,6 +131,7 @@ public class PlayerMovement : MonoBehaviour
 
     private Vector2 targetVelocity;
     private Vector2 inputDirection;
+    private Vector2 wallCheckDirection;
     
     private RaycastHit2D[] hits;
 
@@ -117,6 +147,7 @@ public class PlayerMovement : MonoBehaviour
         playerInput = GetComponent<PlayerInput>();
         rb2d = GetComponent<Rigidbody2D>();
         playerCamera = GetComponentInChildren<Camera>();
+        animatorController = GetComponent<PlayerAnimatorController>();
         hits = new RaycastHit2D[32];
     }
 
@@ -125,10 +156,8 @@ public class PlayerMovement : MonoBehaviour
         if(wantsToJump > 0)
             wantsToJump--;
         
-        if(wantsToRolling > 0)
-            wantsToRolling--;
-        else
-            isRolling = false;
+        if(wantsToRoll > 0)
+            wantsToRoll--;
 
         if(isGrounded)
             isJumping = false;
@@ -150,26 +179,30 @@ public class PlayerMovement : MonoBehaviour
                 rb2d.linearVelocityY = jumpWallSpeed;
             }
         }
+
+
+        if (wantsToRoll > 0 && !isRolling)
+        {
+            wantsToRoll--;
+            if (isGrounded)
+            {
+                isRolling = true;
+                StartCoroutine(DoRoll());
+            }
+        }
+        
+        rollCollider.SetActive(isRolling);
+        normalCollider.SetActive(!isRolling);
+        
+        if(isRolling)
+            return;
         
         HandleJump();
         HandleGliding();
-        HandleRolling();
-        //HandleSlopes
         HandleMovement();
     }
 
-    private void HandleRolling()
-    {
-        float dir = Mathf.Sign(rb2d.linearVelocityX);
-        if (wantsToRolling > 0)
-        {
-            if (isGrounded && !isRolling)
-            {
-                isRolling = true;
-                rb2d.AddForceX(rollingForce * dir, ForceMode2D.Impulse);
-            }
-        }
-    }
+   
     
     private void HandleGliding()
     {
@@ -180,7 +213,10 @@ public class PlayerMovement : MonoBehaviour
 
     private void HandleWalls()
     {
-        float dir = Mathf.Sign(Mathf.Abs(rb2d.linearVelocityX) <= 0.1f ? targetVelocity.x : rb2d.linearVelocityX);
+        if(Mathf.Abs(targetVelocity.x) > .05f)
+            wallCheckDirection = targetVelocity.x > 0 ? Vector2.right : Vector2.left;
+
+        float dir = wallCheckDirection.x;
         ContactFilter2D contactFilter = new ContactFilter2D()
         {
             useLayerMask = true,
@@ -204,7 +240,7 @@ public class PlayerMovement : MonoBehaviour
         if (isWalled)
         {
             float dot = Vector2.Dot(wallNormal, inputDirection);
-            if(dot > 0.2f)
+            if(dot > 0.2f && inputDirection.sqrMagnitude > 0.1f)
                 isWalled = false;
             else
                 isClimbing = true;
@@ -283,6 +319,59 @@ public class PlayerMovement : MonoBehaviour
             rb2d.gravityScale = gravityScale;
             DoNormalMovement();
         }
+    }
+
+    private IEnumerator DoRoll()
+    {
+        isRolling = true;
+
+        Vector2 dir = animatorController.FacingDirection;
+        StopWithForce(initialRollSpeedModifier);
+        rb2d.AddForce(dir * rollingForce, ForceMode2D.Impulse);
+
+        yield return new WaitForSeconds(minRollTime);
+
+        while (true)
+        {
+            yield return new WaitForFixedUpdate();
+            if (!isGrounded)
+            {
+                isRolling = false;
+                yield break;
+            }
+
+            var dot = Vector2.Dot(groundNormal.normalized, Vector2.up);
+            bool isInSlope = dot < .98f;
+            if (!isInSlope)
+            {
+                Vector2 center = rb2d.position + groundNormal * (rollHeightCheck * .5f * 1.02f);
+                Vector2 size = new Vector2(.2f, rollHeightCheck);
+
+                Collider2D hit = Physics2D.OverlapBox(center, size, 0, wallLayer);
+
+                Debug.DrawLine(center - size / 2, center + size / 2, Color.cyan);
+                if (hit == null)
+                    break;
+            }
+        }
+
+        float currentTime = 0;
+
+        while (currentTime < stopRollTime)
+        {
+            yield return null;
+            yield return new WaitForFixedUpdate();
+            
+            currentTime += Time.deltaTime;
+            if (!isGrounded)
+            {
+                isRolling = false;
+                yield break;
+            }
+            float normalizedTime = currentTime / stopRollTime;
+            StopWithForce(stopRollCurve.Evaluate(normalizedTime));
+        }
+        isRolling = false;
     }
 
     private void DoClimbMovement()
@@ -382,7 +471,9 @@ public class PlayerMovement : MonoBehaviour
     public void Rolling(InputAction.CallbackContext context)
     {
         if (context.performed)
-            wantsToRolling = 60;
+        {
+            wantsToRoll = 5;
+        }
     }
 
     public void Gliding(InputAction.CallbackContext context)
