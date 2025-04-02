@@ -41,10 +41,7 @@ namespace Script
             else if(Movement.IsGrounded)
                 up = Movement.GroundNormal;
             
-            spriteRenderer.transform.up = Vector2.Lerp(
-                spriteRenderer.transform.up,
-                up, 
-                rotationSmoothness * Time.deltaTime);
+            spriteRenderer.transform.up = Vector2.Lerp(spriteRenderer.transform.up, up,rotationSmoothness * Time.deltaTime);
 
             Vector2 perp = Vector2.Perpendicular(up);
             float dot = Vector2.Dot(Movement.InputDirection, perp);

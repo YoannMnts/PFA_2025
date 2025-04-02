@@ -93,6 +93,8 @@ public class PlayerMovement : MonoBehaviour
     private float climbAcceleration;
     [SerializeField]
     private float climbDeceleration;
+    [SerializeField, Range(1f, 100f)] 
+    private float climbFallSpeed;
     
     [Header("Glide check")]
     [SerializeField, Range(0f, 1f)] 
@@ -158,10 +160,10 @@ public class PlayerMovement : MonoBehaviour
         
         if(wantsToRoll > 0)
             wantsToRoll--;
-
-        if(isGrounded)
+        if (isGrounded)
+        {
             isJumping = false;
-
+        }
         HandleGround();
         HandleWalls();
 
@@ -227,6 +229,7 @@ public class PlayerMovement : MonoBehaviour
         };
         
         int hitCount = rb2d.Cast(Vector2.right * dir, contactFilter, hits, wallCheckRadius);
+        Debug.DrawRay(transform.position, Vector2.right * dir, Color.cyan);
         isWalled = hitCount > 0;
         Vector2 newNormal = Vector2.zero;
         for (int i = 0; i < hitCount; ++i)
@@ -242,13 +245,16 @@ public class PlayerMovement : MonoBehaviour
             float dot = Vector2.Dot(wallNormal, inputDirection);
             if(dot > 0.2f && inputDirection.sqrMagnitude > 0.1f)
                 isWalled = false;
-            else
+            else if (!isGrounded)
                 isClimbing = true;
         }
         else
         {
             isClimbing = false;
         }
+
+        if (isClimbing && inputDirection == Vector2.zero)
+            rb2d.AddForceY(-climbFallSpeed);
     }
 
     private void HandleGround()
@@ -296,8 +302,9 @@ public class PlayerMovement : MonoBehaviour
                 Vector2 direction = wallNormal.normalized * wallNormalJumpForce;
                 direction += Vector2.up * (jumpForce * wallJumpForceMultiplier);
                 rb2d.AddForce(direction, ForceMode2D.Impulse);
-                Debug.DrawRay(transform.position, direction, Color.red, 2);
+                //Debug.DrawRay(transform.position, direction, Color.red, 2);
                 isJumping = true;
+                wallCheckDirection = wallCheckDirection == Vector2.right ? Vector2.left : Vector2.right;
             }
 
             isClimbing = false;
@@ -320,7 +327,6 @@ public class PlayerMovement : MonoBehaviour
             DoNormalMovement();
         }
     }
-
     private IEnumerator DoRoll()
     {
         isRolling = true;
@@ -352,7 +358,7 @@ public class PlayerMovement : MonoBehaviour
 
                 Collider2D hit = Physics2D.OverlapBox(center, size, 0, wallLayer);
 
-                Debug.DrawLine(center - size / 2, center + size / 2, Color.cyan);
+                //Debug.DrawLine(center - size / 2, center + size / 2, Color.cyan);
                 if (hit == null)
                     break;
             }
@@ -407,7 +413,6 @@ public class PlayerMovement : MonoBehaviour
                 rb2d.AddForce(-targetVelocity.normalized * climbDeceleration, ForceMode2D.Force);
             }
         }
-        
     }
 
     private void DoNormalMovement()
