@@ -24,16 +24,7 @@
                     "initialStateCheck": false
                 },
                 {
-                    "name": "HookOn",
-                    "type": "Button",
-                    "id": "d3891cde-fee4-44e2-ab7d-3863c7cb7a73",
-                    "expectedControlType": "",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": false
-                },
-                {
-                    "name": "Roulade",
+                    "name": "Rolling",
                     "type": "Button",
                     "id": "9fd687f8-50d1-4306-80ff-c5833a20aa1c",
                     "expectedControlType": "",
@@ -45,6 +36,15 @@
                     "name": "Gliding",
                     "type": "Button",
                     "id": "3a86c82a-ae19-4d04-87f1-ce1b2e3ce768",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Climb",
+                    "type": "Button",
+                    "id": "a5861f45-e8fc-4824-91d7-2cb735c6f33a",
                     "expectedControlType": "",
                     "processors": "",
                     "interactions": "",
@@ -142,23 +142,23 @@
                 },
                 {
                     "name": "",
-                    "id": "11aa92f0-5fee-44ba-80e8-208db6b24585",
-                    "path": "<Gamepad>/rightShoulder",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "HookOn",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
                     "id": "6b0c6423-d44b-4a70-9cf3-42f4c31ff962",
                     "path": "<Gamepad>/buttonEast",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "Roulade",
+                    "action": "Rolling",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "e36f2544-7cc7-4c1c-b192-4fca796f9537",
+                    "path": "<Keyboard>/r",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Rolling",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -170,6 +170,28 @@
                     "processors": "",
                     "groups": "",
                     "action": "Gliding",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "ef241f81-9583-4408-a9c2-756de820081f",
+                    "path": "<Keyboard>/shift",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Gliding",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "ec832a0f-38c1-4db5-ba48-b40d60618cd8",
+                    "path": "<Gamepad>/rightShoulder",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Climb",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

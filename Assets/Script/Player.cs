@@ -8,6 +8,7 @@ namespace Script
     {
         public PlayerInput Inputs => playerInput;
         public PlayerMovement Movement => movement;
+        public PlayerAnimatorController Animator => animator;
         
         
         
@@ -15,10 +16,12 @@ namespace Script
         private PlayerInput playerInput;
         
         private PlayerMovement movement;
+        private PlayerAnimatorController animator;
 
         private void Awake()
         {
             movement = GetComponent<PlayerMovement>();
+            animator = GetComponent<PlayerAnimatorController>();
         }
     }
 }

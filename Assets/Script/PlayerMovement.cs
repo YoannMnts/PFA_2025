@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using Script;
 using Unity.Mathematics;
@@ -10,9 +11,21 @@ using UnityEngine.Serialization;
 [RequireComponent(typeof(Player))]
 public class PlayerMovement : MonoBehaviour
 {
-    public bool IsGrounded => isGrounded;
-    private Vector2 CurrentVelocity => rb2d.linearVelocity;
+    #region Properties
+    public Vector2 CurrentVelocity => rb2d.linearVelocity;
+    public Vector2 TargetVelocity => targetVelocity;
+    public Vector2 WallNormal => wallNormal;
+    public Vector2 InputDirection => inputDirection;
+    public Vector2 GroundNormal => groundNormal;
     
+    public bool IsGrounded => isGrounded;
+    public bool IsClimbing => isClimbing;
+    public bool IsWalled => isWalled;
+    public bool IsRolling => isWalled;
+    public Rigidbody2D Rb2d => rb2d;
+    #endregion
+    
+    private PlayerAnimatorController animatorController;
     private PlayerInput playerInput;
     private Rigidbody2D rb2d;
     private Player player;
@@ -20,6 +33,10 @@ public class PlayerMovement : MonoBehaviour
 
 
     [Header("Movement")]
+    [SerializeField]
+    private GameObject normalCollider;
+    [SerializeField] 
+    private float gravityScale = 8;
     [SerializeField]
     private float acceleration;
     [SerializeField]
@@ -51,7 +68,6 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField]
     private float maxGroundAngle;
     
-    
     [Header("Wall check")]
     [SerializeField]
     private LayerMask wallLayer;
@@ -68,21 +84,57 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField, Range(0f, 2f)]
     private float wallJumpSpeedMultiplier;
     
+    [Header("Climb")]
+    [SerializeField]
+    private float climbForce;
+    [SerializeField]
+    private float climbMaxSpeed;
+    [SerializeField]
+    private float climbAcceleration;
+    [SerializeField]
+    private float climbDeceleration;
+    [SerializeField, Range(1f, 100f)] 
+    private float climbFallSpeed;
+    
     [Header("Glide check")]
     [SerializeField, Range(0f, 1f)] 
     private float glidingFallSpeedMultiplier;
-    
-    [Header("Glide check")]
+
+    [Header("Rolling check")] 
+    [SerializeField]
+    private GameObject rollCollider;
+    [SerializeField]
+    private float initialRollSpeedModifier;
     [SerializeField] 
     private float rollingForce;
+    [SerializeField] 
+    private float minRollTime;
+    [SerializeField] 
+    private float rollHeightCheck;
+    [SerializeField] 
+    private float stopRollTime;
+    [SerializeField] 
+    private AnimationCurve stopRollCurve;
+    
+    [Header("Falling check")]
+    [SerializeField]
+    private int fallTimerSeconds;
+    [SerializeField]
+    private float fallTimerMultiplier;
+    
+    private float fallTimerMultiplierInGliding = 1;
+    private float fallBackTimer;
+    private bool canStartFallTimer = true;
     
     private bool isGrounded;
     private bool isJumping;
     private bool isWalled;
+    private bool isClimbing;
     private bool isWantsToGlide;
     private bool isRolling;
+    
     private int wantsToJump;
-    private int wantsToRolling;
+    private int wantsToRoll;
     
     private Camera playerCamera;
 
@@ -91,8 +143,18 @@ public class PlayerMovement : MonoBehaviour
 
     private Vector2 targetVelocity;
     private Vector2 inputDirection;
+    private Vector2 wallCheckDirection;
+    private Vector2 lastPosOnGround;
     
     private RaycastHit2D[] hits;
+
+    private int frameCounter;
+    
+
+    private void OnValidate()
+    {
+        GetComponent<Rigidbody2D>().gravityScale = gravityScale;
+    }
 
     private void Awake()
     {
@@ -100,32 +162,31 @@ public class PlayerMovement : MonoBehaviour
         playerInput = GetComponent<PlayerInput>();
         rb2d = GetComponent<Rigidbody2D>();
         playerCamera = GetComponentInChildren<Camera>();
+        animatorController = GetComponent<PlayerAnimatorController>();
         hits = new RaycastHit2D[32];
-    }
-
-
-    private void Update()
-    {
-        
+        fallBackTimer = fallTimerSeconds;
     }
 
     private void FixedUpdate()
     {
+        frameCounter++;
         if(wantsToJump > 0)
             wantsToJump--;
         
-        if(wantsToRolling > 0)
-            wantsToRolling--;
-        else
-            isRolling = false;
-
-        if(isGrounded)
+        if(wantsToRoll > 0)
+            wantsToRoll--;
+        if (isGrounded)
+        {
             isJumping = false;
-
+            canStartFallTimer = true;
+        }
+        
+        if (isWalled)
+            canStartFallTimer = true;
         HandleGround();
         HandleWalls();
 
-        if (!isGrounded)
+        if (!isGrounded && !isClimbing)
         {
             groundNormal = Vector2.up;
             float fallSpeed = isWalled ? maxFallSpeed * wallFallSpeedMultiplier : maxFallSpeed;
@@ -138,27 +199,56 @@ public class PlayerMovement : MonoBehaviour
             {
                 rb2d.linearVelocityY = jumpWallSpeed;
             }
+
+            if (rb2d.linearVelocityY <= -maxFallSpeed && canStartFallTimer)
+            {
+                fallBackTimer = fallTimerSeconds;
+                fallBackTimer /= Time.fixedDeltaTime;
+                canStartFallTimer = false;
+            }
         }
+
+
+        if (wantsToRoll > 0 && !isRolling)
+        {
+            wantsToRoll--;
+            if (isGrounded)
+            {
+                isRolling = true;
+                StartCoroutine(DoRoll());
+            }
+        }
+        
+        rollCollider.SetActive(isRolling);
+        normalCollider.SetActive(!isRolling);
+        
+        if(isRolling)
+            return;
+
+        if (frameCounter > 10)
+        {
+            frameCounter = 0;
+            if (isGrounded)
+                lastPosOnGround = transform.position;
+            StopWithForce(1);
+        }
+        
         
         HandleJump();
         HandleGliding();
-        HandleRolling();
-        //HandleSlopes
         HandleMovement();
-    }
-
-    private void HandleRolling()
-    {
-        float dir = Mathf.Sign(rb2d.linearVelocityX);
-        if (wantsToRolling > 0)
+        if (!canStartFallTimer)
         {
-            if (isGrounded && !isRolling)
+            fallBackTimer -= 1 * fallTimerMultiplierInGliding;
+            if (fallBackTimer <= 0)
             {
-                isRolling = true;
-                rb2d.AddForceX(rollingForce * dir, ForceMode2D.Impulse);
+                transform.position = lastPosOnGround;
+                canStartFallTimer = true;
             }
         }
     }
+
+   
     
     private void HandleGliding()
     {
@@ -169,9 +259,10 @@ public class PlayerMovement : MonoBehaviour
 
     private void HandleWalls()
     {
-        float dir = Mathf.Sign(Mathf.Abs(rb2d.linearVelocityX) <= 0.1f ? targetVelocity.x : rb2d.linearVelocityX);
-        
-        
+        if(Mathf.Abs(targetVelocity.x) > .05f)
+            wallCheckDirection = targetVelocity.x > 0 ? Vector2.right : Vector2.left;
+
+        float dir = wallCheckDirection.x;
         ContactFilter2D contactFilter = new ContactFilter2D()
         {
             useLayerMask = true,
@@ -182,6 +273,7 @@ public class PlayerMovement : MonoBehaviour
         };
         
         int hitCount = rb2d.Cast(Vector2.right * dir, contactFilter, hits, wallCheckRadius);
+        Debug.DrawRay(transform.position, Vector2.right * dir, Color.cyan);
         isWalled = hitCount > 0;
         Vector2 newNormal = Vector2.zero;
         for (int i = 0; i < hitCount; ++i)
@@ -191,6 +283,16 @@ public class PlayerMovement : MonoBehaviour
         }
 
         wallNormal = newNormal / hitCount;
+        
+        if (isWalled)
+        {
+            float dot = Vector2.Dot(wallNormal, inputDirection);
+            if(dot > 0.2f && inputDirection.sqrMagnitude > 0.1f)
+                isWalled = false;
+        }
+
+        if (isWalled && inputDirection == Vector2.zero)
+            rb2d.AddForceY(-climbFallSpeed);
     }
 
     private void HandleGround()
@@ -238,8 +340,9 @@ public class PlayerMovement : MonoBehaviour
                 Vector2 direction = wallNormal.normalized * wallNormalJumpForce;
                 direction += Vector2.up * (jumpForce * wallJumpForceMultiplier);
                 rb2d.AddForce(direction, ForceMode2D.Impulse);
-                Debug.DrawRay(transform.position, direction, Color.red, 2);
+                //Debug.DrawRay(transform.position, direction, Color.red, 2);
                 isJumping = true;
+                wallCheckDirection = wallCheckDirection == Vector2.right ? Vector2.left : Vector2.right;
             }
         }
     }
@@ -248,7 +351,109 @@ public class PlayerMovement : MonoBehaviour
     private void HandleMovement()
     {
         inputDirection = Vector2.ClampMagnitude(inputDirection, 1);
+
+        if (isWalled && isClimbing)
+        {
+            rb2d.gravityScale = 0;
+            DoClimbMovement();
+        }
+        else
+        {
+            rb2d.gravityScale = gravityScale;
+            DoNormalMovement();
+        }
+    }
+    
+    private IEnumerator DoRoll()
+    {
+        isRolling = true;
+
+        Vector2 dir = animatorController.FacingDirection;
+        StopWithForce(initialRollSpeedModifier);
+        rb2d.AddForce(dir * rollingForce, ForceMode2D.Impulse);
+
+        yield return new WaitForSeconds(minRollTime);
+
+        while (true)
+        {
+            yield return new WaitForFixedUpdate();
+            if (!isGrounded)
+            {
+                isRolling = false;
+                yield break;
+            }
+
+            if(rb2d.linearVelocityY > .2f)
+                break;
+            
+            var dot = Vector2.Dot(groundNormal.normalized, Vector2.up);
+            bool isInSlope = dot < .98f;
+            if (!isInSlope)
+            {
+                Vector2 center = rb2d.position + groundNormal * (rollHeightCheck * .5f * 1.02f);
+                Vector2 size = new Vector2(.2f, rollHeightCheck);
+
+                Collider2D hit = Physics2D.OverlapBox(center, size, 0, wallLayer);
+
+                Debug.DrawLine(center - size / 2, center + size / 2, Color.yellow);
+                if (hit == null)
+                    break;
+            }
+        }
+
+        float currentTime = 0;
+
+        while (currentTime < stopRollTime)
+        {
+            yield return null;
+            yield return new WaitForFixedUpdate();
+            
+            currentTime += Time.deltaTime;
+            if (!isGrounded)
+            {
+                isRolling = false;
+                yield break;
+            }
+            float normalizedTime = currentTime / stopRollTime;
+            StopWithForce(stopRollCurve.Evaluate(normalizedTime));
+        }
+        isRolling = false;
+    }
+
+    private void DoClimbMovement()
+    {
+        rb2d.AddForce(-wallNormal * climbForce);
+        Vector2 forward = Vector2.Perpendicular(wallNormal);
         
+        //float verticalAmount = Vector2.Dot(inputDirection, wallNormal);
+        float horizontalAmount = Vector2.Dot(inputDirection, forward);
+
+        float targetClimbMaxSpeed = horizontalAmount * climbMaxSpeed;
+        targetVelocity = forward * targetClimbMaxSpeed;
+        
+        Debug.DrawRay(transform.position, forward, Color.magenta, 2);
+        
+        bool isGoingBackward = Vector2.Dot(targetVelocity, rb2d.linearVelocity) < 0;
+        if (isGoingBackward || Mathf.Abs(horizontalAmount) < .15f)
+            StopWithForce(semiTurnForceMultiplier);
+        else
+        {
+            float lVelX = Vector2.Dot(rb2d.linearVelocity, targetVelocity.normalized);
+            
+            bool needAcc = Mathf.Abs(lVelX) < Mathf.Abs(targetClimbMaxSpeed);
+            if (needAcc)
+            {
+                rb2d.AddForce(targetVelocity.normalized * climbAcceleration, ForceMode2D.Force);
+            }
+            else
+            {
+                rb2d.AddForce(-targetVelocity.normalized * climbDeceleration, ForceMode2D.Force);
+            }
+        }
+    }
+
+    private void DoNormalMovement()
+    {
         if(inputDirection.sqrMagnitude < .1f)
         {
             if (Mathf.Abs(rb2d.linearVelocityX) >= .1f && isGrounded)
@@ -257,7 +462,6 @@ public class PlayerMovement : MonoBehaviour
             targetVelocity = Vector2.zero;
             return;
         }
-        
         
         targetVelocity = inputDirection * maxSpeed;
 
@@ -284,47 +488,54 @@ public class PlayerMovement : MonoBehaviour
 
     private void StopWithForce(float modifier)
     {
-        float force = -rb2d.linearVelocity.x * rb2d.mass * stopForce;
-        rb2d.AddForceX(force * modifier);
+        if (isWalled)
+        {
+            Vector2 stopVelocity = -rb2d.linearVelocity * (rb2d.mass * stopForce);
+            Debug.DrawRay(transform.position, stopVelocity * 20, Color.yellow);
+            rb2d.AddForce(stopVelocity, ForceMode2D.Force);
+        }
+        else
+        {
+            float force = -rb2d.linearVelocity.x * rb2d.mass * stopForce;
+            rb2d.AddForceX(force * modifier);
+        }
     }
     
     public void MoveInput(InputAction.CallbackContext context)
     {
         inputDirection = context.ReadValue<Vector2>();
+
     }
 
-    public void Jump(InputAction.CallbackContext context)
+    public void JumpInput(InputAction.CallbackContext context)
     {
         if (context.performed)
             wantsToJump = 6;
     }
-/*
-    public void HookOn(InputAction.CallbackContext context)
+    
+    public void RollingInput(InputAction.CallbackContext context)
     {
         if (context.performed)
         {
-            hookInput = true;
-        }
-
-        if (context.canceled)
-        {
-         hookInput = false;  
-         ResetGravity();
+            wantsToRoll = 5;
         }
     }
-*/
-    public void Roulade(InputAction.CallbackContext context)
-    {
-        if (context.performed)
-            wantsToRolling = 60;
-    }
 
-    public void Gliding(InputAction.CallbackContext context)
+    public void GlidingInput(InputAction.CallbackContext context)
     {
         isWantsToGlide = true;
+        fallTimerMultiplierInGliding = fallTimerMultiplier;
         if (context.canceled)
         {
             isWantsToGlide = false;
+            fallTimerMultiplierInGliding = 1;
         }
+    }
+
+    public void ClimbingInput(InputAction.CallbackContext context)
+    {
+        isClimbing = true;
+        if (context.canceled)
+            isClimbing = false;
     }
 }
