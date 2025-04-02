@@ -36,7 +36,7 @@ namespace Script
         private void HandleFacing()
         {
             Vector2 up = Vector2.up;
-            if (Movement.IsClimbing)
+            if (Movement.IsClimbing && Movement.IsWalled)
                 up = Movement.WallNormal;
             else if(Movement.IsGrounded)
                 up = Movement.GroundNormal;

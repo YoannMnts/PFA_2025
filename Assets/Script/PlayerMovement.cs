@@ -245,15 +245,9 @@ public class PlayerMovement : MonoBehaviour
             float dot = Vector2.Dot(wallNormal, inputDirection);
             if(dot > 0.2f && inputDirection.sqrMagnitude > 0.1f)
                 isWalled = false;
-            else if (!isGrounded)
-                isClimbing = true;
-        }
-        else
-        {
-            isClimbing = false;
         }
 
-        if (isClimbing && inputDirection == Vector2.zero)
+        if (isWalled && inputDirection == Vector2.zero)
             rb2d.AddForceY(-climbFallSpeed);
     }
 
@@ -306,8 +300,6 @@ public class PlayerMovement : MonoBehaviour
                 isJumping = true;
                 wallCheckDirection = wallCheckDirection == Vector2.right ? Vector2.left : Vector2.right;
             }
-
-            isClimbing = false;
         }
     }
 
@@ -316,7 +308,7 @@ public class PlayerMovement : MonoBehaviour
     {
         inputDirection = Vector2.ClampMagnitude(inputDirection, 1);
 
-        if (isWalled)
+        if (isWalled && isClimbing)
         {
             rb2d.gravityScale = 0;
             DoClimbMovement();
@@ -470,13 +462,13 @@ public class PlayerMovement : MonoBehaviour
 
     }
 
-    public void Jump(InputAction.CallbackContext context)
+    public void JumpInput(InputAction.CallbackContext context)
     {
         if (context.performed)
             wantsToJump = 6;
     }
     
-    public void Rolling(InputAction.CallbackContext context)
+    public void RollingInput(InputAction.CallbackContext context)
     {
         if (context.performed)
         {
@@ -484,12 +476,19 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
-    public void Gliding(InputAction.CallbackContext context)
+    public void GlidingInput(InputAction.CallbackContext context)
     {
         isWantsToGlide = true;
         if (context.canceled)
         {
             isWantsToGlide = false;
         }
+    }
+
+    public void ClimbingInput(InputAction.CallbackContext context)
+    {
+        isClimbing = true;
+        if (context.canceled)
+            isClimbing = false;
     }
 }

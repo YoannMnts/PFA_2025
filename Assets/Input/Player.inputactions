@@ -40,6 +40,15 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
+                },
+                {
+                    "name": "Climb",
+                    "type": "Button",
+                    "id": "a5861f45-e8fc-4824-91d7-2cb735c6f33a",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -172,6 +181,17 @@
                     "processors": "",
                     "groups": "",
                     "action": "Gliding",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "ec832a0f-38c1-4db5-ba48-b40d60618cd8",
+                    "path": "<Gamepad>/rightShoulder",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Climb",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
