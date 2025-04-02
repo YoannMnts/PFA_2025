@@ -134,9 +134,11 @@ public class PlayerMovement : MonoBehaviour
     private Vector2 targetVelocity;
     private Vector2 inputDirection;
     private Vector2 wallCheckDirection;
+    private Vector2 lastPosOnGround;
     
     private RaycastHit2D[] hits;
 
+    private int frameCounter;
 
     private void OnValidate()
     {
@@ -155,6 +157,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void FixedUpdate()
     {
+        frameCounter++;
         if(wantsToJump > 0)
             wantsToJump--;
         
@@ -180,6 +183,8 @@ public class PlayerMovement : MonoBehaviour
             {
                 rb2d.linearVelocityY = jumpWallSpeed;
             }
+
+            StartCoroutine(BackToGround());
         }
 
 
@@ -198,10 +203,19 @@ public class PlayerMovement : MonoBehaviour
         
         if(isRolling)
             return;
+
+        if (frameCounter > 10)
+        {
+            frameCounter = 0;
+            if (isGrounded)
+                lastPosOnGround = transform.position;
+        }
+        
         
         HandleJump();
         HandleGliding();
         HandleMovement();
+
     }
 
    
@@ -319,6 +333,16 @@ public class PlayerMovement : MonoBehaviour
             DoNormalMovement();
         }
     }
+
+    private IEnumerator BackToGround()
+    {
+        yield return new WaitForSeconds(3f);
+        if (!isGrounded && rb2d.linearVelocityY <= -maxFallSpeed)
+        {
+            transform.position = lastPosOnGround;
+        }
+    }
+    
     private IEnumerator DoRoll()
     {
         isRolling = true;
@@ -350,7 +374,7 @@ public class PlayerMovement : MonoBehaviour
 
                 Collider2D hit = Physics2D.OverlapBox(center, size, 0, wallLayer);
 
-                //Debug.DrawLine(center - size / 2, center + size / 2, Color.cyan);
+                Debug.DrawLine(center - size / 2, center + size / 2, Color.yellow);
                 if (hit == null)
                     break;
             }
