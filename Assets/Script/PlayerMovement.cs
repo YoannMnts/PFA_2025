@@ -116,6 +116,16 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] 
     private AnimationCurve stopRollCurve;
     
+    [Header("Falling check")]
+    [SerializeField]
+    private int fallTimerSeconds;
+    [SerializeField]
+    private float fallTimerMultiplier;
+    
+    private float fallTimerMultiplierInGliding = 1;
+    private float fallBackTimer;
+    private bool canStartFallTimer = true;
+    
     private bool isGrounded;
     private bool isJumping;
     private bool isWalled;
@@ -139,6 +149,7 @@ public class PlayerMovement : MonoBehaviour
     private RaycastHit2D[] hits;
 
     private int frameCounter;
+    
 
     private void OnValidate()
     {
@@ -153,6 +164,7 @@ public class PlayerMovement : MonoBehaviour
         playerCamera = GetComponentInChildren<Camera>();
         animatorController = GetComponent<PlayerAnimatorController>();
         hits = new RaycastHit2D[32];
+        fallBackTimer = fallTimerSeconds;
     }
 
     private void FixedUpdate()
@@ -166,7 +178,11 @@ public class PlayerMovement : MonoBehaviour
         if (isGrounded)
         {
             isJumping = false;
+            canStartFallTimer = true;
         }
+        
+        if (isWalled)
+            canStartFallTimer = true;
         HandleGround();
         HandleWalls();
 
@@ -184,7 +200,12 @@ public class PlayerMovement : MonoBehaviour
                 rb2d.linearVelocityY = jumpWallSpeed;
             }
 
-            StartCoroutine(BackToGround());
+            if (rb2d.linearVelocityY <= -maxFallSpeed && canStartFallTimer)
+            {
+                fallBackTimer = fallTimerSeconds;
+                fallBackTimer /= Time.fixedDeltaTime;
+                canStartFallTimer = false;
+            }
         }
 
 
@@ -209,13 +230,22 @@ public class PlayerMovement : MonoBehaviour
             frameCounter = 0;
             if (isGrounded)
                 lastPosOnGround = transform.position;
+            StopWithForce(1);
         }
         
         
         HandleJump();
         HandleGliding();
         HandleMovement();
-
+        if (!canStartFallTimer)
+        {
+            fallBackTimer -= 1 * fallTimerMultiplierInGliding;
+            if (fallBackTimer <= 0)
+            {
+                transform.position = lastPosOnGround;
+                canStartFallTimer = true;
+            }
+        }
     }
 
    
@@ -331,15 +361,6 @@ public class PlayerMovement : MonoBehaviour
         {
             rb2d.gravityScale = gravityScale;
             DoNormalMovement();
-        }
-    }
-
-    private IEnumerator BackToGround()
-    {
-        yield return new WaitForSeconds(3f);
-        if (!isGrounded && rb2d.linearVelocityY <= -maxFallSpeed)
-        {
-            transform.position = lastPosOnGround;
         }
     }
     
@@ -503,9 +524,11 @@ public class PlayerMovement : MonoBehaviour
     public void GlidingInput(InputAction.CallbackContext context)
     {
         isWantsToGlide = true;
+        fallTimerMultiplierInGliding = fallTimerMultiplier;
         if (context.canceled)
         {
             isWantsToGlide = false;
+            fallTimerMultiplierInGliding = 1;
         }
     }
 
