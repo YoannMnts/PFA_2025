@@ -200,7 +200,7 @@ public class PlayerMovement : MonoBehaviour
                 rb2d.linearVelocityY = jumpWallSpeed;
             }
 
-            if (rb2d.linearVelocityY <= -maxFallSpeed && canStartFallTimer)
+            if (canStartFallTimer)
             {
                 fallBackTimer = fallTimerSeconds;
                 fallBackTimer /= Time.fixedDeltaTime;
