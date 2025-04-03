@@ -350,8 +350,7 @@ public class PlayerMovement : MonoBehaviour
             }
         }
     }
-
-
+    
     private void HandleMovement()
     {
         inputDirection = Vector2.ClampMagnitude(inputDirection, 1);
