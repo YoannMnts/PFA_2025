@@ -188,20 +188,22 @@ public class PlayerMovement : MonoBehaviour
         HandleGround();
         HandleWalls();
 
-        if (!isGrounded && !isClimbing)
+        if (!isGrounded)
         {
-            groundNormal = Vector2.up;
-            float fallSpeed = isWalled ? maxFallSpeed * wallFallSpeedMultiplier : maxFallSpeed;
-            float jumpWallSpeed = maxFallSpeed * wallJumpSpeedMultiplier;
-            if (rb2d.linearVelocityY < -fallSpeed)
+            if (!isClimbing)
             {
-                rb2d.linearVelocityY = -fallSpeed;
+                groundNormal = Vector2.up;
+                float fallSpeed = isWalled ? maxFallSpeed * wallFallSpeedMultiplier : maxFallSpeed;
+                float jumpWallSpeed = maxFallSpeed * wallJumpSpeedMultiplier;
+                if (rb2d.linearVelocityY < -fallSpeed)
+                {
+                    rb2d.linearVelocityY = -fallSpeed;
+                }
+                if (rb2d.linearVelocityY > jumpWallSpeed)
+                {
+                    rb2d.linearVelocityY = jumpWallSpeed;
+                }
             }
-            if (rb2d.linearVelocityY > jumpWallSpeed)
-            {
-                rb2d.linearVelocityY = jumpWallSpeed;
-            }
-
             if (canStartFallTimer)
             {
                 fallBackTimer = fallTimerSeconds;
@@ -209,6 +211,7 @@ public class PlayerMovement : MonoBehaviour
                 canStartFallTimer = false;
             }
         }
+        
 
 
         if (wantsToRoll > 0 && !isRolling)
@@ -291,6 +294,12 @@ public class PlayerMovement : MonoBehaviour
             float dot = Vector2.Dot(wallNormal, inputDirection);
             if (dot > 0.2f && inputDirection.sqrMagnitude > 0.1f)
                 isWalled = false;
+            else
+                isClimbing = true;
+        }
+        else
+        {
+            isClimbing = false;
         }
 
         if (isWalled && inputDirection == Vector2.zero)
@@ -348,6 +357,7 @@ public class PlayerMovement : MonoBehaviour
                 isWallJumping = true;
                 wallCheckDirection = wallCheckDirection == Vector2.right ? Vector2.left : Vector2.right;
             }
+            isClimbing = false;
         }
     }
     
@@ -520,6 +530,7 @@ public class PlayerMovement : MonoBehaviour
         if (context.performed)
         {
             wantsToRoll = 5;
+            targetVelocity = wallCheckDirection;
         }
     }
 
