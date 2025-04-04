@@ -178,6 +178,7 @@ public class PlayerMovement : MonoBehaviour
         if (isGrounded)
         {
             isJumping = false;
+            isClimbing = false;
             canStartFallTimer = true;
         }
         
@@ -269,7 +270,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void HandleWalls()
     {
-        if(Mathf.Abs(targetVelocity.x) > .05f)
+        if(Mathf.Abs(targetVelocity.x) > .05f && !isJumping)
             wallCheckDirection = targetVelocity.x > 0 ? Vector2.right : Vector2.left;
 
         float dir = wallCheckDirection.x;
@@ -297,8 +298,8 @@ public class PlayerMovement : MonoBehaviour
         if (isWalled)
         {
             float dot = Vector2.Dot(wallNormal, inputDirection);
-            if (dot > 0.2f && inputDirection.sqrMagnitude > 0.1f)
-                isWalled = false;
+            if (dot > 0.2f && inputDirection.sqrMagnitude > 0.1f) ;
+            //isWalled = false;
             else
                 isClimbing = true;
         }
@@ -520,7 +521,7 @@ public class PlayerMovement : MonoBehaviour
     
     public void MoveInput(InputAction.CallbackContext context)
     {
-        inputDirection = context.ReadValue<Vector2>();
+            inputDirection = context.ReadValue<Vector2>();
     }
 
     public void JumpInput(InputAction.CallbackContext context)
