@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 6134b67ef67dea2468aa1280c326c397
+guid: 9e433ff4beaf0c74090f7a3eb8bbeb5f
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -3535221090349844623
-    second: Lamp_0
+      213: 392997301121842703
+    second: Lezard copie_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Lamp_0
+      name: Lezard copie_0
       rect:
         serializedVersion: 2
-        x: 43
-        y: 72
-        width: 168
-        height: 402
+        x: 160
+        y: 61
+        width: 261
+        height: 340
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 1777a33162f50fec0800000000000000
-      internalID: -3535221090349844623
+      spriteID: f0efd0396f4347500800000000000000
+      internalID: 392997301121842703
       vertices: []
       indices: 
       edges: []
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Lamp_0: -3535221090349844623
+      Lezard copie_0: 392997301121842703
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

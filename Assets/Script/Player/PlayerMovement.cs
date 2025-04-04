@@ -151,6 +151,8 @@ public class PlayerMovement : MonoBehaviour
     private int frameCounter;
     
 
+    private bool isWallJumping;
+
     private void OnValidate()
     {
         GetComponent<Rigidbody2D>().gravityScale = gravityScale;
@@ -186,18 +188,27 @@ public class PlayerMovement : MonoBehaviour
         HandleGround();
         HandleWalls();
 
-        if (!isGrounded && !isClimbing)
+        if (!isGrounded)
         {
-            groundNormal = Vector2.up;
-            float fallSpeed = isWalled ? maxFallSpeed * wallFallSpeedMultiplier : maxFallSpeed;
-            float jumpWallSpeed = maxFallSpeed * wallJumpSpeedMultiplier;
-            if (rb2d.linearVelocityY < -fallSpeed)
+            if (!isClimbing)
             {
-                rb2d.linearVelocityY = -fallSpeed;
+                groundNormal = Vector2.up;
+                float fallSpeed = isWalled ? maxFallSpeed * wallFallSpeedMultiplier : maxFallSpeed;
+                float jumpWallSpeed = maxFallSpeed * wallJumpSpeedMultiplier;
+                if (rb2d.linearVelocityY < -fallSpeed)
+                {
+                    rb2d.linearVelocityY = -fallSpeed;
+                }
+                if (rb2d.linearVelocityY > jumpWallSpeed)
+                {
+                    rb2d.linearVelocityY = jumpWallSpeed;
+                }
             }
-            if (rb2d.linearVelocityY > jumpWallSpeed)
+            if (canStartFallTimer)
             {
-                rb2d.linearVelocityY = jumpWallSpeed;
+                fallBackTimer = fallTimerSeconds;
+                fallBackTimer /= Time.fixedDeltaTime;
+                canStartFallTimer = false;
             }
 
             if (rb2d.linearVelocityY <= -maxFallSpeed && canStartFallTimer)
@@ -207,6 +218,7 @@ public class PlayerMovement : MonoBehaviour
                 canStartFallTimer = false;
             }
         }
+        
 
 
         if (wantsToRoll > 0 && !isRolling)
@@ -259,7 +271,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void HandleWalls()
     {
-        if(Mathf.Abs(targetVelocity.x) > .05f)
+        if(Mathf.Abs(targetVelocity.x) > .05f && !isWallJumping)
             wallCheckDirection = targetVelocity.x > 0 ? Vector2.right : Vector2.left;
 
         float dir = wallCheckDirection.x;
@@ -284,11 +296,17 @@ public class PlayerMovement : MonoBehaviour
 
         wallNormal = newNormal / hitCount;
         
-        if (isWalled)
+        if (isWalled && !isWallJumping)
         {
             float dot = Vector2.Dot(wallNormal, inputDirection);
-            if(dot > 0.2f && inputDirection.sqrMagnitude > 0.1f)
+            if (dot > 0.2f && inputDirection.sqrMagnitude > 0.1f)
                 isWalled = false;
+            else
+                isClimbing = true;
+        }
+        else
+        {
+            isClimbing = false;
         }
 
         if (isWalled && inputDirection == Vector2.zero)
@@ -333,6 +351,7 @@ public class PlayerMovement : MonoBehaviour
             {
                 isJumping = true;
                 rb2d.AddForceY(jumpForce, ForceMode2D.Impulse);
+                Debug.DrawRay(transform.position, Vector2.up * jumpForce, Color.magenta, 1);
             }
             
             if (!isGrounded && isWalled) 
@@ -340,14 +359,15 @@ public class PlayerMovement : MonoBehaviour
                 Vector2 direction = wallNormal.normalized * wallNormalJumpForce;
                 direction += Vector2.up * (jumpForce * wallJumpForceMultiplier);
                 rb2d.AddForce(direction, ForceMode2D.Impulse);
-                //Debug.DrawRay(transform.position, direction, Color.red, 2);
+                Debug.DrawRay(transform.position, direction, Color.red, 2);
                 isJumping = true;
+                isWallJumping = true;
                 wallCheckDirection = wallCheckDirection == Vector2.right ? Vector2.left : Vector2.right;
             }
+            isClimbing = false;
         }
     }
-
-
+    
     private void HandleMovement()
     {
         inputDirection = Vector2.ClampMagnitude(inputDirection, 1);
@@ -496,15 +516,14 @@ public class PlayerMovement : MonoBehaviour
         }
         else
         {
-            float force = -rb2d.linearVelocity.x * rb2d.mass * stopForce;
-            rb2d.AddForceX(force * modifier);
+            Vector2 force = -rb2d.linearVelocity * (rb2d.mass * stopForce);
+            rb2d.AddForce(force * modifier);
         }
     }
     
     public void MoveInput(InputAction.CallbackContext context)
     {
         inputDirection = context.ReadValue<Vector2>();
-
     }
 
     public void JumpInput(InputAction.CallbackContext context)
@@ -518,6 +537,7 @@ public class PlayerMovement : MonoBehaviour
         if (context.performed)
         {
             wantsToRoll = 5;
+            targetVelocity = wallCheckDirection;
         }
     }
 

@@ -165,7 +165,7 @@
                 {
                     "name": "",
                     "id": "a6152bc3-a393-43bb-b93e-b08947895569",
-                    "path": "<Gamepad>/rightTrigger",
+                    "path": "<Gamepad>/leftTrigger",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -188,6 +188,17 @@
                     "name": "",
                     "id": "ec832a0f-38c1-4db5-ba48-b40d60618cd8",
                     "path": "<Gamepad>/rightShoulder",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Climb",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "487e0267-1d10-486f-bb73-e59178f48379",
+                    "path": "",
                     "interactions": "",
                     "processors": "",
                     "groups": "",

@@ -1,10 +1,16 @@
 fileFormatVersion: 2
-guid: 6134b67ef67dea2468aa1280c326c397
+guid: 6599aaa60cc248a418a02e36aacb62d0
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -3535221090349844623
-    second: Lamp_0
+      213: 3316093970541255181
+    second: porc epic copie_0
+  - first:
+      213: -7360139871026802789
+    second: porc epic copie_1
+  - first:
+      213: 4028663686154145881
+    second: porc epic copie_2
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,13 +119,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Lamp_0
+      name: porc epic copie_0
       rect:
         serializedVersion: 2
-        x: 43
-        y: 72
-        width: 168
-        height: 402
+        x: 157
+        y: 28
+        width: 225
+        height: 468
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +134,52 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 1777a33162f50fec0800000000000000
-      internalID: -3535221090349844623
+      spriteID: d0a1de395e1250e20800000000000000
+      internalID: 3316093970541255181
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: porc epic copie_1
+      rect:
+        serializedVersion: 2
+        x: 184
+        y: 490
+        width: 19
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b9f024278c78bd990800000000000000
+      internalID: -7360139871026802789
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: porc epic copie_2
+      rect:
+        serializedVersion: 2
+        x: 259
+        y: 24
+        width: 69
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 950dbbc1740b8e730800000000000000
+      internalID: 4028663686154145881
       vertices: []
       indices: 
       edges: []
@@ -148,7 +198,9 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Lamp_0: -3535221090349844623
+      porc epic copie_0: 3316093970541255181
+      porc epic copie_1: -7360139871026802789
+      porc epic copie_2: 4028663686154145881
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
