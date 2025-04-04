@@ -40,15 +40,6 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
-                },
-                {
-                    "name": "Climb",
-                    "type": "Button",
-                    "id": "a5861f45-e8fc-4824-91d7-2cb735c6f33a",
-                    "expectedControlType": "",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -175,8 +166,8 @@
                 },
                 {
                     "name": "",
-                    "id": "ef241f81-9583-4408-a9c2-756de820081f",
-                    "path": "<Keyboard>/shift",
+                    "id": "f840601e-38d9-425d-a8f5-62526b271e74",
+                    "path": "<Gamepad>/leftShoulder",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -186,23 +177,12 @@
                 },
                 {
                     "name": "",
-                    "id": "ec832a0f-38c1-4db5-ba48-b40d60618cd8",
-                    "path": "<Gamepad>/rightShoulder",
+                    "id": "ef241f81-9583-4408-a9c2-756de820081f",
+                    "path": "<Keyboard>/shift",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "Climb",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "487e0267-1d10-486f-bb73-e59178f48379",
-                    "path": "",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Climb",
+                    "action": "Gliding",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

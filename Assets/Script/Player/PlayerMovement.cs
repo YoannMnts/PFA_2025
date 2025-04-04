@@ -151,8 +151,6 @@ public class PlayerMovement : MonoBehaviour
     private int frameCounter;
     
 
-    private bool isWallJumping;
-
     private void OnValidate()
     {
         GetComponent<Rigidbody2D>().gravityScale = gravityScale;
@@ -271,7 +269,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void HandleWalls()
     {
-        if(Mathf.Abs(targetVelocity.x) > .05f && !isWallJumping)
+        if(Mathf.Abs(targetVelocity.x) > .05f)
             wallCheckDirection = targetVelocity.x > 0 ? Vector2.right : Vector2.left;
 
         float dir = wallCheckDirection.x;
@@ -296,7 +294,7 @@ public class PlayerMovement : MonoBehaviour
 
         wallNormal = newNormal / hitCount;
         
-        if (isWalled && !isWallJumping)
+        if (isWalled)
         {
             float dot = Vector2.Dot(wallNormal, inputDirection);
             if (dot > 0.2f && inputDirection.sqrMagnitude > 0.1f)
@@ -361,7 +359,6 @@ public class PlayerMovement : MonoBehaviour
                 rb2d.AddForce(direction, ForceMode2D.Impulse);
                 Debug.DrawRay(transform.position, direction, Color.red, 2);
                 isJumping = true;
-                isWallJumping = true;
                 wallCheckDirection = wallCheckDirection == Vector2.right ? Vector2.left : Vector2.right;
             }
             isClimbing = false;
@@ -550,12 +547,5 @@ public class PlayerMovement : MonoBehaviour
             isWantsToGlide = false;
             fallTimerMultiplierInGliding = 1;
         }
-    }
-
-    public void ClimbingInput(InputAction.CallbackContext context)
-    {
-        isClimbing = true;
-        if (context.canceled)
-            isClimbing = false;
     }
 }
