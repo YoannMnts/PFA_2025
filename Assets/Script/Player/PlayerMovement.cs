@@ -52,7 +52,7 @@ public class PlayerMovement : MonoBehaviour
     private float semiTurnForceMultiplier;
     
     [SerializeField]
-    private int maxSpeed = 10;
+    private float maxSpeed = 10;
     [SerializeField]
     private float jumpForce;
     [SerializeField] 
@@ -99,6 +99,8 @@ public class PlayerMovement : MonoBehaviour
     [Header("Glide check")]
     [SerializeField, Range(0f, 1f)] 
     private float glidingFallSpeedMultiplier;
+    [SerializeField, Range(1f, 2f)] 
+    private float glidingSpeedMultiplier;
 
     [Header("Rolling check")] 
     [SerializeField]
@@ -149,7 +151,7 @@ public class PlayerMovement : MonoBehaviour
     private RaycastHit2D[] hits;
 
     private int frameCounter;
-    
+
 
     private void OnValidate()
     {
@@ -264,8 +266,15 @@ public class PlayerMovement : MonoBehaviour
     private void HandleGliding()
     {
         float glidingFallSpeed = maxFallSpeed * glidingFallSpeedMultiplier;
-        if (!isWalled && isWantsToGlide && rb2d.linearVelocityY < 0)
+        if (!isWalled && isWantsToGlide && rb2d.linearVelocityY < 0 && !isGrounded)
+        {
             rb2d.linearVelocityY = -glidingFallSpeed;
+            maxSpeed = glidingSpeedMultiplier * 10;
+        }
+        else
+        {
+            maxSpeed = 10;
+        }
     }
 
     private void HandleWalls()
@@ -295,13 +304,9 @@ public class PlayerMovement : MonoBehaviour
 
         wallNormal = newNormal / hitCount;
         
-        if (isWalled)
+        if (isWalled && !isGrounded)
         {
-            float dot = Vector2.Dot(wallNormal, inputDirection);
-            if (dot > 0.2f && inputDirection.sqrMagnitude > 0.1f) ;
-            //isWalled = false;
-            else
-                isClimbing = true;
+            isClimbing = true;
         }
         else
         {
