@@ -493,7 +493,7 @@ public class PlayerMovement : MonoBehaviour
         if (isGoingBackward && isGrounded)
         {
             StopWithForce(semiTurnForceMultiplier);
-            rb2d.linearVelocity = Vector2.zero; //a enleve plus tard
+            //rb2d.linearVelocity = Vector2.zero; //a enleve plus tard
         }
         else
         {
