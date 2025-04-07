@@ -52,7 +52,7 @@ public class PlayerMovement : MonoBehaviour
     private float semiTurnForceMultiplier;
     
     [SerializeField]
-    private int maxSpeed = 10;
+    private float maxSpeed = 10;
     [SerializeField]
     private float jumpForce;
     [SerializeField] 
@@ -99,6 +99,8 @@ public class PlayerMovement : MonoBehaviour
     [Header("Glide check")]
     [SerializeField, Range(0f, 1f)] 
     private float glidingFallSpeedMultiplier;
+    [SerializeField, Range(1f, 2f)] 
+    private float glidingSpeedMultiplier;
 
     [Header("Rolling check")] 
     [SerializeField]
@@ -149,9 +151,7 @@ public class PlayerMovement : MonoBehaviour
     private RaycastHit2D[] hits;
 
     private int frameCounter;
-    
 
-    private bool isWallJumping;
 
     private void OnValidate()
     {
@@ -180,6 +180,7 @@ public class PlayerMovement : MonoBehaviour
         if (isGrounded)
         {
             isJumping = false;
+            isClimbing = false;
             canStartFallTimer = true;
         }
         
@@ -265,13 +266,20 @@ public class PlayerMovement : MonoBehaviour
     private void HandleGliding()
     {
         float glidingFallSpeed = maxFallSpeed * glidingFallSpeedMultiplier;
-        if (!isWalled && isWantsToGlide && rb2d.linearVelocityY < 0)
+        if (!isWalled && isWantsToGlide && rb2d.linearVelocityY < 0 && !isGrounded)
+        {
             rb2d.linearVelocityY = -glidingFallSpeed;
+            maxSpeed = glidingSpeedMultiplier * 10;
+        }
+        else
+        {
+            maxSpeed = 10;
+        }
     }
 
     private void HandleWalls()
     {
-        if(Mathf.Abs(targetVelocity.x) > .05f && !isWallJumping)
+        if(Mathf.Abs(targetVelocity.x) > .05f && !isJumping)
             wallCheckDirection = targetVelocity.x > 0 ? Vector2.right : Vector2.left;
 
         float dir = wallCheckDirection.x;
@@ -296,13 +304,9 @@ public class PlayerMovement : MonoBehaviour
 
         wallNormal = newNormal / hitCount;
         
-        if (isWalled && !isWallJumping)
+        if (isWalled && !isGrounded)
         {
-            float dot = Vector2.Dot(wallNormal, inputDirection);
-            if (dot > 0.2f && inputDirection.sqrMagnitude > 0.1f)
-                isWalled = false;
-            else
-                isClimbing = true;
+            isClimbing = true;
         }
         else
         {
@@ -361,7 +365,6 @@ public class PlayerMovement : MonoBehaviour
                 rb2d.AddForce(direction, ForceMode2D.Impulse);
                 Debug.DrawRay(transform.position, direction, Color.red, 2);
                 isJumping = true;
-                isWallJumping = true;
                 wallCheckDirection = wallCheckDirection == Vector2.right ? Vector2.left : Vector2.right;
             }
             isClimbing = false;
@@ -523,7 +526,7 @@ public class PlayerMovement : MonoBehaviour
     
     public void MoveInput(InputAction.CallbackContext context)
     {
-        inputDirection = context.ReadValue<Vector2>();
+            inputDirection = context.ReadValue<Vector2>();
     }
 
     public void JumpInput(InputAction.CallbackContext context)
@@ -550,12 +553,5 @@ public class PlayerMovement : MonoBehaviour
             isWantsToGlide = false;
             fallTimerMultiplierInGliding = 1;
         }
-    }
-
-    public void ClimbingInput(InputAction.CallbackContext context)
-    {
-        isClimbing = true;
-        if (context.canceled)
-            isClimbing = false;
     }
 }
