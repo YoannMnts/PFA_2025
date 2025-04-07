@@ -123,16 +123,6 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField, Tooltip("The curve for make the smooth stop roll")] 
     private AnimationCurve stopRollCurve;
     
-    [Header("Falling check")]
-    [SerializeField, Tooltip("The timer for back if we fall off")]
-    private int fallTimerSeconds;
-    [SerializeField, Tooltip("The multiplier when we gliding")]
-    private float fallTimerMultiplier;
-    
-    private float fallTimerMultiplierInGliding = 1;
-    private float fallBackTimer;
-    private bool canStartFallTimer = true;
-    
     private bool isGrounded;
     private bool isJumping;
     private bool isWalled;
@@ -152,12 +142,7 @@ public class PlayerMovement : MonoBehaviour
     private Vector2 targetVelocity;
     private Vector2 inputDirection;
     private Vector2 wallCheckDirection;
-    private Vector2 lastPosOnGround;
-    
     private RaycastHit2D[] hits;
-
-    private int frameCounter;
-
 
     private void OnValidate()
     {
@@ -172,12 +157,10 @@ public class PlayerMovement : MonoBehaviour
         playerCamera = GetComponentInChildren<Camera>();
         animatorController = GetComponent<PlayerAnimatorController>();
         hits = new RaycastHit2D[32];
-        fallBackTimer = fallTimerSeconds;
     }
 
     private void FixedUpdate()
     {
-        frameCounter++;
         if(wantsToJump > 0)
             wantsToJump--;
         
@@ -187,11 +170,8 @@ public class PlayerMovement : MonoBehaviour
         {
             isJumping = false;
             isClimbing = false;
-            canStartFallTimer = true;
         }
         
-        if (isWalled)
-            canStartFallTimer = true;
         HandleGround();
         HandleWalls();
 
@@ -210,19 +190,6 @@ public class PlayerMovement : MonoBehaviour
                 {
                     rb2d.linearVelocityY = jumpWallSpeed;
                 }
-            }
-            if (canStartFallTimer)
-            {
-                fallBackTimer = fallTimerSeconds;
-                fallBackTimer /= Time.fixedDeltaTime;
-                canStartFallTimer = false;
-            }
-
-            if (rb2d.linearVelocityY <= -maxFallSpeed && canStartFallTimer)
-            {
-                fallBackTimer = fallTimerSeconds;
-                fallBackTimer /= Time.fixedDeltaTime;
-                canStartFallTimer = false;
             }
         }
         
@@ -244,27 +211,9 @@ public class PlayerMovement : MonoBehaviour
         if(isRolling)
             return;
 
-        if (frameCounter > 10)
-        {
-            frameCounter = 0;
-            if (isGrounded)
-                lastPosOnGround = transform.position;
-            StopWithForce(1);
-        }
-        
-        
         HandleJump();
         HandleGliding();
         HandleMovement();
-        if (!canStartFallTimer)
-        {
-            fallBackTimer -= 1 * fallTimerMultiplierInGliding;
-            if (fallBackTimer <= 0)
-            {
-                transform.position = lastPosOnGround;
-                canStartFallTimer = true;
-            }
-        }
     }
 
    
@@ -369,6 +318,7 @@ public class PlayerMovement : MonoBehaviour
             if (isGrounded && !isJumping)
             {
                 isJumping = true;
+                rb2d.linearVelocityY = 0;
                 rb2d.AddForceY(jumpForce, ForceMode2D.Impulse);
                 Debug.DrawRay(transform.position, Vector2.up * jumpForce, Color.magenta, 1);
             }
@@ -377,11 +327,14 @@ public class PlayerMovement : MonoBehaviour
             {
                 Vector2 direction = wallNormal.normalized * wallNormalJumpForce;
                 direction += Vector2.up * (jumpForce * wallJumpForceMultiplier);
+                rb2d.linearVelocityY = 0;
                 rb2d.AddForce(direction, ForceMode2D.Impulse);
                 Debug.DrawRay(transform.position, direction, Color.red, 2);
                 isJumping = true;
                 wallCheckDirection = wallCheckDirection == Vector2.right ? Vector2.left : Vector2.right;
             }
+
+            wantsToJump = 0;
             isClimbing = false;
         }
     }
@@ -495,6 +448,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void DoNormalMovement()
     {
+        inputDirection.y = 0;
         if(inputDirection.sqrMagnitude < .1f)
         {
             if (Mathf.Abs(rb2d.linearVelocityX) >= .1f && isGrounded)
@@ -504,7 +458,7 @@ public class PlayerMovement : MonoBehaviour
             return;
         }
         
-        targetVelocity = inputDirection * maxSpeed;
+        targetVelocity = Vector2.Perpendicular(groundNormal) * (-inputDirection.x * maxSpeed);
 
         var dot = Vector2.Dot(targetVelocity.normalized, rb2d.linearVelocity.normalized);
         bool isGoingBackward = dot < 0 && rb2d.linearVelocity.sqrMagnitude > goingBackwardInSlopes;
@@ -566,11 +520,9 @@ public class PlayerMovement : MonoBehaviour
     public void GlidingInput(InputAction.CallbackContext context)
     {
         isWantsToGlide = true;
-        fallTimerMultiplierInGliding = fallTimerMultiplier;
         if (context.canceled)
         {
             isWantsToGlide = false;
-            fallTimerMultiplierInGliding = 1;
         }
     }
 
@@ -578,5 +530,18 @@ public class PlayerMovement : MonoBehaviour
     {
         Gizmos.color = Color.red;
         Gizmos.DrawWireCube((Vector2)transform.position + Vector2.up * (wallCheckBoxHeight * 0.2f) + Vector2.right * wallCheckDistance, Vector2.one * wallCheckBoxHeight);
+    }
+
+    public void Freeze()
+    {
+        StopAllCoroutines();
+        isJumping = false;
+        isClimbing = false;
+        isGrounded = false;
+        isEndRolling = false;
+        isWantsToGlide = false;
+        targetVelocity = Vector2.zero;
+        rb2d.linearVelocity = Vector2.zero;
+        rb2d.angularVelocity = 0;
     }
 }
