@@ -96,13 +96,13 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField, Range(1f, 100f)] 
     private float climbFallSpeed;
     
-    [Header("Glide check")]
+    [Header("Glide")]
     [SerializeField, Range(0f, 1f)] 
     private float glidingFallSpeedMultiplier;
     [SerializeField, Range(1f, 2f)] 
     private float glidingSpeedMultiplier;
 
-    [Header("Rolling check")] 
+    [Header("Roll")] 
     [SerializeField]
     private GameObject rollCollider;
     [SerializeField]
@@ -332,6 +332,7 @@ public class PlayerMovement : MonoBehaviour
             useNormalAngle = true,
             maxNormalAngle = maxGroundAngle,
             minNormalAngle = minGroundAngle,
+            
         };
         
         int hitCount = rb2d.Cast(-groundNormal , contactFilter, hits, groundCheckRadius);
@@ -487,11 +488,12 @@ public class PlayerMovement : MonoBehaviour
         }
         
         targetVelocity = inputDirection * maxSpeed;
-
+        
         bool isGoingBackward = Vector2.Dot(targetVelocity, rb2d.linearVelocity) < 0;
         if (isGoingBackward && isGrounded)
         {
             StopWithForce(semiTurnForceMultiplier);
+            rb2d.linearVelocity = Vector2.zero; //a enleve plus tard
         }
         else
         {

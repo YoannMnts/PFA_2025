@@ -38,7 +38,7 @@ namespace Script
             Vector2 up = Vector2.up;
             if (Movement.IsClimbing && Movement.IsWalled && !Movement.IsGrounded)
                 up = Movement.WallNormal;
-            else if(Movement.IsGrounded)
+            else if (Movement.IsGrounded)
                 up = Movement.GroundNormal;
             
             spriteRenderer.transform.up = Vector2.Lerp(spriteRenderer.transform.up, up,rotationSmoothness * Time.deltaTime);
@@ -51,6 +51,8 @@ namespace Script
                 facingDirection = dot < 0 ? -perp : perp;
                 spriteRenderer.flipX = dot < 0;
             }
+            else
+                facingDirection = spriteRenderer.flipX ? -perp : perp;
         }
     }
 }
