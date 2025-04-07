@@ -33,100 +33,100 @@ public class PlayerMovement : MonoBehaviour
 
 
     [Header("Movement")]
-    [SerializeField]
+    [SerializeField,Tooltip("The normal collider box")]
     private GameObject normalCollider;
-    [SerializeField] 
+    [SerializeField, Tooltip("Current gravity scale")] 
     private float gravityScale = 8;
-    [SerializeField]
+    [SerializeField, Tooltip("The acceleration applied on the player")]
     private float acceleration;
-    [SerializeField]
+    [SerializeField, Tooltip("The acceleration applied on the player in the air")]
     private float airAcceleration;
-    [SerializeField]
+    [SerializeField, Tooltip("The acceleration deceleration on the player")]
     private float deceleration;
-    [SerializeField]
+    [SerializeField, Tooltip("The deceleration applied on the player in the air")]
     private float airDeceleration;
 
-    [SerializeField] 
+    [SerializeField, Tooltip("The force applied on the player for stop him")]
     private float stopForce;
-    [SerializeField, Range(1, 4)] 
+    [SerializeField, Range(1, 4), Tooltip("The force multiplier of the stopForce for do a smooth turn")] 
     private float semiTurnForceMultiplier;
     
-    [SerializeField]
+    [SerializeField, Tooltip("The max speed of the player")]
     private float maxSpeed = 10;
-    [SerializeField]
+    [SerializeField, Tooltip("The force applied on the players for do a jump")]
     private float jumpForce;
-    [SerializeField] 
+    [SerializeField, Tooltip("The max speed of the player when he fall off")] 
     private float maxFallSpeed = 10;
     
-    [FormerlySerializedAs("goingBackWardInSlopes")] [FormerlySerializedAs("goingBackWardAngle")] [SerializeField] 
+    [SerializeField, Tooltip("The min magnitude for going backward in slopes")] 
     private float goingBackwardInSlopes;
     
     [Header("Ground check")]
-    [SerializeField]
+    [SerializeField, Tooltip("The layer of the ground")]
     private LayerMask groundLayer;
-    [SerializeField, Range(0f, 1f)]
+    [SerializeField, Range(0f, 1f), Tooltip("The radius for check if a ground is under the player")]
     private float groundCheckRadius;
-    [SerializeField]
+    [SerializeField, Tooltip("filter the results to only include contacts with collision normal angles that are greater than this angle")]
     private float minGroundAngle;
-    [SerializeField]
+    [SerializeField, Tooltip("filter the results to only include contacts with collision normal angles that are less than this angle")]
     private float maxGroundAngle;
     
     [Header("Wall check")]
-    [SerializeField]
+    [SerializeField, Tooltip("The layer of the wall")]
     private LayerMask wallLayer;
-    [SerializeField, Range(0f, 1f)]
+    [SerializeField, Range(0f, 1f), Tooltip("The height of the box who check if a wall is at the player's feet")]
     private float wallCheckBoxHeight;
-    [SerializeField, Range(0f, 1f)]
+    [SerializeField, Range(0f, 1f), Tooltip("How the box comes out of the player")]
     private float wallCheckDistance;
-    [SerializeField]
+    [SerializeField, Tooltip("The angle for stay on wall/ground")]
     private float wallAngle;
-    [SerializeField]
+    [SerializeField, Tooltip("The force applied on the players for wall jump")]
     private float wallNormalJumpForce;
-    [SerializeField, Range(0f, 1f)]
+    [SerializeField, Range(0f, 1f), Tooltip("The multiplier of the force for wall jump")]
     private float wallJumpForceMultiplier;
-    [SerializeField, Range(0f, 1f)]
+    [SerializeField, Range(0f, 1f), Tooltip("The force applied on the player for make the max fall speed")]
     private float wallFallSpeedMultiplier;
-    [SerializeField, Range(0f, 2f)]
+    [SerializeField, Range(0f, 2f), Tooltip("The multiplier of the jump speed for make the max speed in wall jump")]
     private float wallJumpSpeedMultiplier;
     
     [Header("Climb")]
-    [SerializeField]
+    [SerializeField, Tooltip("The force for climbing")]
     private float climbForce;
-    [SerializeField]
+    [SerializeField, Tooltip("The max speed of the climbing")]
     private float climbMaxSpeed;
-    [SerializeField]
+    [SerializeField, Tooltip("The acceleration of the climbing")]
     private float climbAcceleration;
-    [SerializeField]
+    [SerializeField, Tooltip("The deceleration of the climbing")]
     private float climbDeceleration;
-    [SerializeField, Range(1f, 100f)] 
+    [SerializeField, Range(1f, 100f), Tooltip("The force applied on the player for fall when he's walled")] 
     private float climbFallSpeed;
     
     [Header("Glide")]
-    [SerializeField, Range(0f, 1f)] 
+    [SerializeField, Range(0f, 1f), Tooltip("The fall speed when the player is gliding")] 
     private float glidingFallSpeedMultiplier;
-    [SerializeField, Range(1f, 2f)] 
+    [SerializeField, Range(1f, 2f), Tooltip("The multiplier to reach maximum speed when the player is gliding")] 
     private float glidingSpeedMultiplier;
 
     [Header("Roll")] 
-    [SerializeField]
+    [SerializeField, Tooltip("The collider for the player when rolling")]
     private GameObject rollCollider;
-    [SerializeField]
+    [SerializeField, Tooltip("The force for stop the player when rolling")]
     private float initialRollSpeedModifier;
-    [SerializeField] 
+    [SerializeField, Tooltip("The force for do the roll")] 
     private float rollingForce;
-    [SerializeField] 
+    [SerializeField, Tooltip("The time of the roll")] 
     private float minRollTime;
-    [SerializeField] 
+    [SerializeField, Tooltip("The height of box for check if there is a ceiling")] 
     private float rollHeightCheck;
-    [SerializeField] 
+    [SerializeField, Tooltip("The time to stop the player for do smooth stop")] 
     private float stopRollTime;
-    [SerializeField] 
+    [SerializeField, Tooltip("The curve for make the smooth stop roll")] 
     private AnimationCurve stopRollCurve;
     
     [Header("Falling check")]
-    [SerializeField]
+    [SerializeField, Tooltip("The timer for back if we fall off")]
     private int fallTimerSeconds;
-    [SerializeField]
+    [SerializeField, Tooltip("The multiplier when we gliding")]
     private float fallTimerMultiplier;
     
     private float fallTimerMultiplierInGliding = 1;
