@@ -58,6 +58,9 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] 
     private float maxFallSpeed = 10;
     
+    [FormerlySerializedAs("goingBackWardInSlopes")] [FormerlySerializedAs("goingBackWardAngle")] [SerializeField] 
+    private float goingBackwardInSlopes;
+    
     [Header("Ground check")]
     [SerializeField]
     private LayerMask groundLayer;
@@ -72,7 +75,9 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField]
     private LayerMask wallLayer;
     [SerializeField, Range(0f, 1f)]
-    private float wallCheckRadius;
+    private float wallCheckBoxHeight;
+    [SerializeField, Range(0f, 1f)]
+    private float wallCheckDistance;
     [SerializeField]
     private float wallAngle;
     [SerializeField]
@@ -134,6 +139,7 @@ public class PlayerMovement : MonoBehaviour
     private bool isClimbing;
     private bool isWantsToGlide;
     private bool isRolling;
+    private bool isEndRolling;
     
     private int wantsToJump;
     private int wantsToRoll;
@@ -233,7 +239,7 @@ public class PlayerMovement : MonoBehaviour
         }
         
         rollCollider.SetActive(isRolling);
-        normalCollider.SetActive(!isRolling);
+        normalCollider.SetActive(!isRolling || isEndRolling);
         
         if(isRolling)
             return;
@@ -292,7 +298,15 @@ public class PlayerMovement : MonoBehaviour
             maxNormalAngle = dir > 0 ? 180 + wallAngle : wallAngle,
         };
         
-        int hitCount = rb2d.Cast(Vector2.right * dir, contactFilter, hits, wallCheckRadius);
+        //int hitCount = rb2d.Cast(Vector2.right * dir, contactFilter, hits, wallCheckRadius);
+        int hitCount = Physics2D.BoxCast(
+            (Vector2)transform.position + Vector2.up * (wallCheckBoxHeight * 0.5f),
+            Vector2.one * wallCheckBoxHeight,
+            0,
+            Vector2.right * dir,
+            contactFilter, 
+            hits,
+            wallCheckDistance);
         Debug.DrawRay(transform.position, Vector2.right * dir, Color.cyan);
         isWalled = hitCount > 0;
         Vector2 newNormal = Vector2.zero;
@@ -429,6 +443,7 @@ public class PlayerMovement : MonoBehaviour
 
         while (currentTime < stopRollTime)
         {
+            isEndRolling = true;
             yield return null;
             yield return new WaitForFixedUpdate();
             
@@ -442,6 +457,7 @@ public class PlayerMovement : MonoBehaviour
             StopWithForce(stopRollCurve.Evaluate(normalizedTime));
         }
         isRolling = false;
+        isEndRolling = false;
     }
 
     private void DoClimbMovement()
@@ -457,7 +473,8 @@ public class PlayerMovement : MonoBehaviour
         
         Debug.DrawRay(transform.position, forward, Color.magenta, 2);
         
-        bool isGoingBackward = Vector2.Dot(targetVelocity, rb2d.linearVelocity) < 0;
+        var dot = Vector2.Dot(targetVelocity.normalized, rb2d.linearVelocity.normalized);
+        bool isGoingBackward = dot < 0 && rb2d.linearVelocity.sqrMagnitude > goingBackwardInSlopes;
         if (isGoingBackward || Mathf.Abs(horizontalAmount) < .15f)
             StopWithForce(semiTurnForceMultiplier);
         else
@@ -488,12 +505,12 @@ public class PlayerMovement : MonoBehaviour
         }
         
         targetVelocity = inputDirection * maxSpeed;
-        
-        bool isGoingBackward = Vector2.Dot(targetVelocity, rb2d.linearVelocity) < 0;
+
+        var dot = Vector2.Dot(targetVelocity.normalized, rb2d.linearVelocity.normalized);
+        bool isGoingBackward = dot < 0 && rb2d.linearVelocity.sqrMagnitude > goingBackwardInSlopes;
         if (isGoingBackward && isGrounded)
         {
             StopWithForce(semiTurnForceMultiplier);
-            //rb2d.linearVelocity = Vector2.zero; //a enleve plus tard
         }
         else
         {
@@ -555,5 +572,11 @@ public class PlayerMovement : MonoBehaviour
             isWantsToGlide = false;
             fallTimerMultiplierInGliding = 1;
         }
+    }
+
+    private void OnDrawGizmosSelected()
+    {
+        Gizmos.color = Color.red;
+        Gizmos.DrawWireCube((Vector2)transform.position + Vector2.up * (wallCheckBoxHeight * 0.2f) + Vector2.right * wallCheckDistance, Vector2.one * wallCheckBoxHeight);
     }
 }
