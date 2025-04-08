@@ -30,16 +30,22 @@ public class Parallax : MonoBehaviour
         {
             float distance = Vector2.Distance(new Vector2(basePositions[i].x, basePositions[i].y),
                 new Vector2(player.transform.position.x, player.transform.position.y));
-            if ( distance < basePositions[i].z*loadDistance && distance > 1f)
-                
+            if ( distance < Mathf.Abs(basePositions[i].z)*loadDistance && distance > 1f)
             {
                 if (basePositions[i].z < 50f)
                 {
-                     parallaxObjects[i].transform.position = basePositions[i] + new Vector3((player.transform.position.x - basePositions[i].x)*(basePositions[i].z*speed)*(-1f),(player.transform.position.y - basePositions[i].y)*(basePositions[i].z*speed)*(-1f),basePositions[i].z);
+                    if (basePositions[i].z < 0)
+                    {
+                        parallaxObjects[i].transform.position = basePositions[i] + new Vector3((player.transform.position.x - basePositions[i].x)*(Mathf.Abs(basePositions[i].z)*speed)*(-1f),(player.transform.position.y - basePositions[i].y)*(Mathf.Abs(basePositions[i].z)*speed)*(-1f),0);
+                    }
+                    else
+                    { 
+                        parallaxObjects[i].transform.position = basePositions[i] + new Vector3((player.transform.position.x - basePositions[i].x)*(basePositions[i].z*speed)*(-1f),(player.transform.position.y - basePositions[i].y)*(basePositions[i].z*speed)*(-1f),0);
+                    }
                 }
                 else
                 {
-                    parallaxObjects[i].transform.position = player.transform.position + new Vector3((player.transform.position.x - basePositions[i].x)*backSpeed*(-1f),(player.transform.position.y - basePositions[i].y)*backSpeed*(-1f),basePositions[i].z);
+                    parallaxObjects[i].transform.position = player.transform.position + new Vector3((player.transform.position.x - basePositions[i].x)*backSpeed*(-1f),(player.transform.position.y - basePositions[i].y)*backSpeed*(-1f),0);
                 }
             }
             else

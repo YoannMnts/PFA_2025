@@ -33,100 +33,95 @@ public class PlayerMovement : MonoBehaviour
 
 
     [Header("Movement")]
-    [SerializeField]
+    [SerializeField,Tooltip("The normal collider box")]
     private GameObject normalCollider;
-    [SerializeField] 
+    [SerializeField, Tooltip("Current gravity scale")] 
     private float gravityScale = 8;
-    [SerializeField]
+    [SerializeField, Tooltip("The acceleration applied on the player")]
     private float acceleration;
-    [SerializeField]
+    [SerializeField, Tooltip("The acceleration applied on the player in the air")]
     private float airAcceleration;
-    [SerializeField]
+    [SerializeField, Tooltip("The acceleration deceleration on the player")]
     private float deceleration;
-    [SerializeField]
+    [SerializeField, Tooltip("The deceleration applied on the player in the air")]
     private float airDeceleration;
 
-    [SerializeField] 
+    [SerializeField, Tooltip("The force applied on the player for stop him")]
     private float stopForce;
-    [SerializeField, Range(1, 4)] 
+    [SerializeField, Range(1, 4), Tooltip("The force multiplier of the stopForce for do a smooth turn")] 
     private float semiTurnForceMultiplier;
     
-    [SerializeField]
+    [SerializeField, Tooltip("The max speed of the player")]
     private float maxSpeed = 10;
-    [SerializeField]
+    [SerializeField, Tooltip("The force applied on the players for do a jump")]
     private float jumpForce;
-    [SerializeField] 
+    [SerializeField, Tooltip("The max speed of the player when he fall off")] 
     private float maxFallSpeed = 10;
     
+    [SerializeField, Tooltip("The min magnitude for going backward in slopes")] 
+    private float goingBackwardInSlopes;
+    
     [Header("Ground check")]
-    [SerializeField]
+    [SerializeField, Tooltip("The layer of the ground")]
     private LayerMask groundLayer;
-    [SerializeField, Range(0f, 1f)]
+    [SerializeField, Range(0f, 1f), Tooltip("The radius for check if a ground is under the player")]
     private float groundCheckRadius;
-    [SerializeField]
+    [SerializeField, Tooltip("filter the results to only include contacts with collision normal angles that are greater than this angle")]
     private float minGroundAngle;
-    [SerializeField]
+    [SerializeField, Tooltip("filter the results to only include contacts with collision normal angles that are less than this angle")]
     private float maxGroundAngle;
     
     [Header("Wall check")]
-    [SerializeField]
+    [SerializeField, Tooltip("The layer of the wall")]
     private LayerMask wallLayer;
-    [SerializeField, Range(0f, 1f)]
-    private float wallCheckRadius;
-    [SerializeField]
+    [SerializeField, Range(0f, 1f), Tooltip("The height of the box who check if a wall is at the player's feet")]
+    private float wallCheckBoxHeight;
+    [SerializeField, Range(0f, 1f), Tooltip("How the box comes out of the player")]
+    private float wallCheckDistance;
+    [SerializeField, Tooltip("The angle for stay on wall/ground")]
     private float wallAngle;
-    [SerializeField]
+    [SerializeField, Tooltip("The force applied on the players for wall jump")]
     private float wallNormalJumpForce;
-    [SerializeField, Range(0f, 1f)]
+    [SerializeField, Range(0f, 1f), Tooltip("The multiplier of the force for wall jump")]
     private float wallJumpForceMultiplier;
-    [SerializeField, Range(0f, 1f)]
+    [SerializeField, Range(0f, 1f), Tooltip("The force applied on the player for make the max fall speed")]
     private float wallFallSpeedMultiplier;
-    [SerializeField, Range(0f, 2f)]
+    [SerializeField, Range(0f, 2f), Tooltip("The multiplier of the jump speed for make the max speed in wall jump")]
     private float wallJumpSpeedMultiplier;
     
     [Header("Climb")]
-    [SerializeField]
+    [SerializeField, Tooltip("The force for climbing")]
     private float climbForce;
-    [SerializeField]
+    [SerializeField, Tooltip("The max speed of the climbing")]
     private float climbMaxSpeed;
-    [SerializeField]
+    [SerializeField, Tooltip("The acceleration of the climbing")]
     private float climbAcceleration;
-    [SerializeField]
+    [SerializeField, Tooltip("The deceleration of the climbing")]
     private float climbDeceleration;
-    [SerializeField, Range(1f, 100f)] 
+    [SerializeField, Range(1f, 100f), Tooltip("The force applied on the player for fall when he's walled")] 
     private float climbFallSpeed;
     
-    [Header("Glide check")]
-    [SerializeField, Range(0f, 1f)] 
+    [Header("Glide")]
+    [SerializeField, Range(0f, 1f), Tooltip("The fall speed when the player is gliding")] 
     private float glidingFallSpeedMultiplier;
-    [SerializeField, Range(1f, 2f)] 
+    [SerializeField, Range(1f, 2f), Tooltip("The multiplier to reach maximum speed when the player is gliding")] 
     private float glidingSpeedMultiplier;
 
-    [Header("Rolling check")] 
-    [SerializeField]
+    [Header("Roll")] 
+    [SerializeField, Tooltip("The collider for the player when rolling")]
     private GameObject rollCollider;
-    [SerializeField]
+    [SerializeField, Tooltip("The force for stop the player when rolling")]
     private float initialRollSpeedModifier;
-    [SerializeField] 
+    [SerializeField, Tooltip("The force for do the roll")] 
     private float rollingForce;
-    [SerializeField] 
+    [SerializeField, Tooltip("The time of the roll")] 
     private float minRollTime;
-    [SerializeField] 
+    [SerializeField, Tooltip("The height of box for check if there is a ceiling")] 
     private float rollHeightCheck;
-    [SerializeField] 
+    [SerializeField, Tooltip("The time to stop the player for do smooth stop")] 
     private float stopRollTime;
-    [SerializeField] 
+    [SerializeField, Tooltip("The curve for make the smooth stop roll")] 
     private AnimationCurve stopRollCurve;
-    
-    [Header("Falling check")]
-    [SerializeField]
-    private int fallTimerSeconds;
-    [SerializeField]
-    private float fallTimerMultiplier;
-    
-    private float fallTimerMultiplierInGliding = 1;
-    private float fallBackTimer;
-    private bool canStartFallTimer = true;
     
     private bool isGrounded;
     private bool isJumping;
@@ -134,6 +129,7 @@ public class PlayerMovement : MonoBehaviour
     private bool isClimbing;
     private bool isWantsToGlide;
     private bool isRolling;
+    private bool isEndRolling;
     
     private int wantsToJump;
     private int wantsToRoll;
@@ -146,12 +142,7 @@ public class PlayerMovement : MonoBehaviour
     private Vector2 targetVelocity;
     private Vector2 inputDirection;
     private Vector2 wallCheckDirection;
-    private Vector2 lastPosOnGround;
-    
     private RaycastHit2D[] hits;
-
-    private int frameCounter;
-
 
     private void OnValidate()
     {
@@ -166,12 +157,10 @@ public class PlayerMovement : MonoBehaviour
         playerCamera = GetComponentInChildren<Camera>();
         animatorController = GetComponent<PlayerAnimatorController>();
         hits = new RaycastHit2D[32];
-        fallBackTimer = fallTimerSeconds;
     }
 
     private void FixedUpdate()
     {
-        frameCounter++;
         if(wantsToJump > 0)
             wantsToJump--;
         
@@ -181,11 +170,8 @@ public class PlayerMovement : MonoBehaviour
         {
             isJumping = false;
             isClimbing = false;
-            canStartFallTimer = true;
         }
         
-        if (isWalled)
-            canStartFallTimer = true;
         HandleGround();
         HandleWalls();
 
@@ -205,19 +191,6 @@ public class PlayerMovement : MonoBehaviour
                     rb2d.linearVelocityY = jumpWallSpeed;
                 }
             }
-            if (canStartFallTimer)
-            {
-                fallBackTimer = fallTimerSeconds;
-                fallBackTimer /= Time.fixedDeltaTime;
-                canStartFallTimer = false;
-            }
-
-            if (rb2d.linearVelocityY <= -maxFallSpeed && canStartFallTimer)
-            {
-                fallBackTimer = fallTimerSeconds;
-                fallBackTimer /= Time.fixedDeltaTime;
-                canStartFallTimer = false;
-            }
         }
         
 
@@ -233,32 +206,14 @@ public class PlayerMovement : MonoBehaviour
         }
         
         rollCollider.SetActive(isRolling);
-        normalCollider.SetActive(!isRolling);
+        normalCollider.SetActive(!isRolling || isEndRolling);
         
         if(isRolling)
             return;
 
-        if (frameCounter > 10)
-        {
-            frameCounter = 0;
-            if (isGrounded)
-                lastPosOnGround = transform.position;
-            StopWithForce(1);
-        }
-        
-        
         HandleJump();
         HandleGliding();
         HandleMovement();
-        if (!canStartFallTimer)
-        {
-            fallBackTimer -= 1 * fallTimerMultiplierInGliding;
-            if (fallBackTimer <= 0)
-            {
-                transform.position = lastPosOnGround;
-                canStartFallTimer = true;
-            }
-        }
     }
 
    
@@ -292,7 +247,15 @@ public class PlayerMovement : MonoBehaviour
             maxNormalAngle = dir > 0 ? 180 + wallAngle : wallAngle,
         };
         
-        int hitCount = rb2d.Cast(Vector2.right * dir, contactFilter, hits, wallCheckRadius);
+        //int hitCount = rb2d.Cast(Vector2.right * dir, contactFilter, hits, wallCheckRadius);
+        int hitCount = Physics2D.BoxCast(
+            (Vector2)transform.position + Vector2.up * (wallCheckBoxHeight * 0.5f),
+            Vector2.one * wallCheckBoxHeight,
+            0,
+            Vector2.right * dir,
+            contactFilter, 
+            hits,
+            wallCheckDistance);
         Debug.DrawRay(transform.position, Vector2.right * dir, Color.cyan);
         isWalled = hitCount > 0;
         Vector2 newNormal = Vector2.zero;
@@ -332,6 +295,7 @@ public class PlayerMovement : MonoBehaviour
             useNormalAngle = true,
             maxNormalAngle = maxGroundAngle,
             minNormalAngle = minGroundAngle,
+            
         };
         
         int hitCount = rb2d.Cast(-groundNormal , contactFilter, hits, groundCheckRadius);
@@ -354,6 +318,7 @@ public class PlayerMovement : MonoBehaviour
             if (isGrounded && !isJumping)
             {
                 isJumping = true;
+                rb2d.linearVelocityY = 0;
                 rb2d.AddForceY(jumpForce, ForceMode2D.Impulse);
                 Debug.DrawRay(transform.position, Vector2.up * jumpForce, Color.magenta, 1);
             }
@@ -362,11 +327,14 @@ public class PlayerMovement : MonoBehaviour
             {
                 Vector2 direction = wallNormal.normalized * wallNormalJumpForce;
                 direction += Vector2.up * (jumpForce * wallJumpForceMultiplier);
+                rb2d.linearVelocityY = 0;
                 rb2d.AddForce(direction, ForceMode2D.Impulse);
                 Debug.DrawRay(transform.position, direction, Color.red, 2);
                 isJumping = true;
                 wallCheckDirection = wallCheckDirection == Vector2.right ? Vector2.left : Vector2.right;
             }
+
+            wantsToJump = 0;
             isClimbing = false;
         }
     }
@@ -428,6 +396,7 @@ public class PlayerMovement : MonoBehaviour
 
         while (currentTime < stopRollTime)
         {
+            isEndRolling = true;
             yield return null;
             yield return new WaitForFixedUpdate();
             
@@ -441,6 +410,7 @@ public class PlayerMovement : MonoBehaviour
             StopWithForce(stopRollCurve.Evaluate(normalizedTime));
         }
         isRolling = false;
+        isEndRolling = false;
     }
 
     private void DoClimbMovement()
@@ -456,7 +426,8 @@ public class PlayerMovement : MonoBehaviour
         
         Debug.DrawRay(transform.position, forward, Color.magenta, 2);
         
-        bool isGoingBackward = Vector2.Dot(targetVelocity, rb2d.linearVelocity) < 0;
+        var dot = Vector2.Dot(targetVelocity.normalized, rb2d.linearVelocity.normalized);
+        bool isGoingBackward = dot < 0 && rb2d.linearVelocity.sqrMagnitude > goingBackwardInSlopes;
         if (isGoingBackward || Mathf.Abs(horizontalAmount) < .15f)
             StopWithForce(semiTurnForceMultiplier);
         else
@@ -477,6 +448,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void DoNormalMovement()
     {
+        inputDirection.y = 0;
         if(inputDirection.sqrMagnitude < .1f)
         {
             if (Mathf.Abs(rb2d.linearVelocityX) >= .1f && isGrounded)
@@ -486,9 +458,10 @@ public class PlayerMovement : MonoBehaviour
             return;
         }
         
-        targetVelocity = inputDirection * maxSpeed;
+        targetVelocity = Vector2.Perpendicular(groundNormal) * (-inputDirection.x * maxSpeed);
 
-        bool isGoingBackward = Vector2.Dot(targetVelocity, rb2d.linearVelocity) < 0;
+        var dot = Vector2.Dot(targetVelocity.normalized, rb2d.linearVelocity.normalized);
+        bool isGoingBackward = dot < 0 && rb2d.linearVelocity.sqrMagnitude > goingBackwardInSlopes;
         if (isGoingBackward && isGrounded)
         {
             StopWithForce(semiTurnForceMultiplier);
@@ -547,11 +520,28 @@ public class PlayerMovement : MonoBehaviour
     public void GlidingInput(InputAction.CallbackContext context)
     {
         isWantsToGlide = true;
-        fallTimerMultiplierInGliding = fallTimerMultiplier;
         if (context.canceled)
         {
             isWantsToGlide = false;
-            fallTimerMultiplierInGliding = 1;
         }
+    }
+
+    private void OnDrawGizmosSelected()
+    {
+        Gizmos.color = Color.red;
+        Gizmos.DrawWireCube((Vector2)transform.position + Vector2.up * (wallCheckBoxHeight * 0.2f) + Vector2.right * wallCheckDistance, Vector2.one * wallCheckBoxHeight);
+    }
+
+    public void Freeze()
+    {
+        StopAllCoroutines();
+        isJumping = false;
+        isClimbing = false;
+        isGrounded = false;
+        isEndRolling = false;
+        isWantsToGlide = false;
+        targetVelocity = Vector2.zero;
+        rb2d.linearVelocity = Vector2.zero;
+        rb2d.angularVelocity = 0;
     }
 }
