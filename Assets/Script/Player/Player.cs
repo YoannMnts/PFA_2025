@@ -35,19 +35,10 @@ namespace Script
                 Die();
         }
 
-        private void OnTriggerEnter(Collider other)
-        {
-            if (other.CompareTag("DeathZone"))
-            {
-                Die();
-            }
-        }
-
-        private void Die()
+        public void Die()
         {
             movement.Rb2d.position = lastPosOnGround;
             movement.Freeze();
-            Debug.Log("works");
         }
     }
 }
