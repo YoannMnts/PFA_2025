@@ -47,6 +47,7 @@ namespace Script
         {
             movement.Rb2d.position = lastPosOnGround;
             movement.Freeze();
+            Debug.Log("works");
         }
     }
 }

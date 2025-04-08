@@ -175,6 +175,9 @@ public class PlayerMovement : MonoBehaviour
         HandleGround();
         HandleWalls();
 
+        if (rb2d.linearVelocityY < 0)
+            isJumping = false;
+        
         if (!isGrounded)
         {
             if (!isClimbing)
@@ -249,7 +252,7 @@ public class PlayerMovement : MonoBehaviour
         
         //int hitCount = rb2d.Cast(Vector2.right * dir, contactFilter, hits, wallCheckRadius);
         int hitCount = Physics2D.BoxCast(
-            (Vector2)transform.position + Vector2.up * (wallCheckBoxHeight * 0.5f),
+            (Vector2)transform.position + Vector2.up * (wallCheckBoxHeight * 0.58f),
             Vector2.one * wallCheckBoxHeight,
             0,
             Vector2.right * dir,
@@ -270,6 +273,7 @@ public class PlayerMovement : MonoBehaviour
         if (isWalled && !isGrounded)
         {
             isClimbing = true;
+            isJumping = false;
         }
         else
         {
@@ -320,7 +324,7 @@ public class PlayerMovement : MonoBehaviour
                 isJumping = true;
                 rb2d.linearVelocityY = 0;
                 rb2d.AddForceY(jumpForce, ForceMode2D.Impulse);
-                Debug.DrawRay(transform.position, Vector2.up * jumpForce, Color.magenta, 1);
+                //Debug.DrawRay(transform.position, Vector2.up * jumpForce, Color.magenta, 1);
             }
             
             if (!isGrounded && isWalled) 
@@ -329,7 +333,7 @@ public class PlayerMovement : MonoBehaviour
                 direction += Vector2.up * (jumpForce * wallJumpForceMultiplier);
                 rb2d.linearVelocityY = 0;
                 rb2d.AddForce(direction, ForceMode2D.Impulse);
-                Debug.DrawRay(transform.position, direction, Color.red, 2);
+                //Debug.DrawRay(transform.position, direction, Color.red, 2);
                 isJumping = true;
                 wallCheckDirection = wallCheckDirection == Vector2.right ? Vector2.left : Vector2.right;
             }
@@ -385,7 +389,7 @@ public class PlayerMovement : MonoBehaviour
 
                 Collider2D hit = Physics2D.OverlapBox(center, size, 0, wallLayer);
 
-                Debug.DrawLine(center - size / 2, center + size / 2, Color.yellow);
+                //Debug.DrawLine(center - size / 2, center + size / 2, Color.yellow);
                 if (hit == null)
                     break;
             }
@@ -423,7 +427,7 @@ public class PlayerMovement : MonoBehaviour
         float targetClimbMaxSpeed = horizontalAmount * climbMaxSpeed;
         targetVelocity = forward * targetClimbMaxSpeed;
         
-        Debug.DrawRay(transform.position, forward, Color.magenta, 2);
+        //Debug.DrawRay(transform.position, forward, Color.magenta, 2);
         
         var dot = Vector2.Dot(targetVelocity.normalized, rb2d.linearVelocity.normalized);
         bool isGoingBackward = dot < 0 && rb2d.linearVelocity.sqrMagnitude > goingBackwardInSlopes;
@@ -486,7 +490,7 @@ public class PlayerMovement : MonoBehaviour
         if (isWalled)
         {
             Vector2 stopVelocity = -rb2d.linearVelocity * (rb2d.mass * stopForce);
-            Debug.DrawRay(transform.position, stopVelocity * 20, Color.yellow);
+            //Debug.DrawRay(transform.position, stopVelocity * 20, Color.yellow);
             rb2d.AddForce(stopVelocity, ForceMode2D.Force);
         }
         else
@@ -528,7 +532,7 @@ public class PlayerMovement : MonoBehaviour
     private void OnDrawGizmosSelected()
     {
         Gizmos.color = Color.red;
-        Gizmos.DrawWireCube((Vector2)transform.position + Vector2.up * (wallCheckDistance * 0.2f), Vector2.right * wallCheckBoxHeight + Vector2.up * 0.2f);
+        //Gizmos.DrawWireCube((Vector2)transform.position + Vector2.up * (wallCheckBoxHeight * 0.58f) + Vector2.right * wallCheckDistance, Vector2.one * wallCheckBoxHeight);
     }
 
     public void Freeze()
