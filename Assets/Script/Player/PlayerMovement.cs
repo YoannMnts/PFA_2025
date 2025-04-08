@@ -256,13 +256,13 @@ public class PlayerMovement : MonoBehaviour
             contactFilter, 
             hits,
             wallCheckDistance);
-        Debug.DrawRay(transform.position, Vector2.right * dir, Color.cyan);
+        Debug.DrawRay(transform.position, Vector2.right * dir, Color.red);
         isWalled = hitCount > 0;
         Vector2 newNormal = Vector2.zero;
         for (int i = 0; i < hitCount; ++i)
         {
             newNormal += hits[i].normal;
-            Debug.DrawRay(hits[i].point, hits[i].normal, Color.red);
+            //Debug.DrawRay(hits[i].point, hits[i].normal, Color.red);
         }
 
         wallNormal = newNormal / hitCount;
@@ -333,7 +333,6 @@ public class PlayerMovement : MonoBehaviour
                 isJumping = true;
                 wallCheckDirection = wallCheckDirection == Vector2.right ? Vector2.left : Vector2.right;
             }
-
             wantsToJump = 0;
             isClimbing = false;
         }
@@ -529,7 +528,7 @@ public class PlayerMovement : MonoBehaviour
     private void OnDrawGizmosSelected()
     {
         Gizmos.color = Color.red;
-        Gizmos.DrawWireCube((Vector2)transform.position + Vector2.up * (wallCheckBoxHeight * 0.2f) + Vector2.right * wallCheckDistance, Vector2.one * wallCheckBoxHeight);
+        Gizmos.DrawWireCube((Vector2)transform.position + Vector2.up * (wallCheckDistance * 0.2f), Vector2.right * wallCheckBoxHeight + Vector2.up * 0.2f);
     }
 
     public void Freeze()
