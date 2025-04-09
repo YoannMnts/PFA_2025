@@ -19,7 +19,7 @@ namespace Script
         private PlayerAnimatorController animator;
 
         private Vector2 lastPosOnGround;
-
+        
         private void Awake()
         {
             movement = GetComponent<PlayerMovement>();
@@ -34,7 +34,7 @@ namespace Script
             if(movement.Rb2d.position.y < -250)
                 Die();
         }
-
+        
         public void Die()
         {
             movement.Rb2d.position = lastPosOnGround;
