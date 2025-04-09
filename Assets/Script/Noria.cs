@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.Serialization;
 using UnityEngine.Splines;
 
 public class Noria : MonoBehaviour
@@ -6,22 +7,47 @@ public class Noria : MonoBehaviour
     public SplineContainer splineContainer;
     public float speed; 
     private float distanceTravelled = 0f;
+    public GameObject[] paddles; 
+    public float[] distancesTravelled;
 
     private float splineLength;
 
     void Start()
     {
         splineLength = splineContainer.Spline.GetLength();
+        distancesTravelled = new float[paddles.Length];
+        float spacebetween = splineLength/paddles.Length;
+        for (int i = 0; i < paddles.Length; i++)
+        {
+            distancesTravelled[i] = spacebetween * i;
+        }
     }
 
     void Update()
     {
-        distanceTravelled += speed * Time.deltaTime;
-        if (distanceTravelled >= splineLength)
+        for (int i = 0; i < paddles.Length; i++)
         {
-            distanceTravelled -= splineLength;
+            if (distancesTravelled[i] != null)
+            {
+                distancesTravelled[i] += speed * Time.deltaTime;
+                if (distancesTravelled[i] >= splineLength)
+                {
+                    distancesTravelled[i] -= splineLength;
+                }
+
+                Vector3 positionLocal = splineContainer.Spline.EvaluatePosition(distancesTravelled[i] / splineLength);
+                paddles[i].transform.position = splineContainer.transform.TransformPoint(positionLocal);
+                
+                Vector3 tangentLocal = splineContainer.Spline.EvaluateTangent(distancesTravelled[i]/splineLength);
+                Vector3 tangentWorld = splineContainer.transform.TransformDirection(tangentLocal);
+                if (tangentWorld != Vector3.zero)
+                {
+                    float angle = Mathf.Atan2(tangentLocal.y, tangentLocal.x) * Mathf.Rad2Deg;
+                    Debug.Log(angle);
+                    paddles[i].transform.rotation = Quaternion.Euler(0, 0, angle);
+                }
+            }
         }
-        Vector3 positionLocal = splineContainer.Spline.EvaluatePosition(distanceTravelled / splineLength);
-        transform.position = splineContainer.transform.TransformPoint(positionLocal);
+        
     }    
 }
