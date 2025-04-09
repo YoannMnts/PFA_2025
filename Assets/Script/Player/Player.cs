@@ -19,7 +19,7 @@ namespace Script
         private PlayerAnimatorController animator;
 
         private Vector2 lastPosOnGround;
-
+        
         private void Awake()
         {
             movement = GetComponent<PlayerMovement>();
@@ -34,20 +34,11 @@ namespace Script
             if(movement.Rb2d.position.y < -250)
                 Die();
         }
-
-        private void OnTriggerEnter(Collider other)
-        {
-            if (other.CompareTag("DeathZone"))
-            {
-                Die();
-            }
-        }
-
-        private void Die()
+        
+        public void Die()
         {
             movement.Rb2d.position = lastPosOnGround;
             movement.Freeze();
-            Debug.Log("works");
         }
     }
 }
