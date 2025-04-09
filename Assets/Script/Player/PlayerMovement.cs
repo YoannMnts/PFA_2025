@@ -144,6 +144,8 @@ public class PlayerMovement : MonoBehaviour
     private Vector2 wallCheckDirection;
     private RaycastHit2D[] hits;
 
+    private Vector2 lastWallNormal;
+    
     private void OnValidate()
     {
         GetComponent<Rigidbody2D>().gravityScale = gravityScale;
@@ -237,7 +239,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void HandleWalls()
     {
-        if(Mathf.Abs(targetVelocity.x) > .05f && !isJumping)
+        if (Mathf.Abs(targetVelocity.x) > .05f && !isJumping)
             wallCheckDirection = targetVelocity.x > 0 ? Vector2.right : Vector2.left;
 
         float dir = wallCheckDirection.x;
@@ -259,13 +261,12 @@ public class PlayerMovement : MonoBehaviour
             contactFilter, 
             hits,
             wallCheckDistance);
-        Debug.DrawRay(transform.position, Vector2.right * dir, Color.red);
         isWalled = hitCount > 0;
         Vector2 newNormal = Vector2.zero;
         for (int i = 0; i < hitCount; ++i)
         {
             newNormal += hits[i].normal;
-            //Debug.DrawRay(hits[i].point, hits[i].normal, Color.red);
+            Debug.DrawRay(hits[i].point, hits[i].normal, Color.red);
         }
 
         wallNormal = newNormal / hitCount;
@@ -423,7 +424,6 @@ public class PlayerMovement : MonoBehaviour
         
         //float verticalAmount = Vector2.Dot(inputDirection, wallNormal);
         float horizontalAmount = Vector2.Dot(inputDirection, forward);
-
         float targetClimbMaxSpeed = horizontalAmount * climbMaxSpeed;
         targetVelocity = forward * targetClimbMaxSpeed;
         
@@ -532,7 +532,7 @@ public class PlayerMovement : MonoBehaviour
     private void OnDrawGizmosSelected()
     {
         Gizmos.color = Color.red;
-        //Gizmos.DrawWireCube((Vector2)transform.position + Vector2.up * (wallCheckBoxHeight * 0.58f) + Vector2.right * wallCheckDistance, Vector2.one * wallCheckBoxHeight);
+        Gizmos.DrawWireCube((Vector2)transform.position + Vector2.up * (wallCheckBoxHeight * 0.58f) + Vector2.right * wallCheckDistance, Vector2.one * wallCheckBoxHeight);
     }
 
     public void Freeze()
