@@ -9,9 +9,9 @@ public class DeathZone : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        Debug.Log("DeathZone");
         if (other.CompareTag("Player"))
         {
+            Debug.Log("DeathZone");
             player.Die();
         }
     }

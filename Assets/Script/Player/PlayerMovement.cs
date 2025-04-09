@@ -477,7 +477,7 @@ public class PlayerMovement : MonoBehaviour
                 float accel = isGrounded ? acceleration : airAcceleration;
                 rb2d.AddForceX(targetVelocity.x > 0 ? accel : -accel, ForceMode2D.Force);
             }
-            else
+            else if (Mathf.Abs(rb2d.linearVelocityX) < maxSpeed)
             {
                 float decel = isGrounded ? deceleration : airDeceleration;
                 rb2d.AddForceX(targetVelocity.x > 0 ? -decel : decel, ForceMode2D.Force);
