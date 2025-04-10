@@ -38,7 +38,6 @@ public class Noria : MonoBehaviour
                     {
                         distancesTravelled[i] += splineLength;
                     }
-                    distancesTravelled[i] = -distancesTravelled[i];
                 }
                 else
                 {
