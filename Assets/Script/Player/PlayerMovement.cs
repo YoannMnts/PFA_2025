@@ -19,9 +19,9 @@ public class PlayerMovement : MonoBehaviour
     public Vector2 GroundNormal => groundNormal;
     
     public bool IsGrounded => isGrounded;
-    public bool IsClimbing => isClimbing;
     public bool IsWalled => isWalled;
     public bool IsRolling => isWalled;
+    public bool IsJumping => isJumping;
     public Rigidbody2D Rb2d => rb2d;
     #endregion
     
@@ -126,7 +126,6 @@ public class PlayerMovement : MonoBehaviour
     private bool isGrounded;
     private bool isJumping;
     private bool isWalled;
-    private bool isClimbing;
     private bool isWantsToGlide;
     private bool isRolling;
     private bool isEndRolling;
@@ -143,8 +142,6 @@ public class PlayerMovement : MonoBehaviour
     private Vector2 inputDirection;
     private Vector2 wallCheckDirection;
     private RaycastHit2D[] hits;
-
-    private Vector2 lastWallNormal;
     
     private void OnValidate()
     {
@@ -171,7 +168,6 @@ public class PlayerMovement : MonoBehaviour
         if (isGrounded)
         {
             isJumping = false;
-            isClimbing = false;
         }
         
         HandleGround();
@@ -182,7 +178,7 @@ public class PlayerMovement : MonoBehaviour
         
         if (!isGrounded)
         {
-            if (!isClimbing)
+            if (!isWalled)
             {
                 groundNormal = Vector2.up;
                 float fallSpeed = isWalled ? maxFallSpeed * wallFallSpeedMultiplier : maxFallSpeed;
@@ -239,8 +235,18 @@ public class PlayerMovement : MonoBehaviour
 
     private void HandleWalls()
     {
-        if (Mathf.Abs(targetVelocity.x) > .05f && !isJumping)
+        if (isWalled)
+            wallCheckDirection = -wallNormal;
+        else if(isJumping)
+            wallCheckDirection = CurrentVelocity.x > 0 ? Vector2.right : Vector2.left;
+        else if (Mathf.Abs(targetVelocity.x) > .05f)
             wallCheckDirection = targetVelocity.x > 0 ? Vector2.right : Vector2.left;
+        else
+        {
+            isWalled = false;
+            wallNormal = Vector2.zero;
+            return;
+        }
 
         float dir = wallCheckDirection.x;
         ContactFilter2D contactFilter = new ContactFilter2D()
@@ -269,16 +275,14 @@ public class PlayerMovement : MonoBehaviour
             Debug.DrawRay(hits[i].point, hits[i].normal, Color.red);
         }
 
-        wallNormal = newNormal / hitCount;
+        if(hitCount == 0)
+            wallNormal = Vector2.zero;
+        else
+            wallNormal = newNormal / hitCount;
         
         if (isWalled && !isGrounded)
         {
-            isClimbing = true;
             isJumping = false;
-        }
-        else
-        {
-            isClimbing = false;
         }
 
         if (isWalled && inputDirection == Vector2.zero)
@@ -318,6 +322,9 @@ public class PlayerMovement : MonoBehaviour
 
     private void HandleJump()
     {
+        if (isWalled)
+            isJumping = false;
+        
         if (wantsToJump > 0)
         {
             if (isGrounded && !isJumping)
@@ -339,7 +346,6 @@ public class PlayerMovement : MonoBehaviour
                 wallCheckDirection = wallCheckDirection == Vector2.right ? Vector2.left : Vector2.right;
             }
             wantsToJump = 0;
-            isClimbing = false;
         }
     }
     
@@ -347,7 +353,7 @@ public class PlayerMovement : MonoBehaviour
     {
         inputDirection = Vector2.ClampMagnitude(inputDirection, 1);
 
-        if (isWalled && isClimbing)
+        if (isWalled)
         {
             rb2d.gravityScale = 0;
             DoClimbMovement();
@@ -539,7 +545,6 @@ public class PlayerMovement : MonoBehaviour
     {
         StopAllCoroutines();
         isJumping = false;
-        isClimbing = false;
         isGrounded = false;
         isEndRolling = false;
         isWantsToGlide = false;

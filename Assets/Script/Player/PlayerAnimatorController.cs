@@ -31,12 +31,16 @@ namespace Script
         private void FixedUpdate()
         {
             HandleFacing();
+            if (Movement.IsJumping)
+            {
+                //animator.SetTrigger("IsJumping");
+            }
         }
 
         private void HandleFacing()
         {
             Vector2 up = Vector2.up;
-            if (Movement.IsClimbing && Movement.IsWalled && !Movement.IsGrounded)
+            if (Movement.IsWalled && !Movement.IsGrounded)
                 up = Movement.WallNormal;
             else if (Movement.IsGrounded)
                 up = Movement.GroundNormal;
@@ -46,7 +50,7 @@ namespace Script
             Vector2 perp = Vector2.Perpendicular(up);
             float dot = Vector2.Dot(Movement.InputDirection, perp);
             
-            if(Mathf.Abs(dot) > 0.1f && (Movement.IsGrounded || Movement.IsClimbing))
+            if(Mathf.Abs(dot) > 0.1f && (Movement.IsGrounded || Movement.IsWalled))
             {
                 facingDirection = dot < 0 ? -perp : perp;
                 spriteRenderer.flipX = dot < 0;
