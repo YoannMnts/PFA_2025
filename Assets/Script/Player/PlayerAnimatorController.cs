@@ -33,7 +33,7 @@ namespace Script
             HandleFacing();
             if (Movement.IsJumping)
             {
-                //animator.SetTrigger("IsJumping");
+                animator.SetTrigger("IsJumping");
             }
         }
 
@@ -53,7 +53,7 @@ namespace Script
             if(Mathf.Abs(dot) > 0.1f && (Movement.IsGrounded || Movement.IsWalled))
             {
                 facingDirection = dot < 0 ? -perp : perp;
-                spriteRenderer.flipX = dot < 0;
+                spriteRenderer.flipX = dot > 0;
             }
             else
                 facingDirection = spriteRenderer.flipX ? -perp : perp;
