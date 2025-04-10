@@ -5,10 +5,12 @@ using UnityEngine.Splines;
 public class Noria : MonoBehaviour
 {
     public SplineContainer splineContainer;
-    public float speed; 
+    public float speed;
+    public bool reversed;
     private float distanceTravelled = 0f;
     public GameObject[] paddles; 
     public float[] distancesTravelled;
+    
 
     private float splineLength;
 
@@ -23,17 +25,30 @@ public class Noria : MonoBehaviour
         }
     }
 
-    void Update()
+    void LateUpdate()
     {
         for (int i = 0; i < paddles.Length; i++)
         {
             if (distancesTravelled[i] != null)
             {
-                distancesTravelled[i] += speed * Time.deltaTime;
-                if (distancesTravelled[i] >= splineLength)
+                if (reversed)
                 {
-                    distancesTravelled[i] -= splineLength;
+                    distancesTravelled[i] -= speed * Time.deltaTime;
+                    if (distancesTravelled[i] <= 0)
+                    {
+                        distancesTravelled[i] += splineLength;
+                    }
+                    distancesTravelled[i] = -distancesTravelled[i];
                 }
+                else
+                {
+                    distancesTravelled[i] += speed * Time.deltaTime;
+                    if (distancesTravelled[i] >= splineLength)
+                    {
+                        distancesTravelled[i] -= splineLength;
+                    }
+                }
+                
 
                 Vector3 positionLocal = splineContainer.Spline.EvaluatePosition(distancesTravelled[i] / splineLength);
                 paddles[i].transform.position = splineContainer.transform.TransformPoint(positionLocal);
@@ -43,7 +58,6 @@ public class Noria : MonoBehaviour
                 if (tangentWorld != Vector3.zero)
                 {
                     float angle = Mathf.Atan2(tangentLocal.y, tangentLocal.x) * Mathf.Rad2Deg;
-                    Debug.Log(angle);
                     paddles[i].transform.rotation = Quaternion.Euler(0, 0, angle);
                 }
             }
