@@ -324,7 +324,6 @@ public class PlayerMovement : MonoBehaviour
     {
         if (isWalled)
             isJumping = false;
-        
         if (wantsToJump > 0)
         {
             if (isGrounded && !isJumping)

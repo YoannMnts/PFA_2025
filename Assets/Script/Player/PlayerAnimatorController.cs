@@ -56,7 +56,7 @@ namespace Script
                 spriteRenderer.flipX = dot > 0;
             }
             else
-                facingDirection = spriteRenderer.flipX ? -perp : perp;
+                facingDirection = spriteRenderer.flipX ? perp : -perp;
         }
     }
 }
