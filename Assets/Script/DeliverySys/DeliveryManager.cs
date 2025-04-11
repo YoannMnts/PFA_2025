@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using Script.DeliverySys;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class DeliveryManager : MonoBehaviour
@@ -8,12 +9,7 @@ public class DeliveryManager : MonoBehaviour
     [SerializeField]
     private LetterData[] letterData;
 
-    private Dictionary<PnjData, PnjInteraction> pnjs;
-
-    private void Awake()
-    {
-        pnjs = new Dictionary<PnjData, PnjInteraction>();
-    }
+    private Dictionary<PnjData, PnjInteraction> pnjs = new Dictionary<PnjData, PnjInteraction>();
 
     public void Add(PnjInteraction pnjInteraction)
     {
@@ -25,7 +21,7 @@ public class DeliveryManager : MonoBehaviour
         pnjs.Remove(pnjInteraction.pnjData);
     }
 
-    public void ReceiverCheck(PnjInteraction pnjInteraction)
+    public void DeliveryCheck(PnjInteraction pnjInteraction)
     {
         for (int i = 0; i < letterData.Length; i++)
         {
@@ -33,6 +29,8 @@ public class DeliveryManager : MonoBehaviour
             {
                 Debug.Log("I'm a receiver");
             }
+            else if (pnjInteraction.pnjData == letterData[i].sender) ;
+                GameObject.Find(letterData[i].receiver.name).GetComponent<PnjInteraction>().enabled = true;
         }
     }
 }

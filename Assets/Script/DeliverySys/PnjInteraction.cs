@@ -1,4 +1,5 @@
 using System;
+using Script;
 using Script.DeliverySys;
 using Unity.VisualScripting;
 using UnityEngine;
@@ -25,8 +26,12 @@ public class PnjInteraction : MonoBehaviour
     }
 
     private void OnTriggerEnter2D(Collider2D other)
-    { 
+    {
         if (other.CompareTag("Player"))
-            deliveryManager.ReceiverCheck(this);
+        {
+            deliveryManager.DeliveryCheck(this);
+            Debug.Log(other);
+            other.GetComponentInParent<Player>().Inputs.SwitchCurrentActionMap("PnjInteraction");
+        }
     }
 }
