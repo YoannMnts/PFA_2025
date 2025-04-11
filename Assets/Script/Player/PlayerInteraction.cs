@@ -24,7 +24,7 @@ namespace Script
                 Debug.Log("Interact");
         }
 
-        public void InteractInput(InputAction.CallbackContext context)
+        public void InteractInput()
         {
             isInteract = true;
         }
