@@ -34,4 +34,12 @@ public class PnjInteraction : MonoBehaviour
             other.GetComponentInParent<Player>().Inputs.SwitchCurrentActionMap("PnjInteraction");
         }
     }
+
+    private void OnTriggerExit2D(Collider2D other)
+    {
+        if (other.CompareTag("Player"))
+        {
+            other.GetComponentInParent<Player>().Inputs.SwitchCurrentActionMap("GamePlay");
+        }
+    }
 }
