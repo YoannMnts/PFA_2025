@@ -1,32 +1,30 @@
 ﻿using System;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 namespace Script
 {
     public class PlayerInteraction : MonoBehaviour
     {
-        private PnjInteraction pnjInteraction;
+        public bool IsInteract => isInteract;
         private bool isInteract;
-
-        private void Awake()
-        {
-            pnjInteraction = GetComponent<PnjInteraction>();
-        }
+        private int wantsToInteract;
 
         private void FixedUpdate()
         {
-            HandleInteract();
+            IsInteracting();
         }
 
-        private void HandleInteract()
+        private void IsInteracting()
         {
-            if (isInteract)
-                Debug.Log("Interact");
+            wantsToInteract--;
+            isInteract = wantsToInteract > 0;
         }
 
-        public void InteractInput()
+
+        public void InteractInput(InputAction.CallbackContext context)
         {
-            isInteract = true;
+            wantsToInteract = 6;
         }
     }
 }
