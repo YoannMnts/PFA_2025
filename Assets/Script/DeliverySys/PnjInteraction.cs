@@ -25,17 +25,16 @@ public class PnjInteraction : MonoBehaviour
         deliveryManager.Remove(this);
     }
 
-    private void OnTriggerEnter2D(Collider2D other)
+    private void OnTriggerStay2D(Collider2D other)
     {
         if (other.CompareTag("Player"))
         {
-            deliveryManager.DeliveryCheck(this);
-            Debug.Log(other);
             other.GetComponentInParent<Player>().Inputs.SwitchCurrentActionMap("PnjInteraction");
+            deliveryManager.DeliveryCheck(this);
         }
     }
-
-    private void OnTriggerExit2D(Collider2D other)
+    
+     private void OnTriggerExit2D(Collider2D other)
     {
         if (other.CompareTag("Player"))
         {
