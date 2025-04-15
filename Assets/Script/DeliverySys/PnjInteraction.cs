@@ -17,12 +17,12 @@ public class PnjInteraction : MonoBehaviour
 
     private void OnEnable()
     {
-        deliveryManager.Add(this);
+        deliveryManager.AddPnj(this);
     }
 
     private void OnDisable()
     {
-        deliveryManager.Remove(this);
+        deliveryManager.RemovePnj(this);
     }
 
     private void OnTriggerStay2D(Collider2D other)
