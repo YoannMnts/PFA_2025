@@ -3,10 +3,13 @@ using System.Collections.Generic;
 using NUnit.Framework;
 using Script.DeliverySys;
 using UnityEngine;
+using UnityEngine.Serialization;
 
-public class MirorDataRuntime : MonoBehaviour
+public class Letter : MonoBehaviour
 {
     public LetterData letterData;
+    [SerializeField]
+    public Letter nextLetter;
     private DeliveryManager deliveryManager;
 
     private void Awake()

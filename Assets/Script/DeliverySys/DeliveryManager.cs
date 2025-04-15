@@ -10,29 +10,24 @@ public class DeliveryManager : MonoBehaviour
     
     
     [SerializeField]
-    private LetterData[] letterData;
+    private LetterData[] letterDataTab;
     private Dictionary<PnjData, PnjInteraction> pnjs = new Dictionary<PnjData, PnjInteraction>();
     [SerializeField] 
     private Player player;
-    private List<MirorDataRuntime> activeLetter = new List<MirorDataRuntime>();
-    
-
+    private List<Letter> activeLetter = new List<Letter>();
     public void AddPnj(PnjInteraction pnjInteraction)
     {
         pnjs.Add(pnjInteraction.pnjData, pnjInteraction);
     }
-
     public void RemovePnj(PnjInteraction pnjInteraction)
     {
         pnjs.Remove(pnjInteraction.pnjData);
     }
-
-    public void addLetter(MirorDataRuntime mirorData)
+    public void addLetter(Letter mirorData)
     {
         activeLetter.Add(mirorData);
     }
-
-    public void removeLetter(MirorDataRuntime mirorData)
+    public void removeLetter(Letter mirorData)
     {
         activeLetter.Remove(mirorData);
     }
@@ -46,6 +41,7 @@ public class DeliveryManager : MonoBehaviour
                 if (pnjInteraction.pnjData == activeLetter[i].letterData.receiver)
                 {
                     Debug.Log("I received the delivery");
+                    activeLetter[i].nextLetter.enabled = true;
                     activeLetter[i].enabled = false;
                 }
                 else if (pnjInteraction.pnjData == activeLetter[i].letterData.sender)
