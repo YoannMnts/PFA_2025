@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0eeb945c88124c10989ad86d225d13c2, type: 3}
-  m_Name: Letter1
+  m_Name: StartLetter
   m_EditorClassIdentifier: 
-  sender: {fileID: 11400000, guid: a8e02d414e45cc34a93975248246175f, type: 2}
-  receiver: {fileID: 11400000, guid: e12fe3b1bd0924141abf9f3f8ba990c5, type: 2}
-  text: Blablablablablabla
-  nextLetter: {fileID: 11400000, guid: db12275729703a24cbbe0c96fa2a0220, type: 2}
+  sender: {fileID: 0}
+  receiver: {fileID: 11400000, guid: a8e02d414e45cc34a93975248246175f, type: 2}
+  text: i start
+  nextLetter: {fileID: 11400000, guid: ecc6aacc6a5a377479b401905ad1fb70, type: 2}

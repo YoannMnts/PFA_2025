@@ -9,5 +9,6 @@ namespace Script.DeliverySys
         public PnjData receiver;
         [TextArea]
         public string text;
+        public LetterData nextLetter;
     }
 }

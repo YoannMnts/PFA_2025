@@ -9,12 +9,12 @@ namespace Script
         public PlayerInput Inputs => playerInput;
         public PlayerMovement Movement => movement;
         public PlayerAnimatorController Animator => animator;
-        
+        public PlayerInteraction Interaction => playerInteraction;
         
         
         [SerializeField]
         private PlayerInput playerInput;
-        
+        private PlayerInteraction playerInteraction;
         private PlayerMovement movement;
         private PlayerAnimatorController animator;
 
@@ -24,6 +24,7 @@ namespace Script
         {
             movement = GetComponent<PlayerMovement>();
             animator = GetComponent<PlayerAnimatorController>();
+            playerInteraction = GetComponent<PlayerInteraction>();
         }
 
         private void FixedUpdate()

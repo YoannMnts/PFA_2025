@@ -17,21 +17,28 @@ public class PnjInteraction : MonoBehaviour
 
     private void OnEnable()
     {
-        deliveryManager.Add(this);
+        deliveryManager.AddPnj(this);
     }
 
     private void OnDisable()
     {
-        deliveryManager.Remove(this);
+        deliveryManager.RemovePnj(this);
     }
 
-    private void OnTriggerEnter2D(Collider2D other)
+    private void OnTriggerStay2D(Collider2D other)
     {
         if (other.CompareTag("Player"))
         {
-            deliveryManager.DeliveryCheck(this);
-            Debug.Log(other);
             other.GetComponentInParent<Player>().Inputs.SwitchCurrentActionMap("PnjInteraction");
+            deliveryManager.DeliveryCheck(this);
+        }
+    }
+    
+     private void OnTriggerExit2D(Collider2D other)
+    {
+        if (other.CompareTag("Player"))
+        {
+            other.GetComponentInParent<Player>().Inputs.SwitchCurrentActionMap("GamePlay");
         }
     }
 }
