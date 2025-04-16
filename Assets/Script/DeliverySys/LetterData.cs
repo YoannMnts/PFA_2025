@@ -7,8 +7,8 @@ namespace Script.DeliverySys
     {
         public PnjData sender;
         public PnjData receiver;
+        public LetterData[] dependencies;
         [TextArea]
         public string text;
-        public LetterData nextLetter;
     }
 }
