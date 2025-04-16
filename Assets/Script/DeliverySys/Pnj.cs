@@ -4,7 +4,7 @@ using Script.DeliverySys;
 using Unity.VisualScripting;
 using UnityEngine;
 
-public class PnjInteraction : MonoBehaviour
+public class Pnj : PlayerInteractable
 {
     public PnjData pnjData;
     
@@ -25,20 +25,23 @@ public class PnjInteraction : MonoBehaviour
         deliveryManager.RemovePnj(this);
     }
 
-    private void OnTriggerStay2D(Collider2D other)
+    public void DeliverLetter(Letter letter)
     {
-        if (other.CompareTag("Player"))
-        {
-            other.GetComponentInParent<Player>().Inputs.SwitchCurrentActionMap("PnjInteraction");
-            deliveryManager.DeliveryCheck(this);
-        }
+        Debug.Log($"DeliverLetter {letter.letterData.name}", gameObject);
     }
-    
-     private void OnTriggerExit2D(Collider2D other)
+
+    public override int GetPriority()
     {
-        if (other.CompareTag("Player"))
-        {
-            other.GetComponentInParent<Player>().Inputs.SwitchCurrentActionMap("GamePlay");
-        }
+        return 1;
+    }
+
+    public override void Interact()
+    { 
+        deliveryManager.DeliveryCheck(this);
+    }
+
+    public override bool CanInteract()
+    {
+        return true;
     }
 }
