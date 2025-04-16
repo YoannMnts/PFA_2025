@@ -5,50 +5,97 @@ using Script.DeliverySys;
 using Unity.VisualScripting;
 using UnityEngine;
 
+[DefaultExecutionOrder(-100)]
 public class DeliveryManager : MonoBehaviour
 {
-    
-    
     [SerializeField]
     private LetterData[] letterDataTab;
-    private Dictionary<PnjData, PnjInteraction> pnjs = new Dictionary<PnjData, PnjInteraction>();
     [SerializeField] 
     private Player player;
-    private List<Letter> activeLetter = new List<Letter>();
-    public void AddPnj(PnjInteraction pnjInteraction)
+    
+    private List<Letter> activeLetter;
+    private List<LetterData> completedLetters;
+    private Dictionary<PnjData, Pnj> pnjs;
+
+    private void Awake()
     {
-        pnjs.Add(pnjInteraction.pnjData, pnjInteraction);
-    }
-    public void RemovePnj(PnjInteraction pnjInteraction)
-    {
-        pnjs.Remove(pnjInteraction.pnjData);
-    }
-    public void addLetter(Letter mirorData)
-    {
-        activeLetter.Add(mirorData);
-    }
-    public void removeLetter(Letter mirorData)
-    {
-        activeLetter.Remove(mirorData);
+        pnjs = new Dictionary<PnjData, Pnj>();
+        activeLetter = new List<Letter>();
+        completedLetters = new List<LetterData>();
     }
 
-    public void DeliveryCheck(PnjInteraction pnjInteraction)
+    private void Start()
     {
-        if (player.Interaction.IsInteract)
+        for (int i = 0; i < letterDataTab.Length; i++)
         {
-            for (int i = 0; i < activeLetter.Count; i++)
+            if (letterDataTab[i].dependencies.Length == 0)
             {
-                if (pnjInteraction.pnjData == activeLetter[i].letterData.receiver)
+                Letter letter = CreateLetter(letterDataTab[i]);
+                activeLetter.Add(letter);
+            }
+                
+        }
+    }
+
+    private Letter CreateLetter(LetterData letterData)
+    {
+        Letter letter = new Letter()
+        {
+            letterData = letterData,
+            deliveryManager = this,
+            receiver = pnjs[letterData.receiver],
+            sender = pnjs[letterData.sender],
+        };
+        return letter;
+    }
+
+    public void AddPnj(Pnj pnj)
+    {
+        pnjs.Add(pnj.pnjData, pnj);
+    }
+    public void RemovePnj(Pnj pnj)
+    {
+        pnjs.Remove(pnj.pnjData);
+    }
+
+    public void DeliveryCheck(Pnj pnj)
+    {
+        List<Letter> copy = new List<Letter>(activeLetter);
+        foreach (Letter letter in copy)
+        {
+            if (pnj == letter.receiver)
+            {
+                activeLetter.Remove(letter);
+                pnj.DeliverLetter(letter);
+                completedLetters.Add(letter.letterData);
+            }
+        }
+        CreateValidLetters();
+    }
+
+    private void CreateValidLetters()
+    {
+        for (int i = 0; i < letterDataTab.Length; i++)
+        {
+            LetterData letterData = letterDataTab[i];
+            if (completedLetters.Contains(letterData))
+            {
+                continue;
+            }
+            bool hasCompletedDependencies = true;
+            for (int j = 0; j < letterData.dependencies.Length; j++)
+            {
+                LetterData dependency = letterData.dependencies[j];
+                if (!completedLetters.Contains(dependency))
                 {
-                    Debug.Log("I received the delivery");
-                    activeLetter[i].nextLetter.enabled = true;
-                    activeLetter[i].enabled = false;
+                    hasCompletedDependencies = false;
+                    break;
                 }
-                else if (pnjInteraction.pnjData == activeLetter[i].letterData.sender)
-                {
-                    GameObject.Find(activeLetter[i].letterData.receiver.name).GetComponent<PnjInteraction>().enabled = true;
-                    Debug.Log("I am sending a delivery");
-                }
+            }
+            if (hasCompletedDependencies)
+            {
+                Letter letter = CreateLetter(letterData);
+                activeLetter.Add(letter);
             }
         }
     }

@@ -6,6 +6,15 @@
             "id": "86e8bacd-36dc-40b0-a4b7-27677cb04e18",
             "actions": [
                 {
+                    "name": "Interact",
+                    "type": "Button",
+                    "id": "de03a4a4-0a3e-4d4c-a010-d4561e3c4a00",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
                     "name": "Move",
                     "type": "Value",
                     "id": "be6624e3-9302-475c-874b-0ff7de085dc7",
@@ -185,6 +194,17 @@
                     "action": "Gliding",
                     "isComposite": false,
                     "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "6fa82cfe-7a40-4590-a7f9-967121962081",
+                    "path": "<Gamepad>/buttonSouth",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Interact",
+                    "isComposite": false,
+                    "isPartOfComposite": false
                 }
             ]
         },
@@ -234,6 +254,17 @@
                     "name": "",
                     "id": "7bb98167-b99e-489c-b1a7-be2a07b4475b",
                     "path": "<Gamepad>/buttonSouth",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Intecract",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "20d238f7-b543-47da-a2e7-cdc700e1c1de",
+                    "path": "<Keyboard>/f",
                     "interactions": "",
                     "processors": "",
                     "groups": "",

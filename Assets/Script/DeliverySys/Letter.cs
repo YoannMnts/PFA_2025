@@ -5,25 +5,11 @@ using Script.DeliverySys;
 using UnityEngine;
 using UnityEngine.Serialization;
 
-public class Letter : MonoBehaviour
+[System.Serializable]
+public class Letter
 {
     public LetterData letterData;
-    [SerializeField]
-    public Letter nextLetter;
-    private DeliveryManager deliveryManager;
-
-    private void Awake()
-    {
-        deliveryManager = GameObject.FindGameObjectWithTag("DeliveryManager").GetComponent<DeliveryManager>();
-    }
-
-    private void OnEnable()
-    {
-        deliveryManager.addLetter(this);
-    }
-
-    private void OnDisable()
-    {
-        deliveryManager.removeLetter(this);
-    }
+    public Pnj sender;
+    public Pnj receiver;
+    public DeliveryManager deliveryManager;
 }
