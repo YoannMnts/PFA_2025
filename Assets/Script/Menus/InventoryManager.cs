@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.Rendering;
 using UnityEngine.Serialization;
 
 public class InventoryManager : MonoBehaviour
@@ -14,6 +15,10 @@ public class InventoryManager : MonoBehaviour
     void Start()
     {
         panelSelector.GetComponent<RectTransform>().anchoredPosition = panels[currentPanel].GetComponent<RectTransform>().anchoredPosition;
+        foreach (GameObject panel in panels)
+        {
+            panel.GetComponent<Panel>().Close();
+        }
         inventoryTopPanel.SetActive(false);
     }
     public void OpenTab(InputAction.CallbackContext context)
@@ -34,12 +39,11 @@ public class InventoryManager : MonoBehaviour
                 currentPanel = 0;
                 panelSelector.GetComponent<RectTransform>().anchoredPosition = panels[currentPanel].GetComponent<RectTransform>().anchoredPosition;
                 inventoryTopPanel.SetActive(false);
-                
-                
             }
             else
             {
                 inventoryTopPanel.SetActive(true);
+                panels[0].GetComponent<Panel>().Open();
             }
         }
     }

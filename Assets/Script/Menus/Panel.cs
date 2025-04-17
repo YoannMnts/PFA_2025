@@ -6,9 +6,9 @@ public class Panel : MonoBehaviour
 
     public virtual void Awake()
     {
-        panel.SetActive(false);
+ 
     }
-    public void Open()
+    public virtual void Open()
     {
         panel.SetActive(true);
     }
