@@ -352,7 +352,7 @@ public class PlayerMovement : MonoBehaviour
     {
         inputDirection = Vector2.ClampMagnitude(inputDirection, 1);
 
-        if (isWalled)
+        if (isWalled && !isGrounded)
         {
             rb2d.gravityScale = 0;
             DoClimbMovement();

@@ -8,6 +8,8 @@ using UnityEngine;
 [DefaultExecutionOrder(-100)]
 public class DeliveryManager : MonoBehaviour
 {
+    public List<Letter> ActiveLetter => activeLetter;
+    
     [SerializeField]
     private LetterData[] letterDataTab;
     [SerializeField] 

@@ -274,7 +274,7 @@ MonoBehaviour:
     m_Bits: 8
   wallCheckBoxHeight: 0.18
   wallCheckDistance: 0.5
-  wallAngle: 120
+  wallAngle: 89
   wallNormalJumpForce: 27
   wallJumpForceMultiplier: 1
   wallFallSpeedMultiplier: 0.2

@@ -18,7 +18,6 @@ namespace Script
 
         public void InteractInput(InputAction.CallbackContext context)
         {
-            Debug.Log("InteractInput");
             PlayerInteractable currentPlayerInteractable = null;
             foreach (PlayerInteractable interactable in playerInteractables)
             {
