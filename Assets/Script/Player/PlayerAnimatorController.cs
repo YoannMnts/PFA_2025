@@ -31,10 +31,8 @@ namespace Script
         private void FixedUpdate()
         {
             HandleFacing();
-            if (Movement.IsJumping)
-            {
-                animator.SetTrigger("IsJumping");
-            }
+            animator.SetBool("IsJumping", Movement.IsJumping);
+            animator.SetBool("IsClimbing", Movement.IsWalled && !Movement.IsGrounded);
         }
 
         private void HandleFacing()
@@ -45,18 +43,23 @@ namespace Script
             else if (Movement.IsGrounded)
                 up = Movement.GroundNormal;
             
-            spriteRenderer.transform.up = Vector2.Lerp(spriteRenderer.transform.up, up,rotationSmoothness * Time.deltaTime);
+            //spriteRenderer.transform.up = Vector2.Lerp(spriteRenderer.transform.up, up,rotationSmoothness * Time.deltaTime);
 
             Vector2 perp = Vector2.Perpendicular(up);
             float dot = Vector2.Dot(Movement.InputDirection, perp);
             
-            if(Mathf.Abs(dot) > 0.1f && (Movement.IsGrounded || Movement.IsWalled))
+            if(Mathf.Abs(dot) > 0.1f)
             {
-                facingDirection = dot < 0 ? -perp : perp;
-                spriteRenderer.flipX = dot > 0;
+                if (Movement.IsGrounded)
+                {
+                    facingDirection = dot < 0 ? -perp : perp;
+                    spriteRenderer.flipX = dot > 0;
+                }
+                else if (Movement.IsWalled)
+                    spriteRenderer.flipY = dot < 0;
             }
-            else
-                facingDirection = spriteRenderer.flipX ? perp : -perp;
+            if (!Movement.IsWalled || Movement.IsGrounded)
+                spriteRenderer.flipY = false;
         }
     }
 }
