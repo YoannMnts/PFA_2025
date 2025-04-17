@@ -33,6 +33,7 @@ namespace Script
             HandleFacing();
             animator.SetBool("IsJumping", Movement.IsJumping);
             animator.SetBool("IsClimbing", Movement.IsWalled && !Movement.IsGrounded);
+            animator.SetBool("IsFalling", Movement.CurrentVelocity.y < -0.05f);
         }
 
         private void HandleFacing()
@@ -56,7 +57,7 @@ namespace Script
                     spriteRenderer.flipX = dot > 0;
                 }
                 else if (Movement.IsWalled)
-                    spriteRenderer.flipY = dot < 0;
+                    spriteRenderer.flipX = Movement.WallNormal.x > 0;
             }
             if (!Movement.IsWalled || Movement.IsGrounded)
                 spriteRenderer.flipY = false;
