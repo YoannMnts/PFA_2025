@@ -34,6 +34,7 @@ namespace Script
             animator.SetBool("IsJumping", Movement.IsJumping);
             animator.SetBool("IsClimbing", Movement.IsWalled && !Movement.IsGrounded);
             animator.SetBool("IsFalling", Movement.CurrentVelocity.y < -0.05f);
+            animator.SetBool("IsRunning", Mathf.Abs(Movement.CurrentVelocity.x) > 8);
         }
 
         private void HandleFacing()
