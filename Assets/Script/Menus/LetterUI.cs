@@ -14,6 +14,8 @@ public class LetterUI : MonoBehaviour
     public Vector3 destinationPosition ;
     public Vector3 destinationPositionOnMap;
     public bool pinned = false;
+    public string content = "olala";
+    public string author = "leguman";
     private void OnEnable()
     {
         pinnedImage.enabled = false;

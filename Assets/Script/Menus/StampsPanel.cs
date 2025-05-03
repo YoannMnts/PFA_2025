@@ -4,65 +4,109 @@ using UnityEngine.UI;
 
 public class StampsPanel : Panel
 {
-    [SerializeField] private Image[] stampsFrames;
+    [SerializeField] private RectTransform selectionPanel;
+    [SerializeField] private GridLayoutGroup stampsFramesContainer;
+    private Image[] stampsFrames;
+    [SerializeField] private Image zoomedStamp;
     [SerializeField] public Sprite[] stamps;
-    [SerializeField] private TextMeshProUGUI pageText;
-
+    [SerializeField] private Sprite notUnlockedStamp;
+    private bool[] unlocked;
     private int count;
-    private int currentPage = 0;
-    private int stampsPerPage = 4;
-    private int pagesCount;
+    private int rowCount;
+    private int lastUnlocked;
+    private int currentSelected;
 
     public override void Awake()
     {
-        count = stamps.Length;
-        pagesCount = Mathf.CeilToInt(count / stampsPerPage);
+        int childrenCount = stampsFramesContainer.transform.childCount;
+        count = childrenCount;
+        unlocked = new bool[count];
+        rowCount = 5;
+        stampsFrames = new Image[count];
+        for (int i = 0; i < count; i++)
+        {
+            unlocked[i] = false;
+            stampsFrames[i] = stampsFramesContainer.transform.GetChild(i).GetComponent<Image>();
+        }
+        
         base.Awake();
     }
 
-    void OnEnable()
+    public override void Open()
     {
+        base.Open();
+        currentSelected = 0;
+        for (int i = 0; i < count; i++) 
+        { 
+            if (unlocked[i] == false) 
+            { 
+                stampsFrames[i].sprite = notUnlockedStamp;
+            }
+            else 
+            { 
+                stampsFrames[i].sprite = stamps[i];
+            }
+        }
+        selectionPanel.position = stampsFrames[0].rectTransform.position;
         DisplayStamps();
-        pageText.text = "Page " + (currentPage+1).ToString();
     }
+
     public override void RightDPad()
     {
         base.LeftDPad();
-        currentPage++;
-        if (currentPage >= pagesCount)
+        currentSelected++;
+        if (currentSelected >= count)
         {
-            currentPage = 0;
+            currentSelected = 0;
         }
         DisplayStamps();
-        pageText.text = "Page " + (currentPage+1).ToString();    }
-
-    public override void Close()
-    {
-        base.Close();
-        currentPage = 0;
     }
+
 
     public override void LeftDPad()
     {
         base.RightDPad();
-        currentPage--;
-        if (currentPage < 0)
+        currentSelected--;
+        if (currentSelected < 0)
         {
-            currentPage = pagesCount-1;
+            currentSelected = count - 1;
         }
         DisplayStamps();
-        pageText.text = "Page " + (currentPage+1).ToString();
+    }
+
+    public override void TopDPad()
+    {
+        base.TopDPad();
+        currentSelected -= 10;
+        if (currentSelected < 0)
+        {
+            currentSelected += count;
+        }
+        DisplayStamps();
+    }
+
+    public override void BottomDPad()
+    {
+        base.BottomDPad();
+        currentSelected += 10;
+        if (currentSelected >= count)
+        {
+            currentSelected -= 50;
+        }
+        DisplayStamps();
     }
 
     void DisplayStamps()
     {
-        for (int i = 0; i < stampsPerPage; i++)
+        selectionPanel.position = stampsFrames[currentSelected].rectTransform.position;
+        if (unlocked[currentSelected])
         {
-            int index = (currentPage*stampsPerPage)+i;
-            if (index < stamps.Length)
-            {
-                stampsFrames[i].sprite = stamps[index];
-            }
+            zoomedStamp.sprite = stamps[currentSelected];
         }
+        else
+        {
+            zoomedStamp.sprite = notUnlockedStamp;
+        }
+        
     }
 }

@@ -9,6 +9,11 @@ public class LettersPanel : Panel
     [SerializeField] DeliveryManager deliveryManager;
     [SerializeField] GameObject letterTemplate;
     [SerializeField] DirectionHelp directionHelp;
+    [SerializeField] private GameObject moreUnderIndication;
+    [SerializeField] private GameObject moreOverIndication;
+    [SerializeField] private GameObject readingSheet;
+    [SerializeField] private TextMeshProUGUI letterText;
+    [SerializeField] private TextMeshProUGUI letterAuthor;
     private GameObject[] letters;
     private GameObject[] currentLetters;
     private LetterUI[] currentLettersData;
@@ -16,13 +21,16 @@ public class LettersPanel : Panel
     [SerializeField] Vector3 lettersBasePosition;
     [SerializeField] Vector3 lettersOffset;
     [SerializeField] int lettersByPage ;
-    private int lettersCount = 7;
+    private int lettersCount = 16;
     private int currentLevel;
     private int currentPage;
     public int[] pinnedCoordinates;
+    private bool isReading;
 
     public override void Close()
     {
+        readingSheet.SetActive(false);
+        isReading = false;
         foreach (GameObject letter in letters)
         {
             Destroy(letter);
@@ -33,6 +41,8 @@ public class LettersPanel : Panel
     public override void Open()
     {
         base.Open();
+        readingSheet.SetActive(false);
+        isReading = false;
         currentLevel = 0;
         currentPage = 0;
         letters = new GameObject[lettersCount];
@@ -52,6 +62,7 @@ public class LettersPanel : Panel
         base.Awake();
         currentLevel = 0;
         currentPage = 0;
+        
         pinnedCoordinates = null;
         letters = new GameObject[lettersCount];
         currentLetters = new GameObject[lettersByPage];
@@ -59,38 +70,47 @@ public class LettersPanel : Panel
     public override void TopDPad()
     {
         base.TopDPad();
-        currentLevel--;
-        if (currentLevel < 0)
+        if (isReading == false)
         {
-            if (currentPage == 0)
-            {
-                currentLevel = 0;
-            }
-            else
-            {
-                currentLevel = lettersByPage - 1;
-                currentPage--;
-                DisplayLetters();
-            }
+            currentLevel--;
+            if (currentLevel < 0) 
+            { 
+                if (currentPage == 0) 
+                { 
+                    currentLevel = 0;
+                }
+                else 
+                { 
+                    currentLevel = lettersByPage - 1; 
+                    currentPage--; 
+                    DisplayLetters();
+                }
+            } 
+            selectionPad.position = letters[currentLevel + (currentPage*lettersByPage)].GetComponent<RectTransform>().position;
         }
-        selectionPad.position = letters[currentLevel + (currentPage*lettersByPage)].GetComponent<RectTransform>().position;
+        
+        
     }
 
     public override void BottomDPad()
     {
         base.BottomDPad();
-        currentLevel++;
-        if ((currentPage*lettersByPage)+currentLevel >= lettersCount)
+        if (isReading == false)
         {
-            currentLevel = currentLevel-1;
+             currentLevel++;
+             if ((currentPage*lettersByPage)+currentLevel >= lettersCount) 
+             { 
+                 currentLevel = currentLevel-1;
+             }
+             else if (currentLevel >= lettersByPage) 
+             { 
+                 currentLevel = 0; 
+                 currentPage++; 
+                 DisplayLetters();
+             } 
+             selectionPad.position = letters[currentLevel+ (currentPage*lettersByPage)].GetComponent<RectTransform>().position;
         }
-        else if (currentLevel >= lettersByPage)
-        {
-            currentLevel = 0;
-            currentPage++;
-            DisplayLetters();
-        }
-        selectionPad.position = letters[currentLevel+ (currentPage*lettersByPage)].GetComponent<RectTransform>().position;
+       
     }
 
     public override void SouthButton()
@@ -99,8 +119,32 @@ public class LettersPanel : Panel
         Pin(currentLevel);
     }
 
+    public override void WestButton()
+    {
+        base.WestButton();  
+        Read();
+    }
+
     public void DisplayLetters()
     {
+        if ((currentPage+1)*lettersByPage < lettersCount)
+        {
+            moreUnderIndication.SetActive(true);
+        }
+        else
+        {
+            moreUnderIndication.SetActive(false);
+        }
+
+        if (currentPage > 0)
+        {
+            moreOverIndication.SetActive(true);
+        }
+        else
+        {
+            moreOverIndication.SetActive(false);
+        }
+        
         foreach (GameObject letter in currentLetters)
         {
             if (letter != null)
@@ -129,6 +173,22 @@ public class LettersPanel : Panel
         }
     }
 
+    public void Read()
+    {
+        if (readingSheet.gameObject.activeInHierarchy)
+        {
+            readingSheet.SetActive(false);
+            isReading = false;
+        }
+        else
+        {
+            readingSheet.SetActive(true);
+            isReading = true;
+            letterText.text = currentLettersData[currentLevel].content;
+            letterAuthor.text = "From : " + currentLettersData[currentLevel].author;
+        }
+        
+    }
     public void Pin(int index)
     {
         if (currentLettersData[index].pinned)

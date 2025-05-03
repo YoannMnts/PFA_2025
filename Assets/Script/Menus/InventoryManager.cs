@@ -127,4 +127,12 @@ public class InventoryManager : MonoBehaviour
             panels[currentPanel].GetComponent<Panel>().EastButton();
         }
     }
+
+    public void ReceiveInputWestButton(InputAction.CallbackContext context)
+    {
+        if (context.canceled)
+        {
+            panels[currentPanel].GetComponent<Panel>().WestButton();
+        }
+    }
 }
