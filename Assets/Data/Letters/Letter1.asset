@@ -14,5 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sender: {fileID: 11400000, guid: a8e02d414e45cc34a93975248246175f, type: 2}
   receiver: {fileID: 11400000, guid: e12fe3b1bd0924141abf9f3f8ba990c5, type: 2}
+  dependencies: []
   text: Blablablablablabla
-  nextLetter: {fileID: 11400000, guid: db12275729703a24cbbe0c96fa2a0220, type: 2}
+  interactionText: 
+  glansGain: 1
+  stampsGain: 0

@@ -10,7 +10,7 @@ namespace Script
         public PlayerMovement Movement => movement;
         public PlayerAnimatorController Animator => animator;
         public PlayerInteraction Interaction => playerInteraction;
-        
+        public int Glands => glands;
         
         [SerializeField]
         private PlayerInput playerInput;
@@ -19,6 +19,7 @@ namespace Script
         private PlayerAnimatorController animator;
 
         private Vector2 lastPosOnGround;
+        private int glands;
         
         private void Awake()
         {
@@ -40,6 +41,11 @@ namespace Script
         {
             movement.Rb2d.position = lastPosOnGround;
             movement.Freeze();
+        }
+
+        public void AddGlans(int amount)
+        {
+            glands += amount;
         }
     }
 }

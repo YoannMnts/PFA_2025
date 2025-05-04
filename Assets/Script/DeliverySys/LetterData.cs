@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.Serialization;
 
 namespace Script.DeliverySys
 {
@@ -10,5 +11,10 @@ namespace Script.DeliverySys
         public LetterData[] dependencies;
         [TextArea]
         public string text;
+        [TextArea]
+        public string interactionText;
+
+        public int glandsGain;
+        public int stampsGain;
     }
 }

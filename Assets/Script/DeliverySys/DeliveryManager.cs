@@ -9,7 +9,13 @@ using UnityEngine;
 public class DeliveryManager : MonoBehaviour
 {
     public List<Letter> ActiveLetter => activeLetter;
-    
+    public Sprite[] ActiveStampsTab => activeStampsTab;
+
+
+    [SerializeField] 
+    private Sprite[] stampsTab;
+    [SerializeField] 
+    private Sprite[] activeStampsTab;
     [SerializeField]
     private LetterData[] letterDataTab;
     [SerializeField] 
@@ -70,9 +76,11 @@ public class DeliveryManager : MonoBehaviour
                 activeLetter.Remove(letter);
                 pnj.DeliverLetter(letter);
                 completedLetters.Add(letter.letterData);
+                activeStampsTab[letter.letterData.stampsGain] = stampsTab[letter.letterData.stampsGain];
+                player.AddGlans(letter.letterData.glandsGain);
+                CreateValidLetters();
             }
         }
-        CreateValidLetters();
     }
 
     private void CreateValidLetters()
