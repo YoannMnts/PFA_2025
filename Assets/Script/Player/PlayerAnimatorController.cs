@@ -5,6 +5,11 @@ namespace Script
 {
     public class PlayerAnimatorController : MonoBehaviour
     {
+        private static readonly int IsJumping = Animator.StringToHash("IsJumping");
+        private static readonly int IsClimbing = Animator.StringToHash("IsClimbing");
+        private static readonly int IsGrounded = Animator.StringToHash("IsGrounded");
+        private static readonly int IsRunning = Animator.StringToHash("IsRunning");
+        private static readonly int VerticalVelocity = Animator.StringToHash("VerticalVelocity");
         private PlayerMovement Movement => player.Movement;
         
         [Header("Refs")] 
@@ -31,11 +36,14 @@ namespace Script
         private void FixedUpdate()
         {
             HandleFacing();
-            animator.SetBool("IsJumping", Movement.IsJumping);
-            animator.SetBool("IsClimbing", Movement.IsWalled && !Movement.IsGrounded);
-            animator.SetBool("IsFalling", Movement.CurrentVelocity.y < -0.05f);
-            animator.SetBool("IsRunning", Mathf.Abs(Movement.CurrentVelocity.x) > 8);
+            
+            animator.SetBool(IsJumping, Movement.IsJumping);
+            animator.SetBool(IsClimbing, Movement.IsWalled && !Movement.IsGrounded);
+            animator.SetBool(IsGrounded, Movement.IsGrounded);
+            animator.SetBool(IsRunning, Mathf.Abs(Movement.CurrentVelocity.x) > 8);
+            animator.SetFloat(VerticalVelocity, Movement.CurrentVelocity.y);
         }
+        
 
         private void HandleFacing()
         {
