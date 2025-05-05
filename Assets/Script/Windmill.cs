@@ -27,7 +27,6 @@ public class Windmill : MonoBehaviour
         {
             gameObject.transform.Rotate(Vector3.back, speed * Time.deltaTime);
         }
-        
         for (int i = 0; i < paddles.Length; i++)
         {
             paddlesTimers[i] += Time.deltaTime;

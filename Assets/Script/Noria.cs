@@ -59,6 +59,19 @@ public class Noria : MonoBehaviour
                     float angle = Mathf.Atan2(tangentLocal.y, tangentLocal.x) * Mathf.Rad2Deg;
                     paddles[i].transform.rotation = Quaternion.Euler(0, 0, angle);
                 }
+
+                if (distancesTravelled[i] >= 32 && distancesTravelled[i] <= 40)
+                {
+                    paddles[i].GetComponent<BoxCollider2D>().enabled = false;
+                }
+
+                else 
+                {
+                    if (paddles[i].GetComponent<BoxCollider2D>().enabled == false)
+                    {
+                        paddles[i].GetComponent<BoxCollider2D>().enabled = true;
+                    }
+                }
             }
         }
         
