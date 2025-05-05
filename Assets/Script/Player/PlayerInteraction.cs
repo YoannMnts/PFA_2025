@@ -18,20 +18,23 @@ namespace Script
 
         public void InteractInput(InputAction.CallbackContext context)
         {
-            PlayerInteractable currentPlayerInteractable = null;
-            foreach (PlayerInteractable interactable in playerInteractables)
+            if (context.performed)
             {
-                if (currentPlayerInteractable == null ||
-                    currentPlayerInteractable.GetPriority() < interactable.GetPriority())
+                PlayerInteractable currentPlayerInteractable = null;
+                foreach (PlayerInteractable interactable in playerInteractables)
                 {
-                    if (interactable.CanInteract())
-                        currentPlayerInteractable = interactable;
+                    if (currentPlayerInteractable == null ||
+                        currentPlayerInteractable.GetPriority() < interactable.GetPriority())
+                    {
+                        if (interactable.CanInteract())
+                            currentPlayerInteractable = interactable;
+                    }
                 }
-            }
 
-            if (currentPlayerInteractable != null)
-            {
-                currentPlayerInteractable.Interact();
+                if (currentPlayerInteractable != null)
+                {
+                    currentPlayerInteractable.Interact();
+                }
             }
         }
 
