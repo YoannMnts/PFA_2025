@@ -12,11 +12,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0eeb945c88124c10989ad86d225d13c2, type: 3}
   m_Name: Letter2
   m_EditorClassIdentifier: 
-  sender: {fileID: 11400000, guid: e12fe3b1bd0924141abf9f3f8ba990c5, type: 2}
-  receiver: {fileID: 11400000, guid: a8e02d414e45cc34a93975248246175f, type: 2}
+  sender: {fileID: 11400000, guid: ed1c784f61a160d49b72a96823946ba0, type: 2}
+  receiver: {fileID: 11400000, guid: bcc024c0f1e5725429233d9a12a7452f, type: 2}
   dependencies:
   - {fileID: 11400000, guid: ecc6aacc6a5a377479b401905ad1fb70, type: 2}
-  text: bloublabliblablou
+  text: 'Hello Vanessa,
+
+    How are you doing little one ? You know, I told you
+    about some adjustments where you live in. I just received confirmation that I
+    can do it. All the necessaries are ready, so I can come do my things whenever
+    you want.
+
+    Have a nice day, little one !
+
+    Jack.
+
+'
   interactionText: 
-  glansGain: 2
+  glandsGain: 0
   stampsGain: 1
