@@ -3,6 +3,7 @@ using UnityEngine;
 public class Panel : MonoBehaviour
 {
     public GameObject panel;
+    public DeliveryManager deliveryManager;
 
     public virtual void Awake()
     {

@@ -21,5 +21,5 @@ MonoBehaviour:
     have been taken care of, can you deal with it ? I\u2019m counting on you.\r\nWith
     friendship,\r\nCaptain Hans.\r\n"
   interactionText: 
-  glandsGain: 0
-  stampsGain: 0
+  glandsGain: 1
+  stampsGain: 35

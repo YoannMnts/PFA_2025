@@ -21,7 +21,7 @@ public class LettersPanel : Panel
     [SerializeField] Vector3 lettersBasePosition;
     [SerializeField] Vector3 lettersOffset;
     [SerializeField] int lettersByPage ;
-    private int lettersCount = 16;
+    private int lettersCount = 9;
     private int currentLevel;
     private int currentPage;
     public int[] pinnedCoordinates;
@@ -41,6 +41,7 @@ public class LettersPanel : Panel
     public override void Open()
     {
         base.Open();
+        lettersCount = deliveryManager.ActiveLetter.Count;
         readingSheet.SetActive(false);
         isReading = false;
         currentLevel = 0;
@@ -51,10 +52,18 @@ public class LettersPanel : Panel
         {
             GameObject letter = Instantiate(letterTemplate, panel.transform);
             letters[i] = letter;
+            letter.GetComponent<LetterUI>().SetUp(deliveryManager.ActiveLetter[i].letterData.text, deliveryManager.ActiveLetter[i].sender.pnjData.name, deliveryManager.ActiveLetter[i].receiver.pnjData.name);
             letter.SetActive(false);
         }
         DisplayLetters();
-        selectionPad.position = letters[0].GetComponent<RectTransform>().position;
+        if (lettersCount > 0)
+        {
+            selectionPad.position = letters[0].GetComponent<RectTransform>().position;
+        }
+        else
+        {
+            selectionPad.position = new Vector3(1000,1000,1000);
+        }
     }
 
     public override void Awake()
@@ -62,7 +71,7 @@ public class LettersPanel : Panel
         base.Awake();
         currentLevel = 0;
         currentPage = 0;
-        
+        lettersCount = deliveryManager.ActiveLetter.Count;
         pinnedCoordinates = null;
         letters = new GameObject[lettersCount];
         currentLetters = new GameObject[lettersByPage];
@@ -85,8 +94,16 @@ public class LettersPanel : Panel
                     currentPage--; 
                     DisplayLetters();
                 }
-            } 
-            selectionPad.position = letters[currentLevel + (currentPage*lettersByPage)].GetComponent<RectTransform>().position;
+            }
+
+            if (lettersCount > 0)
+            {
+                selectionPad.position = letters[currentLevel + (currentPage*lettersByPage)].GetComponent<RectTransform>().position;
+            }
+            else
+            {
+                selectionPad.position = new Vector3(1000,1000,1000);
+            }
         }
         
         
@@ -108,7 +125,15 @@ public class LettersPanel : Panel
                  currentPage++; 
                  DisplayLetters();
              } 
-             selectionPad.position = letters[currentLevel+ (currentPage*lettersByPage)].GetComponent<RectTransform>().position;
+            
+             if (lettersCount > 0)
+             {
+                 selectionPad.position = letters[currentLevel+ (currentPage*lettersByPage)].GetComponent<RectTransform>().position;
+             }
+             else
+             {
+                 selectionPad.position = new Vector3(1000,1000,1000);
+             }
         }
        
     }
@@ -144,7 +169,6 @@ public class LettersPanel : Panel
         {
             moreOverIndication.SetActive(false);
         }
-        
         foreach (GameObject letter in currentLetters)
         {
             if (letter != null)

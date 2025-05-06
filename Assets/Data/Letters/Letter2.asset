@@ -29,5 +29,5 @@ MonoBehaviour:
 
 '
   interactionText: 
-  glandsGain: 0
-  stampsGain: 1
+  glandsGain: 2
+  stampsGain: 15

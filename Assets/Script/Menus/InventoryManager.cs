@@ -1,3 +1,4 @@
+using TMPro;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.Rendering;
@@ -9,6 +10,10 @@ public class InventoryManager : MonoBehaviour
     [SerializeField] private GameObject panelSelector;
     [SerializeField] private PlayerInput playerInput;
     [SerializeField] private GameObject[] panels;
+    [SerializeField] private DeliveryManager deliveryManager;
+    [SerializeField] private GameObject acornsPanel;
+    [SerializeField] private TextMeshProUGUI acornsText;
+    [SerializeField] public int acornsCount;
     
     private int currentPanel = 0;
 
@@ -17,6 +22,7 @@ public class InventoryManager : MonoBehaviour
         panelSelector.GetComponent<RectTransform>().anchoredPosition = panels[currentPanel].GetComponent<RectTransform>().anchoredPosition;
         foreach (GameObject panel in panels)
         {
+            panel.GetComponent<Panel>().deliveryManager = deliveryManager;
             panel.GetComponent<Panel>().Close();
         }
         inventoryTopPanel.SetActive(false);
@@ -43,6 +49,7 @@ public class InventoryManager : MonoBehaviour
             else
             {
                 inventoryTopPanel.SetActive(true);
+                acornsText.text = acornsCount+" / 50";
                 panels[0].GetComponent<Panel>().Open();
             }
         }
@@ -58,10 +65,17 @@ public class InventoryManager : MonoBehaviour
             {
                 currentPanel = 0;
             }
-
-            panelSelector.GetComponent<RectTransform>().anchoredPosition =
-                panels[currentPanel].GetComponent<RectTransform>().anchoredPosition;
+            panelSelector.GetComponent<RectTransform>().anchoredPosition = panels[currentPanel].GetComponent<RectTransform>().anchoredPosition;
             panels[currentPanel].GetComponent<Panel>().Open();
+        }
+
+        if (currentPanel == 1 || currentPanel == 2)
+        {
+            acornsPanel.SetActive(false);
+        }
+        else
+        {
+            acornsPanel.SetActive(true);
         }
     }
     public void SwitchTabLeft(InputAction.CallbackContext context)
@@ -78,6 +92,14 @@ public class InventoryManager : MonoBehaviour
             panelSelector.GetComponent<RectTransform>().anchoredPosition =
                 panels[currentPanel].GetComponent<RectTransform>().anchoredPosition;
             panels[currentPanel].GetComponent<Panel>().Open();
+        }
+        if (currentPanel == 1 || currentPanel == 2)
+        {
+            acornsPanel.SetActive(false);
+        }
+        else
+        {
+            acornsPanel.SetActive(true);
         }
     }
 

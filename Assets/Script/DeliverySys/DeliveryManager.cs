@@ -9,13 +9,12 @@ using UnityEngine;
 public class DeliveryManager : MonoBehaviour
 {
     public List<Letter> ActiveLetter => activeLetter;
-    public Sprite[] ActiveStampsTab => activeStampsTab;
 
 
     [SerializeField] 
-    private Sprite[] stampsTab;
-    [SerializeField] 
-    private Sprite[] activeStampsTab;
+    private StampsPanel stampsPanel;
+    [SerializeField]
+    private InventoryManager inventoryManager;
     [SerializeField]
     private LetterData[] letterDataTab;
     [SerializeField] 
@@ -42,7 +41,6 @@ public class DeliveryManager : MonoBehaviour
                 Letter letter = CreateLetter(letterDataTab[i]);
                 activeLetter.Add(letter);
             }
-                
         }
     }
 
@@ -82,6 +80,8 @@ public class DeliveryManager : MonoBehaviour
             {
                 activeLetter.Remove(letter);
                 pnj.DeliverLetter(letter);
+                stampsPanel.UnlockStamp(letter.letterData.stampsGain);
+                inventoryManager.acornsCount += letter.letterData.glandsGain;
                 completedLetters.Add(letter.letterData);
                 activeStampsTab[letter.letterData.stampsGain] = stampsTab[letter.letterData.stampsGain];
                 player.AddGlans(letter.letterData.glansGain);

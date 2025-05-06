@@ -10,6 +10,8 @@ public class StampsPanel : Panel
     [SerializeField] private Image zoomedStamp;
     [SerializeField] public Sprite[] stamps;
     [SerializeField] private Sprite notUnlockedStamp;
+    [SerializeField] private TextMeshProUGUI title;
+    [SerializeField] private string[] names;
     private bool[] unlocked;
     private int count;
     private int rowCount;
@@ -28,7 +30,6 @@ public class StampsPanel : Panel
             unlocked[i] = false;
             stampsFrames[i] = stampsFramesContainer.transform.GetChild(i).GetComponent<Image>();
         }
-        
         base.Awake();
     }
 
@@ -47,7 +48,6 @@ public class StampsPanel : Panel
                 stampsFrames[i].sprite = stamps[i];
             }
         }
-        selectionPanel.position = stampsFrames[0].rectTransform.position;
         DisplayStamps();
     }
 
@@ -102,11 +102,17 @@ public class StampsPanel : Panel
         if (unlocked[currentSelected])
         {
             zoomedStamp.sprite = stamps[currentSelected];
+            title.text = names[currentSelected];
         }
         else
         {
             zoomedStamp.sprite = notUnlockedStamp;
+            title.text = "???";
         }
-        
+    }
+
+    public void UnlockStamp(int index)
+    {
+        unlocked[index] = true;
     }
 }

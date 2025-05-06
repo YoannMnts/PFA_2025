@@ -14,8 +14,8 @@ public class LetterUI : MonoBehaviour
     public Vector3 destinationPosition ;
     public Vector3 destinationPositionOnMap;
     public bool pinned = false;
-    public string content = "olala";
-    public string author = "leguman";
+    public string content ;
+    public string author ;
     private void OnEnable()
     {
         pinnedImage.enabled = false;
@@ -31,5 +31,13 @@ public class LetterUI : MonoBehaviour
     public void GetUnpinned()
     {
         pinnedImage.enabled = false;
+    }
+
+    public void SetUp(string content, string author, string destinationPerson)
+    {
+        this.content = content;
+        this.author = author;
+        this.destinationPerson.text = destinationPerson;
+        ;
     }
 }

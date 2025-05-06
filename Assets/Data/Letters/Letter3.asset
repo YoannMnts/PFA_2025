@@ -12,10 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0eeb945c88124c10989ad86d225d13c2, type: 3}
   m_Name: Letter3
   m_EditorClassIdentifier: 
-  sender: {fileID: 0}
-  receiver: {fileID: 0}
+  sender: {fileID: 11400000, guid: bcc024c0f1e5725429233d9a12a7452f, type: 2}
+  receiver: {fileID: 11400000, guid: ed1c784f61a160d49b72a96823946ba0, type: 2}
   dependencies: []
-  text: 
-  interactionText: 
+  text: eysyhsehyg
+  interactionText: Zzazaza
   glandsGain: 0
   stampsGain: 0
