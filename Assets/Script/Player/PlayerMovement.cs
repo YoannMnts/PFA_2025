@@ -201,7 +201,7 @@ public class PlayerMovement : MonoBehaviour
         if (wantsToRoll > 0 && !isRolling)
         {
             wantsToRoll--;
-            if (isGrounded)
+            if (!isWalled)
             {
                 isRolling = true;
                 StartCoroutine(DoRoll());
@@ -379,11 +379,11 @@ public class PlayerMovement : MonoBehaviour
         while (true)
         {
             yield return new WaitForFixedUpdate();
-            if (!isGrounded)
-            {
-                isRolling = false;
-                yield break;
-            }
+            //if (!isGrounded)
+            //{
+                //isRolling = false;
+                //yield break;
+            //}
 
             if(rb2d.linearVelocityY > .2f)
                 break;
