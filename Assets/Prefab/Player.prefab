@@ -38,6 +38,7 @@ Transform:
   m_Children:
   - {fileID: 368780891383949474}
   - {fileID: 8717969067453376586}
+  - {fileID: 2959208653294583207}
   - {fileID: 4308211211604071299}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -158,69 +159,53 @@ MonoBehaviour:
     m_ActionId: 3a86c82a-ae19-4d04-87f1-ce1b2e3ce768
     m_ActionName: 'GamePlay/Gliding[/XInputControllerWindows/rightTrigger]'
   - m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 3887953055138614702}
-        m_TargetAssemblyTypeName: Script.PlayerInteraction, Assembly-CSharp
-        m_MethodName: InteractInput
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_ActionId: 2fd249f2-f817-4007-bb3b-b5fa0888e13e
-    m_ActionName: PnjInteraction/Intecract
+      m_Calls: []
+    m_ActionId: de03a4a4-0a3e-4d4c-a010-d4561e3c4a00
+    m_ActionName: 'GamePlay/Interact[/XInputControllerWindows/buttonSouth]'
   - m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 8820890516512513759}
-        m_TargetAssemblyTypeName: PlayerMovement, Assembly-CSharp
-        m_MethodName: MoveInput
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_ActionId: e9d64ba5-7bfc-4afc-a9ad-a0f01078846f
-    m_ActionName: 'PnjInteraction/Move[/Keyboard/w,/Keyboard/s,/Keyboard/a,/Keyboard/d]'
+      m_Calls: []
+    m_ActionId: 6412dfcc-a81d-4995-b061-496e2c9663e7
+    m_ActionName: 'GamePlay/OpenMenu[/XInputControllerWindows/buttonNorth]'
   - m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 8820890516512513759}
-        m_TargetAssemblyTypeName: PlayerMovement, Assembly-CSharp
-        m_MethodName: RollingInput
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_ActionId: 55ff43f9-e2f3-45e5-ae05-66443d9e090b
-    m_ActionName: 'PnjInteraction/Rolling[/Keyboard/r]'
+      m_Calls: []
+    m_ActionId: a8bb235e-df6a-47cc-a364-f4490b934ccd
+    m_ActionName: GamePlay/CloseMenu
   - m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 8820890516512513759}
-        m_TargetAssemblyTypeName: PlayerMovement, Assembly-CSharp
-        m_MethodName: GlidingInput
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_ActionId: 7890fcc0-4af0-4899-904a-4a2911f2265e
-    m_ActionName: 'PnjInteraction/Gliding[/Keyboard/shift]'
+      m_Calls: []
+    m_ActionId: 144c7a5b-7947-43a5-9730-5cd8f64c1ad0
+    m_ActionName: 'Menu/CloseMenu[/XInputControllerWindows/buttonNorth]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 5aa2b84d-9dfb-43cc-8e99-2af543450743
+    m_ActionName: 'Menu/SwitchPanelRight[/XInputControllerWindows/rightShoulder]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: aa9992bd-2c5e-4086-8c35-dd4a1368e441
+    m_ActionName: 'Menu/SwitchPanelLeft[/XInputControllerWindows/leftShoulder]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 20c31d1b-513f-4600-a034-ad2c4b9a8569
+    m_ActionName: 'Menu/DPadLeft[/XInputControllerWindows/dpad/left]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 996aa7be-ce5a-42be-97f9-afa362a36606
+    m_ActionName: 'Menu/DPadRight[/XInputControllerWindows/dpad/right]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 49d7d962-a805-470e-a3d1-51c213fd6b5b
+    m_ActionName: 'Menu/DPadTop[/XInputControllerWindows/dpad/up]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 4d7f9271-ca99-4bc4-a99b-49d1928353fb
+    m_ActionName: 'Menu/DPadBottom[/XInputControllerWindows/dpad/down]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: f6f2700a-7335-4914-a8ca-e2fc717c66c7
+    m_ActionName: 'Menu/SouthButton[/XInputControllerWindows/buttonSouth]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: ce7e2186-fda7-44ba-9b48-70deb2e089d9
+    m_ActionName: 'Menu/EastButton[/XInputControllerWindows/buttonEast]'
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: GamePlay
@@ -252,6 +237,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   normalCollider: {fileID: 4567919334552783960}
+  runningCollider: {fileID: 4724200148513138063}
   gravityScale: 2
   acceleration: 70
   airAcceleration: 30
@@ -566,6 +552,84 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   m_Size: {x: 1, y: 1.6}
+  m_EdgeRadius: 0
+--- !u!1 &4724200148513138063
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2959208653294583207}
+  - component: {fileID: 5731208112875427402}
+  m_Layer: 0
+  m_Name: RunningCollider
+  m_TagString: Player
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2959208653294583207
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4724200148513138063}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1793842005310529686}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &5731208112875427402
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4724200148513138063}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: 0.6}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Size: {x: 1, y: 1.2}
   m_EdgeRadius: 0
 --- !u!1 &4945585924968141908
 GameObject:

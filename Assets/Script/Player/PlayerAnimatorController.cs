@@ -65,11 +65,9 @@ namespace Script
                     facingDirection = dot < 0 ? -perp : perp;
                     spriteRenderer.flipX = dot > 0;
                 }
-                else if (Movement.IsWalled)
-                    spriteRenderer.flipX = Movement.WallNormal.x > 0;
             }
-            if (!Movement.IsWalled || Movement.IsGrounded)
-                spriteRenderer.flipY = false;
+            if (Movement.IsWalled)
+                spriteRenderer.flipX = Movement.WallNormal.x > 0;
         }
     }
 }

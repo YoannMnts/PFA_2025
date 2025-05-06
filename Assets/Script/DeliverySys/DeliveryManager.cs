@@ -24,6 +24,7 @@ public class DeliveryManager : MonoBehaviour
     private List<Letter> activeLetter;
     private List<LetterData> completedLetters;
     private Dictionary<PnjData, Pnj> pnjs;
+    private bool alreadyInActiveLetter;
 
     private void Awake()
     {
@@ -47,6 +48,7 @@ public class DeliveryManager : MonoBehaviour
 
     private Letter CreateLetter(LetterData letterData)
     {
+        alreadyInActiveLetter = false;
         Letter letter = new Letter()
         {
             letterData = letterData,
@@ -54,6 +56,11 @@ public class DeliveryManager : MonoBehaviour
             receiver = pnjs[letterData.receiver],
             sender = pnjs[letterData.sender],
         };
+        foreach (var letterActive in activeLetter)
+        {
+            if (letterActive.letterData == letterData)
+                alreadyInActiveLetter = true;
+        }
         return letter;
     }
 
@@ -77,7 +84,7 @@ public class DeliveryManager : MonoBehaviour
                 pnj.DeliverLetter(letter);
                 completedLetters.Add(letter.letterData);
                 activeStampsTab[letter.letterData.stampsGain] = stampsTab[letter.letterData.stampsGain];
-                player.AddGlans(letter.letterData.glandsGain);
+                player.AddGlans(letter.letterData.glansGain);
                 CreateValidLetters();
             }
         }
@@ -105,7 +112,8 @@ public class DeliveryManager : MonoBehaviour
             if (hasCompletedDependencies)
             {
                 Letter letter = CreateLetter(letterData);
-                activeLetter.Add(letter);
+                if (!alreadyInActiveLetter)
+                    activeLetter.Add(letter);
             }
         }
     }

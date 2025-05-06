@@ -14,7 +14,7 @@ namespace Script.DeliverySys
         [TextArea]
         public string interactionText;
 
-        public int glandsGain;
+        public int glansGain;
         public int stampsGain;
     }
 }

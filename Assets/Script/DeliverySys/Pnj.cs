@@ -37,7 +37,6 @@ public class Pnj : PlayerInteractable
 
     public override void Interact()
     { 
-        Debug.Log("Interact");
         deliveryManager.DeliveryCheck(this);
     }
 

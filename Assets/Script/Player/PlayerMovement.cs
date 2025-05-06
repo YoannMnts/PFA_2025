@@ -35,6 +35,8 @@ public class PlayerMovement : MonoBehaviour
     [Header("Movement")]
     [SerializeField,Tooltip("The normal collider box")]
     private GameObject normalCollider;
+    [SerializeField, Tooltip("The collider for the player when running")]
+    private GameObject runningCollider;
     [SerializeField, Tooltip("Current gravity scale")] 
     private float gravityScale = 8;
     [SerializeField, Tooltip("The acceleration applied on the player")]
@@ -207,8 +209,8 @@ public class PlayerMovement : MonoBehaviour
         }
         
         rollCollider.SetActive(isRolling);
-        normalCollider.SetActive(!isRolling || isEndRolling);
-        
+        normalCollider.SetActive((!isRolling || isEndRolling) && Mathf.Abs(CurrentVelocity.x) < 8);
+        runningCollider.SetActive(Mathf.Abs(CurrentVelocity.x) > 8);
         if(isRolling)
             return;
 
