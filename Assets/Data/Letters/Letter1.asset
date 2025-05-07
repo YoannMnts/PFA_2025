@@ -14,12 +14,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sender: {fileID: 11400000, guid: a8e02d414e45cc34a93975248246175f, type: 2}
   receiver: {fileID: 11400000, guid: ed1c784f61a160d49b72a96823946ba0, type: 2}
-  dependencies: []
+  dependencies:
+  - {fileID: 11400000, guid: 7431f899d205c3d4a95dc48e03670356, type: 2}
   text: "Greetings Jack,\r\nI\u2019m writing this little note because I need a helping
     paw. You know that Vanessa moved in \u2026. Cave. And as I told you before, there\u2019s
     still some corrections to do for it to be more secure. The necessaries papers
     have been taken care of, can you deal with it ? I\u2019m counting on you.\r\nWith
     friendship,\r\nCaptain Hans.\r\n"
-  interactionText: 
-  glandsGain: 1
+  sendedText:
+  - 'letter 1 j''envoie '
+  receivedText:
+  - letter 1 je recois
+  glansGain: 0
   stampsGain: 35

@@ -28,6 +28,10 @@ MonoBehaviour:
     Jack.
 
 '
-  interactionText: 
-  glandsGain: 2
+  sendedText:
+  - letter 2 j'envoie 1
+  - letter 2 j'envoie 2
+  receivedText:
+  - letter 2 je recois
+  glansGain: 0
   stampsGain: 15

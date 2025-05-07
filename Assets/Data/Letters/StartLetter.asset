@@ -12,10 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0eeb945c88124c10989ad86d225d13c2, type: 3}
   m_Name: StartLetter
   m_EditorClassIdentifier: 
-  sender: {fileID: 11400000, guid: a8e02d414e45cc34a93975248246175f, type: 2}
+  sender: {fileID: 11400000, guid: cb733a65e3060ca4594e67efa36d5604, type: 2}
   receiver: {fileID: 11400000, guid: a8e02d414e45cc34a93975248246175f, type: 2}
   dependencies: []
-  text: 
-  interactionText: 
-  glandsGain: 0
+  text: Come to me bro
+  sendedText: []
+  receivedText:
+  - start letter je recois1
+  - start letter je recois2
+  glansGain: 0
   stampsGain: 0

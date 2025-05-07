@@ -8,7 +8,7 @@ public class MapPanel : Panel
     [SerializeField] private Image point;
     [SerializeField] private Image pinnedPoint;
     public float multiplicator;
-    private Vector3 offset ;
+
 
     public override void Close()
     {
@@ -27,7 +27,6 @@ public class MapPanel : Panel
     {
         base.Awake();
         lettersPanel.Awake();
-        offset = new Vector3(0, 0, 0);
     }
 
     public override void SouthButton()
@@ -53,12 +52,12 @@ public class MapPanel : Panel
 
     void SetPoints()
     {
-        Vector3 pos= (lettersPanel.ReturnPosOfLetter() * multiplicator)+offset;
+        Vector3 pos = (lettersPanel.ReturnPosOfLetter() * multiplicator);
         point.rectTransform.localPosition = new Vector3(pos.x, pos.y, 0);
         if (lettersPanel.pinnedCoordinates != null)
         {
             pinnedPoint.enabled = true;
-            Vector3 pinnedPos = (lettersPanel.ReturnPosOfPinnedLetter()*multiplicator)+offset;
+            Vector3 pinnedPos = (lettersPanel.ReturnPosOfPinnedLetter()*multiplicator);
             pinnedPoint.rectTransform.localPosition = new Vector3(pinnedPos.x, pinnedPos.y, 0);
         }
         else

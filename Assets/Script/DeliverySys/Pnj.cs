@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using Script;
 using Script.DeliverySys;
 using Unity.VisualScripting;
@@ -7,12 +8,16 @@ using UnityEngine;
 public class Pnj : PlayerInteractable
 {
     public PnjData pnjData;
+    public string baseLine;
     
     private DeliveryManager deliveryManager;
+    private List<string> linesLeft;
+    private bool justDoneTalking = false;
 
     private void Awake()
     {
         deliveryManager = GameObject.FindGameObjectWithTag("DeliveryManager").GetComponent<DeliveryManager>();
+        linesLeft = new List<string>();
     }
 
     private void OnEnable()
@@ -27,7 +32,28 @@ public class Pnj : PlayerInteractable
 
     public void DeliverLetter(Letter letter)
     {
-        Debug.Log($"DeliverLetter {letter.letterData.name}", gameObject);
+        for (int i = 0; i < letter.letterData.receivedText.Length; i++)
+        {
+            linesLeft.Add(letter.letterData.receivedText[i]);
+        }
+        if (linesLeft.Count > 0)
+        {
+            Debug.Log(linesLeft[0]);
+            linesLeft.RemoveAt(0);
+        }
+    }
+
+    public void GiveLetter(Letter letter)
+    {
+        for (int i = 0; i < letter.letterData.receivedText.Length; i++)
+        {
+            linesLeft.Add(letter.letterData.sendedText[i]);
+        }
+        if (linesLeft.Count > 0)
+        {
+            Debug.Log(linesLeft[0]);
+            linesLeft.RemoveAt(0);
+        }
     }
 
     public override int GetPriority()
@@ -36,9 +62,26 @@ public class Pnj : PlayerInteractable
     }
 
     public override void Interact()
-    { 
-        Debug.Log("Pnj Interact");
+    {
         deliveryManager.DeliveryCheck(this);
+        if (linesLeft.Count > 0)
+        {
+            Debug.Log(linesLeft[0]);
+            linesLeft.RemoveAt(0);
+            if (linesLeft.Count == 0)
+            {
+                justDoneTalking = true;
+            }
+        }
+        if (justDoneTalking)
+        {
+            justDoneTalking = false;
+            deliveryManager.CreateValidLetters(this);
+        }
+        else
+        {
+            Debug.Log(baseLine);
+        }
     }
 
     public override bool CanInteract()

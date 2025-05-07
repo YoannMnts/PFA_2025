@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using UnityEditor.ShaderGraph.Internal;
+using UnityEngine;
 
 namespace Script.DeliverySys
 {
@@ -6,5 +7,7 @@ namespace Script.DeliverySys
     public class PnjData : ScriptableObject
     {
         public string name;
+        public Vector3 mapPosition;
+        public Vector3 position;
     }
 }

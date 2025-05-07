@@ -52,7 +52,7 @@ public class LettersPanel : Panel
         {
             GameObject letter = Instantiate(letterTemplate, panel.transform);
             letters[i] = letter;
-            letter.GetComponent<LetterUI>().SetUp(deliveryManager.ActiveLetter[i].letterData.text, deliveryManager.ActiveLetter[i].sender.pnjData.name, deliveryManager.ActiveLetter[i].receiver.pnjData.name);
+            letter.GetComponent<LetterUI>().SetUp(deliveryManager.ActiveLetter[i].letterData.text, deliveryManager.ActiveLetter[i].sender.pnjData.name, deliveryManager.ActiveLetter[i].receiver.pnjData.name, deliveryManager.ActiveLetter[i].receiver.pnjData.position, deliveryManager.ActiveLetter[i].receiver.pnjData.mapPosition);
             letter.SetActive(false);
         }
         DisplayLetters();

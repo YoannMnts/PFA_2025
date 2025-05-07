@@ -12,7 +12,9 @@ namespace Script.DeliverySys
         [TextArea]
         public string text;
         [TextArea]
-        public string interactionText;
+        public string[] sendedText;
+        [TextArea]
+        public string[] receivedText;
 
         public int glansGain;
         public int stampsGain;

@@ -81,16 +81,14 @@ public class DeliveryManager : MonoBehaviour
                 activeLetter.Remove(letter);
                 pnj.DeliverLetter(letter);
                 stampsPanel.UnlockStamp(letter.letterData.stampsGain);
-                inventoryManager.acornsCount += letter.letterData.glandsGain;
+                inventoryManager.acornsCount += letter.letterData.glansGain;
                 completedLetters.Add(letter.letterData);
-                activeStampsTab[letter.letterData.stampsGain] = stampsTab[letter.letterData.stampsGain];
                 player.AddGlans(letter.letterData.glansGain);
-                CreateValidLetters();
             }
         }
     }
 
-    private void CreateValidLetters()
+    public void CreateValidLetters(Pnj pnj = null)
     {
         for (int i = 0; i < letterDataTab.Length; i++)
         {
@@ -114,6 +112,10 @@ public class DeliveryManager : MonoBehaviour
                 Letter letter = CreateLetter(letterData);
                 if (!alreadyInActiveLetter)
                     activeLetter.Add(letter);
+                if (letter.letterData.sender == pnj.pnjData)
+                {
+                    pnj.GiveLetter(letter);
+                }
             }
         }
     }

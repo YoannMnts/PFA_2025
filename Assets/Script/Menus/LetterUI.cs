@@ -19,8 +19,6 @@ public class LetterUI : MonoBehaviour
     private void OnEnable()
     {
         pinnedImage.enabled = false;
-        destinationPosition = new Vector3(27, -115, 21);
-        destinationPositionOnMap = new Vector3(10,10,10);
     }
 
     public void GetPinned()
@@ -33,11 +31,12 @@ public class LetterUI : MonoBehaviour
         pinnedImage.enabled = false;
     }
 
-    public void SetUp(string content, string author, string destinationPerson)
+    public void SetUp(string content, string author, string destinationPerson, Vector3 destinationPosition, Vector3 destinationPositionOnMap)
     {
         this.content = content;
         this.author = author;
-        this.destinationPerson.text = destinationPerson;
-        ;
+        this.destinationPerson.text = "To : " + destinationPerson;
+        this.destinationPosition = destinationPosition;
+        this.destinationPositionOnMap = destinationPositionOnMap;
     }
 }
