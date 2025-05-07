@@ -38,9 +38,9 @@ namespace Script
         {
             HandleFacing();
             
+            animator.SetBool(IsGrounded, Movement.IsGrounded);
             animator.SetBool(IsJumping, Movement.IsJumping);
             animator.SetBool(IsClimbing, Movement.IsWalled && !Movement.IsGrounded);
-            animator.SetBool(IsGrounded, Movement.IsGrounded);
             animator.SetBool(IsRunning, Mathf.Abs(Movement.CurrentVelocity.x) > 8);
             animator.SetFloat(VerticalVelocity, Movement.CurrentVelocity.y);
             animator.SetBool(IsGliding, Movement.IsGliding);

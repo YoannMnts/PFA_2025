@@ -206,6 +206,10 @@ MonoBehaviour:
       m_Calls: []
     m_ActionId: ce7e2186-fda7-44ba-9b48-70deb2e089d9
     m_ActionName: 'Menu/EastButton[/XInputControllerWindows/buttonEast]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: e47c44e0-65cd-42ce-8d64-20a56a712a26
+    m_ActionName: 'Menu/WestButton[/XInputControllerWindows/buttonWest]'
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: GamePlay

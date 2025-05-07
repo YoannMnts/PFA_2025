@@ -7,7 +7,7 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.Serialization;
-
+[DefaultExecutionOrder(-10)]
 [RequireComponent(typeof(Player))]
 public class PlayerMovement : MonoBehaviour
 {
