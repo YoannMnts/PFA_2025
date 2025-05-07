@@ -109,13 +109,17 @@ public class DeliveryManager : MonoBehaviour
             }
             if (hasCompletedDependencies)
             {
+                Debug.Log("zavma");
                 Letter letter = CreateLetter(letterData);
                 if (!alreadyInActiveLetter)
-                    activeLetter.Add(letter);
-                if (letter.letterData.sender == pnj.pnjData)
                 {
-                    pnj.GiveLetter(letter);
+                    activeLetter.Add(letter);
+                    if (letter.letterData.sender == pnj.pnjData)
+                    {
+                        pnj.GiveLetter(letter);
+                    }
                 }
+                    
             }
         }
     }

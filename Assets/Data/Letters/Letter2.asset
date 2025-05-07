@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Letter2
   m_EditorClassIdentifier: 
   sender: {fileID: 11400000, guid: ed1c784f61a160d49b72a96823946ba0, type: 2}
-  receiver: {fileID: 11400000, guid: bcc024c0f1e5725429233d9a12a7452f, type: 2}
+  receiver: {fileID: 11400000, guid: ed1c784f61a160d49b72a96823946ba0, type: 2}
   dependencies:
   - {fileID: 11400000, guid: ecc6aacc6a5a377479b401905ad1fb70, type: 2}
   text: 'Hello Vanessa,
