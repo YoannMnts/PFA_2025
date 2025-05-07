@@ -20,8 +20,9 @@ public class PlayerMovement : MonoBehaviour
     
     public bool IsGrounded => isGrounded;
     public bool IsWalled => isWalled;
-    public bool IsRolling => isWalled;
+    public bool IsRolling => isRolling;
     public bool IsJumping => isJumping;
+    public bool IsGliding => isGliding;
     public Rigidbody2D Rb2d => rb2d;
     #endregion
     
@@ -131,6 +132,7 @@ public class PlayerMovement : MonoBehaviour
     private bool isWantsToGlide;
     private bool isRolling;
     private bool isEndRolling;
+    private bool isGliding;
     
     private int wantsToJump;
     private int wantsToRoll;
@@ -144,7 +146,7 @@ public class PlayerMovement : MonoBehaviour
     private Vector2 inputDirection;
     private Vector2 wallCheckDirection;
     private RaycastHit2D[] hits;
-    
+
     private void OnValidate()
     {
         GetComponent<Rigidbody2D>().gravityScale = gravityScale;
@@ -228,10 +230,12 @@ public class PlayerMovement : MonoBehaviour
         {
             rb2d.linearVelocityY = -glidingFallSpeed;
             maxSpeed = glidingSpeedMultiplier * 10;
+            isGliding = true;
         }
         else
         {
             maxSpeed = 10;
+            isGliding = false;
         }
     }
 

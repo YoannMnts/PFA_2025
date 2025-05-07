@@ -10,6 +10,7 @@ namespace Script
         private static readonly int IsGrounded = Animator.StringToHash("IsGrounded");
         private static readonly int IsRunning = Animator.StringToHash("IsRunning");
         private static readonly int VerticalVelocity = Animator.StringToHash("VerticalVelocity");
+        private static readonly int IsGliding = Animator.StringToHash("IsGliding");
         private PlayerMovement Movement => player.Movement;
         
         [Header("Refs")] 
@@ -42,6 +43,7 @@ namespace Script
             animator.SetBool(IsGrounded, Movement.IsGrounded);
             animator.SetBool(IsRunning, Mathf.Abs(Movement.CurrentVelocity.x) > 8);
             animator.SetFloat(VerticalVelocity, Movement.CurrentVelocity.y);
+            animator.SetBool(IsGliding, Movement.IsGliding);
         }
         
 
