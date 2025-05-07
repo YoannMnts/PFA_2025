@@ -4,15 +4,17 @@ using Script;
 using Script.DeliverySys;
 using Unity.VisualScripting;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 public class Pnj : PlayerInteractable
 {
     public PnjData pnjData;
-    public string baseLine;
+    public string[] baseLines;
+    private int lastLineSaid; 
     
     private DeliveryManager deliveryManager;
     private List<string> linesLeft;
-    private bool justDoneTalking = false;
+    private bool justFinish = false;
 
     private void Awake()
     {
@@ -36,23 +38,14 @@ public class Pnj : PlayerInteractable
         {
             linesLeft.Add(letter.letterData.receivedText[i]);
         }
-        if (linesLeft.Count > 0)
-        {
-            Debug.Log(linesLeft[0]);
-            linesLeft.RemoveAt(0);
-        }
     }
 
     public void GiveLetter(Letter letter)
     {
+        Debug.Log("zour");
         for (int i = 0; i < letter.letterData.receivedText.Length; i++)
         {
             linesLeft.Add(letter.letterData.sendedText[i]);
-        }
-        if (linesLeft.Count > 0)
-        {
-            Debug.Log(linesLeft[0]);
-            linesLeft.RemoveAt(0);
         }
     }
 
@@ -64,23 +57,29 @@ public class Pnj : PlayerInteractable
     public override void Interact()
     {
         deliveryManager.DeliveryCheck(this);
+        if (linesLeft.Count == 0 && justFinish)
+        {
+            justFinish = false;
+            deliveryManager.CreateValidLetters(this);
+        }
         if (linesLeft.Count > 0)
         {
             Debug.Log(linesLeft[0]);
             linesLeft.RemoveAt(0);
             if (linesLeft.Count == 0)
             {
-                justDoneTalking = true;
+                justFinish = true;
             }
         }
-        if (justDoneTalking)
+        else if (linesLeft.Count <= 0)
         {
-            justDoneTalking = false;
-            deliveryManager.CreateValidLetters(this);
-        }
-        else
-        {
-            Debug.Log(baseLine);
+            int currentLine = Random.Range(0, baseLines.Length);
+            while (currentLine == lastLineSaid && baseLines.Length > 1)
+            {
+                currentLine = Random.Range(0, baseLines.Length);
+            }
+            Debug.Log(baseLines[currentLine]);
+            lastLineSaid = currentLine;
         }
     }
 

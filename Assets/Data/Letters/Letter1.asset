@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0eeb945c88124c10989ad86d225d13c2, type: 3}
   m_Name: Letter1
   m_EditorClassIdentifier: 
-  sender: {fileID: 11400000, guid: a8e02d414e45cc34a93975248246175f, type: 2}
-  receiver: {fileID: 11400000, guid: ed1c784f61a160d49b72a96823946ba0, type: 2}
+  sender: {fileID: 11400000, guid: ed1c784f61a160d49b72a96823946ba0, type: 2}
+  receiver: {fileID: 11400000, guid: a8e02d414e45cc34a93975248246175f, type: 2}
   dependencies:
   - {fileID: 11400000, guid: 7431f899d205c3d4a95dc48e03670356, type: 2}
   text: "Greetings Jack,\r\nI\u2019m writing this little note because I need a helping
@@ -23,7 +23,9 @@ MonoBehaviour:
     friendship,\r\nCaptain Hans.\r\n"
   sendedText:
   - 'letter 1 j''envoie '
+  - 'letter 1 j''envoie '
   receivedText:
+  - letter 1 je recois
   - letter 1 je recois
   glansGain: 0
   stampsGain: 35
