@@ -36,7 +36,7 @@ public class DeliveryManager : MonoBehaviour
         completedLetters = new List<LetterData>();
     }
 
-    /*private void Start()
+    private void Start()
     {
         CreateValidLetters(null);
     }
@@ -85,7 +85,6 @@ public class DeliveryManager : MonoBehaviour
                 player.AddGlans(letter.letterData.glansGain);
             }
         }
-        CreateValidLetters(pnj);
     }
 
     public void CreateValidLetters(Pnj pnj)
@@ -111,7 +110,7 @@ public class DeliveryManager : MonoBehaviour
                     break;
                 }
             }
-            if (hasCompletedDependencies && pnj.pnjData == letterData.sender)
+            if (hasCompletedDependencies)
             {
                 if (pnj == null)
                 {
