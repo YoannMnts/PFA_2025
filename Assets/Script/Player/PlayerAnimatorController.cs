@@ -41,9 +41,11 @@ namespace Script
             animator.SetBool(IsGrounded, Movement.IsGrounded);
             animator.SetBool(IsJumping, Movement.IsJumping);
             animator.SetBool(IsClimbing, Movement.IsWalled && !Movement.IsGrounded);
-            animator.SetBool(IsRunning, Mathf.Abs(Movement.CurrentVelocity.x) > 8);
+            animator.SetBool(IsRunning, Mathf.Abs(Movement.CurrentVelocity.x) > 0);
             animator.SetFloat(VerticalVelocity, Movement.CurrentVelocity.y);
             animator.SetBool(IsGliding, Movement.IsGliding);
+            animator.SetBool("IsRolling", Movement.IsRolling);
+            Debug.Log(Movement.CurrentVelocity.y);
         }
         
 
@@ -62,7 +64,7 @@ namespace Script
             
             if(Mathf.Abs(dot) > 0.1f)
             {
-                if (Movement.IsGrounded)
+                if (!Movement.IsRolling && !Movement.IsGliding)
                 {
                     facingDirection = dot < 0 ? -perp : perp;
                     spriteRenderer.flipX = dot > 0;
