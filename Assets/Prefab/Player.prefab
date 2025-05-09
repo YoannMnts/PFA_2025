@@ -314,6 +314,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0df22a1698ca4f6699fc1b62714a21c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dialoguePad: {fileID: 0}
 --- !u!114 &8258549204932650272
 MonoBehaviour:
   m_ObjectHideFlags: 0

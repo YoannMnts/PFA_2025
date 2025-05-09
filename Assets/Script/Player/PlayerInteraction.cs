@@ -8,6 +8,7 @@ namespace Script
     public class PlayerInteraction : MonoBehaviour
     {
         public bool HasInteractions => playerInteractables.Count > 0;
+        [SerializeField] private DialoguePad dialoguePad;
         private List<PlayerInteractable> playerInteractables;
         
         private void Awake()
@@ -43,7 +44,6 @@ namespace Script
             if (other.gameObject.TryGetComponent(out PlayerInteractable interactable))
             {
                 playerInteractables.Add(interactable);
-                Debug.Log($"Enter {interactable.name}");
             }
         }
 
@@ -52,7 +52,7 @@ namespace Script
             if (other.gameObject.TryGetComponent(out PlayerInteractable interactable))
             {
                 playerInteractables.Remove(interactable);
-                Debug.Log($"Exit {interactable.name}");
+                
             }
         }
     }

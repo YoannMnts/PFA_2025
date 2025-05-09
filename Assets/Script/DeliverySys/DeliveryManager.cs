@@ -14,9 +14,12 @@ public class DeliveryManager : MonoBehaviour
     [SerializeField] 
     private StampsPanel stampsPanel;
     [SerializeField]
+    private LettersPanel lettersPanel;
+    [SerializeField]
     private InventoryManager inventoryManager;
     [SerializeField]
     private LetterData[] letterDataTab;
+    [SerializeField] private Pnj[] pnjsTab;
     [SerializeField] 
     private Player player;
     
@@ -24,6 +27,7 @@ public class DeliveryManager : MonoBehaviour
     private List<LetterData> completedLetters;
     private Dictionary<PnjData, Pnj> pnjs;
     private bool alreadyInActiveLetter;
+    public  DialoguePad dialoguePad;
 
     private void Awake()
     {
@@ -34,15 +38,9 @@ public class DeliveryManager : MonoBehaviour
 
     private void Start()
     {
-        for (int i = 0; i < letterDataTab.Length; i++)
-        {
-            if (letterDataTab[i].dependencies.Length == 0)
-            {
-                Letter letter = CreateLetter(letterDataTab[i]);
-                activeLetter.Add(letter);
-            }
-        }
+        CreateValidLetters(null);
     }
+
 
     private Letter CreateLetter(LetterData letterData)
     {
@@ -76,8 +74,9 @@ public class DeliveryManager : MonoBehaviour
         List<Letter> copy = new List<Letter>(activeLetter);
         foreach (Letter letter in copy)
         {
-            if (pnj == letter.receiver)
+            if (pnj == letter.receiver && activeLetter.Contains(letter))
             {
+                lettersPanel.ResetPin();
                 activeLetter.Remove(letter);
                 pnj.DeliverLetter(letter);
                 stampsPanel.UnlockStamp(letter.letterData.stampsGain);
@@ -88,7 +87,7 @@ public class DeliveryManager : MonoBehaviour
         }
     }
 
-    public void CreateValidLetters(Pnj pnj = null)
+    public void CreateValidLetters(Pnj pnj)
     {
         for (int i = 0; i < letterDataTab.Length; i++)
         {
@@ -98,6 +97,10 @@ public class DeliveryManager : MonoBehaviour
                 continue;
             }
             bool hasCompletedDependencies = true;
+            for (int j = 0; j < pnjsTab.Length; j++)
+            {
+                pnjsTab[i].ActivatePopUp(false);
+            }
             for (int j = 0; j < letterData.dependencies.Length; j++)
             {
                 LetterData dependency = letterData.dependencies[j];
@@ -109,18 +112,54 @@ public class DeliveryManager : MonoBehaviour
             }
             if (hasCompletedDependencies)
             {
-                Debug.Log("zavma");
-                Letter letter = CreateLetter(letterData);
-                if (!alreadyInActiveLetter)
+                if (pnj == null)
                 {
-                    activeLetter.Add(letter);
-                    if (letter.letterData.sender == pnj.pnjData)
-                    {
-                        pnj.GiveLetter(letter);
+                    CheckPopUp(letterData);
+                }
+                else
+                {
+                    if (pnj.pnjData == letterData.sender)
+                    { 
+                        Letter letter = CreateLetter(letterData); 
+                        if (!alreadyInActiveLetter) 
+                        { 
+                            activeLetter.Add(letter); 
+                            if (letter.letterData.sender == pnj.pnjData) 
+                            { 
+                                pnj.GiveLetter(letter);
+                            }
+                        }
+                    }
+                    else 
+                    { 
+                        CheckPopUp(letterData);
                     }
                 }
-                    
             }
+        }
+    }
+
+    private void CheckPopUp(LetterData letterData)
+    {
+        for (int i = 0; i < pnjsTab.Length; i++)
+        {
+            if (pnjsTab[i].pnjData == letterData.sender )
+            {
+                pnjsTab[i].ActivatePopUp(true);
+                for (int j = 0; j < activeLetter.Count; j++)
+                {
+                    if (activeLetter[j].letterData == letterData)
+                    {
+                        pnjsTab[i].ActivatePopUp(false);
+                    }
+                }
+            }
+            else
+            {
+                pnjsTab[i].ActivatePopUp(false);
+            }
+
+            
         }
     }
 }

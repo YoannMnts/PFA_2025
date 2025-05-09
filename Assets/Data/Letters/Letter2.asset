@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Letter2
   m_EditorClassIdentifier: 
   sender: {fileID: 11400000, guid: ed1c784f61a160d49b72a96823946ba0, type: 2}
-  receiver: {fileID: 11400000, guid: ed1c784f61a160d49b72a96823946ba0, type: 2}
+  receiver: {fileID: 11400000, guid: dac50ed2bdd641b408b32ced63684d5b, type: 2}
   dependencies:
   - {fileID: 11400000, guid: ecc6aacc6a5a377479b401905ad1fb70, type: 2}
   text: 'Hello Vanessa,
@@ -29,9 +29,11 @@ MonoBehaviour:
 
 '
   sendedText:
-  - letter 2 j'envoie 1
-  - letter 2 j'envoie 2
+  - "\u2026 Good ! \u2026 I see ! Little one ! While you\u2019re here, give me a
+    second ! Aaaaaand ! Here, take this !"
+  - Could you bring it to Vanessa please ?! Knowing her, not sure she will react
+    to your presence ! So you should put it in her letter box.
   receivedText:
-  - letter 2 je recois
-  glansGain: 0
+  - Voila voila
+  glansGain: 4
   stampsGain: 15

@@ -21,7 +21,7 @@ public class LettersPanel : Panel
     [SerializeField] Vector3 lettersBasePosition;
     [SerializeField] Vector3 lettersOffset;
     [SerializeField] int lettersByPage ;
-    private int lettersCount = 9;
+    private int lettersCount;
     private int currentLevel;
     private int currentPage;
     public int[] pinnedCoordinates;
@@ -245,5 +245,23 @@ public class LettersPanel : Panel
     public Vector3 ReturnPosOfPinnedLetter()
     {
         return letters[(pinnedCoordinates[1]*lettersByPage)+pinnedCoordinates[0]].GetComponent<LetterUI>().destinationPositionOnMap;
+    }
+
+    public void ResetPin()
+    {
+        pinnedCoordinates = null;
+        directionHelp.active = false;
+        for (int i = 0; i < letters.Length; i++)
+        {
+            if (letters[i] != null)
+            {
+                LetterUI letterUI = letters[i].gameObject.GetComponent<LetterUI>();
+                if (letterUI.pinned)
+                {
+                    letterUI.pinned = false;
+                    break;
+                }
+            }
+        }
     }
 }

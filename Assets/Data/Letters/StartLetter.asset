@@ -12,13 +12,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0eeb945c88124c10989ad86d225d13c2, type: 3}
   m_Name: StartLetter
   m_EditorClassIdentifier: 
-  sender: {fileID: 11400000, guid: cb733a65e3060ca4594e67efa36d5604, type: 2}
-  receiver: {fileID: 11400000, guid: ed1c784f61a160d49b72a96823946ba0, type: 2}
+  sender: {fileID: 11400000, guid: bcc024c0f1e5725429233d9a12a7452f, type: 2}
+  receiver: {fileID: 11400000, guid: a8e02d414e45cc34a93975248246175f, type: 2}
   dependencies: []
-  text: Come to me bro
-  sendedText: []
+  text: "Greetings Hazel,\nI've heard you just got promoted to be the new village's
+    postman. First of all, congratulations ! \nI'd need to send an important letter,
+    could you help me with that as soon as you can ? You can always find me in the
+    townhall\nWith friendship,\r\nCaptain Hans."
+  sendedText:
+  - You found a letter from Hans in your letterbox
   receivedText:
-  - start letter je recois1
-  - start letter je recois2
+  - You must be the new postman ! A pleasure to meet you
+  - Thank you for coming this quickly
   glansGain: 1
-  stampsGain: 13
+  stampsGain: 0

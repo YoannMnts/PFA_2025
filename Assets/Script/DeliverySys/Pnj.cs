@@ -10,16 +10,19 @@ public class Pnj : PlayerInteractable
 {
     public PnjData pnjData;
     public string[] baseLines;
+    [SerializeField] private Sprite portrait;
+    [SerializeField] private GameObject popUp;
     private int lastLineSaid; 
     
     private DeliveryManager deliveryManager;
     private List<string> linesLeft;
-    private bool justFinish = false;
+    private bool isTalking = false;
 
     private void Awake()
     {
         deliveryManager = GameObject.FindGameObjectWithTag("DeliveryManager").GetComponent<DeliveryManager>();
         linesLeft = new List<string>();
+        popUp.SetActive(false);
     }
 
     private void OnEnable()
@@ -42,8 +45,7 @@ public class Pnj : PlayerInteractable
 
     public void GiveLetter(Letter letter)
     {
-        Debug.Log("zour");
-        for (int i = 0; i < letter.letterData.receivedText.Length; i++)
+        for (int i = 0; i < letter.letterData.sendedText.Length; i++)
         {
             linesLeft.Add(letter.letterData.sendedText[i]);
         }
@@ -56,31 +58,44 @@ public class Pnj : PlayerInteractable
 
     public override void Interact()
     {
+        
         deliveryManager.DeliveryCheck(this);
-        if (linesLeft.Count == 0 && justFinish)
+        if (linesLeft.Count == 0)
         {
-            justFinish = false;
             deliveryManager.CreateValidLetters(this);
         }
         if (linesLeft.Count > 0)
         {
-            Debug.Log(linesLeft[0]);
+            isTalking = true;
+            deliveryManager.dialoguePad.SetUp(portrait, linesLeft[0]);
             linesLeft.RemoveAt(0);
-            if (linesLeft.Count == 0)
-            {
-                justFinish = true;
-            }
         }
         else if (linesLeft.Count <= 0)
         {
-            int currentLine = Random.Range(0, baseLines.Length);
-            while (currentLine == lastLineSaid && baseLines.Length > 1)
+            if (isTalking)
             {
-                currentLine = Random.Range(0, baseLines.Length);
+                isTalking = false;
+                deliveryManager.dialoguePad.Close();
             }
-            Debug.Log(baseLines[currentLine]);
-            lastLineSaid = currentLine;
+            else
+            {
+                isTalking = true;
+                int currentLine = Random.Range(0, baseLines.Length);
+                while (currentLine == lastLineSaid && baseLines.Length > 1) 
+                { 
+                    currentLine = Random.Range(0, baseLines.Length);
+                } 
+                deliveryManager.dialoguePad.SetUp(portrait, baseLines[currentLine]); 
+                lastLineSaid = currentLine;
+            }
         }
+        deliveryManager.CreateValidLetters(null);
+            
+    }
+
+    public void ActivatePopUp(bool activate)
+    {
+        popUp.SetActive(activate);
     }
 
     public override bool CanInteract()
