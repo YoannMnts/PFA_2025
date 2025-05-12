@@ -256,7 +256,7 @@ MonoBehaviour:
   groundLayer:
     serializedVersion: 2
     m_Bits: 8
-  groundCheckRadius: 0.08
+  groundCheckRadius: 0.15
   minGroundAngle: 135
   maxGroundAngle: 45
   wallLayer:
