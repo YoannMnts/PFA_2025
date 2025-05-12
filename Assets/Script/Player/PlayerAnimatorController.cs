@@ -28,6 +28,7 @@ namespace Script
         private Vector2 facingDirection;
         
         public Vector2 FacingDirection => facingDirection;
+        public SpriteRenderer SpriteRenderer => spriteRenderer;
 
         private void Awake()
         {
@@ -68,7 +69,6 @@ namespace Script
                 {
                     facingDirection = dot < 0 ? -perp : perp;
                     spriteRenderer.flipX = dot > 0;
-                    Debug.Log("works");
                 }
             }
             if (Movement.IsWalled)
