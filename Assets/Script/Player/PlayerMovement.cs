@@ -346,11 +346,14 @@ public class PlayerMovement : MonoBehaviour
                 direction += Vector2.up * (jumpForce * wallJumpForceMultiplier);
                 rb2d.linearVelocityY = 0;
                 rb2d.AddForce(direction, ForceMode2D.Impulse);
-                //Debug.DrawRay(transform.position, direction, Color.red, 2);
                 isJumping = true;
                 wallCheckDirection = wallCheckDirection == Vector2.right ? Vector2.left : Vector2.right;
             }
             wantsToJump = 0;
+        }
+        if (rb2d.linearVelocityY < -0.01)
+        {
+            Debug.Log(transform.position.y);
         }
     }
     
@@ -507,7 +510,7 @@ public class PlayerMovement : MonoBehaviour
         else
         {
             Vector2 force = -rb2d.linearVelocity * (rb2d.mass * stopForce);
-            rb2d.AddForce(force * modifier);
+            rb2d.AddForceX(force.x * modifier);
         }
     }
     
