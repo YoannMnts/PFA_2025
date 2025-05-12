@@ -15,14 +15,15 @@ MonoBehaviour:
   sender: {fileID: 11400000, guid: bcc024c0f1e5725429233d9a12a7452f, type: 2}
   receiver: {fileID: 11400000, guid: a8e02d414e45cc34a93975248246175f, type: 2}
   dependencies: []
-  text: "Greetings Hazel,\nI've heard you just got promoted to be the new village's
-    postman. First of all, congratulations ! \nI'd need to send an important letter,
-    could you help me with that as soon as you can ? You can always find me in the
-    townhall\nWith friendship,\r\nCaptain Hans."
+  senderName: Hans
+  text: "Greetings <b>Hazel</b>,\nI've heard you just got promoted to be the new
+    village's <b>postman</b>. First of all, congratulations ! \nI'd need to send
+    an important letter, could you help me with that as soon as you can ? You can
+    always <b>find me in the townhall</b>\nWith friendship,\r\n<b>Captain Hans</b>."
   sendedText:
-  - You found a letter from Hans in your letterbox
+  - You found a <b>letter from Hans</b>  in your letterbox
   receivedText:
-  - You must be the new postman ! A pleasure to meet you
+  - You must be the <b>new postman</b>  ! A pleasure to meet you
   - Thank you for coming this quickly
   glansGain: 1
   stampsGain: 0

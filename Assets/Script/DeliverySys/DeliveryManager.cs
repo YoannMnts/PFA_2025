@@ -18,8 +18,11 @@ public class DeliveryManager : MonoBehaviour
     [SerializeField]
     private InventoryManager inventoryManager;
     [SerializeField]
+    private Notification notification;
+    [SerializeField]
     private LetterData[] letterDataTab;
     [SerializeField] private Pnj[] pnjsTab;
+    [SerializeField] private RewardParticles acornParticles, letterParticles, stampParticles;
     [SerializeField] 
     private Player player;
     
@@ -81,6 +84,17 @@ public class DeliveryManager : MonoBehaviour
                 pnj.DeliverLetter(letter);
                 stampsPanel.UnlockStamp(letter.letterData.stampsGain);
                 inventoryManager.acornsCount += letter.letterData.glansGain;
+                acornParticles.Reward(letter.letterData.glansGain);
+                stampParticles.Reward(1);
+                inventoryManager.OpenBagTemp();
+                if (letter.letterData.stampsGain >= 0)
+                {
+                    StartCoroutine(notification.ShowUpReward(letter.letterData.glansGain, true));
+                }
+                else
+                {
+                    StartCoroutine(notification.ShowUpReward(letter.letterData.glansGain, false));
+                }
                 completedLetters.Add(letter.letterData);
                 player.AddGlans(letter.letterData.glansGain);
             }
@@ -124,6 +138,9 @@ public class DeliveryManager : MonoBehaviour
                         if (!alreadyInActiveLetter) 
                         { 
                             activeLetter.Add(letter); 
+                            StartCoroutine(notification.ShowUpLetter(letter.letterData.receiver.name.ToString()));
+                            letterParticles.Reward(1);
+                            inventoryManager.OpenBagTemp();
                             if (letter.letterData.sender == pnj.pnjData) 
                             { 
                                 pnj.GiveLetter(letter);
@@ -133,6 +150,20 @@ public class DeliveryManager : MonoBehaviour
                     else 
                     { 
                         CheckPopUp(letterData);
+                    }
+                }
+            }
+            for (int k = 0; k < ActiveLetter.Count; k++)
+            {
+                for (int j = 0; j < pnjsTab.Length; j++)
+                {
+                    if (pnjsTab[j].pnjData == ActiveLetter[k].letterData.receiver)
+                    {
+                        pnjsTab[j].ActivatePopUp(true);
+                    }
+                    else
+                    {
+                        pnjsTab[j].ActivatePopUp(false);
                     }
                 }
             }
@@ -158,8 +189,22 @@ public class DeliveryManager : MonoBehaviour
             {
                 pnjsTab[i].ActivatePopUp(false);
             }
-
-            
+        }
+        
+        for (int i = 0; i < ActiveLetter.Count; i++)
+        {
+            for (int j = 0; j < pnjsTab.Length; j++)
+            {
+                if (pnjsTab[j].pnjData == ActiveLetter[i].letterData.receiver)
+                {
+                    pnjsTab[j].ActivatePopUp(true);
+                }
+                else
+                {
+                    pnjsTab[j].ActivatePopUp(false);
+                }
+            }
         }
     }
+    
 }

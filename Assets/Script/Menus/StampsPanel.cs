@@ -1,3 +1,4 @@
+using System.Collections;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -5,7 +6,7 @@ using UnityEngine.UI;
 public class StampsPanel : Panel
 {
     [SerializeField] private RectTransform selectionPanel;
-    [SerializeField] private GridLayoutGroup stampsFramesContainer;
+    [SerializeField] private GameObject stampsFramesContainer;
     private Image[] stampsFrames;
     [SerializeField] private Image zoomedStamp;
     [SerializeField] public Sprite[] stamps;
@@ -98,7 +99,8 @@ public class StampsPanel : Panel
 
     void DisplayStamps()
     {
-        selectionPanel.position = stampsFrames[currentSelected].rectTransform.position;
+        StopAllCoroutines();
+        StartCoroutine(MoveSelector(stampsFrames[currentSelected].rectTransform.anchoredPosition));
         if (unlocked[currentSelected])
         {
             zoomedStamp.sprite = stamps[currentSelected];
@@ -114,5 +116,22 @@ public class StampsPanel : Panel
     public void UnlockStamp(int index)
     {
         unlocked[index] = true;
+    }
+    IEnumerator MoveSelector(Vector3 destination)
+    {
+        float speed = 700f; ;
+        if (Vector3.Distance(destination, selectionPanel.anchoredPosition) > 200)
+        {
+            selectionPanel.anchoredPosition = destination;
+        }
+        else
+        {
+            while (Vector3.Distance(destination, selectionPanel.anchoredPosition) > 1)
+            {
+                selectionPanel.anchoredPosition = Vector3.MoveTowards(selectionPanel.anchoredPosition, destination, speed*Time.deltaTime);
+                yield return null;
+            }
+            selectionPanel.anchoredPosition = destination;
+        }
     }
 }

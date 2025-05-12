@@ -335,6 +335,17 @@
             "bindings": [
                 {
                     "name": "",
+                    "id": "e936e845-a045-4dd2-8e11-5c800c2cd956",
+                    "path": "<Gamepad>/buttonEast",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "CloseMenu",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
                     "id": "38230486-b29c-4ce5-9f48-d0c2f5c46137",
                     "path": "<Gamepad>/buttonNorth",
                     "interactions": "Hold",
@@ -392,7 +403,7 @@
                     "name": "",
                     "id": "1735d729-928d-4c0d-b41e-349c3a536158",
                     "path": "<Gamepad>/dpad/up",
-                    "interactions": "",
+                    "interactions": "Press(behavior=1)",
                     "processors": "",
                     "groups": "",
                     "action": "DPadTop",
@@ -403,7 +414,7 @@
                     "name": "",
                     "id": "ade2141d-0d2b-4799-9dea-7e0bc14a1ff8",
                     "path": "<Gamepad>/dpad/down",
-                    "interactions": "",
+                    "interactions": "Press(behavior=1)",
                     "processors": "",
                     "groups": "",
                     "action": "DPadBottom",
@@ -468,6 +479,34 @@
                     "processors": "",
                     "groups": "",
                     "action": "Interact",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        },
+        {
+            "name": "ScenarisedSequence",
+            "id": "09f0a460-96d5-42ad-8cb5-0dbe1ea739b6",
+            "actions": [
+                {
+                    "name": "Continue",
+                    "type": "Button",
+                    "id": "773ff0cb-5871-4381-95a7-449cedc83500",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "557506b3-0793-43c7-870f-bcbf71714b3d",
+                    "path": "<Gamepad>/buttonSouth",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Continue",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

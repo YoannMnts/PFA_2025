@@ -1,8 +1,10 @@
+using System.Collections;
 using TMPro;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.Rendering;
 using UnityEngine.Serialization;
+using UnityEngine.UI;
 
 public class InventoryManager : MonoBehaviour
 {
@@ -13,6 +15,7 @@ public class InventoryManager : MonoBehaviour
     [SerializeField] private DeliveryManager deliveryManager;
     [SerializeField] private GameObject acornsPanel;
     [SerializeField] private TextMeshProUGUI acornsText;
+    [SerializeField] public GameObject closedBag, openBag;
     [SerializeField] public int acornsCount;
     
     private int currentPanel = 0;
@@ -33,10 +36,14 @@ public class InventoryManager : MonoBehaviour
         {
             if (playerInput.currentActionMap.name == "Menu")
             {
+                openBag.SetActive(false);
+                closedBag.SetActive(true);
                 playerInput.SwitchCurrentActionMap("GamePlay");
             }
             else
             {
+                openBag.SetActive(true);
+                closedBag.SetActive(false);
                 playerInput.SwitchCurrentActionMap("Menu");
             }
             if (inventoryTopPanel.activeInHierarchy)
@@ -65,7 +72,8 @@ public class InventoryManager : MonoBehaviour
             {
                 currentPanel = 0;
             }
-            panelSelector.GetComponent<RectTransform>().anchoredPosition = panels[currentPanel].GetComponent<RectTransform>().anchoredPosition;
+            StopAllCoroutines();
+            StartCoroutine(MoveSelector(panels[currentPanel].GetComponent<RectTransform>().anchoredPosition));
             panels[currentPanel].GetComponent<Panel>().Open();
         }
 
@@ -88,9 +96,8 @@ public class InventoryManager : MonoBehaviour
             {
                 currentPanel = panels.Length - 1;
             }
-
-            panelSelector.GetComponent<RectTransform>().anchoredPosition =
-                panels[currentPanel].GetComponent<RectTransform>().anchoredPosition;
+            StopAllCoroutines();
+            StartCoroutine(MoveSelector(panels[currentPanel].GetComponent<RectTransform>().anchoredPosition));
             panels[currentPanel].GetComponent<Panel>().Open();
         }
         if (currentPanel == 1 || currentPanel == 2)
@@ -100,6 +107,27 @@ public class InventoryManager : MonoBehaviour
         else
         {
             acornsPanel.SetActive(true);
+        }
+    }
+
+    IEnumerator MoveSelector(Vector3 destination)
+    {
+        float speed = 1400f;
+        RectTransform rectTransform = panelSelector.GetComponent<RectTransform>();
+
+        if (Vector3.Distance(destination, rectTransform.anchoredPosition) > 1000)
+        {
+            rectTransform.anchoredPosition = destination;
+            
+        }
+        else
+        {
+            while (Vector3.Distance(destination, rectTransform.anchoredPosition) > 5)
+            {
+                rectTransform.anchoredPosition = Vector3.MoveTowards(rectTransform.anchoredPosition, destination, speed*Time.deltaTime);
+                yield return null;
+            }
+            rectTransform.anchoredPosition = destination;
         }
     }
 
@@ -156,5 +184,38 @@ public class InventoryManager : MonoBehaviour
         {
             panels[currentPanel].GetComponent<Panel>().WestButton();
         }
+    }
+
+    void OpenBag(bool open)
+    {
+        if (open)
+        {
+            openBag.SetActive(true);
+            closedBag.SetActive(false);
+        }
+        else
+        {
+            closedBag.SetActive(true);
+            openBag.SetActive(false);
+        }
+    }
+
+    public void OpenBagTemp()
+    {
+        StartCoroutine(BagOpenFor());
+    }
+
+    IEnumerator BagOpenFor()
+    {
+        float timer = 0;
+        while (timer < 4f)
+        {
+            openBag.SetActive(true);
+            closedBag.SetActive(false);
+            timer += Time.deltaTime;
+            yield return null;
+        }
+        closedBag.SetActive(true);
+        openBag.SetActive(false);
     }
 }

@@ -1,3 +1,4 @@
+using System.Collections;
 using TMPro;
 using UnityEngine;
 using UnityEngine.Serialization;
@@ -37,8 +38,9 @@ public class QuitPanel : Panel
             if (currentLevel >= 3) 
             { 
                 currentLevel = 0;
-            } 
-            selectPad.anchoredPosition = buttons[currentLevel].gameObject.GetComponent<RectTransform>().anchoredPosition ;
+            }
+
+            StartCoroutine(MoveSelector(buttons[currentLevel].gameObject.GetComponent<RectTransform>().anchoredPosition));
         }
        
        
@@ -55,7 +57,7 @@ public class QuitPanel : Panel
             {
                 currentLevel = 2;
             }
-            selectPad.anchoredPosition = buttons[currentLevel].gameObject.GetComponent<RectTransform>().anchoredPosition ;
+            StartCoroutine(MoveSelector(buttons[currentLevel].gameObject.GetComponent<RectTransform>().anchoredPosition));
         }
         
     }
@@ -148,6 +150,25 @@ public class QuitPanel : Panel
                 button.SetActive(false);
             }
             selectPad.gameObject.SetActive(false);
+        }
+    }
+    IEnumerator MoveSelector(Vector3 destination)
+    {
+        float speed = 1400f;
+        RectTransform rectTransform = selectPad;
+
+        if (Vector3.Distance(destination, rectTransform.anchoredPosition) > 200)
+        {
+            rectTransform.anchoredPosition = destination;
+        }
+        else
+        {
+            while (Vector3.Distance(destination, rectTransform.anchoredPosition) > 5)
+            {
+                rectTransform.anchoredPosition = Vector3.MoveTowards(rectTransform.anchoredPosition, destination, speed*Time.deltaTime);
+                yield return null;
+            }
+            rectTransform.anchoredPosition = destination;
         }
     }
 }

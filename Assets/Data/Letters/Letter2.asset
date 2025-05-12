@@ -16,23 +16,24 @@ MonoBehaviour:
   receiver: {fileID: 11400000, guid: dac50ed2bdd641b408b32ced63684d5b, type: 2}
   dependencies:
   - {fileID: 11400000, guid: ecc6aacc6a5a377479b401905ad1fb70, type: 2}
-  text: 'Hello Vanessa,
+  senderName: Jack
+  text: 'Hello <b>Vanessa</b> ,
 
-    How are you doing little one ? You know, I told you
-    about some adjustments where you live in. I just received confirmation that I
-    can do it. All the necessaries are ready, so I can come do my things whenever
-    you want.
+    How are you doing little one ? You know, I told
+    you about some <b>adjustments</b>  where you live in. I just received confirmation
+    that I can do it. All the <b>necessaries are ready</b>, so I can come do my things
+    whenever you want.
 
     Have a nice day, little one !
 
-    Jack.
+    <b>Jack</b> .
 
 '
   sendedText:
   - "\u2026 Good ! \u2026 I see ! Little one ! While you\u2019re here, give me a
     second ! Aaaaaand ! Here, take this !"
-  - Could you bring it to Vanessa please ?! Knowing her, not sure she will react
-    to your presence ! So you should put it in her letter box.
+  - Could you <b>bring it to Vanessa</b>  please ?! Knowing her, not sure she will
+    react to your presence ! So you should put it in her letter box.
   receivedText:
   - Voila voila
   glansGain: 4

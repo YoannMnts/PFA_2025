@@ -16,18 +16,21 @@ MonoBehaviour:
   receiver: {fileID: 11400000, guid: ed1c784f61a160d49b72a96823946ba0, type: 2}
   dependencies:
   - {fileID: 11400000, guid: 7431f899d205c3d4a95dc48e03670356, type: 2}
-  text: "Greetings Jack,\r\nI\u2019m writing this little note because I need a helping
-    paw. You know that Vanessa moved in \u2026. Cave. And as I told you before, there\u2019s
-    still some corrections to do for it to be more secure. The necessaries papers
-    have been taken care of, can you deal with it ? I\u2019m counting on you.\r\nWith
-    friendship,\r\nCaptain Hans.\r\n"
+  senderName: Captain Hans
+  text: "Greetings <b>Jack</b> ,\r\nI\u2019m writing this little note because I need
+    a <b>helping paw</b> . You know that <b>Vanessa moved in \u2026. a cave</b> .
+    And as I told you before, there\u2019s still some corrections to do for it to
+    be more <b>secure</b> . The necessaries papers have been taken care of, can you
+    deal with it ? I\u2019m counting on you.\r\nWith friendship,\r\n<b>Captain Hans</b>
+    .\r\n"
   sendedText:
-  - So, let's not wait more time. Could you bring this letter to Jack ? He lives
-    un bit higher above the river
-  - This is a letter of the greatest importance, but I trust you for the delivery
+  - 'So, let''s not wait more time. Could you bring this letter to <b>Jack</b>  ?
+    He lives un bit higher <b>above the river</b> '
+  - This is a letter of the <b>greatest importance</b> , but I trust you for the
+    delivery
   receivedText:
   - Hello little one ! You should be the new postman ?! What brings you here ?!
-  - Oh ?! You bring me a letter from Captain Hans ?! Should be about the new renovations
+  - Oh ?! You bring me a letter from Captain Hans ?! Should be about the <b>new renovations</b> 
     !
   - Thanks a lot, little one ! Here ! Take this as thanks !
   glansGain: 4
