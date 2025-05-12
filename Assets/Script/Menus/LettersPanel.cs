@@ -1,3 +1,5 @@
+using System;
+using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using Unity.VisualScripting;
@@ -11,10 +13,10 @@ public class LettersPanel : Panel
     [SerializeField] DirectionHelp directionHelp;
     [SerializeField] private GameObject moreUnderIndication;
     [SerializeField] private GameObject moreOverIndication;
-    [SerializeField] private GameObject readingSheet;
+    [SerializeField] private RectTransform readingSheet;
     [SerializeField] private TextMeshProUGUI letterText;
     [SerializeField] private TextMeshProUGUI letterAuthor;
-    private GameObject[] letters;
+    public GameObject[] letters;
     private GameObject[] currentLetters;
     private LetterUI[] currentLettersData;
     [SerializeField] private RectTransform selectionPad;
@@ -29,7 +31,7 @@ public class LettersPanel : Panel
 
     public override void Close()
     {
-        readingSheet.SetActive(false);
+        readingSheet.anchoredPosition = new Vector3(-743f,-1000f,0);
         isReading = false;
         foreach (GameObject letter in letters)
         {
@@ -42,7 +44,7 @@ public class LettersPanel : Panel
     {
         base.Open();
         lettersCount = deliveryManager.ActiveLetter.Count;
-        readingSheet.SetActive(false);
+        readingSheet.anchoredPosition = new Vector3(-743f,-1000f,0);
         isReading = false;
         currentLevel = 0;
         currentPage = 0;
@@ -52,8 +54,7 @@ public class LettersPanel : Panel
         {
             GameObject letter = Instantiate(letterTemplate, panel.transform);
             letters[i] = letter;
-            letter.GetComponent<LetterUI>().SetUp(deliveryManager.ActiveLetter[i].letterData.text, deliveryManager.ActiveLetter[i].sender.pnjData.name, deliveryManager.ActiveLetter[i].receiver.pnjData.name, deliveryManager.ActiveLetter[i].receiver.pnjData.position, deliveryManager.ActiveLetter[i].receiver.pnjData.mapPosition);
-            letter.SetActive(false);
+            letter.GetComponent<LetterUI>().SetUp(deliveryManager.ActiveLetter[i].letterData);
         }
         DisplayLetters();
         if (lettersCount > 0)
@@ -98,7 +99,8 @@ public class LettersPanel : Panel
 
             if (lettersCount > 0)
             {
-                selectionPad.position = letters[currentLevel + (currentPage*lettersByPage)].GetComponent<RectTransform>().position;
+                StartCoroutine(MoveSelector(letters[currentLevel + (currentPage * lettersByPage)]
+                    .GetComponent<RectTransform>().anchoredPosition));
             }
             else
             {
@@ -147,7 +149,11 @@ public class LettersPanel : Panel
     public override void WestButton()
     {
         base.WestButton();  
-        Read();
+        if (lettersCount > 0)
+        {
+            Read();
+        }
+        
     }
 
     public void DisplayLetters()
@@ -199,17 +205,21 @@ public class LettersPanel : Panel
 
     public void Read()
     {
-        if (readingSheet.gameObject.activeInHierarchy)
+        if (isReading)
         {
-            readingSheet.SetActive(false);
+            StopAllCoroutines();
+            StartCoroutine(CloseLetterAnim());
+            currentLettersData[currentLevel].GetUnread();
             isReading = false;
         }
         else
         {
-            readingSheet.SetActive(true);
+            StopAllCoroutines();
+            StartCoroutine(OpenLetterAnim());
             isReading = true;
+            currentLettersData[currentLevel].GetRead();
             letterText.text = currentLettersData[currentLevel].content;
-            letterAuthor.text = "From : " + currentLettersData[currentLevel].author;
+            letterAuthor.text = "From : " + "<b>"+currentLettersData[currentLevel].author+"</b> ";
         }
         
     }
@@ -262,6 +272,50 @@ public class LettersPanel : Panel
                     break;
                 }
             }
+        }
+    }
+
+    IEnumerator OpenLetterAnim()
+    { 
+        readingSheet.anchoredPosition = new Vector3(-743f, -1000f, 0);
+        float speed = 900;
+        while (readingSheet.anchoredPosition.y < 17f)
+        {
+            Vector3 newPos = readingSheet.anchoredPosition;
+            newPos.y += speed*Time.deltaTime;
+            readingSheet.anchoredPosition = newPos;
+            yield return null;
+        }
+    }
+
+    IEnumerator CloseLetterAnim()
+    { 
+        float speed = 1500;
+        while (readingSheet.anchoredPosition.y > -1000f)
+        {
+            Vector3 newPos = readingSheet.anchoredPosition;
+            newPos.y -= speed*Time.deltaTime;
+            readingSheet.anchoredPosition = newPos;
+            yield return null;
+        }
+    }
+    IEnumerator MoveSelector(Vector3 destination)
+    {
+        float speed = 1400f;
+        RectTransform rectTransform = selectionPad;
+
+        if (Vector3.Distance(destination, rectTransform.anchoredPosition) > 500)
+        {
+            rectTransform.anchoredPosition = destination;
+        }
+        else
+        {
+            while (Vector3.Distance(destination, rectTransform.anchoredPosition) > 5)
+            {
+                rectTransform.anchoredPosition = Vector3.MoveTowards(rectTransform.anchoredPosition, destination, speed*Time.deltaTime);
+                yield return null;
+            }
+            rectTransform.anchoredPosition = destination;
         }
     }
 }

@@ -26,7 +26,7 @@ public class DirectionHelp : MonoBehaviour
         if (active)
         {
             Vector3 direction = -(playerPosition.transform.position-target);
-            if (direction.magnitude < 20)
+            if (direction.magnitude < 15)
             {
                 childArrow.GetComponent<SpriteRenderer>().enabled = false;
             }

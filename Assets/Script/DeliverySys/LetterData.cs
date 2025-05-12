@@ -9,6 +9,7 @@ namespace Script.DeliverySys
         public PnjData sender;
         public PnjData receiver;
         public LetterData[] dependencies;
+        public string senderName;
         [TextArea]
         public string text;
         [TextArea]

@@ -11,7 +11,7 @@ public class Pnj : PlayerInteractable
     public PnjData pnjData;
     public string[] baseLines;
     [SerializeField] private Sprite portrait;
-    [SerializeField] private GameObject popUp;
+    [SerializeField] private SpriteRenderer popUp;
     private int lastLineSaid; 
     
     private DeliveryManager deliveryManager;
@@ -22,7 +22,7 @@ public class Pnj : PlayerInteractable
     {
         deliveryManager = GameObject.FindGameObjectWithTag("DeliveryManager").GetComponent<DeliveryManager>();
         linesLeft = new List<string>();
-        popUp.SetActive(false);
+        popUp.enabled = false;
     }
 
     private void OnEnable()
@@ -95,11 +95,12 @@ public class Pnj : PlayerInteractable
 
     public void ActivatePopUp(bool activate)
     {
-        popUp.SetActive(activate);
+        popUp.enabled = activate;
     }
 
     public override bool CanInteract()
     {
         return true;
     }
+    
 }

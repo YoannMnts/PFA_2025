@@ -1,4 +1,5 @@
 using System;
+using Script.DeliverySys;
 using TMPro;
 using UnityEngine;
 using UnityEngine.Serialization;
@@ -9,16 +10,19 @@ using Random = UnityEngine.Random;
 public class LetterUI : MonoBehaviour
 {
     
-    [SerializeField] private Image pinnedImage;
+    [SerializeField] private Image pinnedImage,readImage,baseImage;
     public TextMeshProUGUI destinationPerson;
     public Vector3 destinationPosition ;
     public Vector3 destinationPositionOnMap;
     public bool pinned = false;
     public string content ;
     public string author ;
+    public LetterData data;
     private void OnEnable()
     {
         pinnedImage.enabled = false;
+        readImage.enabled = false;
+        baseImage.enabled = true;
     }
 
     public void GetPinned()
@@ -31,12 +35,25 @@ public class LetterUI : MonoBehaviour
         pinnedImage.enabled = false;
     }
 
-    public void SetUp(string content, string author, string destinationPerson, Vector3 destinationPosition, Vector3 destinationPositionOnMap)
+    public void GetRead()
     {
-        this.content = content;
-        this.author = author;
-        this.destinationPerson.text = "To : " + destinationPerson;
-        this.destinationPosition = destinationPosition;
-        this.destinationPositionOnMap = destinationPositionOnMap;
+        readImage.enabled = true;
+        baseImage.enabled = false;
+    }
+
+    public void GetUnread()
+    {
+        readImage.enabled = false;
+        baseImage.enabled = true;
+    }
+
+    public void SetUp(LetterData data)
+    {
+        this.data = data;
+        this.content = data.text;
+        this.author = data.senderName;
+        this.destinationPerson.text = "To : " + "<b>"+data.receiver.name+"</b>" ;
+        this.destinationPosition = data.receiver.position;
+        this.destinationPositionOnMap = data.receiver.mapPosition;
     }
 }
