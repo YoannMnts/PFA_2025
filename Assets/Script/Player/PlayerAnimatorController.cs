@@ -11,6 +11,7 @@ namespace Script
         private static readonly int IsRunning = Animator.StringToHash("IsRunning");
         private static readonly int VerticalVelocity = Animator.StringToHash("VerticalVelocity");
         private static readonly int IsGliding = Animator.StringToHash("IsGliding");
+        private static readonly int IsRolling = Animator.StringToHash("IsRolling");
         private PlayerMovement Movement => player.Movement;
         
         [Header("Refs")] 
@@ -44,7 +45,7 @@ namespace Script
             animator.SetBool(IsRunning, Mathf.Abs(Movement.CurrentVelocity.x) > 0.1);
             animator.SetFloat(VerticalVelocity, Movement.CurrentVelocity.y);
             animator.SetBool(IsGliding, Movement.IsGliding);
-            animator.SetBool("IsRolling", Movement.IsRolling);
+            animator.SetBool(IsRolling, Movement.IsRolling);
         }
         
 
@@ -67,6 +68,7 @@ namespace Script
                 {
                     facingDirection = dot < 0 ? -perp : perp;
                     spriteRenderer.flipX = dot > 0;
+                    Debug.Log("works");
                 }
             }
             if (Movement.IsWalled)

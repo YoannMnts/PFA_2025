@@ -140,7 +140,9 @@ public class PlayerMovement : MonoBehaviour
     private Camera playerCamera;
 
     private Vector2 groundNormal;
+    private Collider2D currentGround;
     private Vector2 wallNormal;
+    private Collider2D currentWall;
 
     private Vector2 targetVelocity;
     private Vector2 inputDirection;
@@ -282,9 +284,15 @@ public class PlayerMovement : MonoBehaviour
         }
 
         if(hitCount == 0)
+        {
             wallNormal = Vector2.zero;
+            currentWall = null;
+        }
         else
+        {
             wallNormal = newNormal / hitCount;
+            currentWall = hits[0].collider;
+        }
         
         if (isWalled && !isGrounded)
         {
@@ -318,11 +326,17 @@ public class PlayerMovement : MonoBehaviour
         isGrounded = hitCount > 0;
         if (isGrounded)
         {
+            currentGround = hits[0].collider;
             Vector2 newNormal = Vector2.zero;
             for (int i = 0; i < hitCount; ++i)
                 newNormal += hits[i].normal;
 
             groundNormal = newNormal / hitCount;
+        }
+        else
+        {
+            groundNormal = Vector2.up;
+            currentGround = null;
         }
     }
 
@@ -351,10 +365,6 @@ public class PlayerMovement : MonoBehaviour
             }
             wantsToJump = 0;
         }
-        if (rb2d.linearVelocityY < -0.01)
-        {
-            Debug.Log(transform.position.y);
-        }
     }
     
     private void HandleMovement()
@@ -370,6 +380,16 @@ public class PlayerMovement : MonoBehaviour
         {
             rb2d.gravityScale = gravityScale;
             DoNormalMovement();
+        }
+
+        if (rb2d.linearVelocityY <= 0 && currentGround != null)
+        {
+            var closestPoint = currentGround.ClosestPoint(rb2d.position);
+            rb2d.position = new Vector2()
+            {
+                x = rb2d.position.x,
+                y = closestPoint.y
+            };
         }
     }
     
