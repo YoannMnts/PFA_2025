@@ -12,6 +12,7 @@ namespace Script
         private static readonly int VerticalVelocity = Animator.StringToHash("VerticalVelocity");
         private static readonly int IsGliding = Animator.StringToHash("IsGliding");
         private static readonly int IsRolling = Animator.StringToHash("IsRolling");
+        private static readonly int IsWalking = Animator.StringToHash("IsWalking");
         private PlayerMovement Movement => player.Movement;
         
         [Header("Refs")] 
@@ -28,7 +29,7 @@ namespace Script
         private Vector2 facingDirection;
         
         public Vector2 FacingDirection => facingDirection;
-        public SpriteRenderer SpriteRenderer => spriteRenderer;
+        
 
         private void Awake()
         {
@@ -43,7 +44,8 @@ namespace Script
             animator.SetBool(IsGrounded, Movement.IsGrounded);
             animator.SetBool(IsJumping, Movement.IsJumping);
             animator.SetBool(IsClimbing, Movement.IsWalled && !Movement.IsGrounded);
-            animator.SetBool(IsRunning, Mathf.Abs(Movement.CurrentVelocity.x) > 0.1);
+            animator.SetBool(IsRunning, Mathf.Abs(Movement.CurrentVelocity.x) > 9.5f);
+            animator.SetBool(IsWalking, Mathf.Abs(Movement.CurrentVelocity.x) > 0.5f);
             animator.SetFloat(VerticalVelocity, Movement.CurrentVelocity.y);
             animator.SetBool(IsGliding, Movement.IsGliding);
             animator.SetBool(IsRolling, Movement.IsRolling);
@@ -55,8 +57,10 @@ namespace Script
             Vector2 up = Vector2.up;
             if (Movement.IsWalled && !Movement.IsGrounded)
                 up = Movement.WallNormal;
-            else if (Movement.IsGrounded)
+            if (Movement.IsGrounded || Movement.IsWallJumping)
+            {
                 up = Movement.GroundNormal;
+            }
             
             //spriteRenderer.transform.up = Vector2.Lerp(spriteRenderer.transform.up, up,rotationSmoothness * Time.deltaTime);
 
@@ -73,6 +77,8 @@ namespace Script
             }
             if (Movement.IsWalled)
                 spriteRenderer.flipX = Movement.WallNormal.x > 0;
+            if (Movement.IsWallJumping)
+                spriteRenderer.flipX = Movement.WallCheckDirection.x < 0; 
         }
     }
 }

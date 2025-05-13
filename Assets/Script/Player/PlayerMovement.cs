@@ -23,6 +23,8 @@ public class PlayerMovement : MonoBehaviour
     public bool IsRolling => isRolling;
     public bool IsJumping => isJumping;
     public bool IsGliding => isGliding;
+    public bool IsWallJumping => isWallJumping;
+    public Vector2 WallCheckDirection => wallCheckDirection;
     public Rigidbody2D Rb2d => rb2d;
     #endregion
     
@@ -30,8 +32,7 @@ public class PlayerMovement : MonoBehaviour
     private PlayerInput playerInput;
     private Rigidbody2D rb2d;
     private Player player;
-
-
+    
 
     [Header("Movement")]
     [SerializeField,Tooltip("The normal collider box")]
@@ -133,6 +134,7 @@ public class PlayerMovement : MonoBehaviour
     private bool isRolling;
     private bool isEndRolling;
     private bool isGliding;
+    private bool isWallJumping;
     
     private int wantsToJump;
     private int wantsToRoll;
@@ -180,7 +182,12 @@ public class PlayerMovement : MonoBehaviour
         HandleWalls();
 
         if (rb2d.linearVelocityY < 0)
+        {
             isJumping = false;
+        }
+
+        if (isWalled || isGrounded)
+            isWallJumping = false;
         
         if (!isGrounded)
         {
@@ -362,6 +369,7 @@ public class PlayerMovement : MonoBehaviour
                 rb2d.AddForce(direction, ForceMode2D.Impulse);
                 isJumping = true;
                 wallCheckDirection = wallCheckDirection == Vector2.right ? Vector2.left : Vector2.right;
+                isWallJumping = true;
             }
             wantsToJump = 0;
         }
@@ -376,7 +384,7 @@ public class PlayerMovement : MonoBehaviour
             rb2d.gravityScale = 0;
             DoClimbMovement();
         }
-        else
+        else if (!isGliding)
         {
             rb2d.gravityScale = gravityScale;
             DoNormalMovement();
@@ -399,7 +407,7 @@ public class PlayerMovement : MonoBehaviour
 
         Vector2 dir = animatorController.FacingDirection;
         StopWithForce(initialRollSpeedModifier);
-        rb2d.AddForce(dir * rollingForce, ForceMode2D.Impulse);
+        rb2d.AddForceX(dir.x * rollingForce, ForceMode2D.Impulse);
 
         yield return new WaitForSeconds(minRollTime);
 
