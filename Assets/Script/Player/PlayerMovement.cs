@@ -549,7 +549,7 @@ public class PlayerMovement : MonoBehaviour
 
     public void JumpInput(InputAction.CallbackContext context)
     {
-        if (context.performed && !player.Interaction.HasInteractions)
+        if (context.performed)
             wantsToJump = 6;
     }
     

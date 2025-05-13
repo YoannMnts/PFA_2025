@@ -61,8 +61,8 @@ namespace Script
             {
                 up = Movement.GroundNormal;
             }
-            
-            //spriteRenderer.transform.up = Vector2.Lerp(spriteRenderer.transform.up, up,rotationSmoothness * Time.deltaTime);
+            if (!Movement.IsWalled)
+                spriteRenderer.transform.up = Vector2.Lerp(spriteRenderer.transform.up, up,rotationSmoothness * Time.deltaTime);
 
             Vector2 perp = Vector2.Perpendicular(up);
             float dot = Vector2.Dot(Movement.InputDirection, perp);
