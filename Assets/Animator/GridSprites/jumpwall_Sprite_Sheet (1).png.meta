@@ -1,19 +1,19 @@
 fileFormatVersion: 2
-guid: 60e767d586c19cf4e861e350f9e05602
+guid: 042fdc16230774d40a273b68c9beabc1
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -1542208248299997237
-    second: jumpwall_Sprite_Sheet_0
+      213: -7884610635887401843
+    second: jumpwall_Sprite_Sheet (1)_0
   - first:
-      213: -8435101181003583221
-    second: jumpwall_Sprite_Sheet_1
+      213: 6224028786180353282
+    second: jumpwall_Sprite_Sheet (1)_1
   - first:
-      213: -4021409757880199677
-    second: jumpwall_Sprite_Sheet_2
+      213: 7737663509161063656
+    second: jumpwall_Sprite_Sheet (1)_2
   - first:
-      213: 1177235979548084899
-    second: jumpwall_Sprite_Sheet_3
+      213: -6623734823606304304
+    second: jumpwall_Sprite_Sheet (1)_3
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -122,7 +122,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: jumpwall_Sprite_Sheet_0
+      name: jumpwall_Sprite_Sheet (1)_0
       rect:
         serializedVersion: 2
         x: 0
@@ -137,14 +137,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: bc7b666e4c9f89ae0800000000000000
-      internalID: -1542208248299997237
+      spriteID: d842aafa66c349290800000000000000
+      internalID: -7884610635887401843
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: jumpwall_Sprite_Sheet_1
+      name: jumpwall_Sprite_Sheet (1)_1
       rect:
         serializedVersion: 2
         x: 512
@@ -159,14 +159,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: b01bdcdba2080fa80800000000000000
-      internalID: -8435101181003583221
+      spriteID: 20de5186431306650800000000000000
+      internalID: 6224028786180353282
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: jumpwall_Sprite_Sheet_2
+      name: jumpwall_Sprite_Sheet (1)_2
       rect:
         serializedVersion: 2
         x: 1024
@@ -181,8 +181,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 306d24da1251138c0800000000000000
-      internalID: -4021409757880199677
+      spriteID: 8e43c0737f3b16b60800000000000000
+      internalID: 7737663509161063656
       vertices: []
       indices: 
       edges: []
@@ -191,7 +191,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 6ab3439a81dd9ec49913e8a42be72ae5
+    spriteID: 85d1deda6e0ca2c47b553ef728e5d720
     internalID: 0
     vertices: []
     indices: 
@@ -201,9 +201,9 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      jumpwall_Sprite_Sheet_0: -1542208248299997237
-      jumpwall_Sprite_Sheet_1: -8435101181003583221
-      jumpwall_Sprite_Sheet_2: -4021409757880199677
+      jumpwall_Sprite_Sheet (1)_0: -7884610635887401843
+      jumpwall_Sprite_Sheet (1)_1: 6224028786180353282
+      jumpwall_Sprite_Sheet (1)_2: 7737663509161063656
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

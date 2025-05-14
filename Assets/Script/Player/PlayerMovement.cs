@@ -212,7 +212,7 @@ public class PlayerMovement : MonoBehaviour
         if (wantsToRoll > 0 && !isRolling)
         {
             wantsToRoll--;
-            if (!isWalled)
+            if (!isWalled && !isGliding)
             {
                 isRolling = true;
                 StartCoroutine(DoRoll());
@@ -374,7 +374,7 @@ public class PlayerMovement : MonoBehaviour
             wantsToJump = 0;
         }
     }
-    
+
     private void HandleMovement()
     {
         inputDirection = Vector2.ClampMagnitude(inputDirection, 1);

@@ -63,7 +63,7 @@ namespace Script
             }
             if (!Movement.IsWalled)
                 spriteRenderer.transform.up = Vector2.Lerp(spriteRenderer.transform.up, up,rotationSmoothness * Time.deltaTime);
-
+            
             Vector2 perp = Vector2.Perpendicular(up);
             float dot = Vector2.Dot(Movement.InputDirection, perp);
             
@@ -78,7 +78,9 @@ namespace Script
             if (Movement.IsWalled)
                 spriteRenderer.flipX = Movement.WallNormal.x > 0;
             if (Movement.IsWallJumping)
-                spriteRenderer.flipX = Movement.WallCheckDirection.x < 0; 
+                spriteRenderer.flipX = Movement.WallCheckDirection.x < 0;
+            if (Movement.IsGliding)
+                spriteRenderer.flipX = Movement.CurrentVelocity.x < 0;
         }
     }
 }
