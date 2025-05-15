@@ -16,12 +16,13 @@ MonoBehaviour:
   receiver: {fileID: 11400000, guid: a8e02d414e45cc34a93975248246175f, type: 2}
   dependencies: []
   senderName: Hans
-  text: "Greetings <b>Hazel</b>,\nI've heard you just got promoted to be the new
-    village's <b>postman</b>. First of all, congratulations ! \nI'd need to send
-    an important letter, could you help me with that as soon as you can ? You can
-    always <b>find me in the townhall</b>\nWith friendship,\r\n<b>Captain Hans</b>."
+  text: "Greetings <color=#D70000><b>Hazel</b></color>,\nI've heard you just got
+    promoted to be the new village's <b>postman</b>. First of all, congratulations
+    ! \nI'd need to send an important letter, could you help me with that as soon
+    as you can ? You can always <b>find me in the townhall</b>\nWith friendship,\r\n<color=#D70000><b>Captain
+    Hans</b></color>."
   sendedText:
-  - You found a <b>letter from Hans</b>  in your letterbox
+  - You found a <b>letter from <color=#D70000>Hans</color></b>  in your letterbox
   receivedText:
   - You must be the <b>new postman</b>  ! A pleasure to meet you
   - Thank you for coming this quickly

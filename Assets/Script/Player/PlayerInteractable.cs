@@ -2,7 +2,7 @@
 
 namespace Script
 {
-    public abstract class PlayerInteractable : MonoBehaviour
+    public abstract class PlayerInteractable : SoundObject
     {
         public abstract int GetPriority();
         public abstract void Interact();

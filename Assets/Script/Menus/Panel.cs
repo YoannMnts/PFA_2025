@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class Panel : MonoBehaviour
+public class Panel : SoundObject
 {
     public GameObject panel;
     public DeliveryManager deliveryManager;

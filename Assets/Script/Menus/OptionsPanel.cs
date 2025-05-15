@@ -6,12 +6,12 @@ public class OptionsPanel : Panel
     private int currentLevel = 0 ;
     [SerializeField] private RectTransform selectPad;
     [SerializeField] private Image[] bars;
-    public int[] volumes;
+    public float[] volumes;
 
     public override void Awake()
     {
         
-        volumes = new int[4];
+        volumes = new float[4];
         for (int i = 0; i < volumes.Length; i++)
         {
             volumes[i] = 5;
@@ -56,6 +56,7 @@ public class OptionsPanel : Panel
             volumes[currentLevel] += 1;
         } 
         bars[currentLevel].fillAmount = (volumes[currentLevel]*0.1f);
+        PlaySound(clips[1], SoundType.Effects);
     }
     public override void LeftDPad()
     {
@@ -65,6 +66,7 @@ public class OptionsPanel : Panel
             volumes[currentLevel] -= 1;
         }
         bars[currentLevel].fillAmount = (volumes[currentLevel]*0.1f);
+        PlaySound(clips[0], SoundType.Effects);
     }
 }
 

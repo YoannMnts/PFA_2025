@@ -42,6 +42,7 @@ public class QuitPanel : Panel
 
             StartCoroutine(MoveSelector(buttons[currentLevel].gameObject.GetComponent<RectTransform>().anchoredPosition));
         }
+        PlaySound(clips[UnityEngine.Random.Range(0, clips.Length)],SoundType.Effects);
        
        
         
@@ -58,6 +59,7 @@ public class QuitPanel : Panel
                 currentLevel = 2;
             }
             StartCoroutine(MoveSelector(buttons[currentLevel].gameObject.GetComponent<RectTransform>().anchoredPosition));
+            PlaySound(clips[UnityEngine.Random.Range(0, clips.Length)],SoundType.Effects);
         }
         
     }

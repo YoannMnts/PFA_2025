@@ -52,7 +52,7 @@ public class LetterUI : MonoBehaviour
         this.data = data;
         this.content = data.text;
         this.author = data.senderName;
-        this.destinationPerson.text = "To : " + "<b>"+data.receiver.name+"</b>" ;
+        this.destinationPerson.text = "To : " + "<color=#D70000><b>"+data.receiver.name+"</b></color>" ;
         this.destinationPosition = data.receiver.position;
         this.destinationPositionOnMap = data.receiver.mapPosition;
     }

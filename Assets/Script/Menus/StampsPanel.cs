@@ -99,6 +99,7 @@ public class StampsPanel : Panel
 
     void DisplayStamps()
     {
+        PlaySound(clips[UnityEngine.Random.Range(0, clips.Length)],SoundType.Effects);
         StopAllCoroutines();
         StartCoroutine(MoveSelector(stampsFrames[currentSelected].rectTransform.anchoredPosition));
         if (unlocked[currentSelected])

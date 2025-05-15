@@ -1,0 +1,507 @@
+fileFormatVersion: 2
+guid: ac2f1b87f1cb198499e9974a534e2dc1
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -6077577749625234858
+    second: hans_0
+  - first:
+      213: 4693883330264965856
+    second: hans_1
+  - first:
+      213: -6987340097141475704
+    second: hans_2
+  - first:
+      213: -9125255937876439839
+    second: hans_3
+  - first:
+      213: -8732034796405036460
+    second: hans_4
+  - first:
+      213: 3974174005226328609
+    second: hans_5
+  - first:
+      213: -7570333528294544280
+    second: hans_6
+  - first:
+      213: 6362401894679238147
+    second: hans_7
+  - first:
+      213: -8499740996867059910
+    second: hans_8
+  - first:
+      213: -8824140642931125636
+    second: hans_9
+  - first:
+      213: -9168290331422043920
+    second: hans_10
+  - first:
+      213: 7113708593008598020
+    second: hans_11
+  - first:
+      213: 1559170985795797088
+    second: hans_12
+  - first:
+      213: -3123600198968724773
+    second: hans_13
+  - first:
+      213: 2844140862978562968
+    second: hans_14
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 150
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 1
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: hans_0
+      rect:
+        serializedVersion: 2
+        x: 75
+        y: 1546
+        width: 341
+        height: 493
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 65a15c2bc3b18aba0800000000000000
+      internalID: -6077577749625234858
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hans_1
+      rect:
+        serializedVersion: 2
+        x: 587
+        y: 1546
+        width: 341
+        height: 490
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0e222950506042140800000000000000
+      internalID: 4693883330264965856
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hans_2
+      rect:
+        serializedVersion: 2
+        x: 1099
+        y: 1546
+        width: 341
+        height: 487
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 886f901c33bf70f90800000000000000
+      internalID: -6987340097141475704
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hans_3
+      rect:
+        serializedVersion: 2
+        x: 1612
+        y: 1546
+        width: 341
+        height: 484
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1ecc95a72149c5180800000000000000
+      internalID: -9125255937876439839
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hans_4
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 1034
+        width: 346
+        height: 478
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 45a6de1fd9491d680800000000000000
+      internalID: -8732034796405036460
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hans_5
+      rect:
+        serializedVersion: 2
+        x: 582
+        y: 1033
+        width: 346
+        height: 476
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1225b11a33a172730800000000000000
+      internalID: 3974174005226328609
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hans_6
+      rect:
+        serializedVersion: 2
+        x: 1097
+        y: 1033
+        width: 345
+        height: 472
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 86c26cee3c5c0f690800000000000000
+      internalID: -7570333528294544280
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hans_7
+      rect:
+        serializedVersion: 2
+        x: 1608
+        y: 1033
+        width: 345
+        height: 470
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 306d0a250dacb4850800000000000000
+      internalID: 6362401894679238147
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hans_8
+      rect:
+        serializedVersion: 2
+        x: 73
+        y: 521
+        width: 345
+        height: 472
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a3f0aeec89ada0a80800000000000000
+      internalID: -8499740996867059910
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hans_9
+      rect:
+        serializedVersion: 2
+        x: 582
+        y: 521
+        width: 346
+        height: 476
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c72d00a66da5a8580800000000000000
+      internalID: -8824140642931125636
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hans_10
+      rect:
+        serializedVersion: 2
+        x: 1096
+        y: 522
+        width: 346
+        height: 478
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0f0d0fde480b3c080800000000000000
+      internalID: -9168290331422043920
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hans_11
+      rect:
+        serializedVersion: 2
+        x: 1612
+        y: 522
+        width: 341
+        height: 484
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 40cdbe97648f8b260800000000000000
+      internalID: 7113708593008598020
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hans_12
+      rect:
+        serializedVersion: 2
+        x: 75
+        y: 10
+        width: 341
+        height: 487
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 060447030c943a510800000000000000
+      internalID: 1559170985795797088
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hans_13
+      rect:
+        serializedVersion: 2
+        x: 587
+        y: 10
+        width: 341
+        height: 490
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bd231282b2eb6a4d0800000000000000
+      internalID: -3123600198968724773
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hans_14
+      rect:
+        serializedVersion: 2
+        x: 1099
+        y: 11
+        width: 341
+        height: 493
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 89b9205cb0b687720800000000000000
+      internalID: 2844140862978562968
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      hans_0: -6077577749625234858
+      hans_1: 4693883330264965856
+      hans_10: -9168290331422043920
+      hans_11: 7113708593008598020
+      hans_12: 1559170985795797088
+      hans_13: -3123600198968724773
+      hans_14: 2844140862978562968
+      hans_2: -6987340097141475704
+      hans_3: -9125255937876439839
+      hans_4: -8732034796405036460
+      hans_5: 3974174005226328609
+      hans_6: -7570333528294544280
+      hans_7: 6362401894679238147
+      hans_8: -8499740996867059910
+      hans_9: -8824140642931125636
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

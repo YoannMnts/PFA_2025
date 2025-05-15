@@ -9,10 +9,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3440993612533331209}
-  - component: {fileID: 47397120777824927}
   - component: {fileID: 780513572260256539}
   - component: {fileID: 3134846705675367365}
-  - component: {fileID: 931081849269591105}
   m_Layer: 0
   m_Name: PNJ
   m_TagString: Untagged
@@ -38,61 +36,6 @@ Transform:
   - {fileID: 4776250148323453314}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!212 &47397120777824927
-SpriteRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3055401618007557216}
-  m_Enabled: 1
-  m_CastShadows: 0
-  m_ReceiveShadows: 0
-  m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 0
-  m_RayTraceProcedural: 0
-  m_RayTracingAccelStructBuildFlagsOverride: 0
-  m_RayTracingAccelStructBuildFlags: 1
-  m_SmallMeshCulling: 1
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 0
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 138944783
-  m_SortingLayer: 1
-  m_SortingOrder: 0
-  m_Sprite: {fileID: -1259272438, guid: fb81205606048de49bbbe71bcac62554, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 0
-  m_FlipY: 0
-  m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
-  m_AdaptiveModeThreshold: 0.5
-  m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
-  m_MaskInteraction: 0
-  m_SpriteSortPoint: 0
 --- !u!61 &780513572260256539
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -151,37 +94,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7eca65b9c300357468b5fcae2d1074ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pnjData: {fileID: 11400000, guid: a8e02d414e45cc34a93975248246175f, type: 2}
-  baseLines:
-  - '  Do not hesitate to contact me if you ever find someone suspicious. '
-  - "One day, I\u2019ll catch this Arianne Parpin or I\u2019m not a hawk !"
-  - "We owe a great deal to Beam. He\u2019s the one who deals with everything when
-    there is a problem or when someone needs something."
-  - There is no many officers besides me and my sidekick
+  pnjData: {fileID: 0}
+  baseLines: []
   portrait: {fileID: 1614466794060287551, guid: 1ee8ec17722377a43b9d602565db0caa, type: 3}
-  popUp: {fileID: 4100459847037358294}
---- !u!95 &931081849269591105
-Animator:
-  serializedVersion: 7
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3055401618007557216}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 3900e1784321ba84482546243090f3ec, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_AnimatePhysics: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
+  popUp: {fileID: 6361770477240966133}
 --- !u!1 &3662448798241262503
 GameObject:
   m_ObjectHideFlags: 0
@@ -273,7 +189,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0c0ef1111de24ee4ea2fae0888ab76ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pnjSprite: {fileID: 47397120777824927}
+  pnjSprite: {fileID: 0}
   right: 0
 --- !u!1 &4100459847037358294
 GameObject:
@@ -467,5 +383,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0c0ef1111de24ee4ea2fae0888ab76ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pnjSprite: {fileID: 47397120777824927}
+  pnjSprite: {fileID: 0}
   right: 1

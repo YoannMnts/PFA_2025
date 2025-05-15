@@ -6,7 +6,7 @@ using UnityEngine.Rendering;
 using UnityEngine.Serialization;
 using UnityEngine.UI;
 
-public class InventoryManager : MonoBehaviour
+public class InventoryManager : SoundObject
 {
     [SerializeField] private GameObject inventoryTopPanel;
     [SerializeField] private GameObject panelSelector;
@@ -20,8 +20,9 @@ public class InventoryManager : MonoBehaviour
     
     private int currentPanel = 0;
 
-    void Start()
+    public override void Start()
     {
+        base.Start();
         panelSelector.GetComponent<RectTransform>().anchoredPosition = panels[currentPanel].GetComponent<RectTransform>().anchoredPosition;
         foreach (GameObject panel in panels)
         {
@@ -39,12 +40,14 @@ public class InventoryManager : MonoBehaviour
                 openBag.SetActive(false);
                 closedBag.SetActive(true);
                 playerInput.SwitchCurrentActionMap("GamePlay");
+                PlaySound(clips[0],SoundType.Effects);
             }
             else
             {
                 openBag.SetActive(true);
                 closedBag.SetActive(false);
                 playerInput.SwitchCurrentActionMap("Menu");
+                PlaySound(clips[0],SoundType.Effects);
             }
             if (inventoryTopPanel.activeInHierarchy)
             {
@@ -75,6 +78,7 @@ public class InventoryManager : MonoBehaviour
             StopAllCoroutines();
             StartCoroutine(MoveSelector(panels[currentPanel].GetComponent<RectTransform>().anchoredPosition));
             panels[currentPanel].GetComponent<Panel>().Open();
+            PlaySound(clips[0],SoundType.Effects);
         }
 
         if (currentPanel == 1 || currentPanel == 2)
@@ -99,6 +103,7 @@ public class InventoryManager : MonoBehaviour
             StopAllCoroutines();
             StartCoroutine(MoveSelector(panels[currentPanel].GetComponent<RectTransform>().anchoredPosition));
             panels[currentPanel].GetComponent<Panel>().Open();
+            PlaySound(clips[0],SoundType.Effects);
         }
         if (currentPanel == 1 || currentPanel == 2)
         {

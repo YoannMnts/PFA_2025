@@ -137,7 +137,7 @@ public class LettersPanel : Panel
                  selectionPad.position = new Vector3(1000,1000,1000);
              }
         }
-       
+        PlaySound(clips[UnityEngine.Random.Range(3, clips.Length)],SoundType.Effects);
     }
 
     public override void SouthButton()
@@ -211,6 +211,7 @@ public class LettersPanel : Panel
             StartCoroutine(CloseLetterAnim());
             currentLettersData[currentLevel].GetUnread();
             isReading = false;
+            PlaySound(clips[0],SoundType.Effects);
         }
         else
         {
@@ -219,7 +220,8 @@ public class LettersPanel : Panel
             isReading = true;
             currentLettersData[currentLevel].GetRead();
             letterText.text = currentLettersData[currentLevel].content;
-            letterAuthor.text = "From : " + "<b>"+currentLettersData[currentLevel].author+"</b> ";
+            letterAuthor.text = "From : " + "<color=#D70000><b>"+currentLettersData[currentLevel].author+"</b></color> ";
+            PlaySound(clips[0],SoundType.Effects);
         }
         
     }
@@ -232,6 +234,7 @@ public class LettersPanel : Panel
             directionHelp.active = false;
             directionHelp.target = currentLettersData[index].destinationPosition;
             currentLettersData[index].GetUnpinned();
+            PlaySound(clips[1],SoundType.Effects);
         }
         else
         {
@@ -244,6 +247,7 @@ public class LettersPanel : Panel
             directionHelp.active = true;
             directionHelp.target = currentLettersData[index].destinationPosition;
             currentLettersData[index].GetPinned();
+            PlaySound(clips[1],SoundType.Effects);
         }
     }
 

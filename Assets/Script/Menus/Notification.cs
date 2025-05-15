@@ -24,7 +24,7 @@ public class Notification : MonoBehaviour
     public IEnumerator ShowUpLetter(string receiver)
     {
         letterPopUp.anchoredPosition = new Vector3(-1300, 400,0);
-        letterText.text = "New letter to " + receiver + " !";
+        letterText.text = "New letter to <color=#D70000><b>" + receiver + " </b></color>!";
         while (letterPopUp.anchoredPosition.x < -760)
         {
             Vector3 pos = letterPopUp.anchoredPosition;
@@ -51,11 +51,11 @@ public class Notification : MonoBehaviour
         rewardPopUp.anchoredPosition = new Vector3(-1300, 200,0);
         if (acornsCount > 1)
         {
-            acornsText.text = acornsCount.ToString() + " acorns gained !";
+            acornsText.text = "<b>"+acornsCount.ToString() + " acorns</b> gained !";
         }
         else
         {
-            acornsText.text = acornsCount.ToString() + " acorn gained !";
+            acornsText.text = "<b>"+acornsCount.ToString() + " acorn</b> gained !";
         }
         
         if (stampAcquired)

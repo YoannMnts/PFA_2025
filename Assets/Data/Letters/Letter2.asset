@@ -17,14 +17,15 @@ MonoBehaviour:
   dependencies:
   - {fileID: 11400000, guid: ecc6aacc6a5a377479b401905ad1fb70, type: 2}
   senderName: Jack
-  text: 'Hello <b>Vanessa</b> ,
+  text: 'Hello <color=#D70000><b>Vanessa</b></color> ,
 
-    How are you doing little one ? You know, I told
-    you about some <b>adjustments</b>  where you live in. I just received confirmation
-    that I can do it. All the <b>necessaries are ready</b>, so I can come do my things
-    whenever you want.
+    How are you doing little
+    one ? You know, I told you about some <b>adjustments</b>  where you live in.
+    I just received confirmation that I can do it. All the <b>necessaries are ready</b>,
+    so I can come do my things whenever you want.
 
-    Have a nice day, little one !
+    Have a nice day, little one
+    !
 
     <b>Jack</b> .
 
@@ -32,8 +33,9 @@ MonoBehaviour:
   sendedText:
   - "\u2026 Good ! \u2026 I see ! Little one ! While you\u2019re here, give me a
     second ! Aaaaaand ! Here, take this !"
-  - Could you <b>bring it to Vanessa</b>  please ?! Knowing her, not sure she will
-    react to your presence ! So you should put it in her letter box.
+  - Could you <b>bring it to<color=#D70000>Vanessa</color></b>  please ?! Knowing
+    her, not sure she will react to your presence ! So you should put it in her letter
+    box.
   receivedText:
   - Voila voila
   glansGain: 4

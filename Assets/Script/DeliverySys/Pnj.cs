@@ -86,6 +86,7 @@ public class Pnj : PlayerInteractable
                     currentLine = Random.Range(0, baseLines.Length);
                 } 
                 deliveryManager.dialoguePad.SetUp(portrait, baseLines[currentLine]); 
+                PlaySound(clips[0], SoundType.Voices);
                 lastLineSaid = currentLine;
             }
         }
