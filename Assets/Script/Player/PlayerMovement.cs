@@ -138,8 +138,6 @@ public class PlayerMovement : MonoBehaviour
     
     private int wantsToJump;
     private int wantsToRoll;
-    
-    private Camera playerCamera;
 
     private Vector2 groundNormal;
     private Collider2D currentGround;
@@ -161,7 +159,6 @@ public class PlayerMovement : MonoBehaviour
         player = GetComponent<Player>();
         playerInput = GetComponent<PlayerInput>();
         rb2d = GetComponent<Rigidbody2D>();
-        playerCamera = GetComponentInChildren<Camera>();
         animatorController = GetComponent<PlayerAnimatorController>();
         hits = new RaycastHit2D[32];
     }
@@ -384,7 +381,7 @@ public class PlayerMovement : MonoBehaviour
             rb2d.gravityScale = 0;
             DoClimbMovement();
         }
-        else if (!isGliding)
+        else
         {
             rb2d.gravityScale = gravityScale;
             DoNormalMovement();
@@ -465,16 +462,18 @@ public class PlayerMovement : MonoBehaviour
         Vector2 forward = Vector2.Perpendicular(wallNormal);
         
         //float verticalAmount = Vector2.Dot(inputDirection, wallNormal);
+        Debug.Log(inputDirection);
         float horizontalAmount = Vector2.Dot(inputDirection, forward);
         float targetClimbMaxSpeed = horizontalAmount * climbMaxSpeed;
         targetVelocity = forward * targetClimbMaxSpeed;
         
         //Debug.DrawRay(transform.position, forward, Color.magenta, 2);
-        
         var dot = Vector2.Dot(targetVelocity.normalized, rb2d.linearVelocity.normalized);
         bool isGoingBackward = dot < 0 && rb2d.linearVelocity.sqrMagnitude > goingBackwardInSlopes;
         if (isGoingBackward || Mathf.Abs(horizontalAmount) < .15f)
-            StopWithForce(semiTurnForceMultiplier);
+        {
+            StopWithForce(semiTurnForceMultiplier); 
+        }
         else
         {
             float lVelX = Vector2.Dot(rb2d.linearVelocity, targetVelocity.normalized);
