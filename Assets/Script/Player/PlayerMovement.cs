@@ -462,7 +462,6 @@ public class PlayerMovement : MonoBehaviour
         Vector2 forward = Vector2.Perpendicular(wallNormal);
         
         //float verticalAmount = Vector2.Dot(inputDirection, wallNormal);
-        Debug.Log(inputDirection);
         float horizontalAmount = Vector2.Dot(inputDirection, forward);
         float targetClimbMaxSpeed = horizontalAmount * climbMaxSpeed;
         targetVelocity = forward * targetClimbMaxSpeed;
@@ -492,7 +491,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void DoNormalMovement()
     {
-        inputDirection.y = 0;
+        //inputDirection.y = 0;
         if(inputDirection.sqrMagnitude < .1f)
         {
             if (Mathf.Abs(rb2d.linearVelocityX) >= .1f && isGrounded)
