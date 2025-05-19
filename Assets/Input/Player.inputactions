@@ -67,6 +67,15 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
+                },
+                {
+                    "name": "OpenTuto",
+                    "type": "Button",
+                    "id": "1cefb076-0bdc-4ab8-bdef-a8643b02d10e",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -217,7 +226,7 @@
                     "name": "",
                     "id": "6fa82cfe-7a40-4590-a7f9-967121962081",
                     "path": "<Gamepad>/buttonWest",
-                    "interactions": "",
+                    "interactions": "Press(behavior=1)",
                     "processors": "",
                     "groups": "",
                     "action": "Interact",
@@ -232,6 +241,17 @@
                     "processors": "",
                     "groups": "",
                     "action": "OpenMenu",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "445df4fa-a357-4aa0-934d-7d6148c8a14c",
+                    "path": "<Gamepad>/dpad/down",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "OpenTuto",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
@@ -502,7 +522,7 @@
                 {
                     "name": "",
                     "id": "557506b3-0793-43c7-870f-bcbf71714b3d",
-                    "path": "<Gamepad>/buttonSouth",
+                    "path": "<Gamepad>/buttonWest",
                     "interactions": "",
                     "processors": "",
                     "groups": "",

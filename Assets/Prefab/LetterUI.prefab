@@ -381,6 +381,8 @@ MonoBehaviour:
   pinnedImage: {fileID: 1647276616315267169}
   readImage: {fileID: 9136651974079374763}
   baseImage: {fileID: 6767907116961789766}
+  bgImage: {fileID: 2595283380708974037}
+  alreadyDeliveredSprite: {fileID: 21300000, guid: fa2c1e82edb62c7488a8c99363a9e13b, type: 3}
   destinationPerson: {fileID: 6512731015020202850}
   destinationPosition: {x: 0, y: 0, z: 0}
   destinationPositionOnMap: {x: 0, y: 0, z: 0}

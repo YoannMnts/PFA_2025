@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -8,12 +9,23 @@ public class SoundObject : MonoBehaviour
     [SerializeField] public AudioClip[] clips;
     public virtual void Start()
     {
-        soundManager = FindObjectOfType<SoundManager>();
+        StartCoroutine(Research());
     }
 
     public void PlaySound(AudioClip clip, SoundType type)
     {
         soundManager.PlaySound(clip, type);
+    }
+
+    IEnumerator Research()
+    {
+        soundManager = FindObjectOfType<SoundManager>();
+        while (soundManager.isActiveAndEnabled == false)
+        {
+            soundManager = FindObjectOfType<SoundManager>();
+            Debug.Log("ski");
+            yield return null;
+        }
     }
 }
 

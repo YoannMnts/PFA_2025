@@ -28,6 +28,7 @@ public class LettersPanel : Panel
     private int currentPage;
     public int[] pinnedCoordinates;
     private bool isReading;
+    private int maxIntToDeliver;
 
     public override void Close()
     {
@@ -43,7 +44,8 @@ public class LettersPanel : Panel
     public override void Open()
     {
         base.Open();
-        lettersCount = deliveryManager.ActiveLetter.Count;
+        lettersCount = deliveryManager.ActiveLetter.Count + deliveryManager.completedLetters.Count;
+        maxIntToDeliver = deliveryManager.ActiveLetter.Count ;
         readingSheet.anchoredPosition = new Vector3(-743f,-1000f,0);
         isReading = false;
         currentLevel = 0;
@@ -54,8 +56,17 @@ public class LettersPanel : Panel
         {
             GameObject letter = Instantiate(letterTemplate, panel.transform);
             letters[i] = letter;
-            letter.GetComponent<LetterUI>().SetUp(deliveryManager.ActiveLetter[i].letterData);
+            if (i < maxIntToDeliver)
+            {
+                letter.GetComponent<LetterUI>().SetUp(deliveryManager.ActiveLetter[i].letterData, false);
+            }
+            else
+            {
+                letter.GetComponent<LetterUI>().SetUp(deliveryManager.completedLetters[i-maxIntToDeliver], true);
+            }
+            Debug.Log(i);
         }
+        
         DisplayLetters();
         if (lettersCount > 0)
         {
@@ -220,35 +231,39 @@ public class LettersPanel : Panel
             isReading = true;
             currentLettersData[currentLevel].GetRead();
             letterText.text = currentLettersData[currentLevel].content;
-            letterAuthor.text = "From : " + "<color=#D70000><b>"+currentLettersData[currentLevel].author+"</b></color> ";
+            letterAuthor.text = "De : " + "<color=#D70000><b>"+currentLettersData[currentLevel].author+"</b></color> ";
             PlaySound(clips[0],SoundType.Effects);
         }
         
     }
     public void Pin(int index)
     {
-        if (currentLettersData[index].pinned)
+        if (currentLettersData[index].delivered == false)
         {
-            pinnedCoordinates = null;
-            currentLettersData[index].pinned = false;
-            directionHelp.active = false;
-            directionHelp.target = currentLettersData[index].destinationPosition;
-            currentLettersData[index].GetUnpinned();
-            PlaySound(clips[1],SoundType.Effects);
-        }
-        else
-        {
-            if (pinnedCoordinates != null)
+            if (currentLettersData[index].pinned)
             {
-                letters[(pinnedCoordinates[1] * lettersByPage) + pinnedCoordinates[0]].GetComponent<LetterUI>().GetUnpinned();
+                pinnedCoordinates = null;
+                currentLettersData[index].pinned = false;
+                directionHelp.active = false;
+                directionHelp.target = currentLettersData[index].destinationPosition;
+                currentLettersData[index].GetUnpinned();
+                PlaySound(clips[1],SoundType.Effects);
             }
-            pinnedCoordinates = new[] { index, currentPage };
-            currentLettersData[index].pinned = true;
-            directionHelp.active = true;
-            directionHelp.target = currentLettersData[index].destinationPosition;
-            currentLettersData[index].GetPinned();
-            PlaySound(clips[1],SoundType.Effects);
+            else
+            {
+                if (pinnedCoordinates != null)
+                { 
+                    letters[(pinnedCoordinates[1] * lettersByPage) + pinnedCoordinates[0]].GetComponent<LetterUI>().GetUnpinned();
+                }
+                pinnedCoordinates = new[] { index, currentPage };
+                currentLettersData[index].pinned = true;
+                directionHelp.active = true;
+                directionHelp.target = currentLettersData[index].destinationPosition;
+                currentLettersData[index].GetPinned();
+                PlaySound(clips[1],SoundType.Effects);
+            }
         }
+        
     }
 
     public Vector3 ReturnPosOfLetter()

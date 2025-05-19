@@ -16,6 +16,8 @@ public class DeliveryManager : MonoBehaviour
     [SerializeField]
     private LettersPanel lettersPanel;
     [SerializeField]
+    private QuitPanel quitPanel;
+    [SerializeField]
     private InventoryManager inventoryManager;
     [SerializeField]
     private Notification notification;
@@ -27,7 +29,7 @@ public class DeliveryManager : MonoBehaviour
     private Player player;
     
     [SerializeField] private List<Letter> activeLetter;
-    private List<LetterData> completedLetters;
+    public List<LetterData> completedLetters;
     private Dictionary<PnjData, Pnj> pnjs;
     private bool alreadyInActiveLetter;
     public  DialoguePad dialoguePad;
@@ -86,6 +88,7 @@ public class DeliveryManager : MonoBehaviour
                 inventoryManager.acornsCount += letter.letterData.glansGain;
                 acornParticles.Reward(letter.letterData.glansGain);
                 stampParticles.Reward(1);
+                quitPanel.lettersCount += 1;
                 inventoryManager.OpenBagTemp();
                 if (letter.letterData.stampsGain >= 0)
                 {

@@ -10,7 +10,8 @@ using Random = UnityEngine.Random;
 public class LetterUI : MonoBehaviour
 {
     
-    [SerializeField] private Image pinnedImage,readImage,baseImage;
+    [SerializeField] private Image pinnedImage,readImage,baseImage,bgImage;
+    [SerializeField] private Sprite alreadyDeliveredSprite;
     public TextMeshProUGUI destinationPerson;
     public Vector3 destinationPosition ;
     public Vector3 destinationPositionOnMap;
@@ -18,6 +19,7 @@ public class LetterUI : MonoBehaviour
     public string content ;
     public string author ;
     public LetterData data;
+    public bool delivered = false;
     private void OnEnable()
     {
         pinnedImage.enabled = false;
@@ -47,12 +49,17 @@ public class LetterUI : MonoBehaviour
         baseImage.enabled = true;
     }
 
-    public void SetUp(LetterData data)
+    public void SetUp(LetterData data, bool alreadyDelivered)
     {
         this.data = data;
+        if (alreadyDelivered)
+        {
+            bgImage.sprite = alreadyDeliveredSprite;
+            delivered = true;
+        }
         this.content = data.text;
         this.author = data.senderName;
-        this.destinationPerson.text = "To : " + "<color=#D70000><b>"+data.receiver.name+"</b></color>" ;
+        this.destinationPerson.text = "Pour : " + "<color=#D70000><b>"+data.receiver.name+"</b></color>" ;
         this.destinationPosition = data.receiver.position;
         this.destinationPositionOnMap = data.receiver.mapPosition;
     }
