@@ -147,7 +147,7 @@ public class StartSequence : MonoBehaviour
     {
         tutoIndication.anchoredPosition = new Vector3(-1300f, 100f, 0f);
         float speed = 600f;
-        while (tutoIndication.anchoredPosition.x < -660f)
+        while (tutoIndication.anchoredPosition.x < -760f)
         {
             Vector3 pos = tutoIndication.anchoredPosition;
             pos.x += speed*Time.deltaTime;

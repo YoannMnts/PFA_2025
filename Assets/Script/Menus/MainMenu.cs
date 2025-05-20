@@ -1,11 +1,15 @@
+using System.Collections;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class MainMenu : MonoBehaviour
 {
     [SerializeField] StartSequence startSequence;
     [SerializeField] RectTransform[] buttons;
     [SerializeField] RectTransform outline;
+    [SerializeField] Image blackBg;
     private int currentLevel;
 
     void Start()
@@ -46,7 +50,7 @@ public class MainMenu : MonoBehaviour
            {
                currentLevel = buttons.Length - 1;
                outline.anchoredPosition = buttons[currentLevel].anchoredPosition;
-            } 
+           } 
         }
         
     }
@@ -60,8 +64,27 @@ public class MainMenu : MonoBehaviour
                 DontDestroyOnLoad(startSequence.gameObject);
                 StartCoroutine(startSequence.GetComponent<StartSequence>().Play());
             }
+            else if (currentLevel == 1)
+            {
+                StartCoroutine(Appear());
+            }
         }
         
+    }
+
+    IEnumerator Appear()
+    {
+        blackBg.gameObject.SetActive(true);
+        Color color = blackBg.color;
+        color.a = 0;
+        blackBg.color = color;
+        while (color.a < 1)
+        {
+            color.a += Time.deltaTime / 2;
+            blackBg.color = color;
+            yield return null;
+        }
+        SceneManager.LoadScene(2);
     }
 
 }
