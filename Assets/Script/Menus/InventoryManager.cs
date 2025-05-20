@@ -17,6 +17,7 @@ public class InventoryManager : SoundObject
     [SerializeField] private TextMeshProUGUI acornsText;
     [SerializeField] public GameObject closedBag, openBag;
     [SerializeField] public int acornsCount;
+    [SerializeField] public Tutorial tutorial;
     
     private int currentPanel = 0;
 
@@ -44,6 +45,7 @@ public class InventoryManager : SoundObject
             }
             else
             {
+                tutorial.Close();
                 openBag.SetActive(true);
                 closedBag.SetActive(false);
                 playerInput.SwitchCurrentActionMap("Menu");

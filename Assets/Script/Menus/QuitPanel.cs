@@ -1,7 +1,9 @@
 using System.Collections;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.Serialization;
+using UnityEngine.UI;
 
 public class QuitPanel : Panel
 {
@@ -12,7 +14,10 @@ public class QuitPanel : Panel
     [SerializeField] private bool saved = false;
     [SerializeField] private bool currentlyChoosingSave = false;
     [SerializeField] private GameObject savingPanel;
-    [SerializeField] private TextMeshProUGUI lettersCount;
+    [SerializeField] private TextMeshProUGUI lettersCountText;
+    [SerializeField] private Image blackScreen;
+    public int lettersCount = 0;
+    
 
     public override void Awake()
     {
@@ -23,7 +28,7 @@ public class QuitPanel : Panel
     {
         selectPad.anchoredPosition = buttons[0].gameObject.GetComponent<RectTransform>().anchoredPosition ;
         saved = false;
-        lettersCount.text = "??";
+        lettersCountText.text = lettersCount.ToString();
         unsavedIcon.SetActive(true);
         currentLevel = 0;
         savingPanel.SetActive(false);
@@ -141,7 +146,7 @@ public class QuitPanel : Panel
     {
         if (saved)
         {
-            /// load scene
+            StartCoroutine(BackToMainMenu(2));
         }
         else
         {
@@ -172,5 +177,22 @@ public class QuitPanel : Panel
             }
             rectTransform.anchoredPosition = destination;
         }
+    }
+
+    IEnumerator BackToMainMenu(float time)
+    {
+        blackScreen.gameObject.SetActive(true);
+        Color color = blackScreen.color;
+        color.a = 0f;
+        blackScreen.color = color;
+        float speed = 1 / time;
+        while (blackScreen.color.a < 1f)
+        {
+            color.a += Time.deltaTime * speed;
+            blackScreen.color = color;
+            yield return null;
+        }
+
+        SceneManager.LoadSceneAsync(1);
     }
 }

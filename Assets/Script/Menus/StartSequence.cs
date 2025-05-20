@@ -9,7 +9,7 @@ public class StartSequence : MonoBehaviour
 {
     [SerializeField] private PlayerInput playerInput;
     [SerializeField] private Image blackBackground, fillBar, selfBlackBackground;
-    [SerializeField] private RectTransform introLetter;
+    [SerializeField] private RectTransform introLetter, tutoIndication;
     [SerializeField] private GameObject continueIndication;
     private CinemachineCamera introCam;
     private PlayerInput playerInputOther;
@@ -122,19 +122,13 @@ public class StartSequence : MonoBehaviour
             Debug.Log(introCam); 
             StartCoroutine(CameraDezoom(3f));
         }
-        InventoryManager inventoryManager = FindObjectOfType<InventoryManager>();
-        if (inventoryManager != null)
-        {
-            inventoryManager.closedBag.SetActive(false);
-            inventoryManager.openBag.SetActive(false);
-        }
         yield return new WaitForSeconds(7f);
-        inventoryManager.closedBag.SetActive(true);
         if (playerInputOther != null)
         {
             playerInputOther.SwitchCurrentActionMap("GamePlay");
         }
-        
+        yield return new WaitForSeconds(1f);
+        StartCoroutine(IndicateTuto());
     }
 
     IEnumerator CameraDezoom(float time)
@@ -147,5 +141,27 @@ public class StartSequence : MonoBehaviour
             introCam.Lens.OrthographicSize += speed * Time.deltaTime;
             yield return null;
         }
+    }
+
+    IEnumerator IndicateTuto()
+    {
+        tutoIndication.anchoredPosition = new Vector3(-1300f, 100f, 0f);
+        float speed = 600f;
+        while (tutoIndication.anchoredPosition.x < -660f)
+        {
+            Vector3 pos = tutoIndication.anchoredPosition;
+            pos.x += speed*Time.deltaTime;
+            tutoIndication.anchoredPosition = pos;
+            yield return null;
+        }
+        yield return new WaitForSeconds(2f);
+        while (tutoIndication.anchoredPosition.x > -1300f)
+        {
+            Vector3 pos = tutoIndication.anchoredPosition;
+            pos.x -= speed*Time.deltaTime;
+            tutoIndication.anchoredPosition = pos;
+            yield return null;
+        }
+        
     }
 }

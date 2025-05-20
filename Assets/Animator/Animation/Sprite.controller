@@ -461,7 +461,6 @@ AnimatorState:
   m_CycleOffset: 0
   m_Transitions:
   - {fileID: -3042116987842964760}
-  - {fileID: -8753618301983342353}
   - {fileID: -1707542698973422458}
   - {fileID: 6464819851402908592}
   m_StateMachineBehaviours: []
@@ -889,6 +888,12 @@ AnimatorController:
     m_DefaultBool: 0
     m_Controller: {fileID: 9100000}
   - m_Name: IsRolling
+    m_Type: 4
+    m_DefaultFloat: 0
+    m_DefaultInt: 0
+    m_DefaultBool: 0
+    m_Controller: {fileID: 9100000}
+  - m_Name: IsWalking
     m_Type: 4
     m_DefaultFloat: 0
     m_DefaultInt: 0
