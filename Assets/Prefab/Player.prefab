@@ -393,6 +393,10 @@ MonoBehaviour:
       m_Calls: []
     m_ActionId: 773ff0cb-5871-4381-95a7-449cedc83500
     m_ActionName: 'ScenarisedSequence/Continue[/DualShock4GamepadHID/buttonSouth]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 1cefb076-0bdc-4ab8-bdef-a8643b02d10e
+    m_ActionName: 'GamePlay/OpenTuto[/XInputControllerWindows/dpad/down]'
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: GamePlay

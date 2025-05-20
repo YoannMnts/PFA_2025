@@ -227,6 +227,7 @@ AnimatorState:
   - {fileID: 5349513627031607411}
   - {fileID: 3294366927485212547}
   - {fileID: 3830273637547839265}
+  - {fileID: -4341997219001947447}
   m_StateMachineBehaviours: []
   m_Position: {x: 50, y: 50, z: 0}
   m_IKOnFeet: 0
@@ -629,6 +630,37 @@ AnimatorStateTransition:
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: -9210505020387432990}
+  m_Solo: 0
+  m_Mute: 0
+  m_IsExit: 0
+  serializedVersion: 3
+  m_TransitionDuration: 0
+  m_TransitionOffset: 0
+  m_ExitTime: 0
+  m_HasExitTime: 0
+  m_HasFixedDuration: 1
+  m_InterruptionSource: 0
+  m_OrderedInterruption: 1
+  m_CanTransitionToSelf: 1
+--- !u!1101 &-4341997219001947447
+AnimatorStateTransition:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: 
+  m_Conditions:
+  - m_ConditionMode: 2
+    m_ConditionEvent: IsGrounded
+    m_EventTreshold: 0
+  - m_ConditionMode: 2
+    m_ConditionEvent: IsClimbing
+    m_EventTreshold: 0
+  - m_ConditionMode: 1
+    m_ConditionEvent: StayOnWall
+    m_EventTreshold: 0
+  m_DstStateMachine: {fileID: 0}
+  m_DstState: {fileID: -3255128244548723331}
   m_Solo: 0
   m_Mute: 0
   m_IsExit: 0
@@ -1919,7 +1951,7 @@ AnimatorStateMachine:
     m_Position: {x: 690, y: 320, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -9210505020387432990}
-    m_Position: {x: 20, y: -60, z: 0}
+    m_Position: {x: 20, y: -70, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -3819422620278277418}
     m_Position: {x: 350, y: 130, z: 0}

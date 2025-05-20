@@ -63,7 +63,7 @@ namespace Script
             {
                 up = Movement.GroundNormal;
             }
-            if (!Movement.IsWalled)
+            if (!Movement.IsWalled || Movement.IsGrounded)
                 spriteRenderer.transform.up = Vector2.Lerp(spriteRenderer.transform.up, up,rotationSmoothness * Time.deltaTime);
             
             Vector2 perp = Vector2.Perpendicular(up);
