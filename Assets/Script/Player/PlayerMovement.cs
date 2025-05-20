@@ -9,7 +9,7 @@ using UnityEngine.InputSystem;
 using UnityEngine.Serialization;
 [DefaultExecutionOrder(-10)]
 [RequireComponent(typeof(Player))]
-public class PlayerMovement : MonoBehaviour
+public class PlayerMovement : SoundObject
 {
     #region Properties
     public Vector2 CurrentVelocity => rb2d.linearVelocity;
@@ -102,8 +102,6 @@ public class PlayerMovement : MonoBehaviour
     private float climbAcceleration;
     [SerializeField, Tooltip("The deceleration of the climbing")]
     private float climbDeceleration;
-    [SerializeField, Range(1f, 100f), Tooltip("The force applied on the player for fall when he's walled")] 
-    private float climbFallSpeed;
     
     [Header("Glide")]
     [SerializeField, Range(0f, 1f), Tooltip("The fall speed when the player is gliding")] 
@@ -302,9 +300,6 @@ public class PlayerMovement : MonoBehaviour
         {
             isJumping = false;
         }
-
-        if (isWalled && inputDirection == Vector2.zero)
-            rb2d.AddForceY(-climbFallSpeed);
     }
 
     private void HandleGround()
@@ -491,7 +486,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void DoNormalMovement()
     {
-        //inputDirection.y = 0;
+        inputDirection.y = 0;
         if(inputDirection.sqrMagnitude < .1f)
         {
             if (Mathf.Abs(rb2d.linearVelocityX) >= .1f && isGrounded)

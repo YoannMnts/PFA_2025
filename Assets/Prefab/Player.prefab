@@ -423,6 +423,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: db539f912f08c9d4ba595df41886fc20, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  clips: []
   normalCollider: {fileID: 4567919334552783960}
   runningCollider: {fileID: 4724200148513138063}
   gravityScale: 2
@@ -456,7 +457,6 @@ MonoBehaviour:
   climbMaxSpeed: 10
   climbAcceleration: 40
   climbDeceleration: 20
-  climbFallSpeed: 15
   glidingFallSpeedMultiplier: 0.21
   glidingSpeedMultiplier: 1.4
   rollCollider: {fileID: 4945585924968141908}
