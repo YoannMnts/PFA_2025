@@ -348,8 +348,6 @@ public class PlayerMovement : SoundObject
             if (isGrounded && !isJumping)
             {
                 isJumping = true;
-                rb2d.linearVelocityY = 0;
-                rb2d.AddForceY(jumpForce, ForceMode2D.Impulse);
                 //Debug.DrawRay(transform.position, Vector2.up * jumpForce, Color.magenta, 1);
             }
             
@@ -367,6 +365,13 @@ public class PlayerMovement : SoundObject
         }
     }
 
+
+    public void ApplyJumpForce()
+    {
+        rb2d.linearVelocityY = 0;
+        rb2d.AddForceY(jumpForce, ForceMode2D.Impulse);
+    }
+
     private void HandleMovement()
     {
         inputDirection = Vector2.ClampMagnitude(inputDirection, 1);
@@ -382,7 +387,7 @@ public class PlayerMovement : SoundObject
             DoNormalMovement();
         }
 
-        if (rb2d.linearVelocityY <= 0 && currentGround != null)
+        /*if (rb2d.linearVelocityY <= 0 && currentGround != null)
         {
             var closestPoint = currentGround.ClosestPoint(rb2d.position);
             rb2d.position = new Vector2()
@@ -390,7 +395,7 @@ public class PlayerMovement : SoundObject
                 x = rb2d.position.x,
                 y = closestPoint.y
             };
-        }
+        }*/
     }
     
     private IEnumerator DoRoll()

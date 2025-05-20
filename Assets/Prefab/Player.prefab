@@ -163,9 +163,9 @@ MonoBehaviour:
     m_ActionName: 'GamePlay/Gliding[/XInputControllerWindows/rightTrigger]'
   - m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: InventoryManager, Assembly-CSharp
-        m_MethodName: OpenTab
+      - m_Target: {fileID: 3887953055138614702}
+        m_TargetAssemblyTypeName: Script.PlayerInteraction, Assembly-CSharp
+        m_MethodName: InteractInput
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -175,20 +175,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: Notification, Assembly-CSharp
-        m_MethodName: Disappear
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_ActionId: 6412dfcc-a81d-4995-b061-496e2c9663e7
-    m_ActionName: 'GamePlay/OpenMenu[/DualShock4GamepadHID/buttonNorth]'
+    m_ActionId: de03a4a4-0a3e-4d4c-a010-d4561e3c4a00
+    m_ActionName: 'GamePlay/Interact[/XInputControllerWindows/buttonSouth]'
   - m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 0}
@@ -238,21 +226,9 @@ MonoBehaviour:
     m_ActionId: aa9992bd-2c5e-4086-8c35-dd4a1368e441
     m_ActionName: 'Menu/SwitchPanelLeft[/DualShock4GamepadHID/leftShoulder]'
   - m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: InventoryManager, Assembly-CSharp
-        m_MethodName: ReceiveInputLeftDPad
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_ActionId: 20c31d1b-513f-4600-a034-ad2c4b9a8569
-    m_ActionName: 'Menu/DPadLeft[/DualShock4GamepadHID/dpad/left]'
+      m_Calls: []
+    m_ActionId: 5aa2b84d-9dfb-43cc-8e99-2af543450743
+    m_ActionName: 'Menu/SwitchPanelRight[/XInputControllerWindows/rightShoulder]'
   - m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 0}
@@ -342,61 +318,29 @@ MonoBehaviour:
     m_ActionId: ce7e2186-fda7-44ba-9b48-70deb2e089d9
     m_ActionName: 'Menu/EastButton[/DualShock4GamepadHID/buttonEast]'
   - m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 3887953055138614702}
-        m_TargetAssemblyTypeName: Script.PlayerInteraction, Assembly-CSharp
-        m_MethodName: InteractInput
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_ActionId: de03a4a4-0a3e-4d4c-a010-d4561e3c4a00
-    m_ActionName: GamePlay/Interact
-  - m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: InventoryManager, Assembly-CSharp
-        m_MethodName: ReceiveInputWestButton
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_ActionId: e47c44e0-65cd-42ce-8d64-20a56a712a26
-    m_ActionName: Menu/WestButton
-  - m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 3887953055138614702}
-        m_TargetAssemblyTypeName: Script.PlayerInteraction, Assembly-CSharp
-        m_MethodName: InteractInput
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_ActionId: 0f13a1dd-6025-4351-8680-345aa839ba01
-    m_ActionName: 'Interaction/Interact[/DualShock4GamepadHID/buttonWest]'
-  - m_PersistentCalls:
       m_Calls: []
-    m_ActionId: 773ff0cb-5871-4381-95a7-449cedc83500
-    m_ActionName: 'ScenarisedSequence/Continue[/DualShock4GamepadHID/buttonSouth]'
+    m_ActionId: 6412dfcc-a81d-4995-b061-496e2c9663e7
+    m_ActionName: 'GamePlay/OpenMenu[/XInputControllerWindows/buttonNorth]'
   - m_PersistentCalls:
       m_Calls: []
     m_ActionId: 1cefb076-0bdc-4ab8-bdef-a8643b02d10e
     m_ActionName: 'GamePlay/OpenTuto[/XInputControllerWindows/dpad/down]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 20c31d1b-513f-4600-a034-ad2c4b9a8569
+    m_ActionName: 'Menu/DPadLeft[/XInputControllerWindows/dpad/left]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: e47c44e0-65cd-42ce-8d64-20a56a712a26
+    m_ActionName: 'Menu/WestButton[/XInputControllerWindows/buttonWest]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 0f13a1dd-6025-4351-8680-345aa839ba01
+    m_ActionName: 'Interaction/Interact[/XInputControllerWindows/buttonWest]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 773ff0cb-5871-4381-95a7-449cedc83500
+    m_ActionName: 'ScenarisedSequence/Continue[/XInputControllerWindows/buttonWest]'
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: GamePlay
@@ -583,6 +527,7 @@ GameObject:
   - component: {fileID: 368780891383949474}
   - component: {fileID: 7361567875673156427}
   - component: {fileID: 5708825392067139613}
+  - component: {fileID: 1818967358206786339}
   m_Layer: 0
   m_Name: Sprite
   m_TagString: Player
@@ -649,15 +594,15 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -1387007410200796958, guid: a6764e00a70f90b4dad262f6b5a5d6da, type: 3}
+  m_Sprite: {fileID: -2792846889348696693, guid: 82b7dfdc594793d4798104cd3b1b493d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1.5685714, y: 2.02}
+  m_Size: {x: 1.5666667, y: 2.0133333}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!95 &5708825392067139613
@@ -682,6 +627,18 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &1818967358206786339
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2454847221200784881}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aaae3e25776023a4b93a933a5280c233, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &4567919334552783960
 GameObject:
   m_ObjectHideFlags: 0
@@ -864,7 +821,7 @@ Transform:
   m_GameObject: {fileID: 4945585924968141908}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0.05, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

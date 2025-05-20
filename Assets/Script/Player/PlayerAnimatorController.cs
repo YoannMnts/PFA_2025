@@ -5,7 +5,7 @@ namespace Script
 {
     public class PlayerAnimatorController : MonoBehaviour
     {
-        private static readonly int IsJumping = Animator.StringToHash("IsJumping");
+        private static readonly int JumpTrigger = Animator.StringToHash("Jump");
         private static readonly int IsClimbing = Animator.StringToHash("IsClimbing");
         private static readonly int IsGrounded = Animator.StringToHash("IsGrounded");
         private static readonly int IsRunning = Animator.StringToHash("IsRunning");
@@ -31,6 +31,7 @@ namespace Script
         
         public Vector2 FacingDirection => facingDirection;
         
+        private bool wasJumping;
 
         private void Awake()
         {
@@ -38,12 +39,17 @@ namespace Script
             facingDirection = Vector2.right;
         }
 
+
         private void FixedUpdate()
         {
             HandleFacing();
             
+            if(!wasJumping && Movement.IsJumping && !Movement.IsWallJumping)
+                animator.SetTrigger(JumpTrigger);
+            
+            wasJumping = Movement.IsJumping;
+            
             animator.SetBool(IsGrounded, Movement.IsGrounded);
-            animator.SetBool(IsJumping, Movement.IsJumping);
             animator.SetBool(IsClimbing, Mathf.Abs(Movement.CurrentVelocity.y) > .15f && Movement.IsWalled && !Movement.IsGrounded);
             animator.SetBool(IsRunning, Mathf.Abs(Movement.CurrentVelocity.x) > 9.5f);
             animator.SetBool(IsWalking, Mathf.Abs(Movement.CurrentVelocity.x) > 2f);
