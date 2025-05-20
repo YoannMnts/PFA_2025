@@ -1,40 +1,43 @@
 fileFormatVersion: 2
-guid: 979d4a12a0390ab40861a49a66a775cc
+guid: d7f51fd9382c3af4db6b3bf40c4ab87e
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 8134218237063267617
-    second: Jump_Sprite_Sheet (1)_0
+      213: 2693077093431030404
+    second: IddleToRun_Sprite_Sheet (1)_0
   - first:
-      213: -8027814590437831118
-    second: Jump_Sprite_Sheet (1)_1
+      213: 8410699242457559403
+    second: IddleToRun_Sprite_Sheet (1)_1
   - first:
-      213: 5268589371943725108
-    second: Jump_Sprite_Sheet (1)_2
+      213: -7300825273796187044
+    second: IddleToRun_Sprite_Sheet (1)_2
   - first:
-      213: -2484996332495036862
-    second: Jump_Sprite_Sheet (1)_3
+      213: -6999348243661724284
+    second: IddleToRun_Sprite_Sheet (1)_3
   - first:
-      213: 5694554005742140972
-    second: Jump_Sprite_Sheet (1)_4
+      213: 6386301863467304115
+    second: IddleToRun_Sprite_Sheet (1)_4
   - first:
-      213: 2495769468229375153
-    second: Jump_Sprite_Sheet (1)_5
+      213: 3910255656589806529
+    second: IddleToRun_Sprite_Sheet (1)_5
   - first:
-      213: 4325170804131426399
-    second: Jump_Sprite_Sheet (1)_6
+      213: 3560671941227397727
+    second: IddleToRun_Sprite_Sheet (1)_6
   - first:
-      213: 6242667543352106255
-    second: Jump_Sprite_Sheet (1)_7
+      213: 8398213327948704126
+    second: IddleToRun_Sprite_Sheet (1)_7
   - first:
-      213: 6465922441826327353
-    second: Jump_Sprite_Sheet (1)_8
+      213: -4042735483085027360
+    second: IddleToRun_Sprite_Sheet (1)_8
   - first:
-      213: -2237362484846863134
-    second: Jump_Sprite_Sheet (1)_9
+      213: 4211713816821767610
+    second: IddleToRun_Sprite_Sheet (1)_9
   - first:
-      213: -4241903689800689936
-    second: Jump_Sprite_Sheet (1)_10
+      213: 3759796382376078028
+    second: IddleToRun_Sprite_Sheet (1)_10
+  - first:
+      213: 7319260583458270973
+    second: IddleToRun_Sprite_Sheet (1)_11
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -143,7 +146,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Jump_Sprite_Sheet (1)_0
+      name: IddleToRun_Sprite_Sheet (1)_0
       rect:
         serializedVersion: 2
         x: 0
@@ -158,14 +161,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 12509a1c36c82e070800000000000000
-      internalID: 8134218237063267617
+      spriteID: 482b2b2195bbf5520800000000000000
+      internalID: 2693077093431030404
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Jump_Sprite_Sheet (1)_1
+      name: IddleToRun_Sprite_Sheet (1)_1
       rect:
         serializedVersion: 2
         x: 512
@@ -180,14 +183,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 23e4146c929779090800000000000000
-      internalID: -8027814590437831118
+      spriteID: b617453366ec8b470800000000000000
+      internalID: 8410699242457559403
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Jump_Sprite_Sheet (1)_2
+      name: IddleToRun_Sprite_Sheet (1)_2
       rect:
         serializedVersion: 2
         x: 1024
@@ -202,14 +205,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 438aa1e9e1acd1940800000000000000
-      internalID: 5268589371943725108
+      spriteID: c5c2f2c48124eaa90800000000000000
+      internalID: -7300825273796187044
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Jump_Sprite_Sheet (1)_3
+      name: IddleToRun_Sprite_Sheet (1)_3
       rect:
         serializedVersion: 2
         x: 1536
@@ -224,14 +227,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 24e1c7d6005838dd0800000000000000
-      internalID: -2484996332495036862
+      spriteID: 485e9454bd15dde90800000000000000
+      internalID: -6999348243661724284
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Jump_Sprite_Sheet (1)_4
+      name: IddleToRun_Sprite_Sheet (1)_4
       rect:
         serializedVersion: 2
         x: 0
@@ -246,18 +249,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: c2eb98a72be170f40800000000000000
-      internalID: 5694554005742140972
+      spriteID: 3b4426075b3b0a850800000000000000
+      internalID: 6386301863467304115
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Jump_Sprite_Sheet (1)_5
+      name: IddleToRun_Sprite_Sheet (1)_5
       rect:
         serializedVersion: 2
         x: 512
-        y: 1021
+        y: 1024
         width: 512
         height: 512
       alignment: 9
@@ -268,14 +271,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 1b4d313bb11c2a220800000000000000
-      internalID: 2495769468229375153
+      spriteID: 1cb4fff5dc4044630800000000000000
+      internalID: 3910255656589806529
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Jump_Sprite_Sheet (1)_6
+      name: IddleToRun_Sprite_Sheet (1)_6
       rect:
         serializedVersion: 2
         x: 1024
@@ -290,14 +293,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: f50f42d3ee7160c30800000000000000
-      internalID: 4325170804131426399
+      spriteID: f524f8ae34c0a6130800000000000000
+      internalID: 3560671941227397727
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Jump_Sprite_Sheet (1)_7
+      name: IddleToRun_Sprite_Sheet (1)_7
       rect:
         serializedVersion: 2
         x: 1536
@@ -305,21 +308,21 @@ TextureImporter:
         width: 512
         height: 512
       alignment: 9
-      pivot: {x: 0.5, y: 0.2}
+      pivot: {x: 0.5, y: 0.1}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: f0ddc5c3e0962a650800000000000000
-      internalID: 6242667543352106255
+      spriteID: e796550b6827c8470800000000000000
+      internalID: 8398213327948704126
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Jump_Sprite_Sheet (1)_8
+      name: IddleToRun_Sprite_Sheet (1)_8
       rect:
         serializedVersion: 2
         x: 0
@@ -334,14 +337,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 93bd842f3329bb950800000000000000
-      internalID: 6465922441826327353
+      spriteID: 0e789d95f7155e7c0800000000000000
+      internalID: -4042735483085027360
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Jump_Sprite_Sheet (1)_9
+      name: IddleToRun_Sprite_Sheet (1)_9
       rect:
         serializedVersion: 2
         x: 512
@@ -349,21 +352,21 @@ TextureImporter:
         width: 512
         height: 512
       alignment: 9
-      pivot: {x: 0.5, y: 0.05}
+      pivot: {x: 0.5, y: 0.1}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 2ecdae09caa43f0e0800000000000000
-      internalID: -2237362484846863134
+      spriteID: abd144bd663037a30800000000000000
+      internalID: 4211713816821767610
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Jump_Sprite_Sheet (1)_10
+      name: IddleToRun_Sprite_Sheet (1)_10
       rect:
         serializedVersion: 2
         x: 1024
@@ -371,15 +374,37 @@ TextureImporter:
         width: 512
         height: 512
       alignment: 9
-      pivot: {x: 0.5, y: 0.05}
+      pivot: {x: 0.5, y: 0.1}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 0f6d206911bb125c0800000000000000
-      internalID: -4241903689800689936
+      spriteID: cca2357b3ea7d2430800000000000000
+      internalID: 3759796382376078028
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IddleToRun_Sprite_Sheet (1)_11
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 512
+        width: 512
+        height: 512
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dfe6c87b8bc339560800000000000000
+      internalID: 7319260583458270973
       vertices: []
       indices: 
       edges: []
@@ -388,7 +413,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: a80a11d484bbe6f48a79d6fb629c730e
+    spriteID: 1b2338f17ac174240b9125ed3df6108e
     internalID: 0
     vertices: []
     indices: 
@@ -398,17 +423,18 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Jump_Sprite_Sheet (1)_0: 8134218237063267617
-      Jump_Sprite_Sheet (1)_1: -8027814590437831118
-      Jump_Sprite_Sheet (1)_10: -4241903689800689936
-      Jump_Sprite_Sheet (1)_2: 5268589371943725108
-      Jump_Sprite_Sheet (1)_3: -2484996332495036862
-      Jump_Sprite_Sheet (1)_4: 5694554005742140972
-      Jump_Sprite_Sheet (1)_5: 2495769468229375153
-      Jump_Sprite_Sheet (1)_6: 4325170804131426399
-      Jump_Sprite_Sheet (1)_7: 6242667543352106255
-      Jump_Sprite_Sheet (1)_8: 6465922441826327353
-      Jump_Sprite_Sheet (1)_9: -2237362484846863134
+      IddleToRun_Sprite_Sheet (1)_0: 2693077093431030404
+      IddleToRun_Sprite_Sheet (1)_1: 8410699242457559403
+      IddleToRun_Sprite_Sheet (1)_10: 3759796382376078028
+      IddleToRun_Sprite_Sheet (1)_11: 7319260583458270973
+      IddleToRun_Sprite_Sheet (1)_2: -7300825273796187044
+      IddleToRun_Sprite_Sheet (1)_3: -6999348243661724284
+      IddleToRun_Sprite_Sheet (1)_4: 6386301863467304115
+      IddleToRun_Sprite_Sheet (1)_5: 3910255656589806529
+      IddleToRun_Sprite_Sheet (1)_6: 3560671941227397727
+      IddleToRun_Sprite_Sheet (1)_7: 8398213327948704126
+      IddleToRun_Sprite_Sheet (1)_8: -4042735483085027360
+      IddleToRun_Sprite_Sheet (1)_9: 4211713816821767610
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
