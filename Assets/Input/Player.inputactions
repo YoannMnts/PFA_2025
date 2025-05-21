@@ -224,6 +224,28 @@
                 },
                 {
                     "name": "",
+                    "id": "efdd68cc-52f9-4a5c-b56b-b71b0c1e80cf",
+                    "path": "<Gamepad>/rightShoulder",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Gliding",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "8a742e9b-13cd-41ac-890e-d1beb7c9ee4d",
+                    "path": "<Gamepad>/rightTrigger",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Gliding",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
                     "id": "6fa82cfe-7a40-4590-a7f9-967121962081",
                     "path": "<Gamepad>/buttonWest",
                     "interactions": "Press(behavior=1)",

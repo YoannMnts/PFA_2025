@@ -268,7 +268,7 @@ public class LettersPanel : Panel
 
     public Vector3 ReturnPosOfLetter()
     {
-        return currentLettersData[currentLevel].destinationPositionOnMap;
+        return currentLettersData[currentLevel].data.receiver.mapPosition;
     }
 
     public Vector3 ReturnPosOfPinnedLetter()

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Runtime.CompilerServices;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -19,7 +20,7 @@ namespace Script
 
         public void InteractInput(InputAction.CallbackContext context)
         {
-            if (context.performed)
+            if (context.canceled)
             {
                 PlayerInteractable currentPlayerInteractable = null;
                 foreach (PlayerInteractable interactable in playerInteractables)
