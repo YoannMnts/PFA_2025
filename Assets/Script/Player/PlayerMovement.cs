@@ -463,13 +463,16 @@ public class PlayerMovement : SoundObject
         
         //float verticalAmount = Vector2.Dot(inputDirection, wallNormal);
         float horizontalAmount = Vector2.Dot(inputDirection, forward);
+        float wantToClimb = Vector2.Dot(-wallNormal, inputDirection);
         float targetClimbMaxSpeed = horizontalAmount * climbMaxSpeed;
         targetVelocity = forward * targetClimbMaxSpeed;
         
         //Debug.DrawRay(transform.position, forward, Color.magenta, 2);
         var dot = Vector2.Dot(targetVelocity.normalized, rb2d.linearVelocity.normalized);
         bool isGoingBackward = dot < 0 && rb2d.linearVelocity.sqrMagnitude > goingBackwardInSlopes;
-        if (isGoingBackward || Mathf.Abs(horizontalAmount) < .15f)
+        if (wantToClimb > .6f && CurrentVelocity.y < 10)
+            rb2d.AddForceY(Mathf.Abs(inputDirection.normalized.x) * climbForce, ForceMode2D.Force);
+        else if (isGoingBackward || Mathf.Abs(horizontalAmount) < .15f)
         {
             StopWithForce(semiTurnForceMultiplier); 
         }
