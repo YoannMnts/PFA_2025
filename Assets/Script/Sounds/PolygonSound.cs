@@ -1,9 +1,10 @@
 using UnityEngine;
+using UnityEngine.Serialization;
 
 public class PolygonSound : MonoBehaviour
 {
     [SerializeField] private AudioSource audioSource;
-    [SerializeField] private PolygonCollider2D riverShape;
+    [SerializeField] private PolygonCollider2D shape;
     [SerializeField] private Transform listener;
     [SerializeField] private float fadeDistance = 5f; 
     [SerializeField] private OptionsPanel optionsPanel;
@@ -12,7 +13,7 @@ public class PolygonSound : MonoBehaviour
     {
         Vector2 listenerPos = listener.position;
         
-        float distance = DistanceToPolygon(riverShape, listenerPos);
+        float distance = DistanceToPolygon(shape, listenerPos);
 
         if (distance < fadeDistance)
         {

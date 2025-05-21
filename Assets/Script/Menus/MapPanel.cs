@@ -52,17 +52,26 @@ public class MapPanel : Panel
 
     void SetPoints()
     {
-        Vector3 pos = (lettersPanel.ReturnPosOfLetter() * multiplicator);
-        point.rectTransform.localPosition = new Vector3(pos.x, pos.y, 0);
-        if (lettersPanel.pinnedCoordinates != null)
+        if (lettersPanel.letters.Length > 0)
         {
-            pinnedPoint.enabled = true;
-            Vector3 pinnedPos = (lettersPanel.ReturnPosOfPinnedLetter()*multiplicator);
-            pinnedPoint.rectTransform.localPosition = new Vector3(pinnedPos.x, pinnedPos.y, 0);
+            point.enabled = true;
+            Vector3 pos = lettersPanel.ReturnPosOfLetter();
+            point.rectTransform.localPosition = new Vector3(pos.x, pos.y, 0);
+            if (lettersPanel.pinnedCoordinates != null)
+            {
+                pinnedPoint.enabled = true;
+                Vector3 pinnedPos = lettersPanel.ReturnPosOfPinnedLetter();
+                pinnedPoint.rectTransform.localPosition = new Vector3(pinnedPos.x, pinnedPos.y, 0);
+            }
+            else
+            { 
+                pinnedPoint.enabled = false; 
+            }
         }
         else
         {
-            pinnedPoint.enabled = false;
+            point.enabled = false;
         }
+        
     }
 }

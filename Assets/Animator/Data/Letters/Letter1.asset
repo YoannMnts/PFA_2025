@@ -1,0 +1,39 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0eeb945c88124c10989ad86d225d13c2, type: 3}
+  m_Name: Letter1
+  m_EditorClassIdentifier: 
+  sender: {fileID: 11400000, guid: ed1c784f61a160d49b72a96823946ba0, type: 2}
+  receiver: {fileID: 11400000, guid: dac50ed2bdd641b408b32ced63684d5b, type: 2}
+  dependencies:
+  - {fileID: 11400000, guid: 7431f899d205c3d4a95dc48e03670356, type: 2}
+  senderName: Jack
+  text: "Salut ma petiote,\r\nComment tu vas ? Je viens de la part du Capitaine Hans.
+    Je vais devoir passer pour quelques am\xE9nagements dans la Grotte des Inspirations.
+    J\u2019ai tous le matos qu\u2019il me faut et \xE7a prendra pas longtemps. T\u2019auras
+    m\xEAme pas le temps de dire \"Sacrebois\" que \xE7a sera d\xE9j\xE0 fini !\r\nA
+    plus, ma petiote !\r\nJack\r"
+  sendedText:
+  - " \u2026 Tr\xE8s bien ! \u2026 Je vois ! Mon petiot ! Pendant que je t\u2019ai
+    sous le coude, donne-moi deux secondes ! "
+  - "Eeeeeeet ! Tiens ! Tu veux bien apporter ce courrier \xE0 Barbara ?! La connaissant,
+    c\u2019est pas s\xFBre qu\u2019elle capte ta pr\xE9sence ! Tu devrais donc le
+    laisser dans sa bo\xEEte aux lettres !"
+  receivedText:
+  - Hello little one ! You should be the new postman ?! What brings you here ?!
+  - Oh ?! You bring me a letter from <color=#D70000><b>Captain Hans</b></color>?!
+    Should be about the <b>new renovations</b>  !
+  - Thanks a lot, little one ! Here ! Take this as thanks !
+  glansGain: 4
+  stampsGain: 35
+  appearingCharacter: {fileID: 0}
+  disappearingCharacter: {fileID: 0}

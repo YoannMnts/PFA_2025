@@ -10,15 +10,17 @@ public class EndSequence : MonoBehaviour
     [SerializeField] private int countToWin;
     [SerializeField] private RectTransform endMessage;
     [SerializeField] private InventoryManager inventoryManager;
-    [SerializeField] private Image continueButton, blackScreen;
+    [SerializeField] private Image continueButton, blackScreen, goToLetterBoxIndication, finishLoad;
     [SerializeField] private GameObject finishButton;
     [SerializeField] private PlayerInput playerInput;
+    [SerializeField] private HazelLetterBox hazelLetterBox;
     private bool canInteract = false;
     private bool playerIn=false;
     private bool readyToCredits = false;
 
     private void Start()
     {
+        goToLetterBoxIndication.gameObject.SetActive(false);
         endMessage.gameObject.SetActive(false);
         continueButton.gameObject.SetActive(false);
         blackScreen.gameObject.SetActive(false);
@@ -30,7 +32,9 @@ public class EndSequence : MonoBehaviour
     {
         if (inventoryManager.acornsCount >= countToWin)
         {
-            StartCoroutine(EndingAppear());
+            goToLetterBoxIndication.gameObject.SetActive(true);
+            hazelLetterBox.canEnd = true;
+            hazelLetterBox.aboveHeadIndication.GetComponent<SpriteRenderer>().enabled = true;
         }
         else
         {
@@ -39,7 +43,7 @@ public class EndSequence : MonoBehaviour
         }
     }
 
-    IEnumerator EndingAppear()
+    public IEnumerator EndingAppear()
     {
         while (playerInput.currentActionMap.name != "GamePlay")
         {
@@ -83,15 +87,27 @@ public class EndSequence : MonoBehaviour
     {
         if (context.canceled)
         {
-            Debug.Log(readyToCredits);
             if (playerIn && readyToCredits)
             {
-                playerIn = false; 
-                StartCoroutine(SceneTransition());
+                finishLoad.fillAmount += 0.22f;
+                if (finishLoad.fillAmount >= 1)
+                {
+                    playerIn = false;
+                    StopCoroutine(UnLoad());
+                    StartCoroutine(SceneTransition());
+                }
             }
         }
     }
 
+    IEnumerator UnLoad()
+    {
+        while (finishLoad.gameObject.activeInHierarchy && playerIn)
+        {
+            finishLoad.fillAmount -= 0.2f * Time.deltaTime;
+            yield return null;
+        }
+    }
     IEnumerator SceneTransition()
     {
         playerInput.SwitchCurrentActionMap("ScenarisedSequence");
@@ -111,6 +127,7 @@ public class EndSequence : MonoBehaviour
     {
         float speed = 600f;
         float appearSpeed = 0.5f;
+        hazelLetterBox.aboveHeadIndication.GetComponent<SpriteRenderer>().enabled = false;
         while (endMessage.anchoredPosition.y < 2000f || continueButton.color.a > 0)
         {
             Vector3 pos = endMessage.anchoredPosition;
@@ -123,6 +140,8 @@ public class EndSequence : MonoBehaviour
         }
         readyToCredits = true;
         playerInput.SwitchCurrentActionMap("GamePlay");
+        
+        StartCoroutine(UnLoad());
     }
 
     void OnTriggerEnter2D(Collider2D other)
@@ -132,7 +151,10 @@ public class EndSequence : MonoBehaviour
             playerIn = true;
             if (readyToCredits)
             {
-                finishButton.gameObject.SetActive(true);
+
+                finishButton.gameObject.SetActive(true);                
+                StartCoroutine(UnLoad());
+                finishLoad.fillAmount = 0f;
             }
             
         }

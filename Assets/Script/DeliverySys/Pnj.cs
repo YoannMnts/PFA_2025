@@ -15,7 +15,7 @@ public class Pnj : PlayerInteractable
     private int lastLineSaid; 
     
     private DeliveryManager deliveryManager;
-    private List<string> linesLeft;
+    public List<string> linesLeft;
     private bool isTalking = false;
 
     private void Awake()
@@ -58,7 +58,6 @@ public class Pnj : PlayerInteractable
 
     public override void Interact()
     {
-        
         deliveryManager.DeliveryCheck(this);
         if (linesLeft.Count == 0)
         {

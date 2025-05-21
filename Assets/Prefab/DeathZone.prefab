@@ -71,6 +71,7 @@ EdgeCollider2D:
   m_EdgeRadius: 14.6
   m_Points:
   - {x: -100.610825, y: 1.4258118}
+  - {x: -28.987698, y: -1.6995926}
   - {x: 135.14171, y: 3.151741}
   - {x: 135.36577, y: 194.7247}
   - {x: -101.58664, y: 192.90007}
@@ -91,4 +92,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 060e20bdb0e63f34daa249ba480061f8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 3824737627607920114, guid: 86a95a52393044d4d8c1f47edcef0e44, type: 3}
+  player: {fileID: 0}

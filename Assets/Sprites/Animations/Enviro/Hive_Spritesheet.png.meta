@@ -1,0 +1,1253 @@
+fileFormatVersion: 2
+guid: 4cb5046c6942bf3499e2ef5f2305e560
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 7089286125633701612
+    second: Hive_Spritesheet_0
+  - first:
+      213: -1516689371901323448
+    second: Hive_Spritesheet_1
+  - first:
+      213: 7728171319796214736
+    second: Hive_Spritesheet_2
+  - first:
+      213: 1128118775694886762
+    second: Hive_Spritesheet_3
+  - first:
+      213: -296227207508338780
+    second: Hive_Spritesheet_4
+  - first:
+      213: -555415845271121700
+    second: Hive_Spritesheet_5
+  - first:
+      213: -2656102021980332227
+    second: Hive_Spritesheet_6
+  - first:
+      213: -3930820480907484914
+    second: Hive_Spritesheet_7
+  - first:
+      213: 5797518206118928252
+    second: Hive_Spritesheet_8
+  - first:
+      213: 4264142247662598199
+    second: Hive_Spritesheet_9
+  - first:
+      213: 6681417584133037915
+    second: Hive_Spritesheet_10
+  - first:
+      213: 3052802264214051961
+    second: Hive_Spritesheet_11
+  - first:
+      213: 284168227075479081
+    second: Hive_Spritesheet_12
+  - first:
+      213: -3965434698600945349
+    second: Hive_Spritesheet_13
+  - first:
+      213: -8329615126364681239
+    second: Hive_Spritesheet_14
+  - first:
+      213: -3841099208190420082
+    second: Hive_Spritesheet_15
+  - first:
+      213: -256974016422601193
+    second: Hive_Spritesheet_16
+  - first:
+      213: -8871170903552998501
+    second: Hive_Spritesheet_17
+  - first:
+      213: -6205561970972199661
+    second: Hive_Spritesheet_18
+  - first:
+      213: -342604826288974727
+    second: Hive_Spritesheet_19
+  - first:
+      213: -1636708280975029288
+    second: Hive_Spritesheet_20
+  - first:
+      213: 2914424711335407105
+    second: Hive_Spritesheet_21
+  - first:
+      213: -5063566824225775239
+    second: Hive_Spritesheet_22
+  - first:
+      213: -3522967038570618796
+    second: Hive_Spritesheet_23
+  - first:
+      213: -9098365405430253106
+    second: Hive_Spritesheet_24
+  - first:
+      213: -1420895073319265415
+    second: Hive_Spritesheet_25
+  - first:
+      213: -1984375817836812102
+    second: Hive_Spritesheet_26
+  - first:
+      213: 5346935038906203186
+    second: Hive_Spritesheet_27
+  - first:
+      213: -1381507031577233365
+    second: Hive_Spritesheet_28
+  - first:
+      213: 2131735195205208807
+    second: Hive_Spritesheet_29
+  - first:
+      213: 6124797954205753541
+    second: Hive_Spritesheet_30
+  - first:
+      213: 6541693506562932519
+    second: Hive_Spritesheet_31
+  - first:
+      213: -1008620797347318728
+    second: Hive_Spritesheet_32
+  - first:
+      213: -3735615473273057662
+    second: Hive_Spritesheet_33
+  - first:
+      213: 747916000072209803
+    second: Hive_Spritesheet_34
+  - first:
+      213: -7331427096246113006
+    second: Hive_Spritesheet_35
+  - first:
+      213: 6227817017423803572
+    second: Hive_Spritesheet_36
+  - first:
+      213: 8085839820398393763
+    second: Hive_Spritesheet_37
+  - first:
+      213: 2016733905127929390
+    second: Hive_Spritesheet_38
+  - first:
+      213: -5238475764589323666
+    second: Hive_Spritesheet_39
+  - first:
+      213: -7561357288843110599
+    second: Hive_Spritesheet_40
+  - first:
+      213: 1183092668958961417
+    second: Hive_Spritesheet_41
+  - first:
+      213: 4332840680976803127
+    second: Hive_Spritesheet_42
+  - first:
+      213: -3818386251206458690
+    second: Hive_Spritesheet_43
+  - first:
+      213: -1027698834411603072
+    second: Hive_Spritesheet_44
+  - first:
+      213: -518102306421372084
+    second: Hive_Spritesheet_45
+  - first:
+      213: -7400890356072323276
+    second: Hive_Spritesheet_46
+  - first:
+      213: 3116797222211758530
+    second: Hive_Spritesheet_47
+  - first:
+      213: 8273590104194256581
+    second: Hive_Spritesheet_48
+  - first:
+      213: 4255632542759303022
+    second: Hive_Spritesheet_49
+  - first:
+      213: -8901411923837372207
+    second: Hive_Spritesheet_50
+  - first:
+      213: -1488361204948448148
+    second: Hive_Spritesheet_51
+  - first:
+      213: -2389227466468518000
+    second: Hive_Spritesheet_52
+  - first:
+      213: 22127865959764608
+    second: Hive_Spritesheet_53
+  - first:
+      213: 6816727038196704733
+    second: Hive_Spritesheet_54
+  - first:
+      213: 7858836398915916706
+    second: Hive_Spritesheet_55
+  - first:
+      213: -8421431010684882645
+    second: Hive_Spritesheet_56
+  - first:
+      213: -7532202315600830792
+    second: Hive_Spritesheet_57
+  - first:
+      213: -1086294582497737452
+    second: Hive_Spritesheet_58
+  - first:
+      213: 4426370824950384999
+    second: Hive_Spritesheet_59
+  - first:
+      213: 3698719233808166084
+    second: Hive_Spritesheet_60
+  - first:
+      213: 4753630404122014206
+    second: Hive_Spritesheet_61
+  - first:
+      213: -5497625443523819736
+    second: Hive_Spritesheet_62
+  - first:
+      213: 3533233112577596014
+    second: Hive_Spritesheet_63
+  - first:
+      213: -7387295580677768209
+    second: Hive_Spritesheet_64
+  - first:
+      213: 395521512781082281
+    second: Hive_Spritesheet_65
+  - first:
+      213: 8515578537645919931
+    second: Hive_Spritesheet_66
+  - first:
+      213: -8146105416167665136
+    second: Hive_Spritesheet_67
+  - first:
+      213: -7566733102715449953
+    second: Hive_Spritesheet_68
+  - first:
+      213: 4640297354979555752
+    second: Hive_Spritesheet_69
+  - first:
+      213: 7342929595781515447
+    second: Hive_Spritesheet_70
+  - first:
+      213: -1006548106871943540
+    second: Hive_Spritesheet_71
+  - first:
+      213: -4413607418456492728
+    second: Hive_Spritesheet_72
+  - first:
+      213: 8844464255554090520
+    second: Hive_Spritesheet_73
+  - first:
+      213: 5380760999945935525
+    second: Hive_Spritesheet_74
+  - first:
+      213: -1340315755951728077
+    second: Hive_Spritesheet_75
+  - first:
+      213: 267763704520884507
+    second: Hive_Spritesheet_76
+  - first:
+      213: -2066678864065769893
+    second: Hive_Spritesheet_77
+  - first:
+      213: -7975448012203086458
+    second: Hive_Spritesheet_78
+  - first:
+      213: -8875302631868376081
+    second: Hive_Spritesheet_79
+  - first:
+      213: -3466873409838610751
+    second: Hive_Spritesheet_80
+  - first:
+      213: -2176582524983039444
+    second: Hive_Spritesheet_81
+  - first:
+      213: 6454097400694455180
+    second: Hive_Spritesheet_82
+  - first:
+      213: -8070887459620673657
+    second: Hive_Spritesheet_83
+  - first:
+      213: -3745049716353298206
+    second: Hive_Spritesheet_84
+  - first:
+      213: -4512607366395363947
+    second: Hive_Spritesheet_85
+  - first:
+      213: -1809115953727939421
+    second: Hive_Spritesheet_86
+  - first:
+      213: -4737170888784439970
+    second: Hive_Spritesheet_87
+  - first:
+      213: -6874214536641866830
+    second: Hive_Spritesheet_88
+  - first:
+      213: 49295367407096309
+    second: Hive_Spritesheet_89
+  - first:
+      213: 4307647562006575803
+    second: Hive_Spritesheet_90
+  - first:
+      213: -3702700555338945660
+    second: Hive_Spritesheet_91
+  - first:
+      213: 8581913625887927622
+    second: Hive_Spritesheet_92
+  - first:
+      213: -1635251786526402351
+    second: Hive_Spritesheet_93
+  - first:
+      213: -9162849845300589926
+    second: Hive_Spritesheet_94
+  - first:
+      213: -2042795721884400416
+    second: Hive_Spritesheet_95
+  - first:
+      213: 5173015892157689692
+    second: Hive_Spritesheet_96
+  - first:
+      213: 7969005294348645501
+    second: Hive_Spritesheet_97
+  - first:
+      213: 5245195968372280026
+    second: Hive_Spritesheet_98
+  - first:
+      213: -6452118026102544717
+    second: Hive_Spritesheet_99
+  - first:
+      213: 2577526187901104222
+    second: Hive_Spritesheet_100
+  - first:
+      213: -4929247260504736552
+    second: Hive_Spritesheet_101
+  - first:
+      213: -1622777837809426325
+    second: Hive_Spritesheet_102
+  - first:
+      213: 6266134286782232622
+    second: Hive_Spritesheet_103
+  - first:
+      213: 1615798426937136297
+    second: Hive_Spritesheet_104
+  - first:
+      213: -6624316951556353492
+    second: Hive_Spritesheet_105
+  - first:
+      213: -318292474769791373
+    second: Hive_Spritesheet_106
+  - first:
+      213: 5706393360943620536
+    second: Hive_Spritesheet_107
+  - first:
+      213: -6035551224638967317
+    second: Hive_Spritesheet_108
+  - first:
+      213: 5793271270909369974
+    second: Hive_Spritesheet_109
+  - first:
+      213: -4617250772165710206
+    second: Hive_Spritesheet_110
+  - first:
+      213: 3903587095625788263
+    second: Hive_Spritesheet_111
+  - first:
+      213: 1417400832608972504
+    second: Hive_Spritesheet_112
+  - first:
+      213: -2346525427970374664
+    second: Hive_Spritesheet_113
+  - first:
+      213: -4075276804521910012
+    second: Hive_Spritesheet_114
+  - first:
+      213: -6421553537868382655
+    second: Hive_Spritesheet_115
+  - first:
+      213: 1495347182432508317
+    second: Hive_Spritesheet_116
+  - first:
+      213: -1103342467413079301
+    second: Hive_Spritesheet_117
+  - first:
+      213: -536440186627309280
+    second: Hive_Spritesheet_118
+  - first:
+      213: 4504602551178024232
+    second: Hive_Spritesheet_119
+  - first:
+      213: -4000852941007528807
+    second: Hive_Spritesheet_120
+  - first:
+      213: 8264982526158393140
+    second: Hive_Spritesheet_121
+  - first:
+      213: -2473516573403787049
+    second: Hive_Spritesheet_122
+  - first:
+      213: 1919230570117598851
+    second: Hive_Spritesheet_123
+  - first:
+      213: -4638041386836559080
+    second: Hive_Spritesheet_124
+  - first:
+      213: -7811980996150568102
+    second: Hive_Spritesheet_125
+  - first:
+      213: -828186700070216348
+    second: Hive_Spritesheet_126
+  - first:
+      213: -6353589096347100080
+    second: Hive_Spritesheet_127
+  - first:
+      213: 4347408365461772211
+    second: Hive_Spritesheet_128
+  - first:
+      213: -7309689585812156234
+    second: Hive_Spritesheet_129
+  - first:
+      213: -2453650044469459557
+    second: Hive_Spritesheet_130
+  - first:
+      213: -1015168034850451283
+    second: Hive_Spritesheet_131
+  - first:
+      213: 1374240286329047615
+    second: Hive_Spritesheet_132
+  - first:
+      213: 8494176726628604577
+    second: Hive_Spritesheet_133
+  - first:
+      213: 6164978565159264599
+    second: Hive_Spritesheet_134
+  - first:
+      213: -4527580964272945069
+    second: Hive_Spritesheet_135
+  - first:
+      213: -316412049239448225
+    second: Hive_Spritesheet_136
+  - first:
+      213: 1840601529835419688
+    second: Hive_Spritesheet_137
+  - first:
+      213: 7663634181373185491
+    second: Hive_Spritesheet_138
+  - first:
+      213: -8789892460244547393
+    second: Hive_Spritesheet_139
+  - first:
+      213: 49546858074246287
+    second: Hive_Spritesheet_140
+  - first:
+      213: -3251835338368055854
+    second: Hive_Spritesheet_141
+  - first:
+      213: -706394216385089927
+    second: Hive_Spritesheet_142
+  - first:
+      213: -2273671446038553810
+    second: Hive_Spritesheet_143
+  - first:
+      213: -508898850550370265
+    second: Hive_Spritesheet_144
+  - first:
+      213: -675995979133645255
+    second: Hive_Spritesheet_145
+  - first:
+      213: 7485748818709151
+    second: Hive_Spritesheet_146
+  - first:
+      213: -5748536471149244507
+    second: Hive_Spritesheet_147
+  - first:
+      213: 2872168073370991767
+    second: Hive_Spritesheet_148
+  - first:
+      213: -7506616339111337777
+    second: Hive_Spritesheet_149
+  - first:
+      213: 9040689535716141707
+    second: Hive_Spritesheet_150
+  - first:
+      213: 5760748447976642759
+    second: Hive_Spritesheet_151
+  - first:
+      213: 2014185863726019077
+    second: Hive_Spritesheet_152
+  - first:
+      213: -3818469794000047121
+    second: Hive_Spritesheet_153
+  - first:
+      213: 7748201923042805001
+    second: Hive_Spritesheet_154
+  - first:
+      213: -8825455795621254114
+    second: Hive_Spritesheet_155
+  - first:
+      213: -3931516028767271973
+    second: Hive_Spritesheet_156
+  - first:
+      213: 7748256563076247873
+    second: Hive_Spritesheet_157
+  - first:
+      213: -7482885858854722657
+    second: Hive_Spritesheet_158
+  - first:
+      213: -7525008375517468839
+    second: Hive_Spritesheet_159
+  - first:
+      213: -6240469743398669330
+    second: Hive_Spritesheet_160
+  - first:
+      213: -7334224211323108235
+    second: Hive_Spritesheet_161
+  - first:
+      213: 1167145225242268095
+    second: Hive_Spritesheet_162
+  - first:
+      213: 2132903946525878965
+    second: Hive_Spritesheet_163
+  - first:
+      213: -1502260066699851938
+    second: Hive_Spritesheet_164
+  - first:
+      213: -2645683747190051000
+    second: Hive_Spritesheet_165
+  - first:
+      213: -1460451055891554398
+    second: Hive_Spritesheet_166
+  - first:
+      213: 9100363876392559364
+    second: Hive_Spritesheet_167
+  - first:
+      213: -727903263834119907
+    second: Hive_Spritesheet_168
+  - first:
+      213: -5978720662506305845
+    second: Hive_Spritesheet_169
+  - first:
+      213: 8541496814412978663
+    second: Hive_Spritesheet_170
+  - first:
+      213: -3764863423456947577
+    second: Hive_Spritesheet_171
+  - first:
+      213: -5324730424284285469
+    second: Hive_Spritesheet_172
+  - first:
+      213: -5375454505363917608
+    second: Hive_Spritesheet_173
+  - first:
+      213: -4471840941739333828
+    second: Hive_Spritesheet_174
+  - first:
+      213: -1925269075913058499
+    second: Hive_Spritesheet_175
+  - first:
+      213: 4450731272045431912
+    second: Hive_Spritesheet_176
+  - first:
+      213: -4713650947358603450
+    second: Hive_Spritesheet_177
+  - first:
+      213: -7125447013860518209
+    second: Hive_Spritesheet_178
+  - first:
+      213: 3425321991598707444
+    second: Hive_Spritesheet_179
+  - first:
+      213: -106726092067593853
+    second: Hive_Spritesheet_180
+  - first:
+      213: -8870653591654463985
+    second: Hive_Spritesheet_181
+  - first:
+      213: -3496957748291338135
+    second: Hive_Spritesheet_182
+  - first:
+      213: -4102530141562161327
+    second: Hive_Spritesheet_183
+  - first:
+      213: 4282077102371171853
+    second: Hive_Spritesheet_184
+  - first:
+      213: -3206239220211393001
+    second: Hive_Spritesheet_185
+  - first:
+      213: -3970508427900369740
+    second: Hive_Spritesheet_186
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 1
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Hive_Spritesheet_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2048
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ce6808dab24326260800000000000000
+      internalID: 7089286125633701612
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hive_Spritesheet_1
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 2048
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 84716315d03a3fae0800000000000000
+      internalID: -1516689371901323448
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hive_Spritesheet_2
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 2048
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0dba0d7aedaff3b60800000000000000
+      internalID: 7728171319796214736
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hive_Spritesheet_3
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 2048
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a670eb9ac02e7af00800000000000000
+      internalID: 1128118775694886762
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hive_Spritesheet_4
+      rect:
+        serializedVersion: 2
+        x: 2048
+        y: 2048
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4a7d8ab9ce693ebf0800000000000000
+      internalID: -296227207508338780
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hive_Spritesheet_5
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1536
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cd0ddff3b34ca48f0800000000000000
+      internalID: -555415845271121700
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hive_Spritesheet_6
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 1536
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d3f5aac9841a32bd0800000000000000
+      internalID: -2656102021980332227
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hive_Spritesheet_7
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 1536
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e01eda7599be279c0800000000000000
+      internalID: -3930820480907484914
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hive_Spritesheet_8
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 1536
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c7f1496871ce47050800000000000000
+      internalID: 5797518206118928252
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hive_Spritesheet_9
+      rect:
+        serializedVersion: 2
+        x: 2048
+        y: 1536
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7383aa728c64d2b30800000000000000
+      internalID: 4264142247662598199
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hive_Spritesheet_10
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1024
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b5f5c42a4e929bc50800000000000000
+      internalID: 6681417584133037915
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hive_Spritesheet_11
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 1024
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 97c9cff1c7bbd5a20800000000000000
+      internalID: 3052802264214051961
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hive_Spritesheet_12
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 1024
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 92659473f7191f300800000000000000
+      internalID: 284168227075479081
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hive_Spritesheet_13
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 1024
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b39e1e1c622f7f8c0800000000000000
+      internalID: -3965434698600945349
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hive_Spritesheet_14
+      rect:
+        serializedVersion: 2
+        x: 2048
+        y: 1024
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9eb005dbc23476c80800000000000000
+      internalID: -8329615126364681239
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hive_Spritesheet_15
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 512
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e8b96c40f9ca1bac0800000000000000
+      internalID: -3841099208190420082
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hive_Spritesheet_16
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 512
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 71e10aa5e7b0f6cf0800000000000000
+      internalID: -256974016422601193
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hive_Spritesheet_17
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 512
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b9341ff801543e480800000000000000
+      internalID: -8871170903552998501
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hive_Spritesheet_18
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 512
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3157780144a61e9a0800000000000000
+      internalID: -6205561970972199661
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hive_Spritesheet_19
+      rect:
+        serializedVersion: 2
+        x: 2048
+        y: 512
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 97416b6c9b2de3bf0800000000000000
+      internalID: -342604826288974727
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hive_Spritesheet_20
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8db0b877d7e3949e0800000000000000
+      internalID: -1636708280975029288
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hive_Spritesheet_21
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 0
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 10e64cb65dd127820800000000000000
+      internalID: 2914424711335407105
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hive_Spritesheet_22
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 0
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 971e1912dc89ab9b0800000000000000
+      internalID: -5063566824225775239
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hive_Spritesheet_23
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 0
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 450a696d428eb1fc0800000000000000
+      internalID: -3522967038570618796
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hive_Spritesheet_24
+      rect:
+        serializedVersion: 2
+        x: 2048
+        y: 0
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ec970a47edc1cb180800000000000000
+      internalID: -9098365405430253106
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: a671045b3eecb53498f9eaa7f40aef88
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Hive_Spritesheet_0: 7089286125633701612
+      Hive_Spritesheet_1: -1516689371901323448
+      Hive_Spritesheet_10: 6681417584133037915
+      Hive_Spritesheet_11: 3052802264214051961
+      Hive_Spritesheet_12: 284168227075479081
+      Hive_Spritesheet_13: -3965434698600945349
+      Hive_Spritesheet_14: -8329615126364681239
+      Hive_Spritesheet_15: -3841099208190420082
+      Hive_Spritesheet_16: -256974016422601193
+      Hive_Spritesheet_17: -8871170903552998501
+      Hive_Spritesheet_18: -6205561970972199661
+      Hive_Spritesheet_19: -342604826288974727
+      Hive_Spritesheet_2: 7728171319796214736
+      Hive_Spritesheet_20: -1636708280975029288
+      Hive_Spritesheet_21: 2914424711335407105
+      Hive_Spritesheet_22: -5063566824225775239
+      Hive_Spritesheet_23: -3522967038570618796
+      Hive_Spritesheet_24: -9098365405430253106
+      Hive_Spritesheet_3: 1128118775694886762
+      Hive_Spritesheet_4: -296227207508338780
+      Hive_Spritesheet_5: -555415845271121700
+      Hive_Spritesheet_6: -2656102021980332227
+      Hive_Spritesheet_7: -3930820480907484914
+      Hive_Spritesheet_8: 5797518206118928252
+      Hive_Spritesheet_9: 4264142247662598199
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -1,8 +1,10 @@
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using Script;
 using Script.DeliverySys;
 using Unity.VisualScripting;
+using UnityEditor.Tilemaps;
 using UnityEngine;
 
 [DefaultExecutionOrder(-100)]
@@ -76,6 +78,7 @@ public class DeliveryManager : MonoBehaviour
 
     public void DeliveryCheck(Pnj pnj)
     {
+        player.gameObject.GetComponent<PlayerMovement>().Freeze();
         List<Letter> copy = new List<Letter>(activeLetter);
         foreach (Letter letter in copy)
         {
@@ -86,18 +89,9 @@ public class DeliveryManager : MonoBehaviour
                 pnj.DeliverLetter(letter);
                 stampsPanel.UnlockStamp(letter.letterData.stampsGain);
                 inventoryManager.acornsCount += letter.letterData.glansGain;
-                acornParticles.Reward(letter.letterData.glansGain);
-                stampParticles.Reward(1);
                 quitPanel.lettersCount += 1;
-                inventoryManager.OpenBagTemp();
-                if (letter.letterData.stampsGain >= 0)
-                {
-                    StartCoroutine(notification.ShowUpReward(letter.letterData.glansGain, true));
-                }
-                else
-                {
-                    StartCoroutine(notification.ShowUpReward(letter.letterData.glansGain, false));
-                }
+                StartCoroutine(Apparition(letter.letterData.appearingCharacter, letter.letterData.disappearingCharacter));
+                StartCoroutine(RewardNotif(letter, letter.receiver));
                 completedLetters.Add(letter.letterData);
                 player.AddGlans(letter.letterData.glansGain);
             }
@@ -140,10 +134,8 @@ public class DeliveryManager : MonoBehaviour
                         Letter letter = CreateLetter(letterData); 
                         if (!alreadyInActiveLetter) 
                         { 
-                            activeLetter.Add(letter); 
-                            StartCoroutine(notification.ShowUpLetter(letter.letterData.receiver.name.ToString()));
-                            letterParticles.Reward(1);
-                            inventoryManager.OpenBagTemp();
+                            activeLetter.Add(letter);
+                            StartCoroutine(LetterNotif(letter, letter.sender));
                             if (letter.letterData.sender == pnj.pnjData) 
                             { 
                                 pnj.GiveLetter(letter);
@@ -209,5 +201,87 @@ public class DeliveryManager : MonoBehaviour
             }
         }
     }
-    
+
+    IEnumerator Apparition(PnjData pnj1, PnjData pnj2)
+    {
+        if (pnj1 != null)
+        {
+            Debug.Log("tss");
+            GameObject pnjToAppear = null;
+            for (int i = 0; i < pnjsTab.Length; i++)
+            {
+                if (pnjsTab[i].pnjData == pnj1)
+                {
+                    pnjToAppear = pnjsTab[i].gameObject;
+                }
+            }
+
+            if (pnjToAppear != null)
+            {
+                float distance = Vector3.Distance(pnjToAppear.transform.position, player.transform.position);
+                while (distance < 15)
+                {
+                    yield return null;
+                }
+                Debug.Log(pnjToAppear.name);
+                pnjToAppear.GetComponent<SpriteRenderer>().enabled = true;
+                pnjToAppear.GetComponent<BoxCollider2D>().enabled = true;
+            }
+        }
+
+        if (pnj2 != null)
+        {
+            GameObject pnjToDisapear= null;
+            for (int i = 0; i < pnjsTab.Length; i++)
+            {
+                if (pnjsTab[i].pnjData == pnj2)
+                {
+                    pnjToDisapear = pnjsTab[i].gameObject;
+                }
+            }
+
+            if (pnjToDisapear != null)
+            {
+                float distance = Vector3.Distance(pnjToDisapear.transform.position, player.transform.position);
+                while (distance < 15)
+                {
+                    yield return null;
+                }
+                pnjToDisapear.GetComponent<SpriteRenderer>().enabled = false;
+                pnjToDisapear.GetComponent<BoxCollider2D>().enabled = false;
+            }
+        }
+    }
+
+    IEnumerator LetterNotif(Letter letter, Pnj pnj)
+    {
+        yield return null;
+        while (pnj.linesLeft.Count>0)
+        {
+            yield return null;
+        }
+        StartCoroutine(notification.ShowUpLetter(letter.letterData.receiver.name.ToString()));
+        letterParticles.Reward(1);
+        inventoryManager.OpenBagTemp();
+    }
+
+    IEnumerator RewardNotif(Letter letter, Pnj pnj)
+    {
+        yield return null;
+        while (pnj.linesLeft.Count > 0)
+        {
+            yield return null;
+        }
+        if (letter.letterData.stampsGain >= 0)
+        {
+            StartCoroutine(notification.ShowUpReward(letter.letterData.glansGain, true));
+        }
+        else
+        {
+            StartCoroutine(notification.ShowUpReward(letter.letterData.glansGain, false));
+        }
+        acornParticles.Reward(letter.letterData.glansGain);
+        stampParticles.Reward(1);
+        inventoryManager.OpenBagTemp();
+    }
 }

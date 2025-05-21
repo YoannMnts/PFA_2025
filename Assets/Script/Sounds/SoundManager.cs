@@ -8,7 +8,6 @@ public class SoundManager : MonoBehaviour
     
     public void PlaySound(AudioClip clip, SoundType type)
     {
-        Debug.Log(clip);
         bool played = false;
         for (int i = 0; i < audioSources.Count; i++)
         {
