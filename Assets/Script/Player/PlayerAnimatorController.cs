@@ -44,8 +44,9 @@ namespace Script
         {
             HandleFacing();
             
-            if(!wasJumping && Movement.IsJumping && !Movement.IsWallJumping)
+            if(!wasJumping && Movement.IsJumping)
                 animator.SetTrigger(JumpTrigger);
+                
             
             wasJumping = Movement.IsJumping;
             
