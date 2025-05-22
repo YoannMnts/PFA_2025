@@ -24,6 +24,7 @@ public class PlayerMovement : SoundObject
     public bool IsJumping => isJumping;
     public bool IsGliding => isGliding;
     public bool IsWallJumping => isWallJumping;
+    public bool IsRunning => Mathf.Abs(CurrentVelocity.x) > 9.5f;
     public Vector2 WallCheckDirection => wallCheckDirection;
     public Rigidbody2D Rb2d => rb2d;
     #endregion
@@ -584,6 +585,7 @@ public class PlayerMovement : SoundObject
         isJumping = false;
         isGrounded = false;
         isEndRolling = false;
+        isRolling = false;
         isWantsToGlide = false;
         targetVelocity = Vector2.zero;
         rb2d.linearVelocity = Vector2.zero;

@@ -52,7 +52,7 @@ namespace Script
             
             animator.SetBool(IsGrounded, Movement.IsGrounded);
             animator.SetBool(IsClimbing, Mathf.Abs(Movement.CurrentVelocity.y) > .15f && Movement.IsWalled && !Movement.IsGrounded);
-            animator.SetBool(IsRunning, Mathf.Abs(Movement.CurrentVelocity.x) > 9.5f);
+            animator.SetBool(IsRunning, Movement.IsRunning);
             animator.SetBool(IsWalking, Mathf.Abs(Movement.CurrentVelocity.x) > 2f);
             animator.SetFloat(VerticalVelocity, Movement.CurrentVelocity.y);
             animator.SetBool(IsGliding, Movement.IsGliding);
