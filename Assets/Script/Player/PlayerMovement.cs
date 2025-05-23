@@ -24,6 +24,7 @@ public class PlayerMovement : SoundObject
     public bool IsJumping => isJumping;
     public bool IsGliding => isGliding;
     public bool IsWallJumping => isWallJumping;
+    public bool HasACeiling => hasACeiling;
     public bool IsRunning => Mathf.Abs(CurrentVelocity.x) > 9.5f;
     public Vector2 WallCheckDirection => wallCheckDirection;
     public Rigidbody2D Rb2d => rb2d;
@@ -134,6 +135,7 @@ public class PlayerMovement : SoundObject
     private bool isEndRolling;
     private bool isGliding;
     private bool isWallJumping;
+    private bool hasACeiling;
     
     private int wantsToJump;
     private int wantsToRoll;
@@ -216,8 +218,8 @@ public class PlayerMovement : SoundObject
         }
         
         rollCollider.SetActive(isRolling);
-        normalCollider.SetActive((!isRolling || isEndRolling) && Mathf.Abs(CurrentVelocity.x) < 8);
-        runningCollider.SetActive(Mathf.Abs(CurrentVelocity.x) > 8);
+        runningCollider.SetActive(Mathf.Abs(CurrentVelocity.x) > 8 || hasACeiling);
+        normalCollider.SetActive((!isRolling || isEndRolling) && Mathf.Abs(CurrentVelocity.x) < 8 && !hasACeiling);
         if(isRolling)
             return;
 
@@ -429,7 +431,6 @@ public class PlayerMovement : SoundObject
                 Vector2 size = new Vector2(.2f, rollHeightCheck);
 
                 Collider2D hit = Physics2D.OverlapBox(center, size, 0, wallLayer);
-
                 //Debug.DrawLine(center - size / 2, center + size / 2, Color.yellow);
                 if (hit == null)
                     break;
@@ -500,7 +501,6 @@ public class PlayerMovement : SoundObject
         {
             if (Mathf.Abs(rb2d.linearVelocityX) >= .1f && isGrounded)
                 StopWithForce(1);
-
             targetVelocity = Vector2.zero;
             return;
         }
@@ -527,6 +527,10 @@ public class PlayerMovement : SoundObject
                 rb2d.AddForceX(targetVelocity.x > 0 ? -decel : decel, ForceMode2D.Force);
             }
         }
+        Vector2 center = rb2d.position + groundNormal * (rollHeightCheck * .5f * 1.02f);
+        Vector2 size = new Vector2(.2f, rollHeightCheck);
+        Collider2D hit = Physics2D.OverlapBox(center, size, 0, wallLayer);
+        hasACeiling = hit != null && IsRunning;
     }
 
     private void StopWithForce(float modifier)
@@ -590,5 +594,11 @@ public class PlayerMovement : SoundObject
         targetVelocity = Vector2.zero;
         rb2d.linearVelocity = Vector2.zero;
         rb2d.angularVelocity = 0;
+        rb2d.constraints = RigidbodyConstraints2D.FreezePositionX;
+    }
+
+    public void UnFreeze()
+    {
+        rb2d.constraints = RigidbodyConstraints2D.None;
     }
 }

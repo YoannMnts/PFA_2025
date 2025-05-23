@@ -14,6 +14,7 @@ namespace Script
         private static readonly int IsRolling = Animator.StringToHash("IsRolling");
         private static readonly int IsWalking = Animator.StringToHash("IsWalking");
         private static readonly int StayOnWall = Animator.StringToHash("StayOnWall");
+        private static readonly int HasACeiling = Animator.StringToHash("HasACeiling");
         private PlayerMovement Movement => player.Movement;
         
         [Header("Refs")] 
@@ -58,6 +59,7 @@ namespace Script
             animator.SetBool(IsGliding, Movement.IsGliding);
             animator.SetBool(IsRolling, Movement.IsRolling);
             animator.SetBool(StayOnWall,Movement.IsWalled && !Movement.IsGrounded);
+            animator.SetBool(HasACeiling, Movement.HasACeiling);
         }
         
 

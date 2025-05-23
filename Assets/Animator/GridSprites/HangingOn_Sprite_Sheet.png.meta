@@ -1,16 +1,16 @@
 fileFormatVersion: 2
-guid: 425e2f148bf4e6e4988d31700b743a9d
+guid: c618eee62ae5ed04c8ee6bc8e6602b80
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 7828819841766745451
-    second: accrocher_Sprite_Sheet_0
+      213: 7641351613370051068
+    second: HangingOn_Sprite_Sheet_0
   - first:
-      213: -8337409576752483374
-    second: accrocher_Sprite_Sheet_1
+      213: -1931598561193995507
+    second: HangingOn_Sprite_Sheet_1
   - first:
-      213: 7162692363745132123
-    second: accrocher_Sprite_Sheet_2
+      213: -1262919240481484292
+    second: HangingOn_Sprite_Sheet_2
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -119,7 +119,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: accrocher_Sprite_Sheet_0
+      name: HangingOn_Sprite_Sheet_0
       rect:
         serializedVersion: 2
         x: 0
@@ -134,14 +134,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: b65690fca2e85ac60800000000000000
-      internalID: 7828819841766745451
+      spriteID: cf9a7c68ec88b0a60800000000000000
+      internalID: 7641351613370051068
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: accrocher_Sprite_Sheet_1
+      name: HangingOn_Sprite_Sheet_1
       rect:
         serializedVersion: 2
         x: 512
@@ -156,14 +156,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 2d37ab6d9229b4c80800000000000000
-      internalID: -8337409576752483374
+      spriteID: d035067b7559135e0800000000000000
+      internalID: -1931598561193995507
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: accrocher_Sprite_Sheet_2
+      name: HangingOn_Sprite_Sheet_2
       rect:
         serializedVersion: 2
         x: 1024
@@ -178,8 +178,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: b5e7e6851cef66360800000000000000
-      internalID: 7162692363745132123
+      spriteID: cf1581b54a5397ee0800000000000000
+      internalID: -1262919240481484292
       vertices: []
       indices: 
       edges: []
@@ -188,7 +188,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: d19e37bc7691dcb459992f0899b77bda
+    spriteID: 51235f868ba3cdd40bdde54f5988f5f2
     internalID: 0
     vertices: []
     indices: 
@@ -198,9 +198,9 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      accrocher_Sprite_Sheet_0: 7828819841766745451
-      accrocher_Sprite_Sheet_1: -8337409576752483374
-      accrocher_Sprite_Sheet_2: 7162692363745132123
+      HangingOn_Sprite_Sheet_0: 7641351613370051068
+      HangingOn_Sprite_Sheet_1: -1931598561193995507
+      HangingOn_Sprite_Sheet_2: -1262919240481484292
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

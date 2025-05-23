@@ -4,7 +4,6 @@ using System.Collections.Generic;
 using Script;
 using Script.DeliverySys;
 using Unity.VisualScripting;
-using UnityEditor.Tilemaps;
 using UnityEngine;
 
 [DefaultExecutionOrder(-100)]
@@ -34,6 +33,7 @@ public class DeliveryManager : MonoBehaviour
     public List<LetterData> completedLetters;
     private Dictionary<PnjData, Pnj> pnjs;
     private bool alreadyInActiveLetter;
+    private bool inInteraction;
     public  DialoguePad dialoguePad;
 
     private void Awake()

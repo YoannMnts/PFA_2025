@@ -11,12 +11,15 @@ namespace Script
         public PlayerAnimatorController Animator => animator;
         public PlayerInteraction Interaction => playerInteraction;
         public int Glands => glands;
+        public DeliveryManager DeliveryManager => deliveryManager;
         
         [SerializeField]
         private PlayerInput playerInput;
         private PlayerInteraction playerInteraction;
         private PlayerMovement movement;
         private PlayerAnimatorController animator;
+        [SerializeField]
+        private DeliveryManager deliveryManager;
 
         private Vector2 lastPosOnGround;
         private int glands;
