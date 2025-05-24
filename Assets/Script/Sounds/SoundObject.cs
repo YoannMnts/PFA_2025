@@ -20,11 +20,10 @@ public class SoundObject : MonoBehaviour
     IEnumerator Research()
     {
         soundManager = FindObjectOfType<SoundManager>();
-        while (soundManager.isActiveAndEnabled == false)
+        while (soundManager == null)
         {
             soundManager = FindObjectOfType<SoundManager>();
-            Debug.Log("ski");
-            yield return null;
+            yield return 1f;
         }
     }
 }

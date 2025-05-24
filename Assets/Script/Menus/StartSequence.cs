@@ -3,20 +3,23 @@ using Unity.Cinemachine;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
+using UnityEngine.Serialization;
 using UnityEngine.UI;
 
-public class StartSequence : MonoBehaviour
+public class StartSequence : SoundObject
 {
     [SerializeField] private PlayerInput playerInput;
     [SerializeField] private Image blackBackground, fillBar, selfBlackBackground;
     [SerializeField] private RectTransform introLetter, tutoIndication;
     [SerializeField] private GameObject continueIndication;
+    [SerializeField] private SoundManagerNoVolume soundManagerNoVolume;
     private CinemachineCamera introCam;
     private PlayerInput playerInputOther;
     private bool canInteract = false;
 
     void Start()
     {
+        base.Start();
         blackBackground.gameObject.SetActive(false);
         selfBlackBackground.gameObject.SetActive(false);
         fillBar.gameObject.SetActive(false);
@@ -61,6 +64,7 @@ public class StartSequence : MonoBehaviour
     }
     IEnumerator DisplayIntroLetter()
     {
+        soundManagerNoVolume.PlaySound(clips[0]);
         introLetter.gameObject.SetActive(true);
         float speed = 200f;
         while (introLetter.anchoredPosition.y < 0)
@@ -83,6 +87,7 @@ public class StartSequence : MonoBehaviour
             if (canInteract)
             {
                 StartCoroutine(Continue());
+                soundManagerNoVolume.PlaySound(clips[1]);
             }
         }
     }
@@ -112,6 +117,7 @@ public class StartSequence : MonoBehaviour
         yield return new WaitForSeconds(1f);
         StartCoroutine(Disapear(selfBlackBackground, 3f));
         playerInputOther = FindObjectOfType<PlayerInput>();
+        
         if (playerInputOther != null)
         {
             playerInputOther.SwitchCurrentActionMap("ScenarisedSequence");
@@ -145,6 +151,7 @@ public class StartSequence : MonoBehaviour
 
     IEnumerator IndicateTuto()
     {
+        PlaySound(clips[0],SoundType.Effects);
         tutoIndication.anchoredPosition = new Vector3(-1300f, 100f, 0f);
         float speed = 600f;
         while (tutoIndication.anchoredPosition.x < -760f)

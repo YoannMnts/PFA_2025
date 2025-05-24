@@ -18,6 +18,7 @@ public class StampsPanel : Panel
     private int rowCount;
     private int lastUnlocked;
     private int currentSelected;
+    private int lastClipPlayed;
 
     public override void Awake()
     {
@@ -49,6 +50,8 @@ public class StampsPanel : Panel
                 stampsFrames[i].sprite = stamps[i];
             }
         }
+
+        lastClipPlayed = 0;
         DisplayStamps();
     }
 
@@ -59,6 +62,13 @@ public class StampsPanel : Panel
         if (currentSelected >= count)
         {
             currentSelected = 0;
+        }
+        
+        PlaySound(clips[lastClipPlayed],SoundType.Effects);
+        lastClipPlayed += 1;
+        if (lastClipPlayed == clips.Length - 1)
+        {
+            lastClipPlayed = 0;
         }
         DisplayStamps();
     }
@@ -72,6 +82,13 @@ public class StampsPanel : Panel
         {
             currentSelected = count - 1;
         }
+        
+        PlaySound(clips[lastClipPlayed],SoundType.Effects);
+        lastClipPlayed += 1;
+        if (lastClipPlayed == clips.Length - 1)
+        {
+            lastClipPlayed = 0;
+        }
         DisplayStamps();
     }
 
@@ -83,6 +100,12 @@ public class StampsPanel : Panel
         {
             currentSelected += count;
         }
+        PlaySound(clips[lastClipPlayed],SoundType.Effects);
+        lastClipPlayed += 1;
+        if (lastClipPlayed == clips.Length - 1)
+        {
+            lastClipPlayed = 0;
+        }
         DisplayStamps();
     }
 
@@ -93,6 +116,12 @@ public class StampsPanel : Panel
         if (currentSelected >= count)
         {
             currentSelected -= 50;
+        }
+        PlaySound(clips[lastClipPlayed],SoundType.Effects);
+        lastClipPlayed += 1;
+        if (lastClipPlayed == clips.Length - 1)
+        {
+            lastClipPlayed = 0;
         }
         DisplayStamps();
     }
@@ -116,7 +145,11 @@ public class StampsPanel : Panel
 
     public void UnlockStamp(int index)
     {
-        unlocked[index] = true;
+        if (index >= 0 && index < count)
+        {
+            unlocked[index] = true;
+        }
+        
     }
     IEnumerator MoveSelector(Vector3 destination)
     {
@@ -133,7 +166,6 @@ public class StampsPanel : Panel
                 yield return null;
             }
             selectionPanel.anchoredPosition = destination;
-            PlaySound(clips[UnityEngine.Random.Range(0, clips.Length)],SoundType.Effects);
         }
     }
 }
