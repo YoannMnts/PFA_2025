@@ -1,0 +1,470 @@
+fileFormatVersion: 2
+guid: f86003ec49e88014d82cf4ecd9cba5b2
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 6835199946384656699
+    second: Frederic_0
+  - first:
+      213: 5056844848240517231
+    second: Frederic_1
+  - first:
+      213: -8946774626936946487
+    second: Frederic_2
+  - first:
+      213: 2247978654059048616
+    second: Frederic_3
+  - first:
+      213: -3935293421821180065
+    second: Frederic_4
+  - first:
+      213: -6093460172471663723
+    second: Frederic_5
+  - first:
+      213: -8323558714222369725
+    second: Frederic_6
+  - first:
+      213: 4735465377240862451
+    second: Frederic_7
+  - first:
+      213: 1879740839710327331
+    second: Frederic_8
+  - first:
+      213: 7225932480223169617
+    second: Frederic_9
+  - first:
+      213: -4547011334477012285
+    second: Frederic_10
+  - first:
+      213: -6090160190106759932
+    second: Frederic_11
+  - first:
+      213: -9100746016856461795
+    second: Frederic_12
+  - first:
+      213: -4955475443464759711
+    second: Frederic_13
+  - first:
+      213: -1385775276806675027
+    second: Frederic_14
+  - first:
+      213: -7105053217942023591
+    second: Frederic_15
+  - first:
+      213: -222425608817894422
+    second: Frederic_16
+  - first:
+      213: -1712648129382560551
+    second: Frederic_17
+  - first:
+      213: 845199432096446774
+    second: Frederic_18
+  - first:
+      213: 9154718007697047695
+    second: Frederic_19
+  - first:
+      213: -160458760741165364
+    second: Frederic_20
+  - first:
+      213: 6135019685004424694
+    second: Frederic_21
+  - first:
+      213: 1117794465555725163
+    second: Frederic_22
+  - first:
+      213: -2028937543223264852
+    second: Frederic_23
+  - first:
+      213: -8939773254099901015
+    second: Frederic_24
+  - first:
+      213: -5630710242639432310
+    second: Frederic_25
+  - first:
+      213: -7189153814579559375
+    second: Frederic_26
+  - first:
+      213: -5597738442531639587
+    second: Frederic_27
+  - first:
+      213: -8783701732972718627
+    second: Frederic_28
+  - first:
+      213: 4462130193374768399
+    second: Frederic_29
+  - first:
+      213: 5872393413929401811
+    second: Frederic_30
+  - first:
+      213: -8553909497409237616
+    second: Frederic_31
+  - first:
+      213: -2844469881443045111
+    second: Frederic_32
+  - first:
+      213: -7326599509529312534
+    second: Frederic_33
+  - first:
+      213: 6610683730282815663
+    second: Frederic_34
+  - first:
+      213: 11252593193898270
+    second: Frederic_35
+  - first:
+      213: 3739803529296019629
+    second: Frederic_36
+  - first:
+      213: -544303038627259279
+    second: Frederic_37
+  - first:
+      213: -1011371681182623788
+    second: Frederic_38
+  - first:
+      213: -727151386428228513
+    second: Frederic_39
+  - first:
+      213: 8715319200352075255
+    second: Frederic_40
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 1
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Frederic_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1536
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b39c60503228bde50800000000000000
+      internalID: 6835199946384656699
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Frederic_1
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 1536
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f60e3afd8958d2640800000000000000
+      internalID: 5056844848240517231
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Frederic_2
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 1536
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9c002fbf0eba6d380800000000000000
+      internalID: -8946774626936946487
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Frederic_3
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 1536
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8aea9d1fcac623f10800000000000000
+      internalID: 2247978654059048616
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Frederic_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1024
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f57ca61ab770369c0800000000000000
+      internalID: -3935293421821180065
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Frederic_5
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 1024
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 59306d6f14eaf6ba0800000000000000
+      internalID: -6093460172471663723
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Frederic_6
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 1024
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3442ba31377cc7c80800000000000000
+      internalID: -8323558714222369725
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Frederic_7
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 1024
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3fe4a98cba0c7b140800000000000000
+      internalID: 4735465377240862451
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Frederic_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 512
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3228abc955e261a10800000000000000
+      internalID: 1879740839710327331
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Frederic_9
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 512
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 15cc8ae5e4ba74460800000000000000
+      internalID: 7225932480223169617
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: a7913a825c0fb874c92cd7bc444b45a6
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Frederic_0: 6835199946384656699
+      Frederic_1: 5056844848240517231
+      Frederic_2: -8946774626936946487
+      Frederic_3: 2247978654059048616
+      Frederic_4: -3935293421821180065
+      Frederic_5: -6093460172471663723
+      Frederic_6: -8323558714222369725
+      Frederic_7: 4735465377240862451
+      Frederic_8: 1879740839710327331
+      Frederic_9: 7225932480223169617
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

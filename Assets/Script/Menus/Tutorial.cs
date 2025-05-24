@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-public class Tutorial : MonoBehaviour
+public class Tutorial : SoundObject
 {
     public GameObject tutoImage;
 
@@ -16,9 +16,11 @@ public class Tutorial : MonoBehaviour
         if (tutoImage.activeInHierarchy)
         {
             tutoImage.SetActive(false);
+            PlaySound(clips[0],SoundType.Effects);
         }
         else
         {
+            PlaySound(clips[0],SoundType.Effects);
             tutoImage.SetActive(true);
         }
     }
@@ -27,6 +29,7 @@ public class Tutorial : MonoBehaviour
     {
         if (tutoImage.activeInHierarchy)
         {
+            PlaySound(clips[0],SoundType.Effects);
             tutoImage.SetActive(false);
         }
     }
