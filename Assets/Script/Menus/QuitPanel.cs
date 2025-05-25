@@ -47,7 +47,7 @@ public class QuitPanel : Panel
 
             StartCoroutine(MoveSelector(buttons[currentLevel].gameObject.GetComponent<RectTransform>().anchoredPosition));
         }
-        PlaySound(clips[UnityEngine.Random.Range(0, clips.Length)],SoundType.Effects);
+        PlaySound(clips[0],SoundType.Effects);
        
        
         
@@ -64,7 +64,7 @@ public class QuitPanel : Panel
                 currentLevel = 2;
             }
             StartCoroutine(MoveSelector(buttons[currentLevel].gameObject.GetComponent<RectTransform>().anchoredPosition));
-            PlaySound(clips[UnityEngine.Random.Range(0, clips.Length)],SoundType.Effects);
+            PlaySound(clips[0],SoundType.Effects);
         }
         
     }
@@ -103,9 +103,9 @@ public class QuitPanel : Panel
         }
     }
 
-    public override void EastButton()
+    public override void WestButton()
     {
-        base.EastButton();
+        base.WestButton();
         if (currentlyChoosingSave)
         {
             currentlyChoosingSave = false;
@@ -113,6 +113,7 @@ public class QuitPanel : Panel
             foreach (GameObject button in buttons)
             {
                 button.SetActive(true);
+                PlaySound(clips[0],SoundType.Effects);
             }
             selectPad.gameObject.SetActive(true);
         }
@@ -122,7 +123,8 @@ public class QuitPanel : Panel
     {
         if (saved)
         {
-            ///Application.Quit();
+            PlaySound(clips[2],SoundType.Effects);
+            Application.Quit();
         }
         else
         {
@@ -133,6 +135,7 @@ public class QuitPanel : Panel
                 button.SetActive(false);
             }
             selectPad.gameObject.SetActive(false);
+            PlaySound(clips[1],SoundType.Effects);
         }
     }
 
@@ -140,6 +143,7 @@ public class QuitPanel : Panel
     {
         saved = true;
         unsavedIcon.SetActive(false);
+        PlaySound(clips[2],SoundType.Effects);
     }
 
     private void MainMenu()
@@ -147,6 +151,7 @@ public class QuitPanel : Panel
         if (saved)
         {
             StartCoroutine(BackToMainMenu(2));
+            PlaySound(clips[2],SoundType.Effects);
         }
         else
         {
@@ -157,6 +162,7 @@ public class QuitPanel : Panel
                 button.SetActive(false);
             }
             selectPad.gameObject.SetActive(false);
+            PlaySound(clips[1],SoundType.Effects);
         }
     }
     IEnumerator MoveSelector(Vector3 destination)

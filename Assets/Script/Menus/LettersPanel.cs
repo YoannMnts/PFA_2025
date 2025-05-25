@@ -119,6 +119,7 @@ public class LettersPanel : Panel
             }
         }
         
+        PlaySound(clips[2],SoundType.Effects);
         
     }
 
@@ -148,7 +149,7 @@ public class LettersPanel : Panel
                  selectionPad.position = new Vector3(1000,1000,1000);
              }
         }
-        PlaySound(clips[UnityEngine.Random.Range(3, clips.Length)],SoundType.Effects);
+        PlaySound(clips[2],SoundType.Effects);
     }
 
     public override void SouthButton()

@@ -50,6 +50,7 @@ public class Notification : SoundObject
     }
     public IEnumerator ShowUpReward(int acornsCount, bool stampAcquired = false)
     {
+        PlaySound(clips[0],SoundType.Effects);
         rewardPopUp.anchoredPosition = new Vector3(-1300, 200,0);
         if (acornsCount > 1)
         {

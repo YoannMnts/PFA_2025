@@ -16,17 +16,17 @@ MonoBehaviour:
   receiver: {fileID: 11400000, guid: ed1c784f61a160d49b72a96823946ba0, type: 2}
   dependencies: []
   senderName: Hans
-  text: "Salutation citoyen Jack,\r\nJe t\u2019\xE9cris puisque j\u2019ai besoin
-    d\u2019un coup de patte. Pour se pr\xE9parer \xE0 la F\xEAte des Couleurs, Barbara
-    a d\xE9cid\xE9 d\u2019emm\xE9nager la Grotte des Inspirations pour trouver de\u2026
-    L\u2019inspiration... Vu qu\u2019elle s\u2019est install\xE9e tr\xE8s r\xE9cemment,
-    il reste des retouches \xE0 faire. Et c\u2019est l\xE0 que tu entres en jeu,
-    soldat ! Il faudrait que tu t\u2019occupes des travaux n\xE9cessaires ! Peux-tu
-    te charger de cette mission, soldat ?\r\nAvec amiti\xE9,\r\nCapitaine Hans\r"
+  text: "Salutation citoyen Jack,\r\nJe t\u2019ecris puisque j\u2019ai besoin d\u2019un
+    coup de patte. Pour se preparer \xE0 la Fete des Couleurs, Barbara a d\xE9cid\xE9
+    d\u2019emm\xE9nager la Grotte des Inspirations pour trouver de\u2026 L\u2019inspiration...
+    Vu qu\u2019elle s\u2019est installee tr\xE8s recemment, il reste des retouches
+    a faire. Et c\u2019est la que tu entres en jeu, soldat ! Il faudrait que tu t\u2019occupes
+    des travaux n\xE9cessaires ! Peux-tu te charger de cette mission, soldat ?\r\nAvec
+    amitie,\r\nCapitaine Hans\r"
   sendedText:
   - "Salutations, citoyen ordinaire ! Police de Verd\u2019Oyant, Commandant Hans
     \xE0 ton service. "
-  - "J\u2019ai ou\xEFe dire que nous accueillons une nouvelle recrue dans nos rangs,
+  - "J\u2019ai ouie dire que nous accueillons une nouvelle recrue dans nos rangs,
     un postier qui plus est. Tu es bien le nouveau postier, n\u2019est-ce pas ?\r\n"
   - "Merveilleux, soldat !  En tant que repr\xE9sentant des forces de l\u2019ordre,
     il est de mon devoir de t\u2019aider \xE0 te familiariser \xE0 ta nouvelle vie
@@ -36,7 +36,7 @@ MonoBehaviour:
   - " Et \xE7a tombe bien ! Puisque j\u2019ai une mission pour toi, soldat. Ta toute
     premi\xE8re ! J\u2019ai une lettre \xE0 envoyer \xE0 Jack. Pourrais-tu lui apporter
     ?\r\n"
-  - "Hahaha ! J\u2019aime cet \xE9tat d\u2019esprit ! Tiens, voici la lettre\r\n"
+  - "Hahaha ! J\u2019aime cet etat d\u2019esprit ! Tiens, voici la lettre\r\n"
   - "Bien entendu, il va de soi qu\u2019en tant que postier tu ne dois pas regarder
     le contenu des lettres que tu livres. Sinon, cela constituerait un crime et il
     serait alors de mon devoir de t\u2019appr\xE9hender. Mais j\u2019ai foi en toi

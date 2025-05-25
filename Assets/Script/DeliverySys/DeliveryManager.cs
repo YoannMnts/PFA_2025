@@ -32,8 +32,7 @@ public class DeliveryManager : MonoBehaviour
     [SerializeField] private List<Letter> activeLetter;
     public List<LetterData> completedLetters;
     private Dictionary<PnjData, Pnj> pnjs;
-    private bool alreadyInActiveLetter;
-    private bool inInteraction;
+    private bool alreadyInActiveLetters;
     public  DialoguePad dialoguePad;
 
     private void Awake()
@@ -51,7 +50,7 @@ public class DeliveryManager : MonoBehaviour
 
     private Letter CreateLetter(LetterData letterData)
     {
-        alreadyInActiveLetter = false;
+        alreadyInActiveLetters = false;
         Letter letter = new Letter()
         {
             letterData = letterData,
@@ -62,7 +61,7 @@ public class DeliveryManager : MonoBehaviour
         foreach (var letterActive in activeLetter)
         {
             if (letterActive.letterData == letterData)
-                alreadyInActiveLetter = true;
+                alreadyInActiveLetters = true;
         }
         return letter;
     }
@@ -132,7 +131,7 @@ public class DeliveryManager : MonoBehaviour
                     if (pnj.pnjData == letterData.sender)
                     { 
                         Letter letter = CreateLetter(letterData); 
-                        if (!alreadyInActiveLetter) 
+                        if (!alreadyInActiveLetters) 
                         { 
                             activeLetter.Add(letter);
                             StartCoroutine(LetterNotif(letter, letter.sender));
@@ -225,7 +224,15 @@ public class DeliveryManager : MonoBehaviour
                 }
                 Debug.Log(pnjToAppear.name);
                 pnjToAppear.GetComponent<SpriteRenderer>().enabled = true;
-                pnjToAppear.GetComponent<BoxCollider2D>().enabled = true;
+                Collider2D[] colliders = pnjToAppear.GetComponents<BoxCollider2D>();
+                for (int i = 0; i < colliders.Length; i++)
+                {
+                    colliders[i].enabled = true;
+                }
+                if (pnjToAppear.GetComponent<PolygonCollider2D>() != null)
+                {
+                    pnjToAppear.GetComponent<PolygonCollider2D>().enabled = true;
+                }
             }
         }
 
@@ -248,7 +255,15 @@ public class DeliveryManager : MonoBehaviour
                     yield return null;
                 }
                 pnjToDisapear.GetComponent<SpriteRenderer>().enabled = false;
-                pnjToDisapear.GetComponent<BoxCollider2D>().enabled = false;
+                Collider2D[] colliders = pnjToDisapear.GetComponents<BoxCollider2D>();
+                for (int i = 0; i < colliders.Length; i++)
+                {
+                    colliders[i].enabled = false;
+                }
+                if (pnjToDisapear.GetComponent<PolygonCollider2D>() != null)
+                {
+                    pnjToDisapear.GetComponent<PolygonCollider2D>().enabled = false;
+                }
             }
         }
     }
@@ -272,16 +287,16 @@ public class DeliveryManager : MonoBehaviour
         {
             yield return null;
         }
-        if (letter.letterData.stampsGain >= 0)
+        if (letter.letterData.stampsGain >= 0 && letter.letterData.stampsGain <= stampsPanel.stamps.Length)
         {
             StartCoroutine(notification.ShowUpReward(letter.letterData.glansGain, true));
+            stampParticles.Reward(1);
         }
         else
         {
             StartCoroutine(notification.ShowUpReward(letter.letterData.glansGain, false));
         }
         acornParticles.Reward(letter.letterData.glansGain);
-        stampParticles.Reward(1);
         inventoryManager.OpenBagTemp();
     }
 }

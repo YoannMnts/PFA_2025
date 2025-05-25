@@ -12,7 +12,7 @@ public class Pnj : PlayerInteractable
     public string[] baseLines;
     [SerializeField] private Sprite portrait;
     [SerializeField] private SpriteRenderer popUp;
-    private int lastLineSaid; 
+    private int lastLineSaid = 0; 
     
     private DeliveryManager deliveryManager;
     public List<string> linesLeft;
@@ -84,8 +84,8 @@ public class Pnj : PlayerInteractable
                 { 
                     currentLine = Random.Range(0, baseLines.Length);
                 } 
-                deliveryManager.dialoguePad.SetUp(portrait, baseLines[currentLine]); 
-                PlaySound(clips[0], SoundType.Voices);
+                
+                deliveryManager.dialoguePad.SetUp(portrait, baseLines[currentLine]);
                 lastLineSaid = currentLine;
             }
         }

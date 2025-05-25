@@ -56,7 +56,7 @@ public class OptionsPanel : Panel
             volumes[currentLevel] += 1;
         } 
         bars[currentLevel].fillAmount = (volumes[currentLevel]*0.1f);
-        PlaySound(clips[1], SoundType.Effects);
+        PlaySound(clips[0], SoundType.Effects);
     }
     public override void LeftDPad()
     {

@@ -71,6 +71,7 @@ public class MapPanel : Panel
         else
         {
             point.enabled = false;
+            pinnedPoint.enabled = false;
         }
         
     }

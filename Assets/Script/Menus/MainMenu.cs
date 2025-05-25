@@ -10,6 +10,8 @@ public class MainMenu : MonoBehaviour
     [SerializeField] RectTransform[] buttons;
     [SerializeField] RectTransform outline;
     [SerializeField] Image blackBg;
+    [SerializeField] SoundManagerNoVolume soundManager;
+    [SerializeField] private AudioClip[] clips;
     private int currentLevel;
 
     void Start()
@@ -33,6 +35,7 @@ public class MainMenu : MonoBehaviour
                 currentLevel = 0; 
                 outline.anchoredPosition = buttons[currentLevel].anchoredPosition;
             }
+            soundManager.PlaySound(clips[0]);
         }
         
     }
@@ -51,6 +54,7 @@ public class MainMenu : MonoBehaviour
                currentLevel = buttons.Length - 1;
                outline.anchoredPosition = buttons[currentLevel].anchoredPosition;
            } 
+           soundManager.PlaySound(clips[0]);
         }
         
     }
@@ -59,6 +63,7 @@ public class MainMenu : MonoBehaviour
     {
         if (context.canceled)
         {
+            soundManager.PlaySound(clips[1]);
             if (currentLevel == 0)
             {
                 DontDestroyOnLoad(startSequence.gameObject);
@@ -67,6 +72,10 @@ public class MainMenu : MonoBehaviour
             else if (currentLevel == 1)
             {
                 StartCoroutine(Appear());
+            }
+            else if (currentLevel == 2)
+            {
+                Application.Quit();
             }
         }
         
