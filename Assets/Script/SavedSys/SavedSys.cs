@@ -9,11 +9,14 @@ public class SavedSys : MonoBehaviour
     private GameObject playerGO;
     [SerializeField]
     private DeliveryManager deliveryManager;
+
+    [SerializeField]
+    private GameObject test;
     
     void Start()
     {
-        //PlayerPrefs.DeleteAll();
-        Load();
+        PlayerPrefs.DeleteAll();
+        //Load();
     }
 
     public void Saved()
@@ -22,6 +25,7 @@ public class SavedSys : MonoBehaviour
         PlayerPrefs.SetFloat("PlayerPosY", playerGO.transform.position.y);
         PlayerPrefs.SetInt("Acorns", 9);
         CompletedLetterSaved();
+        PnjSaved();
         Debug.Log("saved");
     }
     public void Load()
@@ -32,6 +36,17 @@ public class SavedSys : MonoBehaviour
         playerGO.transform.position = vector3;
         PlayerPrefs.GetInt("Acorns");
         CompletedLetterLoad();
+        PnjLoad();
+    }
+
+
+    private void PnjSaved()
+    {
+        foreach (var children in test.GetComponentsInChildren<Transform>())
+        {
+            PlayerPrefs.SetFloat(children.name + "x", children.position.x);
+            PlayerPrefs.SetFloat(children.name + "y", children.position.y);
+        }
     }
 
     private void CompletedLetterSaved()
@@ -48,12 +63,22 @@ public class SavedSys : MonoBehaviour
         }
     }
 
+    private void PnjLoad()
+    {
+        foreach (var children in test.GetComponentsInChildren<Transform>())
+        {
+            var vector3 = Vector3.zero;
+            vector3.x = PlayerPrefs.GetFloat(children.name + "x");
+            vector3.y = PlayerPrefs.GetFloat(children.name + "y");
+            children.position = vector3;
+        }
+    }
 
     private void CompletedLetterLoad()
     {
         for (int i = 0; i < deliveryManager.LetterDataTab.Length; i++)
         {
-            if (deliveryManager.completedLetters.Contains(deliveryManager.LetterDataTab[PlayerPrefs.GetInt(deliveryManager.LetterDataTab[i].ToString())]))
+            if (deliveryManager.completedLetters.Contains(deliveryManager.LetterDataTab[PlayerPrefs.GetInt(deliveryManager.LetterDataTab[i].ToString())]) || PlayerPrefs.GetInt(deliveryManager.LetterDataTab[i].ToString()) == 0)
             {
                 continue;
             }
