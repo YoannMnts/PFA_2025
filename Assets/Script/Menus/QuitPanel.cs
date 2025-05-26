@@ -24,6 +24,22 @@ public class QuitPanel : Panel
         base.Awake();
     }
 
+    public override void Close()
+    {
+        if (currentlyChoosingSave)
+        {
+            currentlyChoosingSave = false;
+            savingPanel.SetActive(false);
+            foreach (GameObject button in buttons)
+            {
+                button.SetActive(true);
+                PlaySound(clips[0],SoundType.Effects);
+            }
+            selectPad.gameObject.SetActive(true);
+        }
+        base.Close();
+    }
+
     void OnEnable()
     {
         selectPad.anchoredPosition = buttons[0].gameObject.GetComponent<RectTransform>().anchoredPosition ;

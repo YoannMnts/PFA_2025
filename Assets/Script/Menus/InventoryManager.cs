@@ -69,7 +69,7 @@ public class InventoryManager : SoundObject
 
     public void SwitchTabRight(InputAction.CallbackContext context)
     {
-        if (context.canceled)
+        if (context.performed)
         {
             panels[currentPanel].GetComponent<Panel>().Close();
             currentPanel += 1;
@@ -94,7 +94,7 @@ public class InventoryManager : SoundObject
     }
     public void SwitchTabLeft(InputAction.CallbackContext context)
     {
-        if (context.canceled)
+        if (context.performed)
         {
             panels[currentPanel].GetComponent<Panel>().Close();
             currentPanel -= 1;
@@ -140,7 +140,7 @@ public class InventoryManager : SoundObject
 
     public void ReceiveInputLeftDPad(InputAction.CallbackContext context)
     {
-        if (context.canceled)
+        if (context.performed)
         {
             panels[currentPanel].GetComponent<Panel>().LeftDPad();
         }
@@ -148,7 +148,7 @@ public class InventoryManager : SoundObject
     
     public void ReceiveInputRightDPad(InputAction.CallbackContext context)
     {
-        if (context.canceled)
+        if (context.performed)
         {
             panels[currentPanel].GetComponent<Panel>().RightDPad();
         }
@@ -157,7 +157,7 @@ public class InventoryManager : SoundObject
     
     public void ReceiveInputTopDPad(InputAction.CallbackContext context)
     {
-        if (context.canceled)
+        if (context.performed)
         {
             panels[currentPanel].GetComponent<Panel>().TopDPad();
         }
@@ -165,7 +165,7 @@ public class InventoryManager : SoundObject
     }
     public void ReceiveInputBottomDPad(InputAction.CallbackContext context)
     {
-        if (context.canceled)
+        if (context.performed)
         {
             panels[currentPanel].GetComponent<Panel>().BottomDPad();
         }

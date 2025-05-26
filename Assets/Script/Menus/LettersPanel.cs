@@ -112,6 +112,10 @@ public class LettersPanel : Panel
             {
                 StartCoroutine(MoveSelector(letters[currentLevel + (currentPage * lettersByPage)]
                     .GetComponent<RectTransform>().anchoredPosition));
+                if (lettersCount > 1)
+                {
+                    PlaySound(clips[2],SoundType.Effects);  
+                }
             }
             else
             {
@@ -119,7 +123,7 @@ public class LettersPanel : Panel
             }
         }
         
-        PlaySound(clips[2],SoundType.Effects);
+        
         
     }
 
@@ -143,13 +147,17 @@ public class LettersPanel : Panel
              if (lettersCount > 0)
              {
                  selectionPad.position = letters[currentLevel+ (currentPage*lettersByPage)].GetComponent<RectTransform>().position;
+                 if (lettersCount > 1)
+                 {
+                     PlaySound(clips[2],SoundType.Effects);  
+                 }
              }
              else
              {
                  selectionPad.position = new Vector3(1000,1000,1000);
              }
         }
-        PlaySound(clips[2],SoundType.Effects);
+        
     }
 
     public override void SouthButton()
