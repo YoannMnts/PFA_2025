@@ -2,6 +2,8 @@ using System;
 using Script;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.Serialization;
+using UnityEngine.UIElements;
 
 public class SavedSys : MonoBehaviour
 {
@@ -11,12 +13,12 @@ public class SavedSys : MonoBehaviour
     private DeliveryManager deliveryManager;
 
     [SerializeField]
-    private GameObject test;
+    private GameObject pnjGO;
     
     void Start()
     {
-        PlayerPrefs.DeleteAll();
-        //Load();
+        //PlayerPrefs.DeleteAll();
+        Load();
     }
 
     public void Saved()
@@ -42,10 +44,14 @@ public class SavedSys : MonoBehaviour
 
     private void PnjSaved()
     {
-        foreach (var children in test.GetComponentsInChildren<Transform>())
+        foreach (var children in pnjGO.GetComponentsInChildren<SpriteRenderer>())
         {
-            PlayerPrefs.SetFloat(children.name + "x", children.position.x);
-            PlayerPrefs.SetFloat(children.name + "y", children.position.y);
+            PlayerPrefs.SetInt(children.name + "SpriteRenderer", children.GetComponent<SpriteRenderer>().enabled ? 1 : 0);
+        }
+
+        foreach (var children in pnjGO.GetComponentsInChildren<BoxCollider2D>())
+        {
+            PlayerPrefs.SetInt(children.name + "BoxCollider2D", children.GetComponent<BoxCollider2D>().enabled ? 1 : 0);
         }
     }
 
@@ -65,12 +71,13 @@ public class SavedSys : MonoBehaviour
 
     private void PnjLoad()
     {
-        foreach (var children in test.GetComponentsInChildren<Transform>())
+        foreach (var children in pnjGO.GetComponentsInChildren<SpriteRenderer>())
         {
-            var vector3 = Vector3.zero;
-            vector3.x = PlayerPrefs.GetFloat(children.name + "x");
-            vector3.y = PlayerPrefs.GetFloat(children.name + "y");
-            children.position = vector3;
+            children.GetComponent<SpriteRenderer>().enabled = PlayerPrefs.GetInt(children.name + "SpriteRenderer") == 1;
+        }
+        foreach (var children in pnjGO.GetComponentsInChildren<BoxCollider2D>())
+        {
+            children.GetComponent<BoxCollider2D>().enabled = PlayerPrefs.GetInt(children.name + "BoxCollider2D") == 1;
         }
     }
 
