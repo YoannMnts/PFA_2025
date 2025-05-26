@@ -432,8 +432,30 @@
                 },
                 {
                     "name": "",
+                    "id": "b9a5dbf5-9d48-4e4d-9337-65dca1a13f30",
+                    "path": "<Gamepad>/leftStick/left",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "DPadLeft",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
                     "id": "184bb2df-a2d9-4c4b-8e06-4730d31e2831",
                     "path": "<Gamepad>/dpad/right",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "DPadRight",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "f16ec421-c92a-43b9-8f1b-31778e4148f5",
+                    "path": "<Gamepad>/leftStick/right",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -454,9 +476,31 @@
                 },
                 {
                     "name": "",
+                    "id": "31389d77-b850-449a-8013-ef2397a830c1",
+                    "path": "<Gamepad>/leftStick/up",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "DPadTop",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
                     "id": "ade2141d-0d2b-4799-9dea-7e0bc14a1ff8",
                     "path": "<Gamepad>/dpad/down",
                     "interactions": "Press(behavior=1)",
+                    "processors": "",
+                    "groups": "",
+                    "action": "DPadBottom",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "de0abb1c-35e9-4c8b-b3df-579a2fdc79ac",
+                    "path": "<Gamepad>/leftStick/down",
+                    "interactions": "",
                     "processors": "",
                     "groups": "",
                     "action": "DPadBottom",

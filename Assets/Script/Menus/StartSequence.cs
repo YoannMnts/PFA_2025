@@ -151,7 +151,7 @@ public class StartSequence : SoundObject
 
     IEnumerator IndicateTuto()
     {
-        PlaySound(clips[0],SoundType.Effects);
+        PlaySound(clips[2],SoundType.Effects);
         tutoIndication.anchoredPosition = new Vector3(-1300f, 100f, 0f);
         float speed = 600f;
         while (tutoIndication.anchoredPosition.x < -760f)
