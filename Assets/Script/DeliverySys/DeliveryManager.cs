@@ -10,6 +10,8 @@ using UnityEngine;
 public class DeliveryManager : MonoBehaviour
 {
     public List<Letter> ActiveLetter => activeLetter;
+    public LetterData[] LetterDataTab => letterDataTab;
+    
 
 
     [SerializeField] 
@@ -24,15 +26,19 @@ public class DeliveryManager : MonoBehaviour
     private Notification notification;
     [SerializeField]
     private LetterData[] letterDataTab;
-    [SerializeField] private Pnj[] pnjsTab;
-    [SerializeField] private RewardParticles acornParticles, letterParticles, stampParticles;
+    [SerializeField] 
+    private Pnj[] pnjsTab;
+    [SerializeField] 
+    private RewardParticles acornParticles, letterParticles, stampParticles;
     [SerializeField] 
     private Player player;
+    [SerializeField] 
+    private List<Letter> activeLetter;
     
-    [SerializeField] private List<Letter> activeLetter;
-    public List<LetterData> completedLetters;
     private Dictionary<PnjData, Pnj> pnjs;
     private bool alreadyInActiveLetters;
+    
+    public List<LetterData> completedLetters;
     public  DialoguePad dialoguePad;
 
     private void Awake()

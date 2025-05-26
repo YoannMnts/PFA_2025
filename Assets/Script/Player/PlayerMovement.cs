@@ -226,6 +226,10 @@ public class PlayerMovement : SoundObject
         HandleJump();
         HandleGliding();
         HandleMovement();
+        if (rb2d.linearVelocity.y < -5)
+            PlaySound(clips[1], SoundType.Effects);
+        if (Mathf.Abs(rb2d.linearVelocity.x) > 9.5f)
+            PlaySound(clips[6], SoundType.Effects);
     }
 
    
@@ -350,12 +354,14 @@ public class PlayerMovement : SoundObject
         {
             if (isGrounded && !isJumping)
             {
+                PlaySound(clips[3], SoundType.Effects);
                 isJumping = true;
                 //Debug.DrawRay(transform.position, Vector2.up * jumpForce, Color.magenta, 1);
             }
             
             if (!isGrounded && isWalled) 
             {
+                PlaySound(clips[3], SoundType.Effects);
                 Vector2 direction = wallNormal.normalized * wallNormalJumpForce;
                 direction += Vector2.up * (jumpForce * wallJumpForceMultiplier);
                 rb2d.linearVelocityY = 0;
@@ -427,6 +433,7 @@ public class PlayerMovement : SoundObject
             bool isInSlope = dot < .98f;
             if (!isInSlope)
             {
+                PlaySound(clips[5], SoundType.Effects);
                 Vector2 center = rb2d.position + groundNormal * (rollHeightCheck * .5f * 1.02f);
                 Vector2 size = new Vector2(.2f, rollHeightCheck);
 
@@ -486,6 +493,7 @@ public class PlayerMovement : SoundObject
             if (needAcc)
             {
                 rb2d.AddForce(targetVelocity.normalized * climbAcceleration, ForceMode2D.Force);
+                PlaySound(clips[0], SoundType.Effects);
             }
             else
             {
@@ -594,7 +602,7 @@ public class PlayerMovement : SoundObject
         targetVelocity = Vector2.zero;
         rb2d.linearVelocity = Vector2.zero;
         rb2d.angularVelocity = 0;
-        rb2d.constraints = RigidbodyConstraints2D.FreezePositionX;
+        rb2d.constraints = RigidbodyConstraints2D.FreezeAll;
     }
 
     public void UnFreeze()
