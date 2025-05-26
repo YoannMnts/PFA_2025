@@ -86,7 +86,7 @@ namespace Script
                     spriteRenderer.flipX = dot > 0;
                 }
             }
-            if (Movement.IsWalled)
+            if (Movement.IsWalled && !Movement.IsGrounded)
                 spriteRenderer.flipX = Movement.WallNormal.x > 0;
             if (Movement.IsWallJumping)
                 spriteRenderer.flipX = Movement.WallCheckDirection.x < 0;

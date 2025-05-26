@@ -7,7 +7,6 @@ using UnityEngine.UI;
 
 public class QuitPanel : Panel
 {
-    public int currentLevel = 0;
     [SerializeField] private GameObject[] buttons;
     [SerializeField] private RectTransform selectPad;
     [SerializeField] private GameObject unsavedIcon;
@@ -16,9 +15,10 @@ public class QuitPanel : Panel
     [SerializeField] private GameObject savingPanel;
     [SerializeField] private TextMeshProUGUI lettersCountText;
     [SerializeField] private Image blackScreen;
-    public int lettersCount = 0;
-    
+    [SerializeField] private SavedSys savedSys;
 
+    public int currentLevel = 0;
+    public int lettersCount = 0;
     public override void Awake()
     {
         base.Awake();
@@ -144,6 +144,7 @@ public class QuitPanel : Panel
         saved = true;
         unsavedIcon.SetActive(false);
         PlaySound(clips[2],SoundType.Effects);
+        savedSys.Saved();
     }
 
     private void MainMenu()

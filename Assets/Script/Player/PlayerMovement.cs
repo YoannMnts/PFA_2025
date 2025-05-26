@@ -602,7 +602,7 @@ public class PlayerMovement : SoundObject
         targetVelocity = Vector2.zero;
         rb2d.linearVelocity = Vector2.zero;
         rb2d.angularVelocity = 0;
-        rb2d.constraints = RigidbodyConstraints2D.FreezeAll;
+        //rb2d.constraints = RigidbodyConstraints2D.FreezeAll;
     }
 
     public void UnFreeze()

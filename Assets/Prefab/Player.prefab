@@ -476,7 +476,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: db539f912f08c9d4ba595df41886fc20, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  clips: []
+  clips:
+  - {fileID: 8300000, guid: 8d63a18eb89cfd5439740d9ead34a5cc, type: 3}
+  - {fileID: 8300000, guid: c825c8c8f824fdc49b93d6936f17734e, type: 3}
+  - {fileID: 8300000, guid: a09c96482e349f048951e2633cd03577, type: 3}
+  - {fileID: 8300000, guid: d8869fca74a050949a256b7cc1689004, type: 3}
+  - {fileID: 8300000, guid: 4c385213548e4df4384d22799948e1af, type: 3}
+  - {fileID: 8300000, guid: 7c230e9c188627248a359af039b0d52b, type: 3}
+  - {fileID: 8300000, guid: d66f39b9003fa2e4492585028b2b8c73, type: 3}
   normalCollider: {fileID: 4567919334552783960}
   runningCollider: {fileID: 4724200148513138063}
   gravityScale: 2
@@ -516,7 +523,7 @@ MonoBehaviour:
   initialRollSpeedModifier: 3
   rollingForce: 30
   minRollTime: 0.3
-  rollHeightCheck: 1.7
+  rollHeightCheck: 1.8
   stopRollTime: 0.5
   stopRollCurve:
     serializedVersion: 2

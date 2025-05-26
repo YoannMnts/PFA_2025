@@ -12,16 +12,8 @@ public class SavedSys : MonoBehaviour
     
     void Start()
     {
-        for (int i = 0; i < deliveryManager.LetterDataTab.Length; i++)
-        {
-            Debug.Log(PlayerPrefs.GetInt(i.ToString()));
-        }
+        //PlayerPrefs.DeleteAll();
         Load();
-    }
-
-    private void Update()
-    {
-        Saved();
     }
 
     public void Saved()
@@ -30,10 +22,14 @@ public class SavedSys : MonoBehaviour
         PlayerPrefs.SetFloat("PlayerPosY", playerGO.transform.position.y);
         PlayerPrefs.SetInt("Acorns", 9);
         CompletedLetterSaved();
-
+        Debug.Log("saved");
     }
     public void Load()
     {
+        var vector3 = playerGO.transform.position;
+        vector3.x = PlayerPrefs.GetFloat("PlayerPosX", -63);
+        vector3.y = PlayerPrefs.GetFloat("PlayerPosY", -75);
+        playerGO.transform.position = vector3;
         PlayerPrefs.GetInt("Acorns");
         CompletedLetterLoad();
     }
