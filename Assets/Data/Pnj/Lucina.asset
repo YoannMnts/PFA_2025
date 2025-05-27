@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: Lucina
   mapPosition: {x: 0, y: 0, z: 0}
-  position: {x: 0, y: 0, z: 0}
+  position: {x: 74, y: 35, z: 0}

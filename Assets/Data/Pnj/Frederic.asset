@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: Frederic
   mapPosition: {x: 0, y: 0, z: 0}
-  position: {x: 0, y: 0, z: 0}
+  position: {x: 68, y: -50, z: 0}

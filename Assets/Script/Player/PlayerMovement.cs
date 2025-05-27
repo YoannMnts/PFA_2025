@@ -355,6 +355,7 @@ public class PlayerMovement : SoundObject
             if (isGrounded && !isJumping)
             {
                 PlaySound(clips[3], SoundType.Effects);
+                PlaySound(clips[7], SoundType.Voices);
                 isJumping = true;
                 //Debug.DrawRay(transform.position, Vector2.up * jumpForce, Color.magenta, 1);
             }
@@ -362,6 +363,7 @@ public class PlayerMovement : SoundObject
             if (!isGrounded && isWalled) 
             {
                 PlaySound(clips[3], SoundType.Effects);
+                PlaySound(clips[7], SoundType.Voices);
                 Vector2 direction = wallNormal.normalized * wallNormalJumpForce;
                 direction += Vector2.up * (jumpForce * wallJumpForceMultiplier);
                 rb2d.linearVelocityY = 0;
