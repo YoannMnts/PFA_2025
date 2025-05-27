@@ -7,6 +7,8 @@ using UnityEngine.UIElements;
 
 public class SavedSys : MonoBehaviour
 {
+    public bool AlreadySaved => alreadySaved;
+    
     [SerializeField]
     private GameObject playerGo;
     [SerializeField]

@@ -12,12 +12,13 @@ public class MainMenu : MonoBehaviour
     [SerializeField] Image blackBg;
     [SerializeField] SoundManagerNoVolume soundManager;
     [SerializeField] private AudioClip[] clips;
+    [SerializeField] private SavedSys savedSys;
     private int currentLevel;
     private bool existingSave = false;
 
     void Start()
     {
-        //existingSave = quelque chose
+        existingSave = savedSys.AlreadySaved;
         if (existingSave)
         {
             currentLevel = 0;
@@ -138,7 +139,7 @@ public class MainMenu : MonoBehaviour
 
     public void ResetSave()
     {
-        //reset la save
+        PlayerPrefs.DeleteAll();
     }
 
 }
