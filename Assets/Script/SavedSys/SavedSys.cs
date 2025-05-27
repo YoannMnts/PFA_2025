@@ -8,48 +8,75 @@ using UnityEngine.UIElements;
 public class SavedSys : MonoBehaviour
 {
     [SerializeField]
-    private GameObject playerGO;
+    private GameObject playerGo;
     [SerializeField]
     private DeliveryManager deliveryManager;
-
     [SerializeField]
-    private GameObject pnjGO;
+    private InventoryManager inventoryManager;
+    [SerializeField]
+    private GameObject pnjGo;
+    [SerializeField]
+    private StampsPanel stampsPanel;
     
+    private bool alreadySaved;
+
     void Start()
-    {
-        //PlayerPrefs.DeleteAll();
-        Load();
+    { 
+        alreadySaved = PlayerPrefs.GetInt("alreadySaved") == 1;
+        if (alreadySaved)
+        {
+            //PlayerPrefs.DeleteAll();
+            Load();
+        }
     }
 
     public void Saved()
     {
-        PlayerPrefs.SetFloat("PlayerPosX", playerGO.transform.position.x);
-        PlayerPrefs.SetFloat("PlayerPosY", playerGO.transform.position.y);
-        PlayerPrefs.SetInt("Acorns", 9);
+        PlayerPrefs.SetInt("Acorns", inventoryManager.acornsCount);
+        PlayerPrefs.SetInt("alreadySaved", 1);
+        
+        PlayerPosSaved();
         CompletedLetterSaved();
         PnjSaved();
+        StampsSaved();
         Debug.Log("saved");
     }
+    
     public void Load()
     {
-        var vector3 = playerGO.transform.position;
-        vector3.x = PlayerPrefs.GetFloat("PlayerPosX", -63);
-        vector3.y = PlayerPrefs.GetFloat("PlayerPosY", -75);
-        playerGO.transform.position = vector3;
-        PlayerPrefs.GetInt("Acorns");
+        inventoryManager.acornsCount = PlayerPrefs.GetInt("Acorns");
+        
+        PlayerPosLoad();
         CompletedLetterLoad();
         PnjLoad();
+        StampsLoad();
+        Debug.Log("Loaded");
     }
 
+
+    #region SavedMethods
+    
+    private void PlayerPosSaved()
+    {
+        PlayerPrefs.SetFloat("PlayerPosX", playerGo.transform.position.x);
+        PlayerPrefs.SetFloat("PlayerPosY", playerGo.transform.position.y);
+    }
+    private void StampsSaved()
+    {
+        for (int i = 0; i < stampsPanel.UnlockedStamps.Length; i++)
+        {
+            PlayerPrefs.SetInt("UnlockedStamps" + i, stampsPanel.UnlockedStamps[i] == true ? 1 : 0);
+        }
+    }
 
     private void PnjSaved()
     {
-        foreach (var children in pnjGO.GetComponentsInChildren<SpriteRenderer>())
+        foreach (var children in pnjGo.GetComponentsInChildren<SpriteRenderer>())
         {
             PlayerPrefs.SetInt(children.name + "SpriteRenderer", children.GetComponent<SpriteRenderer>().enabled ? 1 : 0);
         }
 
-        foreach (var children in pnjGO.GetComponentsInChildren<BoxCollider2D>())
+        foreach (var children in pnjGo.GetComponentsInChildren<BoxCollider2D>())
         {
             PlayerPrefs.SetInt(children.name + "BoxCollider2D", children.GetComponent<BoxCollider2D>().enabled ? 1 : 0);
         }
@@ -68,14 +95,32 @@ public class SavedSys : MonoBehaviour
             }
         }
     }
+    
+    #endregion
 
+    #region LoadMethods
+
+    private void StampsLoad()
+    {
+        for (int i = 0; i < stampsPanel.UnlockedStamps.Length; i++)
+        {
+            stampsPanel.UnlockedStamps[i] = PlayerPrefs.GetInt("UnlockedStamps" + i) == 1;
+        }
+    }
+    private void PlayerPosLoad()
+    {
+        var vector3 = playerGo.transform.position;
+        vector3.x = PlayerPrefs.GetFloat("PlayerPosX", -63);
+        vector3.y = PlayerPrefs.GetFloat("PlayerPosY", -75);
+        playerGo.transform.position = vector3;
+    }
     private void PnjLoad()
     {
-        foreach (var children in pnjGO.GetComponentsInChildren<SpriteRenderer>())
+        foreach (var children in pnjGo.GetComponentsInChildren<SpriteRenderer>())
         {
             children.GetComponent<SpriteRenderer>().enabled = PlayerPrefs.GetInt(children.name + "SpriteRenderer") == 1;
         }
-        foreach (var children in pnjGO.GetComponentsInChildren<BoxCollider2D>())
+        foreach (var children in pnjGo.GetComponentsInChildren<BoxCollider2D>())
         {
             children.GetComponent<BoxCollider2D>().enabled = PlayerPrefs.GetInt(children.name + "BoxCollider2D") == 1;
         }
@@ -92,4 +137,6 @@ public class SavedSys : MonoBehaviour
             deliveryManager.completedLetters.Add(deliveryManager.LetterDataTab[PlayerPrefs.GetInt(deliveryManager.LetterDataTab[i].ToString())]);
         }
     }
+    
+    #endregion
 }
