@@ -12,9 +12,9 @@ public class SoundObject : MonoBehaviour
         StartCoroutine(Research());
     }
 
-    public void PlaySound(AudioClip clip, SoundType type)
+    public void PlaySound(AudioClip clip, SoundType type, bool unique = false)
     {
-        soundManager.PlaySound(clip, type);
+        soundManager.PlaySound(clip, type, unique);
     }
 
     IEnumerator Research()

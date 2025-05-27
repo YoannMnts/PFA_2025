@@ -227,9 +227,9 @@ public class PlayerMovement : SoundObject
         HandleGliding();
         HandleMovement();
         if (rb2d.linearVelocity.y < -5)
-            PlaySound(clips[1], SoundType.Effects);
+            PlaySound(clips[1], SoundType.Effects, true);
         if (Mathf.Abs(rb2d.linearVelocity.x) > 9.5f)
-            PlaySound(clips[6], SoundType.Effects);
+            PlaySound(clips[6], SoundType.Effects, true);
     }
 
    
@@ -433,7 +433,7 @@ public class PlayerMovement : SoundObject
             bool isInSlope = dot < .98f;
             if (!isInSlope)
             {
-                PlaySound(clips[5], SoundType.Effects);
+                PlaySound(clips[5], SoundType.Effects, true);
                 Vector2 center = rb2d.position + groundNormal * (rollHeightCheck * .5f * 1.02f);
                 Vector2 size = new Vector2(.2f, rollHeightCheck);
 
@@ -493,7 +493,7 @@ public class PlayerMovement : SoundObject
             if (needAcc)
             {
                 rb2d.AddForce(targetVelocity.normalized * climbAcceleration, ForceMode2D.Force);
-                PlaySound(clips[0], SoundType.Effects);
+                PlaySound(clips[0], SoundType.Effects, true);
             }
             else
             {

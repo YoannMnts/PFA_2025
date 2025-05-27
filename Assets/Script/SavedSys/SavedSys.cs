@@ -2,6 +2,8 @@ using System;
 using Script;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.Serialization;
+using UnityEngine.UIElements;
 
 public class SavedSys : MonoBehaviour
 {
@@ -9,6 +11,9 @@ public class SavedSys : MonoBehaviour
     private GameObject playerGO;
     [SerializeField]
     private DeliveryManager deliveryManager;
+
+    [SerializeField]
+    private GameObject pnjGO;
     
     void Start()
     {
@@ -22,6 +27,7 @@ public class SavedSys : MonoBehaviour
         PlayerPrefs.SetFloat("PlayerPosY", playerGO.transform.position.y);
         PlayerPrefs.SetInt("Acorns", 9);
         CompletedLetterSaved();
+        PnjSaved();
         Debug.Log("saved");
     }
     public void Load()
@@ -32,6 +38,21 @@ public class SavedSys : MonoBehaviour
         playerGO.transform.position = vector3;
         PlayerPrefs.GetInt("Acorns");
         CompletedLetterLoad();
+        PnjLoad();
+    }
+
+
+    private void PnjSaved()
+    {
+        foreach (var children in pnjGO.GetComponentsInChildren<SpriteRenderer>())
+        {
+            PlayerPrefs.SetInt(children.name + "SpriteRenderer", children.GetComponent<SpriteRenderer>().enabled ? 1 : 0);
+        }
+
+        foreach (var children in pnjGO.GetComponentsInChildren<BoxCollider2D>())
+        {
+            PlayerPrefs.SetInt(children.name + "BoxCollider2D", children.GetComponent<BoxCollider2D>().enabled ? 1 : 0);
+        }
     }
 
     private void CompletedLetterSaved()
@@ -48,12 +69,23 @@ public class SavedSys : MonoBehaviour
         }
     }
 
+    private void PnjLoad()
+    {
+        foreach (var children in pnjGO.GetComponentsInChildren<SpriteRenderer>())
+        {
+            children.GetComponent<SpriteRenderer>().enabled = PlayerPrefs.GetInt(children.name + "SpriteRenderer") == 1;
+        }
+        foreach (var children in pnjGO.GetComponentsInChildren<BoxCollider2D>())
+        {
+            children.GetComponent<BoxCollider2D>().enabled = PlayerPrefs.GetInt(children.name + "BoxCollider2D") == 1;
+        }
+    }
 
     private void CompletedLetterLoad()
     {
         for (int i = 0; i < deliveryManager.LetterDataTab.Length; i++)
         {
-            if (deliveryManager.completedLetters.Contains(deliveryManager.LetterDataTab[PlayerPrefs.GetInt(deliveryManager.LetterDataTab[i].ToString())]))
+            if (deliveryManager.completedLetters.Contains(deliveryManager.LetterDataTab[PlayerPrefs.GetInt(deliveryManager.LetterDataTab[i].ToString())]) || PlayerPrefs.GetInt(deliveryManager.LetterDataTab[i].ToString()) == 0)
             {
                 continue;
             }
