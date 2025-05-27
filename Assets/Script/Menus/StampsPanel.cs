@@ -5,6 +5,8 @@ using UnityEngine.UI;
 
 public class StampsPanel : Panel
 {
+    public bool[] UnlockedStamps => unlocked;
+    
     [SerializeField] private RectTransform selectionPanel;
     [SerializeField] private GameObject stampsFramesContainer;
     private Image[] stampsFrames;
