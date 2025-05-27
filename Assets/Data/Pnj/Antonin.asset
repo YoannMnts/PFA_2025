@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: Antonin
   mapPosition: {x: 0, y: 0, z: 0}
-  position: {x: 0, y: 0, z: 0}
+  position: {x: -44, y: 37, z: 0}

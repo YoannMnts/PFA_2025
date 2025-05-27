@@ -58,6 +58,7 @@ public class Pnj : PlayerInteractable
 
     public override void Interact()
     {
+        PlaySound(clips[Random.Range(0, clips.Length)],SoundType.Voices);
         deliveryManager.DeliveryCheck(this);
         if (linesLeft.Count == 0)
         {
