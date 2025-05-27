@@ -13,10 +13,22 @@ public class MainMenu : MonoBehaviour
     [SerializeField] SoundManagerNoVolume soundManager;
     [SerializeField] private AudioClip[] clips;
     private int currentLevel;
+    private bool existingSave = false;
 
     void Start()
     {
-        currentLevel = 0;
+        //existingSave = quelque chose
+        if (existingSave)
+        {
+            currentLevel = 0;
+            
+        }
+        else
+        {
+            currentLevel = 1;
+            buttons[0].gameObject.SetActive(false);
+        }
+        
         outline.anchoredPosition = buttons[currentLevel].anchoredPosition;
     }
 
@@ -31,8 +43,16 @@ public class MainMenu : MonoBehaviour
                 outline.anchoredPosition = buttons[currentLevel].anchoredPosition;
             }
             else
-            { 
-                currentLevel = 0; 
+            {
+                if (existingSave)
+                {
+                    currentLevel = 0; 
+                }
+                else
+                {
+                    currentLevel = 1;
+                }
+                
                 outline.anchoredPosition = buttons[currentLevel].anchoredPosition;
             }
             soundManager.PlaySound(clips[0]);
@@ -44,17 +64,31 @@ public class MainMenu : MonoBehaviour
     {
         if (context.canceled)
         {
-           if (currentLevel > 0)
-           {
-               currentLevel--;
-               outline.anchoredPosition = buttons[currentLevel].anchoredPosition;
-           }
-           else
-           {
-               currentLevel = buttons.Length - 1;
-               outline.anchoredPosition = buttons[currentLevel].anchoredPosition;
-           } 
-           soundManager.PlaySound(clips[0]);
+            if (existingSave)
+            {
+                if (currentLevel > 0)
+                { 
+                    currentLevel--; 
+                }
+                else 
+                { 
+                    currentLevel = buttons.Length - 1; 
+                } 
+                
+            }
+            else
+            {
+                if (currentLevel > 1)
+                { 
+                    currentLevel--; 
+                }
+                else 
+                { 
+                    currentLevel = buttons.Length - 1; 
+                } 
+            }
+            outline.anchoredPosition = buttons[currentLevel].anchoredPosition;
+            soundManager.PlaySound(clips[0]);
         }
         
     }
@@ -71,9 +105,15 @@ public class MainMenu : MonoBehaviour
             }
             else if (currentLevel == 1)
             {
-                StartCoroutine(Appear());
+                ResetSave();
+                DontDestroyOnLoad(startSequence.gameObject);
+                StartCoroutine(startSequence.GetComponent<StartSequence>().Play());
             }
             else if (currentLevel == 2)
+            {
+                StartCoroutine(Appear());
+            }
+            else if (currentLevel == 3)
             {
                 Application.Quit();
             }
@@ -94,6 +134,11 @@ public class MainMenu : MonoBehaviour
             yield return null;
         }
         SceneManager.LoadScene(2);
+    }
+
+    public void ResetSave()
+    {
+        //reset la save
     }
 
 }
