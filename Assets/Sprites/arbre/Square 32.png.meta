@@ -1,13 +1,10 @@
 fileFormatVersion: 2
-guid: 480e5faf0c50d39469e891b879d7631c
+guid: 68cad45c1550071458783d9fa58452b8
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 2676750066927426066
-    second: Square 28_0
-  - first:
-      213: -901429745926724550
-    second: Square 28_1
+      213: 5887322252847175657
+    second: Square 32_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -49,12 +46,12 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 80
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -80,7 +77,7 @@ TextureImporter:
     textureFormat: -1
     textureCompression: 1
     compressionQuality: 50
-    crunchedCompression: 1
+    crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
     ignorePlatformSupport: 0
@@ -103,35 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Square 28_0
+      name: Square 32_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 1182
-        width: 864
-        height: 866
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 21a56bbf00ab52520800000000000000
-      internalID: 2676750066927426066
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Square 28_1
-      rect:
-        serializedVersion: 2
-        x: 0
+        x: 743
         y: 0
-        width: 2048
-        height: 2019
+        width: 1305
+        height: 739
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -140,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: a34211c0c6a7d73f0800000000000000
-      internalID: -901429745926724550
+      spriteID: 9e755378568f3b150800000000000000
+      internalID: 5887322252847175657
       vertices: []
       indices: 
       edges: []
@@ -150,7 +125,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 5e97eb03825dee720800000000000000
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -159,9 +134,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      Square 28_0: 2676750066927426066
-      Square 28_1: -901429745926724550
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

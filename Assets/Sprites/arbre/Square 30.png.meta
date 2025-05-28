@@ -5,9 +5,6 @@ TextureImporter:
   - first:
       213: -6127380805070584129
     second: Square 30_0
-  - first:
-      213: -489403292651468433
-    second: Square 30_1
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -106,28 +103,6 @@ TextureImporter:
       name: Square 30_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 695
-        height: 2048
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: fb6883e3f9b27faa0800000000000000
-      internalID: -6127380805070584129
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Square 30_1
-      rect:
-        serializedVersion: 2
         x: 743
         y: 0
         width: 1305
@@ -140,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: f694a9d5c4a4539f0800000000000000
-      internalID: -489403292651468433
+      spriteID: fb6883e3f9b27faa0800000000000000
+      internalID: -6127380805070584129
       vertices: []
       indices: 
       edges: []
@@ -161,7 +136,6 @@ TextureImporter:
       entries: []
     nameFileIdTable:
       Square 30_0: -6127380805070584129
-      Square 30_1: -489403292651468433
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

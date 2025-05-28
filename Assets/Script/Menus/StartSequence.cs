@@ -36,6 +36,23 @@ public class StartSequence : SoundObject
         StartCoroutine(DisplayIntroLetter());
     }
 
+    public IEnumerator EnterInGame()
+    {
+        playerInput.SwitchCurrentActionMap("ScenarisedSequence");
+        blackBackground.gameObject.SetActive(true);
+        StartCoroutine(Appear(blackBackground,2f));
+        yield return new WaitForSeconds(3f);
+        fillBar.gameObject.SetActive(true);
+        fillBar.fillAmount = 0;
+        AsyncOperation loading = SceneManager.LoadSceneAsync(0);
+        while (SceneManager.GetSceneAt(0).isLoaded == false)
+        {
+            fillBar.fillAmount = loading.progress;
+            yield return null;
+        }
+        StartCoroutine(EnterInScene());
+    }
+
     IEnumerator Appear(Image image, float time)
     {
         float speed = 1 / time;

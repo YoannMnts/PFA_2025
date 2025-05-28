@@ -102,7 +102,7 @@ public class MainMenu : MonoBehaviour
             if (currentLevel == 0)
             {
                 DontDestroyOnLoad(startSequence.gameObject);
-                StartCoroutine(startSequence.GetComponent<StartSequence>().Play());
+                StartCoroutine(startSequence.GetComponent<StartSequence>().EnterInGame());
             }
             else if (currentLevel == 1)
             {
