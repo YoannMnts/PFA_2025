@@ -39,6 +39,7 @@ public class SavedSys : MonoBehaviour
         
         PlayerPosSaved();
         CompletedLetterSaved();
+        ActiveLetterSaved();
         PnjSaved();
         StampsSaved();
         Debug.Log("saved");
@@ -50,6 +51,7 @@ public class SavedSys : MonoBehaviour
         
         PlayerPosLoad();
         CompletedLetterLoad();
+        ActiveLetterLoad();
         PnjLoad();
         StampsLoad();
         Debug.Log("Loaded");
@@ -92,7 +94,21 @@ public class SavedSys : MonoBehaviour
             {
                 if (deliveryManager.completedLetters[i] == deliveryManager.LetterDataTab[j])
                 {
-                    PlayerPrefs.SetInt(deliveryManager.LetterDataTab[j].ToString(), j);
+                    PlayerPrefs.SetInt("CompletedLetter" + deliveryManager.LetterDataTab[j].ToString(), j);
+                }
+            }
+        }
+    }
+
+    private void ActiveLetterSaved()
+    {
+        for (int i = 0; i < deliveryManager.ActiveLetter.Count; i++)
+        {
+            for (int j = 0; j < deliveryManager.LetterDataTab.Length; j++)
+            {
+                if (deliveryManager.ActiveLetter[i].letterData == deliveryManager.LetterDataTab[j])
+                {
+                    PlayerPrefs.SetInt("ActiveLetter" + deliveryManager.LetterDataTab[j].ToString(), j);
                 }
             }
         }
@@ -132,11 +148,24 @@ public class SavedSys : MonoBehaviour
     {
         for (int i = 0; i < deliveryManager.LetterDataTab.Length; i++)
         {
-            if (deliveryManager.completedLetters.Contains(deliveryManager.LetterDataTab[PlayerPrefs.GetInt(deliveryManager.LetterDataTab[i].ToString())]) || PlayerPrefs.GetInt(deliveryManager.LetterDataTab[i].ToString()) == 0)
+            if (deliveryManager.completedLetters.Contains(deliveryManager.LetterDataTab[PlayerPrefs.GetInt("CompletedLetter" + deliveryManager.LetterDataTab[i].ToString())]) || PlayerPrefs.GetInt("CompletedLetter" + deliveryManager.LetterDataTab[i].ToString()) == 0)
             {
                 continue;
             }
-            deliveryManager.completedLetters.Add(deliveryManager.LetterDataTab[PlayerPrefs.GetInt(deliveryManager.LetterDataTab[i].ToString())]);
+            deliveryManager.completedLetters.Add(deliveryManager.LetterDataTab[PlayerPrefs.GetInt("CompletedLetter" + deliveryManager.LetterDataTab[i].ToString())]);
+        }
+    }
+
+    private void ActiveLetterLoad()
+    {
+        for (int i = 0; i < deliveryManager.LetterDataTab.Length; i++)
+        {
+            Letter letter = deliveryManager.CreateLetter(deliveryManager.LetterDataTab[PlayerPrefs.GetInt("ActiveLetter" + deliveryManager.LetterDataTab[i].ToString())]);
+            if (deliveryManager.AlreadyInActiveLetter || letter.letterData == deliveryManager.LetterDataTab[0] || deliveryManager.completedLetters.Contains(letter.letterData))
+            {
+                continue;
+            }
+            deliveryManager.ActiveLetter.Add(letter);
         }
     }
     
