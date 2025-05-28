@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      rolling_Sprite_sheet animation_0: 7245377639357233495
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      WallIdle_Sprite_Sheet animation_0: -4778591915803774911
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
