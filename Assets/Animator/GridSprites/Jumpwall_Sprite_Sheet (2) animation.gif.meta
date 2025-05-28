@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Jumpwall_Sprite_Sheet (2) animation_0: 3980159595415829712
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Gliding_Sprite_Sheet animation_0: 8535880541529100041
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

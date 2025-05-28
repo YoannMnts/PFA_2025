@@ -1,10 +1,22 @@
 fileFormatVersion: 2
-guid: dd56984c838cd144cbf598c043ada2e3
+guid: 9dadc6d4978013b4581c593a4df33690
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -7068403499513703849
-    second: HangingOn_Sprite_Sheet animation_0
+      213: 774351698370071120
+    second: Square 12_0
+  - first:
+      213: 8629307048295165262
+    second: Square 12_1
+  - first:
+      213: -6159222754354731060
+    second: Square 12_2
+  - first:
+      213: 3458172346119266837
+    second: Square 12_3
+  - first:
+      213: -7480334724906832115
+    second: Square 12_4
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +112,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: HangingOn_Sprite_Sheet animation_0
+      name: Square 12_0
       rect:
         serializedVersion: 2
-        x: 168
-        y: 128
-        width: 307
-        height: 342
+        x: 0
+        y: 0
+        width: 855
+        height: 2048
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +127,96 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 7529b5a977cf7ed90800000000000000
-      internalID: -7068403499513703849
+      spriteID: 05a819854cc0fba00800000000000000
+      internalID: 774351698370071120
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Square 12_1
+      rect:
+        serializedVersion: 2
+        x: 1062
+        y: 1215
+        width: 507
+        height: 833
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e4d68675a0571c770800000000000000
+      internalID: 8629307048295165262
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Square 12_2
+      rect:
+        serializedVersion: 2
+        x: 1770
+        y: 1681
+        width: 278
+        height: 367
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cc7ee22b98b068aa0800000000000000
+      internalID: -6159222754354731060
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Square 12_3
+      rect:
+        serializedVersion: 2
+        x: 1042
+        y: 0
+        width: 1006
+        height: 868
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 512a4863d65edff20800000000000000
+      internalID: 3458172346119266837
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Square 12_4
+      rect:
+        serializedVersion: 2
+        x: 1378
+        y: 296
+        width: 670
+        height: 1203
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d0fa8e04333803890800000000000000
+      internalID: -7480334724906832115
       vertices: []
       indices: 
       edges: []
@@ -134,8 +234,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      HangingOn_Sprite_Sheet animation_0: -7068403499513703849
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
