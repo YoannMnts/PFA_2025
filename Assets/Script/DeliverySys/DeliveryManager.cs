@@ -11,6 +11,7 @@ public class DeliveryManager : MonoBehaviour
 {
     public List<Letter> ActiveLetter => activeLetter;
     public LetterData[] LetterDataTab => letterDataTab;
+    public bool AlreadyInActiveLetter => alreadyInActiveLetters;
     
 
 
@@ -54,7 +55,7 @@ public class DeliveryManager : MonoBehaviour
     }
 
 
-    private Letter CreateLetter(LetterData letterData)
+    public Letter CreateLetter(LetterData letterData)
     {
         alreadyInActiveLetters = false;
         Letter letter = new Letter()
