@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: dd56984c838cd144cbf598c043ada2e3
+guid: c3d0139e5b7b3a84ab04cbc4327cfff5
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -7068403499513703849
-    second: HangingOn_Sprite_Sheet animation_0
+      213: -8159810336294894907
+    second: Square 6 bis_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: HangingOn_Sprite_Sheet animation_0
+      name: Square 6 bis_0
       rect:
         serializedVersion: 2
-        x: 168
-        y: 128
-        width: 307
-        height: 342
+        x: 0
+        y: 0
+        width: 721
+        height: 711
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 7529b5a977cf7ed90800000000000000
-      internalID: -7068403499513703849
+      spriteID: 5c2059e4bb782ce80800000000000000
+      internalID: -8159810336294894907
       vertices: []
       indices: 
       edges: []
@@ -134,8 +134,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      HangingOn_Sprite_Sheet animation_0: -7068403499513703849
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
