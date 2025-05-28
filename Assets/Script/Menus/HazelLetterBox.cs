@@ -7,7 +7,7 @@ public class HazelLetterBox : MonoBehaviour
 {
     [SerializeField] private EndSequence endSequence;
     [SerializeField] public AboveHeadIndication aboveHeadIndication;
-    bool canInteract = true;
+    bool canInteract = false;
     public bool canEnd = false;
 
     private void Start()
