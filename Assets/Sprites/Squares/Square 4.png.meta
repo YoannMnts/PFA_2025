@@ -5,6 +5,15 @@ TextureImporter:
   - first:
       213: -6895265589767636652
     second: Square 4_0
+  - first:
+      213: 7691568137600104437
+    second: Square 4_1
+  - first:
+      213: 8715751313335488430
+    second: Square 4_2
+  - first:
+      213: -1830210576408517290
+    second: Square 4_3
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -56,7 +65,7 @@ TextureImporter:
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
   alphaIsTransparency: 1
-  spriteTessellationDetail: 0
+  spriteTessellationDetail: -1
   textureType: 8
   textureShape: 1
   singleChannelComponent: 0
@@ -103,12 +112,12 @@ TextureImporter:
       name: Square 4_0
       rect:
         serializedVersion: 2
-        x: 1285
-        y: 0
-        width: 763
-        height: 2048
+        x: 0
+        y: 820
+        width: 473
+        height: 1228
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -121,12 +130,78 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: Square 4_1
+      rect:
+        serializedVersion: 2
+        x: 435
+        y: 977
+        width: 759
+        height: 1071
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5f7fd5f2870fdba60800000000000000
+      internalID: 7691568137600104437
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Square 4_2
+      rect:
+        serializedVersion: 2
+        x: 1285
+        y: 0
+        width: 763
+        height: 2048
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eaf810634a194f870800000000000000
+      internalID: 8715751313335488430
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Square 4_3
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 924
+        height: 656
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 655e1097d29c996e0800000000000000
+      internalID: -1830210576408517290
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     customData: 
     physicsShape: []
     bones: []
     spriteID: 5e97eb03825dee720800000000000000
-    internalID: 1537655665
+    internalID: 0
     vertices: []
     indices: 
     edges: []
@@ -136,6 +211,9 @@ TextureImporter:
       entries: []
     nameFileIdTable:
       Square 4_0: -6895265589767636652
+      Square 4_1: 7691568137600104437
+      Square 4_2: 8715751313335488430
+      Square 4_3: -1830210576408517290
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
