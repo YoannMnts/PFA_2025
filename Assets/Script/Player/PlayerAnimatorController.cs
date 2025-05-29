@@ -15,6 +15,7 @@ namespace Script
         private static readonly int IsWalking = Animator.StringToHash("IsWalking");
         private static readonly int StayOnWall = Animator.StringToHash("StayOnWall");
         private static readonly int HasACeiling = Animator.StringToHash("HasACeiling");
+        private static readonly int HorizontalVelocity = Animator.StringToHash("HorizontalVelocity");
         private PlayerMovement Movement => player.Movement;
         
         [Header("Refs")] 
@@ -56,6 +57,7 @@ namespace Script
             animator.SetBool(IsRunning, Movement.IsRunning);
             animator.SetBool(IsWalking, Mathf.Abs(Movement.CurrentVelocity.x) > 2f);
             animator.SetFloat(VerticalVelocity, Movement.CurrentVelocity.y);
+            animator.SetFloat(HorizontalVelocity, Movement.CurrentVelocity.x);
             animator.SetBool(IsGliding, Movement.IsGliding);
             animator.SetBool(IsRolling, Movement.IsRolling);
             animator.SetBool(StayOnWall,Movement.IsWalled && !Movement.IsGrounded);
@@ -74,6 +76,11 @@ namespace Script
             }
             if (!Movement.IsWalled || Movement.IsGrounded)
                 spriteRenderer.transform.up = Vector2.Lerp(spriteRenderer.transform.up, up,rotationSmoothness * Time.deltaTime);
+            if (Movement.IsWalled && !Movement.IsGrounded)
+            {
+                spriteRenderer.transform.right = up.x > 0 ? Vector2.Lerp(spriteRenderer.transform.right, up,rotationSmoothness * Time.deltaTime) : -Vector2.Lerp(spriteRenderer.transform.right, up,rotationSmoothness * Time.deltaTime);
+            }
+            Debug.DrawRay(spriteRenderer.transform.position, up, Color.red);
             
             Vector2 perp = Vector2.Perpendicular(up);
             float dot = Vector2.Dot(Movement.InputDirection, perp);
