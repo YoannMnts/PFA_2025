@@ -25,7 +25,7 @@ public class PlayerMovement : SoundObject
     public bool IsGliding => isGliding;
     public bool IsWallJumping => isWallJumping;
     public bool HasACeiling => hasACeiling;
-    public bool IsRunning => Mathf.Abs(CurrentVelocity.x) > 9.5f;
+    public bool IsRunning => Mathf.Abs(CurrentVelocity.x) > 8f;
     public Vector2 WallCheckDirection => wallCheckDirection;
     public Rigidbody2D Rb2d => rb2d;
     #endregion
@@ -254,8 +254,6 @@ public class PlayerMovement : SoundObject
     {
         if (isWalled)
             wallCheckDirection = -wallNormal;
-        else if(isJumping)
-            wallCheckDirection = CurrentVelocity.x > 0 ? Vector2.right : Vector2.left;
         else if (Mathf.Abs(targetVelocity.x) > .05f)
             wallCheckDirection = targetVelocity.x > 0 ? Vector2.right : Vector2.left;
         else
@@ -264,12 +262,14 @@ public class PlayerMovement : SoundObject
             wallNormal = Vector2.zero;
             return;
         }
+        if(isJumping)
+            wallCheckDirection = wallNormal;
 
         float dir = wallCheckDirection.x;
         ContactFilter2D contactFilter = new ContactFilter2D()
         {
             useLayerMask = true,
-            layerMask = wallLayer,
+            layerMask = groundLayer,
             useNormalAngle = true,
             minNormalAngle = dir > 0 ? 180 - wallAngle : -wallAngle,
             maxNormalAngle = dir > 0 ? 180 + wallAngle : wallAngle,
@@ -469,7 +469,6 @@ public class PlayerMovement : SoundObject
     {
         rb2d.AddForce(-wallNormal * climbForce);
         Vector2 forward = Vector2.Perpendicular(wallNormal);
-        
         //float verticalAmount = Vector2.Dot(inputDirection, wallNormal);
         float horizontalAmount = Vector2.Dot(inputDirection, forward);
         float wantToClimb = Vector2.Dot(-wallNormal, inputDirection);
