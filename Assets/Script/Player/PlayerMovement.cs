@@ -400,7 +400,7 @@ public class PlayerMovement : SoundObject
             DoNormalMovement();
         }
 
-        if (rb2d.linearVelocityY <= 0 && currentGround != null)
+        if (rb2d.linearVelocityY <= 0 && currentGround != null && groundNormal.y > .9f)
         {
             var closestPoint = currentGround.ClosestPoint(rb2d.position);
             rb2d.position = new Vector2()
@@ -605,11 +605,11 @@ public class PlayerMovement : SoundObject
         targetVelocity = Vector2.zero;
         rb2d.linearVelocity = Vector2.zero;
         rb2d.angularVelocity = 0;
-        //rb2d.constraints = RigidbodyConstraints2D.FreezeAll;
+        rb2d.constraints = RigidbodyConstraints2D.FreezePositionX | RigidbodyConstraints2D.FreezeRotation;
     }
 
     public void UnFreeze()
     {
-        rb2d.constraints = RigidbodyConstraints2D.None;
+        rb2d.constraints = RigidbodyConstraints2D.FreezeRotation;
     }
 }
