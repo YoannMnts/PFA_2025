@@ -672,8 +672,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   splineContainer: {fileID: 4127514387418237904}
-  speed: 1
-  reversed: 0
+  speed: 3
+  reversed: 1
   paddles:
   - {fileID: 9032312974460438614}
   - {fileID: 6524977208417765679}

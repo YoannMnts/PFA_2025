@@ -400,7 +400,7 @@ public class PlayerMovement : SoundObject
             DoNormalMovement();
         }
 
-        /*if (rb2d.linearVelocityY <= 0 && currentGround != null)
+        if (rb2d.linearVelocityY <= 0 && currentGround != null)
         {
             var closestPoint = currentGround.ClosestPoint(rb2d.position);
             rb2d.position = new Vector2()
@@ -408,7 +408,7 @@ public class PlayerMovement : SoundObject
                 x = rb2d.position.x,
                 y = closestPoint.y
             };
-        }*/
+        }
     }
     
     private IEnumerator DoRoll()
