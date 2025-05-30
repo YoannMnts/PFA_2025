@@ -254,16 +254,22 @@ public class PlayerMovement : SoundObject
     {
         if (isWalled)
             wallCheckDirection = -wallNormal;
-        else if (Mathf.Abs(targetVelocity.x) > .05f)
+        else if (Mathf.Abs(targetVelocity.x) > .05f && !isJumping)
             wallCheckDirection = targetVelocity.x > 0 ? Vector2.right : Vector2.left;
-        else
+        else if(!isWallJumping)
         {
             isWalled = false;
             wallNormal = Vector2.zero;
+            Debug.Log("graou");
             return;
         }
-        if(isJumping)
-            wallCheckDirection = wallNormal;
+
+        if (isJumping && !isWallJumping)
+        {
+            wallCheckDirection = wallNormal.x > -0.1f && wallCheckDirection.x < 0.1f? Vector2.right : Vector2.left;
+            isWallJumping = true;
+            Debug.Log("ici");
+        }
 
         float dir = wallCheckDirection.x;
         ContactFilter2D contactFilter = new ContactFilter2D()
@@ -367,8 +373,6 @@ public class PlayerMovement : SoundObject
                 rb2d.linearVelocityY = 0;
                 rb2d.AddForce(direction, ForceMode2D.Impulse);
                 isJumping = true;
-                wallCheckDirection = wallCheckDirection == Vector2.right ? Vector2.left : Vector2.right;
-                isWallJumping = true;
             }
             wantsToJump = 0;
         }
