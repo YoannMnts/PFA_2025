@@ -1,0 +1,42 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0eeb945c88124c10989ad86d225d13c2, type: 3}
+  m_Name: Letter7
+  m_EditorClassIdentifier: 
+  sender: {fileID: 11400000, guid: c0804555b19704340ae924094193c8bb, type: 2}
+  receiver: {fileID: 11400000, guid: ff1efd42a7eb34e44b2f88a9294420e2, type: 2}
+  dependencies:
+  - {fileID: 11400000, guid: fd8df75db0be607499c382305e0be237, type: 2}
+  senderName: Nelia
+  text: "Bonjour Elise,\r\nMalheureusement, nous sommes tr\xE8s occup\xE9s par les
+    pr\xE9paratifs de la F\xEAte des Couleurs et nous ne pouvons pas venir te voir
+    directement. Nous t\u2019\xE9crivons donc pour savoir s\u2019il serait possible
+    de passer commande pour un g\xE2teau d\u2019anniversaire. Quelques jours apr\xE8s
+    la F\xEAte des Couleurs, ce sera l\u2019anniversaire de Nelia et nous aimerions
+    lui faire une petite surprise.\r\nLes parents de Nelia\r\n"
+  sendedText:
+  - "Dis ! Dis ! Dis ! Tu es un facteur, non ? Mes parents m\u2019ont confi\xE9 une
+    lettre que je dois donner \xE0 Madame Elise. Tu peux lui donner s\u2019il te
+    pla\xEEt ?\r\n"
+  - "Yaaaay ! Merci t\u2019es trop cool !"
+  receivedText:
+  - Bonjour, tu as besoin de quelque chose ? Une meringue ? Une tarte aux noix ?
+    Des profiteroles ? Des macarons ?
+  - "Oh ? Tu as une lettre pour moi ? Voyons voir\u2026"
+  - "C\u2019est de la part des parents de Nelia ! "
+  - "Tu ne le sais peut-\xEAtre pas mais ils travaillent \xE0 la mairie et ils ont
+    beaucoup de travail avec la F\xEAte des Couleurs qui approche ! Tu ne risques
+    donc pas de les croiser de sit\xF4t.\r\n"
+  glansGain: 4
+  stampsGain: 17
+  appearingCharacter: {fileID: 0}
+  disappearingCharacter: {fileID: 0}

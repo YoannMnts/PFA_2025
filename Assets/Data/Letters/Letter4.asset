@@ -1,0 +1,36 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0eeb945c88124c10989ad86d225d13c2, type: 3}
+  m_Name: Letter4
+  m_EditorClassIdentifier: 
+  sender: {fileID: 11400000, guid: 8f7f29cef723b4440b99490ea59509f9, type: 2}
+  receiver: {fileID: 11400000, guid: ed1c784f61a160d49b72a96823946ba0, type: 2}
+  dependencies:
+  - {fileID: 11400000, guid: fd8df75db0be607499c382305e0be237, type: 2}
+  senderName: Poutre
+  text: "Bonjour mon cher Jack,\r\nEn vue de la F\xEAte des Couleurs, je construis
+    un nouveau violon pour Lucina. Mais, pour pouvoir le faire, j\u2019ai besoin
+    d\u2019un peu de bois. Serait-il possible de t\u2019en emprunter un peu ? Merci
+    d\u2019avance.\r\nPoutre\r\n"
+  sendedText:
+  - "Travail ! Trop de travail ! Et j\u2019ai besoin de bois ! AAAAAAAH ! \u2026
+    Toi ! Facteur ! J\u2019ai besoin de toi !"
+  - "Non je ne veux pas que tu fasses mon travail ! J\u2019ai juste besoin que tu
+    livres cette lettre \xE0 Jack ! J\u2019ai besoin de bois !"
+  receivedText:
+  - "Quel bon vent t\u2019am\xE8ne mon petiot ? Hmm ? Une lettre du petiot Poutre
+    ? Laisse-moi voir\u2026\r\n"
+  - "Ah ! Je vois ! C\u2019est pour la petiote Lucina et son violon !"
+  glansGain: 3
+  stampsGain: 0
+  appearingCharacter: {fileID: 0}
+  disappearingCharacter: {fileID: 0}

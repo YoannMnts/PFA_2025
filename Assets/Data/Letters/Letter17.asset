@@ -1,0 +1,52 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0eeb945c88124c10989ad86d225d13c2, type: 3}
+  m_Name: Letter17
+  m_EditorClassIdentifier: 
+  sender: {fileID: 11400000, guid: 1a080252247be3b4a87fed0f00c2172c, type: 2}
+  receiver: {fileID: 11400000, guid: c333ba6243c47e64dac784babe641bbc, type: 2}
+  dependencies:
+  - {fileID: 11400000, guid: fd8df75db0be607499c382305e0be237, type: 2}
+  senderName: Frederic
+  text: "Bonjour,\r\nTr\xE8s ch\xE8re Madame, il semblerait qu\u2019en passant pr\xE8s
+    de mon charmant domicile, vous ayez oubli\xE9 une de vos possessions : votre
+    portefeuille. Vous devriez faire attention, des rumeurs circulent comme quoi
+    il y aurait la c\xE9l\xE8bre Ariane Parpin dans les environs. Heureusement que
+    je suis un citoyen exemplaire et que je vous avertis. Je vous invite \xE0 venir
+    le r\xE9cup\xE9rer.\r\nBien cordialement,\r\nFr\xE9d\xE9ric\r\n"
+  sendedText:
+  - "AAAAAAH ! Pr\xE9viens quand tu arrives, nom d\u2019une pipe ! J\u2019ai failli
+    avoir une attaque ! Ne commence pas \xE0 choper les mauvaises manies d\u2019Antonin
+    !"
+  - "Mais je dois dire que tu tombes bien. J\u2019ai justement quelque chose \xE0
+    d\xE9livrer \xE0 une jeune pie qui n\u2019est pas toute seule dans sa t\xEAte.
+    Elle est juste \xE0 c\xF4t\xE9 de mon humble demeure."
+  - "Hein ? Vu qu\u2019elle est proche, je pourrais l\u2019amener moi-m\xEAme ?"
+  - ...
+  - "Silence garnement ! Depuis quand on questionne ses a\xEEn\xE9s ! Moi de mon
+    temps !"
+  - "Hey ! Reviens ! Je n\u2019ai pas fini de te faire la morale !"
+  receivedText:
+  - "Ohohohoho ! Encore un coup r\xE9ussi pour la seule, l\u2019unique, Ariane Parpin.
+    Que me vaux l\u2019honneur de ta venue, cher facteur ?\r\n"
+  - "Une lettre pour la charmante moi ? Ohohohoho ! Sans aucun doute un admirateur
+    ! Voyons voir\u2026"
+  - "\u2026"
+  - "Je\u2026 Je n\u2019ai pas les mots."
+  - "Je ne sais pas ce qui est le plus embarrassant : la grande Ariane Parpin qui
+    perd son portefeuille sur les lieux de sa derni\xE8re \u0153uvre\u2026"
+  - "Ou le septuag\xE9naire qui ne s\u2019est pas encore rendu compte du vol et me
+    sermonne\u2026"
+  glansGain: 3
+  stampsGain: 9
+  appearingCharacter: {fileID: 0}
+  disappearingCharacter: {fileID: 0}

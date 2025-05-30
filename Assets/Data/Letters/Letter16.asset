@@ -1,0 +1,37 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0eeb945c88124c10989ad86d225d13c2, type: 3}
+  m_Name: Letter16
+  m_EditorClassIdentifier: 
+  sender: {fileID: 11400000, guid: 1a080252247be3b4a87fed0f00c2172c, type: 2}
+  receiver: {fileID: 11400000, guid: 5c6e884f0beeccc4889768905bf01ea3, type: 2}
+  dependencies:
+  - {fileID: 11400000, guid: 830867d8243ad1d4bb8070d956381b71, type: 2}
+  senderName: Frederic
+  text: "Bonjour, fieff\xE9 faquin,\r\n\u2026\r\n\u2026\r\nD\xE9gage de mon courrier
+    !\r\nAvec aigreur,\r\nFr\xE9d\xE9ric\r\n"
+  sendedText:
+  - "Je vais lui dire ce que je pense \xE0 ce fieff\xE9 faquin !"
+  - Donne-lui cette lettre !
+  receivedText:
+  - "Oh ? D\xE9j\xE0 une r\xE9ponse ?\r\n"
+  - "\u2026\r\n"
+  - Wha ha ha ha ha ha !
+  - "Merveilleux ! Ha ha ha ha ha ! Il a vraiment les meilleures r\xE9actions !"
+  - "Et je suppose qu\u2019il a d\xFB hurler : \"Br\xFBlez cette chose\" ou une broutille
+    du m\xEAme acabit !"
+  - "Cela faisait vraiment longtemps que je n\u2019avais pas ri comme \xE7a !"
+  - Ha ha ha ha ha ! Je lui enverrai une autre de mes lettres assez rapidement !
+  glansGain: 2
+  stampsGain: 10
+  appearingCharacter: {fileID: 0}
+  disappearingCharacter: {fileID: 0}

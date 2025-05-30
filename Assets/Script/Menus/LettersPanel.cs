@@ -76,6 +76,7 @@ public class LettersPanel : Panel
         {
             selectionPad.position = new Vector3(1000,1000,1000);
         }
+        
     }
 
     public override void Awake()
@@ -195,7 +196,7 @@ public class LettersPanel : Panel
         {
             moreOverIndication.SetActive(false);
         }
-        foreach (GameObject letter in currentLetters)
+        foreach (GameObject letter in letters)
         {
             if (letter != null)
             {
@@ -206,10 +207,11 @@ public class LettersPanel : Panel
         currentLettersData = new LetterUI[lettersByPage];
         for (int j = 0; j < lettersByPage; j++)
         {
-            if ((currentPage * lettersByPage) + j < lettersCount)
+            if ((currentPage * (lettersByPage-1)) + j < lettersCount)
             {
-                letters[(currentPage*lettersByPage)+j].SetActive(true);
-                currentLetters[j] = letters[(currentPage*lettersByPage)+j];
+                letters[(currentPage*(lettersByPage-1))+j].SetActive(true);
+                Debug.Log(letters[currentPage*(lettersByPage-1)+j]);
+                currentLetters[j] = letters[(currentPage*(lettersByPage-1))+j];
                 currentLettersData[j] = currentLetters[j].gameObject.GetComponent<LetterUI>();
                 if (pinnedCoordinates != null)
                 {
@@ -218,7 +220,7 @@ public class LettersPanel : Panel
                         currentLettersData[j].GetPinned();
                     }
                 }
-                letters[(currentPage*lettersByPage)+j].GetComponent<RectTransform>().anchoredPosition = lettersBasePosition-(lettersOffset*(j+1));
+                letters[currentPage*(lettersByPage-1)+j].GetComponent<RectTransform>().anchoredPosition = lettersBasePosition-(lettersOffset*(j+1));
             }
         }
     }
