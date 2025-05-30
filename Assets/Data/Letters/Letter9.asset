@@ -1,0 +1,39 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0eeb945c88124c10989ad86d225d13c2, type: 3}
+  m_Name: Letter9
+  m_EditorClassIdentifier: 
+  sender: {fileID: 11400000, guid: ac853fc7cde38634b826552d02fa0800, type: 2}
+  receiver: {fileID: 11400000, guid: 8f7f29cef723b4440b99490ea59509f9, type: 2}
+  dependencies:
+  - {fileID: 11400000, guid: fd8df75db0be607499c382305e0be237, type: 2}
+  senderName: Icare
+  text: "Bonjour Poutre,\r\nJ\u2019ai un grand projet ! Et quand je dis grand projet,
+    je dis GRAND ! Pour que ce magnifique chef-d'\u0153uvre puisse voir le jour,
+    j\u2019ai besoin de tes comp\xE9tences et de mat\xE9riel. Du bois, du tissu et
+    des feux d\u2019artifices feront l\u2019affaire. Rejoins-moi et crois en mon
+    g\xE9nie !\r\nA tr\xE8s vite !\r\nIcare\r\n"
+  sendedText:
+  - "Pouvoir voler un jour\u2026 Sans retour\u2026 Ils disent tous que je suis fou
+    mais ils verront tous !"
+  - "Je leur prouverais que j\u2019ai raison ! Et pour \xE7a j\u2019ai besoin de
+    toi ! Facteur, T\u2019es de mon c\xF4t\xE9, hein ?\r\n"
+  - "Je le savais ! Enfin un confr\xE8re ! Prends cette lettre ! J\u2019ai besoin
+    que tu la donnes \xE0 Poutre et ce ne sera alors qu\u2019une question de temps
+    avant que je rejoigne les cieux !"
+  receivedText:
+  - "Une lettre pour moi ? Mais, de qui est-ce\u2026\r\n"
+  - OH NON ! NON ! .... OH NON ! PAS LUI, PAS ENCORE ! PAR PITIE, NON !
+  glansGain: 0
+  stampsGain: 33
+  appearingCharacter: {fileID: 0}
+  disappearingCharacter: {fileID: 0}

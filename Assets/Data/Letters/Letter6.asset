@@ -1,0 +1,39 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0eeb945c88124c10989ad86d225d13c2, type: 3}
+  m_Name: Letter6
+  m_EditorClassIdentifier: 
+  sender: {fileID: 11400000, guid: 8f7f29cef723b4440b99490ea59509f9, type: 2}
+  receiver: {fileID: 11400000, guid: cf5f10c214eb15b4997047ff491d2471, type: 2}
+  dependencies:
+  - {fileID: 11400000, guid: 41b48bdfd39083b438ce027a1d8ff4fb, type: 2}
+  senderName: Poutre
+  text: "Bonjour Lucina,\r\nJ\u2019ai le plaisir de t\u2019annoncer que gr\xE2ce
+    \xE0 Jack qui me procure le bois, je vais pouvoir terminer ton nouveau violon
+    ! Il sera termin\xE9 aujourd\u2019hui. Tu pourras venir le r\xE9cup\xE9rer tout
+    \xE0 l\u2019heure et tu pourras l\u2019essayer avant de donner ton petit concert
+    pour la F\xEAte des Couleurs. D\u2019ailleurs, Fr\xE9d\xE9ric devrait bient\xF4t
+    te contacter pour l\u2019organisation des festivit\xE9s.\r\nAvec amiti\xE9s,\r\nPoutre\r\n"
+  sendedText:
+  - "D\u2019ailleurs, tu veux bien lui livrer cette lettre. Elle sera ravie d\u2019apprendre
+    l\u2019avanc\xE9e de sa commande !"
+  receivedText:
+  - "Oui, mon ami ? Pour quelle raison interromps-tu mon entra\xEEnement musical
+    ?\r\n"
+  - Une lettre de ce cher Poutre ? Sans doute pour mon nouveau violon.
+  - "Merveilleux ! J\u2019aurais de quoi honorer cette magnifique f\xEAte ! Merci
+    mon jeune ami ! J\u2019esp\xE8re te voir au concert pendant la F\xEAte des Couleurs
+    !"
+  glansGain: 2
+  stampsGain: 22
+  appearingCharacter: {fileID: 0}
+  disappearingCharacter: {fileID: 0}

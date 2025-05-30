@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0eeb945c88124c10989ad86d225d13c2, type: 3}
+  m_Name: Letter8
+  m_EditorClassIdentifier: 
+  sender: {fileID: 11400000, guid: ff1efd42a7eb34e44b2f88a9294420e2, type: 2}
+  receiver: {fileID: 11400000, guid: 5c91b2b04e22d0a45b52d2a8e3bfa740, type: 2}
+  dependencies:
+  - {fileID: 11400000, guid: d8bfa0af01484154e9996eea68f81069, type: 2}
+  senderName: Elise
+  text: "Bonjour,\r\nC\u2019est avec grand plaisir que je vous confectionnerais un
+    g\xE2teau pour l\u2019anniversaire de Nelia. Je lui pr\xE9parerais son g\xE2teau
+    pr\xE9f\xE9r\xE9 : un g\xE2teau aux fraises ! Il sera pr\xEAt d\xE8s ce soir
+    ! Vous pourrez venir le chercher quand vous le souhaitez.\r\nA bient\xF4t dans
+    ma p\xE2tisserie !\r\nElise\r\n"
+  sendedText:
+  - "Bref, je m\u2019\xE9gare. Tu veux bien leur apporter ma r\xE9ponse ? Comme c\u2019est
+    cens\xE9 \xEAtre une surprise pour Nelia, il vaut mieux que tu d\xE9poses cette
+    lettre dans leur bo\xEEte aux lettres."
+  receivedText: []
+  glansGain: 2
+  stampsGain: 44
+  appearingCharacter: {fileID: 0}
+  disappearingCharacter: {fileID: 0}

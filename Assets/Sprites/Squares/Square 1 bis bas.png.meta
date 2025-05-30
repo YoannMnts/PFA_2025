@@ -1,25 +1,13 @@
 fileFormatVersion: 2
-guid: 1e2d8a22ac4850b4ab5a4231303d9ed5
+guid: 570ab1e6f279f6242bdf1a1ba23b5987
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -2173083911567262015
-    second: Square 15 (1)_0
+      213: 34168398256021110
+    second: Square 1 bis bas_0
   - first:
-      213: -252760955227913900
-    second: Square 15 (1)_1
-  - first:
-      213: 2340978406819229209
-    second: Square 15 (1)_2
-  - first:
-      213: -5454371670457649145
-    second: Square 15 (1)_3
-  - first:
-      213: 7180927510827275206
-    second: Square 15 (1)_4
-  - first:
-      213: 7608196269992206778
-    second: Square 15 (1)_5
+      213: -481123611534796698
+    second: Square 1 bis bas_1
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -115,13 +103,35 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Square 15 (1)_0
+      name: Square 1 bis bas_0
       rect:
         serializedVersion: 2
         x: 0
+        y: 318
+        width: 2048
+        height: 1730
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 67e18982af3697000800000000000000
+      internalID: 34168398256021110
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Square 1 bis bas_1
+      rect:
+        serializedVersion: 2
+        x: 2035
         y: 0
-        width: 1261
-        height: 2048
+        width: 13
+        height: 24
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -130,118 +140,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 1cebae722b7a7d1e0800000000000000
-      internalID: -2173083911567262015
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Square 15 (1)_1
-      rect:
-        serializedVersion: 2
-        x: 732
-        y: 479
-        width: 1316
-        height: 1569
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 4514d8a10430e7cf0800000000000000
-      internalID: -252760955227913900
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Square 15 (1)_2
-      rect:
-        serializedVersion: 2
-        x: 2009
-        y: 501
-        width: 10
-        height: 9
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 91ee15d3573dc7020800000000000000
-      internalID: 2340978406819229209
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Square 15 (1)_3
-      rect:
-        serializedVersion: 2
-        x: 1912
-        y: 440
-        width: 12
-        height: 18
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 708fa6d3ddd2e44b0800000000000000
-      internalID: -5454371670457649145
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Square 15 (1)_4
-      rect:
-        serializedVersion: 2
-        x: 1938
-        y: 438
-        width: 6
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 6c390b06687c7a360800000000000000
-      internalID: 7180927510827275206
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Square 15 (1)_5
-      rect:
-        serializedVersion: 2
-        x: 1557
-        y: 0
-        width: 491
-        height: 195
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: ab16656923eb59960800000000000000
-      internalID: 7608196269992206778
+      spriteID: 6685a69df94b259f0800000000000000
+      internalID: -481123611534796698
       vertices: []
       indices: 
       edges: []
@@ -260,12 +160,8 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Square 15 (1)_0: -2173083911567262015
-      Square 15 (1)_1: -252760955227913900
-      Square 15 (1)_2: 2340978406819229209
-      Square 15 (1)_3: -5454371670457649145
-      Square 15 (1)_4: 7180927510827275206
-      Square 15 (1)_5: 7608196269992206778
+      Square 1 bis bas_0: 34168398256021110
+      Square 1 bis bas_1: -481123611534796698
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

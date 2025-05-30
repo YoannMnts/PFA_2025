@@ -1,0 +1,37 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0eeb945c88124c10989ad86d225d13c2, type: 3}
+  m_Name: Letter12
+  m_EditorClassIdentifier: 
+  sender: {fileID: 11400000, guid: a8e02d414e45cc34a93975248246175f, type: 2}
+  receiver: {fileID: 11400000, guid: 8f7f29cef723b4440b99490ea59509f9, type: 2}
+  dependencies:
+  - {fileID: 11400000, guid: c84573aeadef636479a5aaa4fc34ba5f, type: 2}
+  senderName: Captain Hans
+  text: "Bonjour soldat Poutre,\r\nNe te fais pas de soucis, le citoyen Icare a \xE9t\xE9
+    averti. Un premier avertissement a \xE9t\xE9 envoy\xE9 comme la proc\xE9dure
+    l\u2019exige. Ses plans ont donc \xE9t\xE9 confisqu\xE9s CEPENDANT dans le cas
+    o\xF9 le citoyen Icare recommencerait une fois encore ses excentricit\xE9s, il
+    sera appr\xE9hend\xE9 dans le respect de la loi.\r\nBonne journ\xE9e, soldat
+    Poutre.\r\n"
+  sendedText:
+  - "L\u2019autre lettre est pour le soldat Poutre. Vu ce qu\u2019il a subi l\u2019ann\xE9e
+    derni\xE8re avec les id\xE9es d\u2019Icare, il a besoin d\u2019\xEAtre rassur\xE9."
+  receivedText:
+  - "Facteur ! Alors ?! Tu l\u2019as envoy\xE9 ?! Piti\xE9, dis-moi que le Capitaine
+    Hans a fait quelque chose !"
+  - "Par toutes les heures de sommeil que j\u2019ai manqu\xE9 ! Victoire ! Il ne
+    va pas m\u2019entra\xEEner dans ses folies \xE0 nouveau ! Merci Facteur !"
+  glansGain: 4
+  stampsGain: 0
+  appearingCharacter: {fileID: 0}
+  disappearingCharacter: {fileID: 0}

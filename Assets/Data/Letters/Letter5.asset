@@ -1,0 +1,34 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0eeb945c88124c10989ad86d225d13c2, type: 3}
+  m_Name: Letter5
+  m_EditorClassIdentifier: 
+  sender: {fileID: 11400000, guid: ed1c784f61a160d49b72a96823946ba0, type: 2}
+  receiver: {fileID: 11400000, guid: 8f7f29cef723b4440b99490ea59509f9, type: 2}
+  dependencies:
+  - {fileID: 11400000, guid: ed61c1276d54a814a92c89bbb2d9e658, type: 2}
+  senderName: Jack
+  text: "Bonjour mon petiot,\r\nSans aucun probl\xE8me ! Tu peux prendre tout le
+    bois dont tu as besoin. Avec l\u2019arriv\xE9e de la F\xEAte des Couleurs, on
+    a eu un gros surplus de bois pour tout pr\xE9parer ! Fais-toi plaisir et sers-toi
+    !\r\nA plus mon petiot !\r\nJack\r\n"
+  sendedText:
+  - "Tiens mon petiot ! Donne cette lettre \xE0 Poutre ! \xC7a devrait le soulager
+    d\u2019un poids !"
+  receivedText:
+  - "Une r\xE9ponse de Jack ! Vite, donne-la-moi !"
+  - "\u2026 Ouf ! Heureusement qu\u2019il est l\xE0 ! Je vais pouvoir terminer la
+    t\xE2che que Lucina m\u2019a confi\xE9e !"
+  glansGain: 4
+  stampsGain: 12
+  appearingCharacter: {fileID: 0}
+  disappearingCharacter: {fileID: 0}

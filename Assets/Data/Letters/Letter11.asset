@@ -1,0 +1,41 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0eeb945c88124c10989ad86d225d13c2, type: 3}
+  m_Name: Letter11
+  m_EditorClassIdentifier: 
+  sender: {fileID: 11400000, guid: a8e02d414e45cc34a93975248246175f, type: 2}
+  receiver: {fileID: 11400000, guid: ac853fc7cde38634b826552d02fa0800, type: 2}
+  dependencies:
+  - {fileID: 11400000, guid: c84573aeadef636479a5aaa4fc34ba5f, type: 2}
+  senderName: Captain Hans
+  text: "Bonjour citoyen Icare,\r\nIl semblerait que tu recommences tes folies et
+    que tu tentes non seulement d\u2019inclure le soldat Poutre mais aussi notre
+    nouvelle recrue. Citoyen Icare, je me dois te mettre en garde et qu\u2019une
+    quelconque autre plainte venant d\u2019un autre brave citoyen me verra dans l\u2019obligation
+    de t\u2019appr\xE9hender. Pour l\u2019heure, seuls tes plans te seront confisqu\xE9s.\r\nRespectueusement,\r\nCapitaine
+    Hans\r\n"
+  sendedText:
+  - "Tiens, soldat, d\xE9livre cette lettre \xE0 Icare ! C\u2019est une mise en garde,
+    il n\u2019a pas int\xE9r\xEAt \xE0 recommencer ses b\xEAtises !"
+  receivedText:
+  - "Te revoil\xE0 ! J\u2019imagine que tu m\u2019apportes de bonnes nouvelles !"
+  - "Mais cette lettre n\u2019est pas de Poutre mais du Capitaine Hans !"
+  - "Comment il veut que j\u2019arr\xEAte mon g\xE9nie ?! Confisquer mes merveilleux
+    plans ?!"
+  - "\xC7a ne m\u2019\xE9tonne pas, venant de quelqu\u2019un avec une cervelle de
+    moineau ! Mais il ne m\u2019arr\xEAtera pas, personne ne m\u2019arr\xEAtera !"
+  - "Ce que j\u2019ai fait pour m\xE9riter un tel m\xE9contentement ? \u2026 C\u2019est
+    de l\u2019histoire ancienne !\r\n"
+  glansGain: 5
+  stampsGain: 5
+  appearingCharacter: {fileID: 0}
+  disappearingCharacter: {fileID: 0}
