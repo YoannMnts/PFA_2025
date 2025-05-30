@@ -32,7 +32,7 @@ public class Parallax : MonoBehaviour
                 new Vector2(player.transform.position.x, player.transform.position.y));
             if ( distance < Mathf.Abs(basePositions[i].z)*loadDistance && distance > 1f)
             {
-                if (basePositions[i].z < 300f)
+                if (basePositions[i].z < 50f)
                 {
                     if (basePositions[i].z < 0)
                     {

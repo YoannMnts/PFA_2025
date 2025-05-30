@@ -76,6 +76,7 @@ public class Pnj : PlayerInteractable
             {
                 isTalking = false;
                 deliveryManager.dialoguePad.Close();
+                deliveryManager.player.GetComponent<PlayerMovement>().UnFreeze();
             }
             else
             {

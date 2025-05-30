@@ -1,0 +1,49 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0eeb945c88124c10989ad86d225d13c2, type: 3}
+  m_Name: Letter33
+  m_EditorClassIdentifier: 
+  sender: {fileID: 11400000, guid: a8e02d414e45cc34a93975248246175f, type: 2}
+  receiver: {fileID: 11400000, guid: a2eaac1a1fac8c447b333e410c5ab2f7, type: 2}
+  dependencies:
+  - {fileID: 11400000, guid: fd8df75db0be607499c382305e0be237, type: 2}
+  senderName: Caprain Hans
+  text: "Salutations, citoyen Terry,\r\nJ\u2019ai cru comprendre qu\u2019aux alentours
+    de la propri\xE9t\xE9 de Fr\xE9d\xE9ric, un individu suspect de type volatile
+    aurait \xE9t\xE9 aper\xE7u. D\u2019apr\xE8s mes conclusions, il se pourrait bien
+    qu\u2019il s\u2019agisse de la c\xE9l\xE8bre voleuse Ariane Parpin qui me vole
+    dans les plumes depuis plusieurs mois. Je viendrais en personne pour enqu\xEAter
+    sur les lieux et r\xE9colter vos t\xE9moignages.\r\nRespectueusement,\r\nCapitaine
+    Hans\r\n"
+  sendedText:
+  - "Alors soldat ? Comment se sont pass\xE9s tes premi\xE8res livraisons ?"
+  - "Je suis s\xFBr que tu as \xE9t\xE9 exceptionnel et que les autres villageois
+    te font pleinement confiance.\r\n"
+  - "Maintenant soldat, j\u2019ai une autre mission pour toi ! J\u2019ai une lettre
+    \xE0 remettre \xE0 Terry, le majordome de Fr\xE9d\xE9ric. Soit exemplaire et
+    apporte-lui la lettre !"
+  receivedText:
+  - "Bien le bonjour, Monsieur le facteur. Votre pr\xE9sence en ces lieux me pousse
+    \xE0 me dire que vous \xEAtes en possession d\u2019un courrier qui m\u2019est
+    destin\xE9."
+  - "Voyez-vous cela ? Une lettre du tr\xE8s estim\xE9 Capitaine Hans. Que peut bien
+    me valoir cet honneur ?\r\n"
+  - "\u2026\r\n"
+  - "Je vois\u2026 Une voleuse\u2026 Voil\xE0 qui est inqui\xE9tant\u2026"
+  - "Cependant je ne pense pas qu\u2019il trouve de quelconques traces de cette personne.
+    J\u2019en ferais part \xE0 Monsieur Fr\xE9d\xE9ric, bien entendu."
+  - "N\xE9anmoins, le seul animal que le Ma\xEEtre de ses lieux ait pu apercevoir
+    est une jeune volatile ayant laiss\xE9 derri\xE8re elle son portefeuille."
+  glansGain: 2
+  stampsGain: 27
+  appearingCharacter: {fileID: 0}
+  disappearingCharacter: {fileID: 0}

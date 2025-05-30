@@ -32,7 +32,7 @@ public class DeliveryManager : MonoBehaviour
     [SerializeField] 
     private RewardParticles acornParticles, letterParticles, stampParticles;
     [SerializeField] 
-    private Player player;
+    public Player player;
     [SerializeField] 
     private List<Letter> activeLetter;
     
