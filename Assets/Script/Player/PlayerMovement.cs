@@ -9,7 +9,7 @@ using UnityEngine.InputSystem;
 using UnityEngine.Serialization;
 [DefaultExecutionOrder(-10)]
 [RequireComponent(typeof(Player))]
-public class PlayerMovement : SoundObject
+public class PlayerMovement : MonoBehaviour
 {
     #region Properties
     public Vector2 CurrentVelocity => rb2d.linearVelocity;
@@ -226,10 +226,6 @@ public class PlayerMovement : SoundObject
         HandleJump();
         HandleGliding();
         HandleMovement();
-        if (rb2d.linearVelocity.y < -5)
-            PlaySound(clips[1], SoundType.Effects, true);
-        if (Mathf.Abs(rb2d.linearVelocity.x) > 9.5f)
-            PlaySound(clips[6], SoundType.Effects, true);
     }
 
    
@@ -360,14 +356,12 @@ public class PlayerMovement : SoundObject
         {
             if (isGrounded && !isJumping)
             {
-                PlaySound(clips[3], SoundType.Effects);
                 isJumping = true;
                 //Debug.DrawRay(transform.position, Vector2.up * jumpForce, Color.magenta, 1);
             }
             
             if (!isGrounded && isWalled) 
             {
-                PlaySound(clips[3], SoundType.Effects);
                 Vector2 direction = wallNormal.normalized * wallNormalJumpForce;
                 direction += Vector2.up * (jumpForce * wallJumpForceMultiplier);
                 rb2d.linearVelocityY = 0;
@@ -437,7 +431,6 @@ public class PlayerMovement : SoundObject
             bool isInSlope = dot < .98f;
             if (!isInSlope)
             {
-                PlaySound(clips[5], SoundType.Effects, true);
                 Vector2 center = rb2d.position + groundNormal * (rollHeightCheck * .5f * 1.02f);
                 Vector2 size = new Vector2(.2f, rollHeightCheck);
 
@@ -496,7 +489,6 @@ public class PlayerMovement : SoundObject
             if (needAcc)
             {
                 rb2d.AddForce(targetVelocity.normalized * climbAcceleration, ForceMode2D.Force);
-                PlaySound(clips[0], SoundType.Effects, true);
             }
             else
             {

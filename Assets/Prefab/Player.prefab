@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 3887953055138614702}
   - component: {fileID: 8258549204932650272}
   - component: {fileID: 5518382526661767865}
+  - component: {fileID: 2707007329875257711}
   - component: {fileID: 7195079279946215982}
   m_Layer: 0
   m_Name: Player
@@ -476,14 +477,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: db539f912f08c9d4ba595df41886fc20, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  clips:
-  - {fileID: 8300000, guid: ec198a83890bd284eb1ff9362a9bb44c, type: 3}
-  - {fileID: 8300000, guid: 98d8abdcd096d0149a0d7a7c2131b267, type: 3}
-  - {fileID: 8300000, guid: f60950784cf319245bb60a5952fdac98, type: 3}
-  - {fileID: 8300000, guid: 180e4e3e4ec56b94299f7e9471099802, type: 3}
-  - {fileID: 8300000, guid: f85f562388036fd469a9af814f37b1dd, type: 3}
-  - {fileID: 8300000, guid: 534b78418c4a30840b38c523805bbc2e, type: 3}
-  - {fileID: 8300000, guid: 1aad54a40ee08c64ca5362b7a770b116, type: 3}
   normalCollider: {fileID: 4567919334552783960}
   runningCollider: {fileID: 4724200148513138063}
   gravityScale: 2
@@ -592,6 +585,19 @@ MonoBehaviour:
   player: {fileID: 1598060375889289099}
   runningVFX: {fileID: 8603956083078077065}
   fallingVFX: {fileID: 2061239923809764224}
+--- !u!114 &2707007329875257711
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 469289122408443856}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3af3521a9aacd1144801509a983f10e5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  clips: []
 --- !u!58 &7195079279946215982
 CircleCollider2D:
   m_ObjectHideFlags: 0
