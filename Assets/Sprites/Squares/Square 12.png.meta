@@ -1,22 +1,22 @@
 fileFormatVersion: 2
-guid: 9dadc6d4978013b4581c593a4df33690
+guid: 708be0c7316388b4e8b73ea0930e67c0
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 774351698370071120
-    second: Square 12_0
+      213: 4326389228587327849
+    second: Square 12 (1)_0
   - first:
-      213: 8629307048295165262
-    second: Square 12_1
+      213: -5289416712446890234
+    second: Square 12 (1)_1
   - first:
-      213: -6159222754354731060
-    second: Square 12_2
+      213: 838191139750252489
+    second: Square 12 (1)_2
   - first:
-      213: 3458172346119266837
-    second: Square 12_3
+      213: -8132509731911980518
+    second: Square 12 (1)_3
   - first:
-      213: -7480334724906832115
-    second: Square 12_4
+      213: 6759008369477232408
+    second: Square 12 (1)_4
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -112,7 +112,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Square 12_0
+      name: Square 12 (1)_0
       rect:
         serializedVersion: 2
         x: 0
@@ -127,14 +127,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 05a819854cc0fba00800000000000000
-      internalID: 774351698370071120
+      spriteID: 961260ac41c6a0c30800000000000000
+      internalID: 4326389228587327849
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Square 12_1
+      name: Square 12 (1)_1
       rect:
         serializedVersion: 2
         x: 1062
@@ -149,14 +149,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: e4d68675a0571c770800000000000000
-      internalID: 8629307048295165262
+      spriteID: 60fa69946873896b0800000000000000
+      internalID: -5289416712446890234
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Square 12_2
+      name: Square 12 (1)_2
       rect:
         serializedVersion: 2
         x: 1770
@@ -171,14 +171,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: cc7ee22b98b068aa0800000000000000
-      internalID: -6159222754354731060
+      spriteID: 9cf81b2966ad1ab00800000000000000
+      internalID: 838191139750252489
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Square 12_3
+      name: Square 12 (1)_3
       rect:
         serializedVersion: 2
         x: 1042
@@ -193,14 +193,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 512a4863d65edff20800000000000000
-      internalID: 3458172346119266837
+      spriteID: a1aaaf89c75832f80800000000000000
+      internalID: -8132509731911980518
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Square 12_4
+      name: Square 12 (1)_4
       rect:
         serializedVersion: 2
         x: 1378
@@ -215,8 +215,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: d0fa8e04333803890800000000000000
-      internalID: -7480334724906832115
+      spriteID: 81725902d42dccd50800000000000000
+      internalID: 6759008369477232408
       vertices: []
       indices: 
       edges: []
@@ -235,11 +235,11 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Square 12_0: 774351698370071120
-      Square 12_1: 8629307048295165262
-      Square 12_2: -6159222754354731060
-      Square 12_3: 3458172346119266837
-      Square 12_4: -7480334724906832115
+      Square 12 (1)_0: 4326389228587327849
+      Square 12 (1)_1: -5289416712446890234
+      Square 12 (1)_2: 838191139750252489
+      Square 12 (1)_3: -8132509731911980518
+      Square 12 (1)_4: 6759008369477232408
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

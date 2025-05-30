@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: HansTuto
   m_EditorClassIdentifier: 
   name: Hans
-  mapPosition: {x: 0, y: 0, z: 0}
+  mapPosition: {x: -236.5, y: -75.9, z: 0}
   position: {x: -46, y: 73, z: 0}
