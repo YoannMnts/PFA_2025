@@ -1,5 +1,6 @@
 using System.Collections;
 using UnityEngine;
+using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
 
 public class Credits : MonoBehaviour
@@ -10,6 +11,13 @@ public class Credits : MonoBehaviour
         StartCoroutine(Scrolling());
     }
 
+    public void Pass(InputAction.CallbackContext context)
+    {
+        if (context.performed)
+        {
+            SceneManager.LoadScene(1);
+        }
+    }
     IEnumerator Scrolling()
     {
         float speed =40f;

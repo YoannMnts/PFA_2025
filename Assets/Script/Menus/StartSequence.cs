@@ -124,12 +124,12 @@ public class StartSequence : SoundObject
             fillBar.fillAmount = loading.progress;
             yield return null;
         }
-
         StartCoroutine(EnterInScene());
     }
 
     IEnumerator EnterInScene()
     {
+        Debug.Log("alala");
         selfBlackBackground.gameObject.SetActive(true);
         yield return new WaitForSeconds(1f);
         StartCoroutine(Disapear(selfBlackBackground, 3f));
@@ -156,6 +156,7 @@ public class StartSequence : SoundObject
 
     IEnumerator CameraDezoom(float time)
     {
+        
         introCam.Lens.OrthographicSize = 2;
         yield return new WaitForSeconds(3);
         float speed = 7/time;
