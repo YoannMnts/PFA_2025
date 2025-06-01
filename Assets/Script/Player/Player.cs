@@ -44,6 +44,7 @@ namespace Script
         {
             movement.Rb2d.position = lastPosOnGround;
             movement.Freeze();
+            movement.UnFreeze();
         }
 
         public void AddGlans(int amount)

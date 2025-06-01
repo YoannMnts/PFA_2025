@@ -256,7 +256,6 @@ public class PlayerMovement : MonoBehaviour
         {
             isWalled = false;
             wallNormal = Vector2.zero;
-            Debug.Log("graou");
             return;
         }
 
@@ -264,7 +263,6 @@ public class PlayerMovement : MonoBehaviour
         {
             wallCheckDirection = wallNormal.x > -0.1f && wallCheckDirection.x < 0.1f? Vector2.right : Vector2.left;
             isWallJumping = true;
-            Debug.Log("ici");
         }
 
         float dir = wallCheckDirection.x;
