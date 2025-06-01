@@ -11,6 +11,7 @@ public class LettersPanel : Panel
     [SerializeField] DeliveryManager deliveryManager;
     [SerializeField] GameObject letterTemplate;
     [SerializeField] DirectionHelp directionHelp;
+    [SerializeField] private GameObject mapPanel;
     [SerializeField] private GameObject moreUnderIndication;
     [SerializeField] private GameObject moreOverIndication;
     [SerializeField] private RectTransform readingSheet;
@@ -18,7 +19,7 @@ public class LettersPanel : Panel
     [SerializeField] private TextMeshProUGUI letterAuthor;
     public GameObject[] letters;
     private GameObject[] currentLetters;
-    private LetterUI[] currentLettersData;
+    public LetterUI[] currentLettersData;
     [SerializeField] private RectTransform selectionPad;
     [SerializeField] Vector3 lettersBasePosition;
     [SerializeField] Vector3 lettersOffset;
@@ -29,6 +30,7 @@ public class LettersPanel : Panel
     public int[] pinnedCoordinates;
     private bool isReading;
     private int maxIntToDeliver;
+    public bool withMap;
 
     public override void Close()
     {
@@ -44,6 +46,7 @@ public class LettersPanel : Panel
     public override void Open()
     {
         base.Open();
+        withMap = mapPanel.activeInHierarchy;
         lettersCount = deliveryManager.ActiveLetter.Count + deliveryManager.completedLetters.Count;
         maxIntToDeliver = deliveryManager.ActiveLetter.Count ;
         readingSheet.anchoredPosition = new Vector3(-743f,-1000f,0);
@@ -64,13 +67,12 @@ public class LettersPanel : Panel
             {
                 letter.GetComponent<LetterUI>().SetUp(deliveryManager.completedLetters[i-maxIntToDeliver], true);
             }
-            Debug.Log(i);
         }
-        
         DisplayLetters();
         if (lettersCount > 0)
         {
             selectionPad.position = letters[0].GetComponent<RectTransform>().position;
+            currentLettersData[0].GetHovered(withMap);
         }
         else
         {
@@ -116,7 +118,16 @@ public class LettersPanel : Panel
                 if (lettersCount > 1)
                 {
                     PlaySound(clips[2],SoundType.Effects);  
+                    for (int i = 0; i < currentLettersData.Length; i++)
+                    {
+                        if (currentLettersData[i] != null)
+                        {
+                            currentLettersData[i].GetUnHovered();   
+                        }
+                    }
+                    currentLettersData[currentLevel].GetHovered(withMap);
                 }
+                
             }
             else
             {
@@ -150,8 +161,17 @@ public class LettersPanel : Panel
                  selectionPad.position = letters[currentLevel+ (currentPage*lettersByPage)].GetComponent<RectTransform>().position;
                  if (lettersCount > 1)
                  {
-                     PlaySound(clips[2],SoundType.Effects);  
+                     PlaySound(clips[2],SoundType.Effects);
+                     for (int i = 0; i < currentLettersData.Length; i++)
+                     {
+                         if (currentLettersData[i] != null)
+                         {
+                             currentLettersData[i].GetUnHovered();   
+                         }
+                     }
+                     currentLettersData[currentLevel].GetHovered(withMap);
                  }
+                 
              }
              else
              {

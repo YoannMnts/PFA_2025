@@ -66,6 +66,42 @@ public class InventoryManager : SoundObject
             }
         }
     }
+    public void OpenMap(InputAction.CallbackContext context)
+    {
+        if (context.canceled)
+        {
+            if (playerInput.currentActionMap.name == "Menu")
+            {
+                openBag.SetActive(false);
+                closedBag.SetActive(true);
+                playerInput.SwitchCurrentActionMap("GamePlay");
+                PlaySound(clips[0],SoundType.Effects);
+            }
+            else
+            {
+                tutorial.Close();
+                openBag.SetActive(true);
+                closedBag.SetActive(false);
+                playerInput.SwitchCurrentActionMap("Menu");
+                PlaySound(clips[0],SoundType.Effects);
+            }
+            if (inventoryTopPanel.activeInHierarchy)
+            {
+                panels[currentPanel].GetComponent<Panel>().Close();
+                panelSelector.GetComponent<RectTransform>().anchoredPosition = panels[currentPanel].GetComponent<RectTransform>().anchoredPosition;
+                inventoryTopPanel.SetActive(false);
+            }
+            else
+            {
+                currentPanel = 1;
+                inventoryTopPanel.SetActive(true);
+                
+                acornsText.text = acornsCount+" / 50";
+                panels[1].GetComponent<Panel>().Open();
+                panelSelector.GetComponent<RectTransform>().anchoredPosition = panels[currentPanel].GetComponent<RectTransform>().anchoredPosition;
+            }
+        }
+    }
 
     public void SwitchTabRight(InputAction.CallbackContext context)
     {

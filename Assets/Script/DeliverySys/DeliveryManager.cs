@@ -93,7 +93,7 @@ public class DeliveryManager : MonoBehaviour
                 lettersPanel.ResetPin();
                 activeLetter.Remove(letter);
                 pnj.DeliverLetter(letter);
-                stampsPanel.UnlockStamp(letter.letterData.stampsGain);
+                stampsPanel.UnlockStamp();
                 inventoryManager.acornsCount += letter.letterData.glansGain;
                 quitPanel.lettersCount += 1;
                 StartCoroutine(Apparition(letter.letterData.appearingCharacter, letter.letterData.disappearingCharacter));

@@ -20,6 +20,7 @@ public class MapPanel : Panel
     {
         base.Open();
         lettersPanel.Open();
+        lettersPanel.withMap = true;
         SetPoints();
     }
 

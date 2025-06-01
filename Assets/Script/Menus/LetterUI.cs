@@ -10,7 +10,7 @@ using Random = UnityEngine.Random;
 public class LetterUI : MonoBehaviour
 {
     
-    [SerializeField] private Image pinnedImage,readImage,baseImage,bgImage;
+    [SerializeField] private Image pinnedImage,readImage,baseImage,bgImage, pinIndicator, readIndicator;
     [SerializeField] private Sprite alreadyDeliveredSprite;
     public TextMeshProUGUI destinationPerson;
     public Vector3 destinationPosition ;
@@ -25,28 +25,34 @@ public class LetterUI : MonoBehaviour
         pinnedImage.enabled = false;
         readImage.enabled = false;
         baseImage.enabled = true;
+        pinIndicator.enabled = false;
+        readIndicator.enabled = false;
     }
 
     public void GetPinned()
     {
         pinnedImage.enabled = true;
+        pinIndicator.enabled = false;
     }
 
     public void GetUnpinned()
     {
         pinnedImage.enabled = false;
+        pinIndicator.enabled = true;
     }
 
     public void GetRead()
     {
         readImage.enabled = true;
         baseImage.enabled = false;
+        readIndicator.enabled = false;
     }
 
     public void GetUnread()
     {
         readImage.enabled = false;
         baseImage.enabled = true;
+        readIndicator.enabled = true;
     }
 
     public void SetUp(LetterData data, bool alreadyDelivered)
@@ -62,5 +68,26 @@ public class LetterUI : MonoBehaviour
         this.destinationPerson.text = "Pour : " + "<color=#D70000><b>"+data.receiver.name+"</b></color>" ;
         this.destinationPosition = data.receiver.position;
         this.destinationPositionOnMap = data.receiver.mapPosition;
+    }
+
+    public void GetHovered(bool cantRead)
+    {
+        if (cantRead == false)
+        {
+            readIndicator.enabled = true;
+        }
+
+        if (pinned == false && delivered == false)
+        {
+            pinIndicator.enabled = true;
+        }
+        
+        
+    }
+
+    public void GetUnHovered()
+    {
+        pinIndicator.enabled = false;
+        readIndicator.enabled = false;
     }
 }

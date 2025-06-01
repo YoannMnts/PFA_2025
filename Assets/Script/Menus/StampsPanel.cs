@@ -145,13 +145,15 @@ public class StampsPanel : Panel
         }
     }
 
-    public void UnlockStamp(int index)
+    public void UnlockStamp()
     {
-        if (index >= 0 && index < count)
+        int randomIndex = Random.Range(0, count);
+        while (unlocked[randomIndex] == true)
         {
-            unlocked[index] = true;
+            randomIndex = Random.Range(0, count);
         }
-        
+        unlocked[randomIndex] = true;
+        Debug.Log(randomIndex);
     }
     IEnumerator MoveSelector(Vector3 destination)
     {

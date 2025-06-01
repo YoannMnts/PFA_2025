@@ -18,7 +18,6 @@ namespace Script.DeliverySys
         public string[] receivedText;
 
         public int glansGain;
-        public int stampsGain;
 
         public PnjData appearingCharacter;
         public PnjData disappearingCharacter;

@@ -43,6 +43,9 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Background
+    uniqueID: 3782016269
+    locked: 0
   - name: EnvrioBg
     uniqueID: 563450921
     locked: 0
