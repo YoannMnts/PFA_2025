@@ -6,6 +6,7 @@ TagManager:
   tags:
   - DeathZone
   - DeliveryManager
+  - Hive
   layers:
   - Default
   - TransparentFX

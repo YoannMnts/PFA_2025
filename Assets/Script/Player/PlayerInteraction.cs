@@ -52,29 +52,19 @@ namespace Script
             {
                 playerInteractables.Add(interactable);
             }
-            else if (other.gameObject.name == "Hive")
+            else if (other.CompareTag("Hive"))
             {
-                StartCoroutine(MoveHive(other));
+                other.GetComponent<Animator>().SetTrigger("HiveSwinging");
+                Debug.Log("ici");
             }
         }
-
-        private IEnumerator MoveHive(Collider2D other)
-        {
-            int sign = 1;
-            if (Mathf.Abs(other.transform.rotation.z) >= 2.5f)
-                sign = -sign;
-            var rotation = other.transform.rotation;
-            rotation.z += sign * HiveRotationMultiplier;
-            other.transform.rotation = rotation;
-            yield return null;
-        }
+        
 
         private void OnTriggerExit2D(Collider2D other)
         {
             if (other.gameObject.TryGetComponent(out PlayerInteractable interactable))
             {
                 playerInteractables.Remove(interactable);
-                
             }
         }
     }

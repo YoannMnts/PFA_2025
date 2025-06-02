@@ -587,7 +587,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialoguePad: {fileID: 0}
-  HiveRotationMultiplier: 1
+  HiveRotationMultiplier: 0.06
 --- !u!114 &8258549204932650272
 MonoBehaviour:
   m_ObjectHideFlags: 0

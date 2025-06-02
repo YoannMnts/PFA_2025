@@ -68,7 +68,6 @@ public class PlayerSFXController : SoundObject
     {
         if (Movement.IsRunning && !Movement.IsRolling && Movement.IsGrounded)
         {
-            Debug.Log("ici");
             PlaySound(clips[14], SoundType.Effects, true);
         }
     }
