@@ -20,6 +20,6 @@ MonoBehaviour:
   sendedText: []
   receivedText: []
   glansGain: 0
-  stampsGain: 0
+  stampGain: 0
   appearingCharacter: {fileID: 0}
   disappearingCharacter: {fileID: 0}

@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: FloraLetterbox
   m_EditorClassIdentifier: 
   name: "Bo\xEEte aux lettres de Flora"
-  mapPosition: {x: 48.2, y: 228.2, z: 0}
+  mapPosition: {x: 28.2, y: 208.2, z: 0}
   position: {x: 45, y: 21, z: 0}
