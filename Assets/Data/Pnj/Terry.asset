@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Terry
   m_EditorClassIdentifier: 
   name: Terry
-  mapPosition: {x: 95.6, y: -39.5, z: 0}
+  mapPosition: {x: 75, y: -59, z: 0}
   position: {x: 54, y: -61, z: 0}

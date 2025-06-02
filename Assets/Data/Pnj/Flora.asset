@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Flora
   m_EditorClassIdentifier: 
   name: Flora
-  mapPosition: {x: 86.8, y: 224.6, z: 0}
+  mapPosition: {x: 66.8, y: 204.6, z: 0}
   position: {x: 54, y: 21, z: 0}

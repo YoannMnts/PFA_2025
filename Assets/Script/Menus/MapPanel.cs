@@ -1,13 +1,20 @@
+using System.Collections;
+using Script.DeliverySys;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class MapPanel : Panel
 {
     [SerializeField] private LettersPanel lettersPanel;
+    [SerializeField] private DeliveryManager deliveryManager;
     [SerializeField] private Image mapImage;
     [SerializeField] private Image point;
     [SerializeField] private Image pinnedPoint;
-    public float multiplicator;
+    [SerializeField] private Image searchPoint;
+    [SerializeField] private Image hazelPosition;
+    [SerializeField] private Vector3 refPos;
+    [SerializeField] private LetterData saveLetterData;
+    
 
 
     public override void Close()
@@ -19,6 +26,7 @@ public class MapPanel : Panel
     public override void Open()
     {
         base.Open();
+        searchPoint.enabled = false;
         lettersPanel.Open();
         lettersPanel.withMap = true;
         SetPoints();
@@ -74,6 +82,84 @@ public class MapPanel : Panel
             point.enabled = false;
             pinnedPoint.enabled = false;
         }
-        
+
+        Vector3 playerPos = deliveryManager.player.transform.position-refPos;
+        float multi = 3.55f;
+        hazelPosition.rectTransform.localPosition = new Vector3((playerPos.x)*multi, (playerPos.y)*multi, 0);
+    }
+    
+
+    public override void WestButton()
+    {
+        base.WestButton();
+        StartCoroutine(FindSender());
+    }
+
+    IEnumerator FindSender()
+    {
+        if (searchPoint.enabled == false)
+        {
+             Vector3? posOnMap = null;
+             for (int i = 0; i < deliveryManager.LetterDataTab.Length; i++)
+             {
+                 if (deliveryManager.LetterDataTab[i] == saveLetterData)
+                 {
+                     continue;
+                 }
+                 bool isAvailable = true;
+                 for (int j = 0; j < deliveryManager.LetterDataTab[i].dependencies.Length; j++)
+                 { 
+                     if (!deliveryManager.completedLetters.Contains(deliveryManager.LetterDataTab[i].dependencies[j]))
+                     { 
+                         isAvailable = false;
+                     }
+                 }
+                 if (isAvailable)
+                 {
+                     if (!deliveryManager.completedLetters.Contains(deliveryManager.LetterDataTab[i]))
+                     {
+                         for (int j = 0; j < deliveryManager.ActiveLetter.Count; j++)
+                         {
+                             if (deliveryManager.ActiveLetter[j].letterData == deliveryManager.LetterDataTab[i])
+                             { 
+                                 isAvailable = false;
+                             }
+                         }
+                     }
+                     else
+                     {
+                         isAvailable = false;
+                     }
+                 }
+                 if (isAvailable)
+                 {
+                     posOnMap = deliveryManager.LetterDataTab[i].sender.mapPosition;
+                     break;
+                 }
+             }
+             if (posOnMap != null)
+             {
+                 searchPoint.enabled = true;
+                 searchPoint.rectTransform.localPosition = new Vector3(posOnMap.Value.x, posOnMap.Value.y, 0);
+                 searchPoint.color = new Color(1, 1, 1, 0);
+                 while (searchPoint.color.a<1)
+                 {
+                     Color color = searchPoint.color;
+                     Color newColor = new Color(color.r, color.g, color.b, color.a+(1.5f*Time.deltaTime));
+                     searchPoint.color = newColor;
+                     yield return null;
+                 }
+                 yield return new WaitForSeconds(0.1f);
+                 while (searchPoint.color.a>0)
+                 {
+                     Color color = searchPoint.color;
+                     Color newColor = new Color(color.r, color.g, color.b, color.a-(0.8f*Time.deltaTime));
+                     searchPoint.color = newColor;
+                     yield return null;
+                 }
+                 searchPoint.enabled = false;
+             }
+        }
+       
     }
 }

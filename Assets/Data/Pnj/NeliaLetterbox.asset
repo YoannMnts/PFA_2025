@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: NeliaLetterbox
   m_EditorClassIdentifier: 
   name: "Bo\xEEte aux lettres de Nelia"
-  mapPosition: {x: 62.4, y: 154.1, z: 0}
+  mapPosition: {x: 42, y: 134, z: 0}
   position: {x: 0, y: 0, z: 0}

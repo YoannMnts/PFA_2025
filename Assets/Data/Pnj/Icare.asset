@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Icare
   m_EditorClassIdentifier: 
   name: Icare
-  mapPosition: {x: 238.8, y: 256.2, z: 0}
+  mapPosition: {x: 218.8, y: 236.2, z: 0}
   position: {x: 103, y: 28, z: 0}

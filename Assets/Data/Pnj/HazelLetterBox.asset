@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: HazelLetterBox
   m_EditorClassIdentifier: 
   name: Hazel's letterbox
-  mapPosition: {x: -274.5, y: -75.9, z: 0}
+  mapPosition: {x: -294, y: -95, z: 0}
   position: {x: -56, y: -73, z: 0}

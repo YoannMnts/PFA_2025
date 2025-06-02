@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Elise
   m_EditorClassIdentifier: 
   name: Elise
-  mapPosition: {x: -108.4, y: 253.4, z: 0}
+  mapPosition: {x: -128.4, y: 233.4, z: 0}
   position: {x: -8, y: 21, z: 0}
