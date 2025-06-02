@@ -1,8 +1,10 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.Serialization;
 
 namespace Script
 {
@@ -12,6 +14,10 @@ namespace Script
         [SerializeField] private DialoguePad dialoguePad;
         private List<PlayerInteractable> playerInteractables;
         
+        [FormerlySerializedAs("HiveMultiplier")]
+        [Header("Hive Interaction")]
+        [SerializeField] private float HiveRotationMultiplier;
+
         private void Awake()
         {
             playerInteractables = new List<PlayerInteractable>();
@@ -46,6 +52,21 @@ namespace Script
             {
                 playerInteractables.Add(interactable);
             }
+            else if (other.gameObject.name == "Hive")
+            {
+                StartCoroutine(MoveHive(other));
+            }
+        }
+
+        private IEnumerator MoveHive(Collider2D other)
+        {
+            int sign = 1;
+            if (Mathf.Abs(other.transform.rotation.z) >= 2.5f)
+                sign = -sign;
+            var rotation = other.transform.rotation;
+            rotation.z += sign * HiveRotationMultiplier;
+            other.transform.rotation = rotation;
+            yield return null;
         }
 
         private void OnTriggerExit2D(Collider2D other)

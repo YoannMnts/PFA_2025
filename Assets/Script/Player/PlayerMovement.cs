@@ -21,6 +21,7 @@ public class PlayerMovement : MonoBehaviour
     public bool IsGrounded => isGrounded;
     public bool IsWalled => isWalled;
     public bool IsRolling => isRolling;
+    public bool IsEndRolling => isEndRolling;
     public bool IsJumping => isJumping;
     public bool IsGliding => isGliding;
     public bool IsWallJumping => isWallJumping;
@@ -392,7 +393,7 @@ public class PlayerMovement : MonoBehaviour
             DoNormalMovement();
         }
 
-        if (rb2d.linearVelocityY <= 0 && currentGround != null && groundNormal.y > .9f)
+        if (rb2d.linearVelocityY <= 0 && currentGround != null && groundNormal.y > .99f)
         {
             var closestPoint = currentGround.ClosestPoint(rb2d.position);
             rb2d.position = new Vector2()
@@ -406,7 +407,7 @@ public class PlayerMovement : MonoBehaviour
     private IEnumerator DoRoll()
     {
         isRolling = true;
-
+        
         Vector2 dir = animatorController.FacingDirection;
         StopWithForce(initialRollSpeedModifier);
         rb2d.AddForceX(dir.x * rollingForce, ForceMode2D.Impulse);

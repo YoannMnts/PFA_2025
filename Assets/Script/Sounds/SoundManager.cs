@@ -14,7 +14,7 @@ public class SoundManager : MonoBehaviour
         {
             for (int i = 0; i < audioSources.Count; i++)
             {
-                if (audioSources[i].clip == clip)
+                if (audioSources[i].clip == clip && audioSources[i].isPlaying)
                 {
                     uniqueValided = false;
                 }

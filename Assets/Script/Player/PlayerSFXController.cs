@@ -7,6 +7,7 @@ public class PlayerSFXController : SoundObject
 {
     private Player player;
     private PlayerMovement Movement => player.Movement;
+    private int JumpIndex = 5;
 
     private void Awake()
     {
@@ -25,7 +26,7 @@ public class PlayerSFXController : SoundObject
 
     private void Climb()
     {
-        if (Movement.IsWalled && Mathf.Abs(Movement.CurrentVelocity.y) > 0.1f)
+        if (Movement.IsWalled && Mathf.Abs(Movement.CurrentVelocity.y) > 0.1f && !Movement.IsGrounded)
         {
             PlaySound(clips[0], SoundType.Effects, true);
         }
@@ -35,15 +36,23 @@ public class PlayerSFXController : SoundObject
     {
         if (Movement.IsJumping)
         {
-            PlaySound(clips[0], SoundType.Effects, true);
+            PlaySound(clips[JumpSFXChoice()], SoundType.Effects, true);
         }
+    }
+
+    private int JumpSFXChoice()
+    {
+        if (JumpIndex >= 9)
+            JumpIndex = 3;
+        JumpIndex += 2;
+        return Mathf.Clamp(JumpIndex, 5, 9);
     }
 
     private void Roll()
     {
         if (Movement.IsRolling)
         {
-            PlaySound(clips[0], SoundType.Effects, true);
+            PlaySound(clips[12], SoundType.Effects, true);
         }
     }
 
@@ -51,15 +60,16 @@ public class PlayerSFXController : SoundObject
     {
         if (Movement.IsGliding)
         {
-            PlaySound(clips[0], SoundType.Effects, true);
+            //PlaySound(clips[0], SoundType.Effects, true);
         }
     }
 
     private void Run()
     {
-        if (Movement.IsRunning)
+        if (Movement.IsRunning && !Movement.IsRolling && Movement.IsGrounded)
         {
-            PlaySound(clips[0], SoundType.Effects, true);
+            Debug.Log("ici");
+            PlaySound(clips[14], SoundType.Effects, true);
         }
     }
 
@@ -67,7 +77,7 @@ public class PlayerSFXController : SoundObject
     {
         if (Mathf.Abs(Movement.CurrentVelocity.x) > 0.1f && !Movement.IsRunning)
         {
-            PlaySound(clips[0], SoundType.Effects, true);
+            //PlaySound(clips[0], SoundType.Effects, true);
         }
     }
 }
