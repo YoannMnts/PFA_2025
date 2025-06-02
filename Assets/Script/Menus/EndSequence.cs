@@ -14,6 +14,7 @@ public class EndSequence : MonoBehaviour
     [SerializeField] private GameObject finishButton;
     [SerializeField] private PlayerInput playerInput;
     [SerializeField] private HazelLetterBox hazelLetterBox;
+    [SerializeField] private SavedSys savedSys;
     private bool canInteract = false;
     private bool playerIn=false;
     private bool readyToCredits = false;
@@ -104,12 +105,13 @@ public class EndSequence : MonoBehaviour
     {
         while (finishLoad.gameObject.activeInHierarchy && playerIn)
         {
-            finishLoad.fillAmount -= 0.2f * Time.deltaTime;
+            finishLoad.fillAmount -= 0.05f * Time.deltaTime;
             yield return null;
         }
     }
     IEnumerator SceneTransition()
     {
+        savedSys.Saved();
         playerInput.SwitchCurrentActionMap("ScenarisedSequence");
         blackScreen.gameObject.SetActive(true);
         float appearSpeed = 0.5f;

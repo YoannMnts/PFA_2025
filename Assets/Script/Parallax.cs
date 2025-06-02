@@ -45,7 +45,7 @@ public class Parallax : MonoBehaviour
                 }
                 else
                 {
-                    parallaxObjects[i].transform.position = player.transform.position + new Vector3((player.transform.position.x - basePositions[i].x)*backSpeed*(-1f),(player.transform.position.y - basePositions[i].y)*backSpeed*(-1f),0);
+                    parallaxObjects[i].transform.position = player.transform.position;
                 }
             }
             else

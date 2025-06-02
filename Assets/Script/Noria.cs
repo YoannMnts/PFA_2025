@@ -60,7 +60,7 @@ public class Noria : MonoBehaviour
                     paddles[i].transform.rotation = Quaternion.Euler(0, 0, angle);
                 }
 
-                if (distancesTravelled[i] >= 32 && distancesTravelled[i] <= 40)
+                if (distancesTravelled[i] >= 35 && distancesTravelled[i] <= 40)
                 {
                     paddles[i].GetComponent<BoxCollider2D>().enabled = false;
                 }

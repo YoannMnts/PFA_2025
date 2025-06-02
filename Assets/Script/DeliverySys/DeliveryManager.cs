@@ -28,7 +28,7 @@ public class DeliveryManager : MonoBehaviour
     [SerializeField]
     private LetterData[] letterDataTab;
     [SerializeField] 
-    private Pnj[] pnjsTab;
+    public Pnj[] pnjsTab;
     [SerializeField] 
     private RewardParticles acornParticles, letterParticles, stampParticles;
     [SerializeField] 
@@ -93,7 +93,7 @@ public class DeliveryManager : MonoBehaviour
                 lettersPanel.ResetPin();
                 activeLetter.Remove(letter);
                 pnj.DeliverLetter(letter);
-                stampsPanel.UnlockStamp(letter.letterData.stampsGain);
+                stampsPanel.UnlockStamp();
                 inventoryManager.acornsCount += letter.letterData.glansGain;
                 quitPanel.lettersCount += 1;
                 StartCoroutine(Apparition(letter.letterData.appearingCharacter, letter.letterData.disappearingCharacter));
@@ -191,7 +191,6 @@ public class DeliveryManager : MonoBehaviour
                 pnjsTab[i].ActivatePopUp(false);
             }
         }
-        
         for (int i = 0; i < ActiveLetter.Count; i++)
         {
             for (int j = 0; j < pnjsTab.Length; j++)
@@ -294,7 +293,7 @@ public class DeliveryManager : MonoBehaviour
         {
             yield return null;
         }
-        if (letter.letterData.stampsGain >= 0 && letter.letterData.stampsGain <= stampsPanel.stamps.Length)
+        if (letter.letterData.stampGain)
         {
             StartCoroutine(notification.ShowUpReward(letter.letterData.glansGain, true));
             stampParticles.Reward(1);
