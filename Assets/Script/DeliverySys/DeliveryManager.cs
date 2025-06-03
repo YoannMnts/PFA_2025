@@ -35,6 +35,7 @@ public class DeliveryManager : MonoBehaviour
     public Player player;
     [SerializeField] 
     private List<Letter> activeLetter;
+    [SerializeField] LetterData saveLetterData;
     
     private Dictionary<PnjData, Pnj> pnjs;
     private bool alreadyInActiveLetters;
@@ -52,6 +53,7 @@ public class DeliveryManager : MonoBehaviour
     private void Start()
     {
         CreateValidLetters(null);
+        StartCoroutine(ConstantCheck());
     }
 
 
@@ -95,7 +97,6 @@ public class DeliveryManager : MonoBehaviour
                 pnj.DeliverLetter(letter);
                 stampsPanel.UnlockStamp();
                 inventoryManager.acornsCount += letter.letterData.glansGain;
-                quitPanel.lettersCount += 1;
                 StartCoroutine(Apparition(letter.letterData.appearingCharacter, letter.letterData.disappearingCharacter));
                 StartCoroutine(RewardNotif(letter, letter.receiver));
                 completedLetters.Add(letter.letterData);
@@ -114,10 +115,6 @@ public class DeliveryManager : MonoBehaviour
                 continue;
             }
             bool hasCompletedDependencies = true;
-            for (int j = 0; j < pnjsTab.Length; j++)
-            {
-                pnjsTab[i].ActivatePopUp(false);
-            }
             for (int j = 0; j < letterData.dependencies.Length; j++)
             {
                 LetterData dependency = letterData.dependencies[j];
@@ -131,14 +128,15 @@ public class DeliveryManager : MonoBehaviour
             {
                 if (pnj == null)
                 {
-                    CheckPopUp(letterData);
+                    
                 }
                 else
                 {
-                    if (pnj.pnjData == letterData.sender)
+                    if (pnj.pnjData == letterData.sender )
                     { 
+
                         Letter letter = CreateLetter(letterData); 
-                        if (!alreadyInActiveLetters) 
+                        if (!alreadyInActiveLetters && letterData != saveLetterData) 
                         { 
                             activeLetter.Add(letter);
                             StartCoroutine(LetterNotif(letter, letter.sender));
@@ -148,64 +146,13 @@ public class DeliveryManager : MonoBehaviour
                             }
                         }
                     }
-                    else 
-                    { 
-                        CheckPopUp(letterData);
-                    }
-                }
-            }
-            for (int k = 0; k < ActiveLetter.Count; k++)
-            {
-                for (int j = 0; j < pnjsTab.Length; j++)
-                {
-                    if (pnjsTab[j].pnjData == ActiveLetter[k].letterData.receiver)
-                    {
-                        pnjsTab[j].ActivatePopUp(true);
-                    }
-                    else
-                    {
-                        pnjsTab[j].ActivatePopUp(false);
-                    }
                 }
             }
         }
+        AboveHeadIndication();
     }
 
-    private void CheckPopUp(LetterData letterData)
-    {
-        for (int i = 0; i < pnjsTab.Length; i++)
-        {
-            if (pnjsTab[i].pnjData == letterData.sender )
-            {
-                pnjsTab[i].ActivatePopUp(true);
-                for (int j = 0; j < activeLetter.Count; j++)
-                {
-                    if (activeLetter[j].letterData == letterData)
-                    {
-                        pnjsTab[i].ActivatePopUp(false);
-                    }
-                }
-            }
-            else
-            {
-                pnjsTab[i].ActivatePopUp(false);
-            }
-        }
-        for (int i = 0; i < ActiveLetter.Count; i++)
-        {
-            for (int j = 0; j < pnjsTab.Length; j++)
-            {
-                if (pnjsTab[j].pnjData == ActiveLetter[i].letterData.receiver)
-                {
-                    pnjsTab[j].ActivatePopUp(true);
-                }
-                else
-                {
-                    pnjsTab[j].ActivatePopUp(false);
-                }
-            }
-        }
-    }
+
 
     IEnumerator Apparition(PnjData pnj1, PnjData pnj2)
     {
@@ -304,5 +251,83 @@ public class DeliveryManager : MonoBehaviour
         }
         acornParticles.Reward(letter.letterData.glansGain);
         inventoryManager.OpenBagTemp();
+    }
+
+    void AboveHeadIndication()
+    {
+        for (int i = 0; i < pnjsTab.Length; i++)
+        {
+            Debug.Log("crasdh");
+            pnjsTab[i].ActivatePopUp(false);
+        }
+
+        for (int i = 0; i < LetterDataTab.Length; i++)
+        {
+            if (LetterDataTab[i] == saveLetterData)
+            {
+                continue;
+            }
+
+            bool isAvailable = true;
+            for (int j = 0; j < LetterDataTab[i].dependencies.Length; j++)
+            {
+                if (!completedLetters.Contains(LetterDataTab[i].dependencies[j]))
+                {
+                    isAvailable = false;
+                }
+            }
+
+            if (isAvailable)
+            {
+                if (!completedLetters.Contains(LetterDataTab[i]))
+                {
+                    for (int j = 0; j < ActiveLetter.Count; j++)
+                    {
+                        if (ActiveLetter[j].letterData == LetterDataTab[i])
+                        {
+                            isAvailable = false;
+                        }
+                    }
+                }
+                else
+                {
+                    isAvailable = false;
+                }
+            }
+
+            if (isAvailable)
+            {
+                for (int j = 0; j < pnjsTab.Length; j++)
+                {
+                    if (pnjsTab[j].pnjData == LetterDataTab[i].sender)
+                    {
+                        if (pnjsTab[j].GetComponent<SpriteRenderer>().enabled)
+                        {
+                            pnjsTab[j].ActivatePopUp(true);
+                        }
+                    }
+                }
+            }
+
+            for (int k = 0; k < activeLetter.Count; k++)
+            {
+                for (int j = 0; j < pnjsTab.Length; j++)
+                {
+                    if (pnjsTab[j].pnjData == activeLetter[k].letterData.receiver)
+                    {
+                        pnjsTab[j].ActivatePopUp(true);
+                    }
+                }
+            }
+        }
+    }
+
+    IEnumerator ConstantCheck()
+    {
+        while (true)
+        {
+            AboveHeadIndication();
+            yield return new WaitForSeconds(2f);
+        }
     }
 }

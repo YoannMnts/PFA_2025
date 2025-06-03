@@ -1,0 +1,53 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0eeb945c88124c10989ad86d225d13c2, type: 3}
+  m_Name: Letter26
+  m_EditorClassIdentifier: 
+  sender: {fileID: 11400000, guid: 8fefa2137319bd2479cb9d2e0453c956, type: 2}
+  receiver: {fileID: 11400000, guid: a8e02d414e45cc34a93975248246175f, type: 2}
+  dependencies:
+  - {fileID: 11400000, guid: 2f785fbd8ed659d4aab62d1bf454e210, type: 2}
+  senderName: A.P
+  text: "Salutations Capitaine Hans !\r\nC\u2019est moi ! La grande ! L\u2019unique
+    ! Ariane Parpin !\r\nAppr\xE9ciez-vous ma petite surprise, cher Capitaine ? Il
+    s\u2019agit d\u2019un petit entracte avant le grand spectacle que je compte livrer
+    ! Et quelle meilleure sc\xE8ne pour mon prochain crime que durant la F\xEAte
+    des Couleurs ! Apr\xE8s tout, bien que voleuse, je reste une artiste. Mon crime
+    est un art ! Et vous, Capitaine Hans est l\u2019acteur qu\u2019il me manque pour
+    que tout soit parfait !\r\nAttrapez-moi si vous le pouvez, Monsieur Hans\u2026\r\nA.P\r\n"
+  sendedText:
+  - "Et il y a une petite note pour moi avec la lettre ! C\u2019est un message que
+    je dois te transmettre !"
+  - "\"Ohohohoho ! Tu travailles durement, ami facteur ! Maintenant ta derni\xE8re
+    t\xE2che est de livrer une ultime lettre \xE0 la star de ma prochaine sc\xE8ne.
+    Je parle bien \xE9videmment du Capitaine Hans !\""
+  - "Tiens ! Voil\xE0 la lettre ! D\xE9p\xEAche-toi d\u2019aller le voir !"
+  receivedText:
+  - "Hmm\u2026 Oh ? C\u2019est toi, soldat ? Excuse-moi, j\u2019\xE9tais en pleine
+    r\xE9flexion\u2026"
+  - "J\u2019ai re\xE7u des colis, un g\xE2teau au chocolat et un bouquet de fleurs\u2026"
+  - "Soldat\u2026 Je d\xE9teste le chocolat. Je me suis \xE9touff\xE9 avec un carr\xE9
+    de chocolat quand je n\u2019\xE9tais qu\u2019un oisillon. Et je suis allergique
+    aux fleurs !"
+  - Et en plus- Ah ! Tu as du courrier pour moi ? Merci bien, soldat !
+  - "\u2026"
+  - "J\u2019aurais d\xFB m\u2019en douter ! A.P ! Ces initiales ! \xC7a ne peut \xEAtre
+    qu\u2019elle ! Ariane Parpin"
+  - "Cette satan\xE9e pie me glisse entre les plumes depuis des mois ! Mais je l\u2019attraperai
+    un jour !"
+  - "Et elle compte faire son crime pendant la F\xEAte des Lumi\xE8res ! Foi de faucon,
+    elle n\u2019y arrivera pas !"
+  - Merci pour ton service, soldat !
+  glansGain: 0
+  stampGain: 0
+  appearingCharacter: {fileID: 0}
+  disappearingCharacter: {fileID: 0}

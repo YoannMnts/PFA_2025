@@ -13,12 +13,10 @@ public class QuitPanel : Panel
     [SerializeField] private bool saved = false;
     [SerializeField] private bool currentlyChoosingSave = false;
     [SerializeField] private GameObject savingPanel;
-    [SerializeField] private TextMeshProUGUI lettersCountText;
     [SerializeField] private Image blackScreen;
     [SerializeField] private SavedSys savedSys;
 
     public int currentLevel = 0;
-    public int lettersCount = 0;
     public override void Awake()
     {
         base.Awake();
@@ -44,7 +42,6 @@ public class QuitPanel : Panel
     {
         selectPad.anchoredPosition = buttons[0].gameObject.GetComponent<RectTransform>().anchoredPosition ;
         saved = false;
-        lettersCountText.text = lettersCount.ToString();
         unsavedIcon.SetActive(true);
         currentLevel = 0;
         savingPanel.SetActive(false);

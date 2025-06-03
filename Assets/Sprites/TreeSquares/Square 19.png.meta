@@ -1,10 +1,13 @@
 fileFormatVersion: 2
-guid: 078b629aab67d9a49b767bb0c040e161
+guid: 38327b16b3c32ae4ea4b11d04599c07b
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 5858461642679432338
-    second: Square 19_0
+      213: 4107922964691268908
+    second: Square 19 (1)_0
+  - first:
+      213: -3043286246795929391
+    second: Square 19 (1)_1
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,7 +103,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Square 19_0
+      name: Square 19 (1)_0
       rect:
         serializedVersion: 2
         x: 0
@@ -115,8 +118,30 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 294b82613df6d4150800000000000000
-      internalID: 5858461642679432338
+      spriteID: c25b713fb26420930800000000000000
+      internalID: 4107922964691268908
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Square 19 (1)_1
+      rect:
+        serializedVersion: 2
+        x: 1949
+        y: 1954
+        width: 99
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1d895e5584314c5d0800000000000000
+      internalID: -3043286246795929391
       vertices: []
       indices: 
       edges: []
@@ -135,7 +160,8 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Square 19_0: 5858461642679432338
+      Square 19 (1)_0: 4107922964691268908
+      Square 19 (1)_1: -3043286246795929391
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

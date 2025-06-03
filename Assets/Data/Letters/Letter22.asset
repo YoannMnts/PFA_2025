@@ -1,0 +1,43 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0eeb945c88124c10989ad86d225d13c2, type: 3}
+  m_Name: Letter22
+  m_EditorClassIdentifier: 
+  sender: {fileID: 11400000, guid: 1a080252247be3b4a87fed0f00c2172c, type: 2}
+  receiver: {fileID: 11400000, guid: a8e02d414e45cc34a93975248246175f, type: 2}
+  dependencies:
+  - {fileID: 11400000, guid: d46044825503ac741bad87c6a477ff0c, type: 2}
+  senderName: "Fr\xE9d\xE9ric"
+  text: "Bonjour Capitaine Hans,\r\nJe vous fais part d\u2019une nouvelle urgente
+    et inqui\xE9tante ! Icare m\u2019a envoy\xE9 un courrier afin que je le soutienne
+    dans son prochain projet qu\u2019il compte lancer durant la F\xEAte des Couleurs.\r\nNous
+    savons tous deux ce qu\u2019il s\u2019est pass\xE9 l\u2019ann\xE9e derni\xE8re
+    \xE0 cette m\xEAme p\xE9riode ! Son projet \"Nid de Tortue\" a bien failli devenir
+    \"Soupe de Tortue\", en entra\xEEnant le village de Verd\u2019Oyant dans ses
+    inepties ! Nous \xE9tions \xE0 peu de devoir annuler la F\xEAte !\r\nEncore une
+    fois, il pr\xE9voit d\u2019utiliser une quantit\xE9 importante de feux d\u2019artifices
+    ! Il faut l\u2019emp\xEAcher d\u2019agir pour que la F\xEAte des Couleurs se
+    passe sans encombre !\r\nCordialement,\r\nFr\xE9d\xE9ric\r\n"
+  sendedText:
+  - "Facteur ! Il faut alerter la police\u2026 Il faut faire appel \xE0 \u2026"
+  - "Mais non pas \xE0 Rambouc ! Et c\u2019est qui ce Rambouc ?! Non, il faut faire
+    appel au Capitaine Hans !\r\n"
+  receivedText:
+  - "Un plaisir de te revoir, soldat ! Quel bon vent t\u2019am\xE8ne ?"
+  - "Encore une lettre ? Et celle-ci vient de Fr\xE9d\xE9ric ?"
+  - "Hmm\u2026 Lui qui n\u2019a pas l\u2019habitude de faire appel \xE0 moi\u2026
+    C\u2019est que \xE7a doit \xEAtre important"
+  - "Mais ?! C\u2019est une blague ?! Encore ?!"
+  glansGain: 0
+  stampGain: 0
+  appearingCharacter: {fileID: 0}
+  disappearingCharacter: {fileID: 0}

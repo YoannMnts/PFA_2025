@@ -1,0 +1,42 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0eeb945c88124c10989ad86d225d13c2, type: 3}
+  m_Name: Letter30
+  m_EditorClassIdentifier: 
+  sender: {fileID: 11400000, guid: 8f7f29cef723b4440b99490ea59509f9, type: 2}
+  receiver: {fileID: 11400000, guid: f31bde0d9fd625545a3cd6d375331275, type: 2}
+  dependencies:
+  - {fileID: 11400000, guid: 65da283338f66fc4b88882c1f8f6e7d6, type: 2}
+  senderName: Poutre
+  text: "Bonjour Larry,\r\nTu as bien fait de me le demander ! Je viens de recevoir
+    toutes les marchandises dont tu as besoin ! J\u2019\xE9tais sur le point de t\u2019envoyer
+    un courrier !\r\nJe ne peux malheureusement pas venir te livrer moi-m\xEAme cette
+    fois ! J\u2019ai beaucoup trop de travail ! Je ne peux pas me permettre de m\u2019absenter.
+    Tu pourras me trouver chez moi\r\nD\u2019ailleurs, en plus des r\xE9serves de
+    nourriture pour le banquet, je t\u2019ai \xE9galement pr\xE9par\xE9 des merveilleux
+    jus de fruits dont j\u2019ai le secret ! Tu pourras les utiliser avec tes plats
+    pendant le banquet !\r\nA tr\xE8s vite !\r\nPoutre\r\n"
+  sendedText:
+  - "Vite ! Apporte-lui \xE7a !"
+  - "J\u2019ai encore du travail ! Je dois te laisser !"
+  receivedText:
+  - "De retour l\u2019ami ? Alors, une r\xE9ponse pour moi ?"
+  - "\u2026"
+  - "Quel soulagement ! Les marchandises sont bien arriv\xE9es !"
+  - "Mon ami ! Merci beaucoup ! Tu pourras d\xE9guster en exclusivit\xE9 notre Ratatouille
+    !"
+  - "Mon ami ! Merci beaucoup ! Tu pourras d\xE9guster en exclusivit\xE9 notre Ratatouille
+    !"
+  glansGain: 0
+  stampGain: 0
+  appearingCharacter: {fileID: 0}
+  disappearingCharacter: {fileID: 0}

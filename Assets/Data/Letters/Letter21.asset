@@ -1,0 +1,56 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0eeb945c88124c10989ad86d225d13c2, type: 3}
+  m_Name: Letter21
+  m_EditorClassIdentifier: 
+  sender: {fileID: 11400000, guid: ac853fc7cde38634b826552d02fa0800, type: 2}
+  receiver: {fileID: 11400000, guid: 1a080252247be3b4a87fed0f00c2172c, type: 2}
+  dependencies:
+  - {fileID: 11400000, guid: 43157929053e7bb46b3122b1c45ab675, type: 2}
+  senderName: Icare
+  text: "Bonjour Fr\xE9d\xE9ric,\r\nLe reste de Verd\u2019Oyant ne comprend pas mon
+    g\xE9nie ! Ils n\u2019ont pas la vision ! Mais je suis s\xFBr que tu es diff\xE9rent
+    Fr\xE9d\xE9ric !\r\nJ\u2019ai un projet, un grand projet ! Celui-l\xE0 me permettra
+    enfin de voler ! Ce sera grandiose, un \xE9v\xE8nement qui m\xE9riterait d\u2019\xEAtre
+    retranscrit dans les livres d\u2019Histoire. C\u2019est un projet qui m\xE9lange
+    intelligence, savoir-faire manuel et beaucoup de feux d\u2019artifices.\r\nIl
+    d\xE9passera de loin toutes mes pr\xE9c\xE9dentes tentatives, m\xEAme le projet
+    Nid de Tortue de l\u2019ann\xE9e derni\xE8re. Mais j\u2019ai besoin de ton appui
+    pour permettre \xE0 ce dessein de prendre forme et faire taire les rageux !\r\nA
+    bient\xF4t dans les cieux !\r\nIcare, tortue volante\r\n"
+  sendedText:
+  - "Je ne m\u2019arr\xEAterai pas ! Ils ne m\u2019arr\xEAteront pas ! Ils peuvent
+    tenter de me faire taire mais ils ne tueront pas mon r\xEAve !"
+  - "Un jour, je volerais comme un oiseau ! Je vivrais d\u2019air pur et d\u2019eau
+    fra\xEEche ! Rien ne peut arr\xEAter une tortue qui n\u2019a rien \xE0 perdre
+    !"
+  - "Facteur ! Toi qui me soutiens, d\xE9livre cette lettre ! Elle doit \xEAtre apport\xE9e
+    \xE0 Fr\xE9d\xE9ric ! Je suis s\xFBr que lui soutiendra mon g\xE9nie comme toi
+    !"
+  receivedText:
+  - "Hmm\u2026"
+  - "AAAAH\u2026 Pr\xE9viens quand tu es l\xE0 ! C\u2019est une manie chez vous les
+    jeunes de faire peur aux anciens ?!"
+  - "Que veux-tu ?! Pourquoi es-tu l\xE0 ?! Hors de ma pelouse !"
+  - "Ah\u2026 Tu m\u2019apportes du courrier ?"
+  - "Alors, qu\u2019avons-nous l\xE0 ?...\r\n"
+  - "\u2026"
+  - "Par toutes les plumes qu\u2019il me reste ! Encore lui ?! Il compte recommencer
+    les idioties de l\u2019ann\xE9e pass\xE9e ?!"
+  - "\u2026 Je suis vraiment trop vieux pour ses sottises\u2026"
+  - "Facteur ! Il faut alerter la police\u2026 Il faut faire appel \xE0 \u2026"
+  - "Mais non pas \xE0 Rambouc ! Et c\u2019est qui ce Rambouc ?! Non, il faut faire
+    appel au Capitaine Hans !"
+  glansGain: 0
+  stampGain: 0
+  appearingCharacter: {fileID: 0}
+  disappearingCharacter: {fileID: 0}

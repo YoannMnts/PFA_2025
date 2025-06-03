@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a0cc9aa725324320bbcb267c963f2613, type: 3}
   m_Name: NeliaLetterbox
   m_EditorClassIdentifier: 
-  name: "Bo\xEEte aux lettres de Nelia"
-  mapPosition: {x: 42, y: 134, z: 0}
+  name: Le parents de Nelia
+  mapPosition: {x: 49, y: -2, z: 0}
   position: {x: 0, y: 0, z: 0}

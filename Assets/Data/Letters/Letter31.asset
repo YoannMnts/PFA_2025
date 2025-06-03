@@ -1,0 +1,61 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0eeb945c88124c10989ad86d225d13c2, type: 3}
+  m_Name: Letter31
+  m_EditorClassIdentifier: 
+  sender: {fileID: 11400000, guid: 5c6e884f0beeccc4889768905bf01ea3, type: 2}
+  receiver: {fileID: 11400000, guid: 1a080252247be3b4a87fed0f00c2172c, type: 2}
+  dependencies:
+  - {fileID: 11400000, guid: f51e54eedb127ee41894eb226c196118, type: 2}
+  senderName: Antonin
+  text: "Salutation, tr\xE8s cher ami,\r\nJe me permets de t\u2019\xE9crire \xE0
+    nouveau et bien que j\u2019adore tes petites r\xE9actions, j\u2019aimerais te
+    parler avec sinc\xE9rit\xE9. Bien des ann\xE9es ont pass\xE9es depuis notre premi\xE8re
+    rencontre, un moment m\xE9morable. Quel d\xE9lice ce fut de te voir totalement
+    confus apr\xE8s t\u2019avoir chapard\xE9 de mani\xE8re habile ton fromage. Mais
+    j\u2019aimerais que tu saches que tous les compliments que j\u2019ai pu te faire
+    ce jour-l\xE0 \xE9taient bien r\xE9els et le sont toujours.\r\nPuis, par la suite,
+    nous avons partag\xE9 bon comme mauvais moment. Nous avons suivi le m\xEAme chemin,
+    les m\xEAmes \xE9tudes, la m\xEAme carri\xE8re. Nos chamailleries et gamineries
+    continu\xE8rent m\xEAme bien. En revanche, \xE0 mon grand regret, nous nous sommes
+    perdus de vue ces derni\xE8res ann\xE9es. J\u2019aimerais donc profiter de la
+    F\xEAte des Couleurs pour nous rapprocher \xE0 nouveau.\r\nJe suis peut-\xEAtre
+    un vil \"faquin\" mais tu me connais assez pour savoir quand je dis la v\xE9rit\xE9
+    et partage mon ressenti,\r\nAvec \xE9motion,\r\nAntonin\r\n"
+  sendedText:
+  - "Mon bon ami ! Je me r\xE9jouis de vous revoir ! Et je dois dire qu\u2019une
+    fois de plus vous tombez \xE0 pic !"
+  - "Voyez-vous, je me languis encore et toujours des merveilleuses r\xE9actions
+    de Fr\xE9d\xE9ric. C\u2019est l\xE0 que vous entrez en jeu ! Comme \xE0 votre
+    habitude, veuillez lui livrer cette lettre."
+  - "Partez lui remettre cette lettre ! Il me tarde d\xE9j\xE0 d\u2019avoir sa r\xE9ponse
+    !"
+  receivedText:
+  - "HA AH ! Tu ne m\u2019as pas surpris cette fois !\r\n"
+  - "Et oui ! Le vieux Fr\xE9d\xE9ric sait s\u2019adapter ! J\u2019ai c\xF4toy\xE9
+    Antonin pendant plus de 40 ans ! Tes petites frayeurs de facteur ne sont rien
+    \xE0 c\xF4t\xE9 de \xE7a !"
+  - "\u2026"
+  - "Une nouvelle lettre d\u2019Antonin ?"
+  - "Br\xFBle-la ! Noie-la ! Fais quelque chose mais d\xE9truis-la !"
+  - "\u2026"
+  - "\u2026"
+  - "\u2026 Tout bien r\xE9fl\xE9chi\u2026 Je vais la lire. J\u2019ai l\u2019impression
+    que sinon, je passerais \xE0 c\xF4t\xE9 de quelque chose"
+  - "\u2026"
+  - "Je vois\u2026 Je dois dire\u2026 Que cela fait longtemps que nous ne nous sommes
+    pas vus\u2026"
+  - "\u2026"
+  glansGain: 0
+  stampGain: 0
+  appearingCharacter: {fileID: 0}
+  disappearingCharacter: {fileID: 0}

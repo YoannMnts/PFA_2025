@@ -1,0 +1,48 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0eeb945c88124c10989ad86d225d13c2, type: 3}
+  m_Name: Letter29
+  m_EditorClassIdentifier: 
+  sender: {fileID: 11400000, guid: f31bde0d9fd625545a3cd6d375331275, type: 2}
+  receiver: {fileID: 11400000, guid: 8f7f29cef723b4440b99490ea59509f9, type: 2}
+  dependencies:
+  - {fileID: 11400000, guid: 9cb274e99011902488e3ddd2c36597fa, type: 2}
+  senderName: Larry
+  text: "Bonjour,\r\nMon ami, la F\xEAte des Couleurs approchant \xE0 grands pas,
+    je commence \xE0 m\u2019inqui\xE9ter. Je t\u2019\xE9cris donc dans l\u2019espoir
+    que tu me fasses parvenir des nouvelles optimistes. Sans les approvisionnements
+    de nourriture, il n\u2019y aura pas suffisamment de nourriture pour le banquet
+    et je ne pourrais pas pr\xE9parer le plat signature de notre village : la Ratatouille.
+    Je sais que tu es d\xE9bord\xE9 de travail et je suis d\xE9sol\xE9 de te mettre
+    la pression.\r\nDans l\u2019attente de ta r\xE9ponse, mon ami, je te souhaite
+    une bonne journ\xE9e.\r\nLarry\r\n"
+  sendedText:
+  - "Bonjour l\u2019ami. Tu as un moment \xE0 m\u2019accorder ? J\u2019ai besoin
+    d\u2019un coup de patte.\r\n"
+  - "Cela fait plusieurs jours que j\u2019attends une livraison de marchandises.
+    Avec le banquet organis\xE9 pendant la F\xEAte des Couleurs, je dois avoir suffisamment
+    de nourriture pour tout le monde."
+  - "Mais je n\u2019ai toujours pas de nouvelles et je commence \xE0 m\u2019inqui\xE9ter
+    ! C\u2019est Poutre qui s\u2019occupe de l\u2019approvisionnement de mon auberge.
+    Peux-tu donc lui donner cette lettre ?"
+  receivedText:
+  - "Je dois encore v\xE9rifier \xE7a ! Oh ! Et je dois envoyer \xE7a ! Apr\xE8s,
+    il faut que j\u2019aille l\xE0 !"
+  - "QUOI ?! QU\u2019EST-CE QU\u2019IL Y A ?!"
+  - "J\u2019ai du travail ! Trop de travail ! C\u2019est important ?!"
+  - Une lettre de Larry ?
+  - ...
+  - "Les marchandises ! Il n\u2019est pas encore au courant !"
+  glansGain: 0
+  stampGain: 0
+  appearingCharacter: {fileID: 0}
+  disappearingCharacter: {fileID: 0}

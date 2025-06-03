@@ -36,8 +36,9 @@ MonoBehaviour:
     F\xEAte des Couleurs."
   - "Elle est partie \xE0 Fau L\u2019Iaire pour rapporter quelques archives historiques.
     Je te demanderai donc de lui porter cette lettre dans sa bo\xEEte aux lettres."
-  receivedText: []
+  receivedText:
+  - Livraison accomplie !
   glansGain: 4
-  stampsGain: 43
+  stampGain: 0
   appearingCharacter: {fileID: 11400000, guid: e12fe3b1bd0924141abf9f3f8ba990c5, type: 2}
   disappearingCharacter: {fileID: 0}

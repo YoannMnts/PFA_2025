@@ -26,8 +26,9 @@ MonoBehaviour:
   - "Bref, je m\u2019\xE9gare. Tu veux bien leur apporter ma r\xE9ponse ? Comme c\u2019est
     cens\xE9 \xEAtre une surprise pour Nelia, il vaut mieux que tu d\xE9poses cette
     lettre dans leur bo\xEEte aux lettres."
-  receivedText: []
+  receivedText:
+  - Livraison accomplie !
   glansGain: 2
-  stampsGain: 44
+  stampGain: 0
   appearingCharacter: {fileID: 0}
   disappearingCharacter: {fileID: 0}

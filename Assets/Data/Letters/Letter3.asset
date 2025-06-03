@@ -26,8 +26,9 @@ MonoBehaviour:
   sendedText:
   - "Toi, mon visiteur, \u0153uvrant comme facteur, apporte cette lettre \xE0 mes
     bienfaiteurs."
-  receivedText: []
+  receivedText:
+  - Livraison accomplie !
   glansGain: 3
-  stampsGain: 40
+  stampGain: 0
   appearingCharacter: {fileID: 0}
   disappearingCharacter: {fileID: 0}
