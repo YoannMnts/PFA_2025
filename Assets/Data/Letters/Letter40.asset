@@ -1,0 +1,44 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0eeb945c88124c10989ad86d225d13c2, type: 3}
+  m_Name: Letter40
+  m_EditorClassIdentifier: 
+  sender: {fileID: 11400000, guid: cf5f10c214eb15b4997047ff491d2471, type: 2}
+  receiver: {fileID: 11400000, guid: 1a080252247be3b4a87fed0f00c2172c, type: 2}
+  dependencies:
+  - {fileID: 11400000, guid: be7ce70ab8c783f4b9e0fd156a0627a8, type: 2}
+  senderName: Lucina
+  text: "Bonjour Fr\xE9d\xE9ric,\r\nJe suppose que Duke, comme \xE0 son habitude,
+    ne t\u2019a pas tenu au courant des progr\xE8s de la com\xE9die musicale. Permets-moi
+    donc de t\u2019\xE9clairer. Pendant des jours durant, nous avons r\xE9p\xE9t\xE9.
+    La derni\xE8re en date, fut le jour d\u2019avant. Je peux te dire avec certitude
+    que nous sommes pr\xEAts !\r\nAssur\xE9ment, nous continuerons \xE0 faire d\u2019autres
+    s\xE9ances de r\xE9p\xE9tition afin de ne rien perdre de nos entra\xEEnements
+    ! Cependant, nous n\u2019accepterons pas les s\xE9ances \xE0 rallonge de ce satan\xE9
+    hibou et de son fichu orgueil ! Il nous \xE9puisera avant m\xEAme que nous n\u2019ayons
+    commenc\xE9 !\r\nRespectueusement,\r\nLucina \r\n"
+  sendedText: []
+  receivedText:
+  - "AAAAAH ! Mais \xE7a suffit \xE0 la fin ! Sale petit gredin ! Je commence \xE0
+    en avoir assez ! Et-"
+  - "Une lettre ? Tu ne pouvais pas le dire plus t\xF4t ?"
+  - "\u2026"
+  - "Enfin ! Des nouvelles de la com\xE9die musicale que nos artistes pr\xE9parent
+    ! Heureusement que Lucina est l\xE0 ! Duke, cens\xE9 mener le projet n\u2019a
+    jamais donn\xE9 l\u2019ombre d\u2019une nouvelle !"
+  - "Et elle n\u2019a pas \xE0 s\u2019inqui\xE9ter ! Lucina, Barbara et l\u2019autre
+    volatile sont tr\xE8s talentueux ! M\xEAme sans d\u2019autres r\xE9p\xE9titions,
+    je suis s\xFBr que ce sera g\xE9nial !"
+  glansGain: 0
+  stampGain: 0
+  appearingCharacter: {fileID: 0}
+  disappearingCharacter: {fileID: 0}

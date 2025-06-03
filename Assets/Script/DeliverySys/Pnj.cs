@@ -24,6 +24,7 @@ public class Pnj : PlayerInteractable
     {
         deliveryManager = GameObject.FindGameObjectWithTag("DeliveryManager").GetComponent<DeliveryManager>();
         linesLeft = new List<string>();
+        linesStock = new List<string>();
         popUp.enabled = false;
     }
 
@@ -126,7 +127,6 @@ public class Pnj : PlayerInteractable
             }
             linesStock.Clear();
         }
-            
     }
 
     public void ActivatePopUp(bool activate)

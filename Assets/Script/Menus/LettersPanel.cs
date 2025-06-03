@@ -263,7 +263,7 @@ public class LettersPanel : Panel
             isReading = true;
             currentLettersData[currentLevel].GetRead();
             letterText.text = currentLettersData[currentLevel].content;
-            if (currentLettersData[currentLevel].content.Length > 500)
+            if (currentLettersData[currentLevel].content.Length > 450)
             {
                 letterText.fontSize = 25;
                 letterAuthor.fontSize = 25;

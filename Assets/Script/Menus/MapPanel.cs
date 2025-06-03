@@ -139,6 +139,7 @@ public class MapPanel : Panel
              }
              if (posOnMap != null)
              {
+                 PlaySound(clips[0], SoundType.Effects);
                  searchPoint.enabled = true;
                  searchPoint.rectTransform.localPosition = new Vector3(posOnMap.Value.x, posOnMap.Value.y, 0);
                  searchPoint.color = new Color(1, 1, 1, 0);

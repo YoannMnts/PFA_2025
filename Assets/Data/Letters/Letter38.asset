@@ -1,0 +1,46 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0eeb945c88124c10989ad86d225d13c2, type: 3}
+  m_Name: Letter38
+  m_EditorClassIdentifier: 
+  sender: {fileID: 11400000, guid: cf5f10c214eb15b4997047ff491d2471, type: 2}
+  receiver: {fileID: 11400000, guid: c783226517f12ff4daf198bdb92902f3, type: 2}
+  dependencies:
+  - {fileID: 11400000, guid: daca56cb1ce5bee4da88db6ab961ab6b, type: 2}
+  senderName: Lucina
+  text: "Bonjour Barbara,\r\nJe suis navr\xE9e d\u2019avoir \xE0 te le dire mais\u2026
+    Il faut que tu viennes chez Duke, d\xE8s maintenant. Il veut ENCORE faire une
+    r\xE9p\xE9tition parce que ce cher M\xF4ssieur trouve que nous ne sommes pas
+    au point !\r\nCe qu\u2019il peut \xEAtre p\xE9nible, je te jure ! On a fait des
+    dizaines de r\xE9p\xE9titions depuis le d\xE9but de la semaine ! Et elles durent
+    toujours pendant des heures ! On a r\xE9p\xE9t\xE9 cette com\xE9die musicale
+    tellement de fois qu\u2019on pourrait la faire les yeux ferm\xE9s ! On est largement
+    plus que pr\xEAts ! J\u2019ai des ampoules aux doigts \xE0 force de trop jouer
+    du violon !\r\nExcuse-moi, d\u2019avoir l\xE2ch\xE9 ma frustration mais c\u2019est
+    qu\u2019il est \xE9nervant ! Et si on n\u2019est pas pr\xE9sent, il va \xEAtre
+    encore plus p\xE9nible ! Tu sais comment il est\u2026\r\nLucina\r\n"
+  sendedText:
+  - "Par ailleurs, je suppose que ce cher M\xF4ssieur Duke n\u2019a pas jug\xE9 n\xE9cessaire
+    de mettre au courant Monsieur Fr\xE9d\xE9ric de l\u2019avanc\xE9e de nos r\xE9p\xE9titions.
+    Prends donc"
+  receivedText:
+  - "\u2026 Ma voix, \xE9puis\xE9e, \xE9reint\xE9e de toute cette atrocit\xE9\u2026"
+  - "Qui aurait pu un jour imaginer, que de mon art, je serais fatigu\xE9e\u2026"
+  - "Cet \xEAtre, vil et impur, nous rend la vie bien dure\u2026"
+  - "Et je\u2026 Oh ? Mon ami facteur ? Pourquoi me chercher \xE0 cette heure ?"
+  - "Et je\u2026 OhEvidemment, une lettre\u2026 ? Mon ami facteur ? Pourquoi me chercher
+    \xE0 cette heure ?"
+  - "\u2026"
+  glansGain: 0
+  stampGain: 0
+  appearingCharacter: {fileID: 0}
+  disappearingCharacter: {fileID: 0}
