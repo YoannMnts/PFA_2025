@@ -8,6 +8,7 @@ public class PlayerSFXController : SoundObject
     private Player player;
     private PlayerMovement Movement => player.Movement;
     private int JumpIndex = 5;
+    private bool canPlaySound;
 
     private void Awake()
     {
@@ -26,7 +27,7 @@ public class PlayerSFXController : SoundObject
 
     private void Climb()
     {
-        if (Movement.IsWalled && Mathf.Abs(Movement.CurrentVelocity.y) > 0.1f && !Movement.IsGrounded)
+        if (Movement.IsWalled && Mathf.Abs(Movement.CurrentVelocity.y) > 3 && !Movement.IsGrounded && !Movement.IsJumping)
         {
             PlaySound(clips[0], SoundType.Effects, true);
         }
@@ -34,18 +35,16 @@ public class PlayerSFXController : SoundObject
 
     private void Jump()
     {
-        if (Movement.IsJumping)
+        if (Movement.IsJumping && canPlaySound)
         {
-            PlaySound(clips[JumpSFXChoice()], SoundType.Effects, true);
+            PlaySound(clips[JumpIndex], SoundType.Effects, true);
+            JumpIndex += 2;
+            if (JumpIndex > 9)
+                JumpIndex = 5;
+            canPlaySound = false;
         }
-    }
-
-    private int JumpSFXChoice()
-    {
-        if (JumpIndex >= 9)
-            JumpIndex = 3;
-        JumpIndex += 2;
-        return Mathf.Clamp(JumpIndex, 5, 9);
+        if (!Movement.IsJumping)
+            canPlaySound = true;
     }
 
     private void Roll()
