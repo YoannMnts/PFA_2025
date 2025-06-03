@@ -21,11 +21,11 @@ public class Credits : MonoBehaviour
     IEnumerator Scrolling()
     {
         float speed =40f;
-        while (creditsObject.position.y <= 2000)
+        while (creditsObject.anchoredPosition.y <= 3000)
         {
-            Vector3 pos = creditsObject.position;
+            Vector3 pos = creditsObject.anchoredPosition;
             pos.y += speed * Time.deltaTime;
-            creditsObject.position = pos;
+            creditsObject.anchoredPosition = pos;
             yield return null;
         }
         yield return new WaitForSeconds(2f);

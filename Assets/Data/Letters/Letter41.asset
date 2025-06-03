@@ -1,0 +1,32 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0eeb945c88124c10989ad86d225d13c2, type: 3}
+  m_Name: Letter41
+  m_EditorClassIdentifier: 
+  sender: {fileID: 0}
+  receiver: {fileID: 0}
+  dependencies: []
+  senderName: 
+  text: 
+  sendedText:
+  - "C\u2019est merveilleux ! Mon travail est presque fini ! Et tu sais ce que \xE7a
+    veut dire ?"
+  - "Exact ! Encore plus de travail ! Mais avant, il faut que Fr\xE9d\xE9ric le sache
+    !"
+  - "S\u2019il ne conna\xEEt pas la progression des pr\xE9paratifs de la F\xEAte
+    des Couleurs, il risque de paniquer et de devenir aigri !"
+  - "Ce qui ne change pas grand-chose d'habitude\u2026"
+  receivedText: []
+  glansGain: 0
+  stampGain: 0
+  appearingCharacter: {fileID: 0}
+  disappearingCharacter: {fileID: 0}

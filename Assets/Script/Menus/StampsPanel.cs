@@ -34,6 +34,20 @@ public class StampsPanel : Panel
             unlocked[i] = false;
             stampsFrames[i] = stampsFramesContainer.transform.GetChild(i).GetComponent<Image>();
         }
+        int unlockedCount = 0;
+        for (int i = 0; i < count; i++)
+        {
+            if (unlocked[i])
+            {
+                unlockedCount+=1;
+            }
+        }
+        if (unlockedCount == 49)
+        {
+            unlocked[50] = true;
+        }
+        
+        
         base.Awake();
     }
 
@@ -153,7 +167,6 @@ public class StampsPanel : Panel
             randomIndex = Random.Range(0, count);
         }
         unlocked[randomIndex] = true;
-        Debug.Log(randomIndex);
     }
     IEnumerator MoveSelector(Vector3 destination)
     {
