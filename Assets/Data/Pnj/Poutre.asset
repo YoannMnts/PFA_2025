@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: Poutre
   mapPosition: {x: 250, y: 139, z: 0}
-  position: {x: 84, y: 72, z: 0}
+  position: {x: 111, y: 0, z: 0}

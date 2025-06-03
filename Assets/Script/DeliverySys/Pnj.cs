@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using Script;
 using Script.DeliverySys;
@@ -16,6 +17,7 @@ public class Pnj : PlayerInteractable
     
     private DeliveryManager deliveryManager;
     public List<string> linesLeft;
+    private List<string> linesStock;
     private bool isTalking = false;
 
     private void Awake()
@@ -37,18 +39,42 @@ public class Pnj : PlayerInteractable
 
     public void DeliverLetter(Letter letter)
     {
-        for (int i = 0; i < letter.letterData.receivedText.Length; i++)
+        if (linesLeft.Count > 0)
         {
-            linesLeft.Add(letter.letterData.receivedText[i]);
+            for (int i = 0; i < letter.letterData.receivedText.Length; i++)
+            {
+                linesStock.Add(letter.letterData.receivedText[i]);
+            }    
         }
+        else
+        {
+            for (int i = 0; i < letter.letterData.receivedText.Length; i++)
+            {
+                linesLeft.Add(letter.letterData.receivedText[i]);
+            }    
+        }
+        
     }
+
+    
 
     public void GiveLetter(Letter letter)
     {
-        for (int i = 0; i < letter.letterData.sendedText.Length; i++)
+        if (linesLeft.Count > 0)
         {
-            linesLeft.Add(letter.letterData.sendedText[i]);
+            for (int i = 0; i < letter.letterData.sendedText.Length; i++)
+            {
+                linesStock.Add(letter.letterData.sendedText[i]);
+            }    
         }
+        else
+        {
+            for (int i = 0; i < letter.letterData.receivedText.Length; i++)
+            {
+                linesLeft.Add(letter.letterData.sendedText[i]);
+            }
+        }
+        
     }
 
     public override int GetPriority()
@@ -92,6 +118,14 @@ public class Pnj : PlayerInteractable
             }
         }
         deliveryManager.CreateValidLetters(null);
+        if (linesLeft.Count == 0)
+        {
+            for (int i = 0; i < linesStock.Count; i++)
+            {
+                linesLeft.Add(linesStock[i]);
+            }
+            linesStock.Clear();
+        }
             
     }
 

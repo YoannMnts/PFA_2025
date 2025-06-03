@@ -1,0 +1,42 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0eeb945c88124c10989ad86d225d13c2, type: 3}
+  m_Name: Letter19
+  m_EditorClassIdentifier: 
+  sender: {fileID: 11400000, guid: e12fe3b1bd0924141abf9f3f8ba990c5, type: 2}
+  receiver: {fileID: 11400000, guid: 71ee918d340c0f64a9d45c1af4da93be, type: 2}
+  dependencies:
+  - {fileID: 11400000, guid: eb5b3b8023f8ca644a7b18ab2f4e6b91, type: 2}
+  senderName: Flora
+  text: "Bonjour Papoutre,\r\nJe suis de retour de mon voyage de la ville de Fau
+    L\u2019Iaire. J\u2019ai r\xE9ussi \xE0 trouver les informations que tu recherchais
+    sur la Cascade du Retour. Quelqu\u2019un a d\xE9j\xE0 r\xE9ussi \xE0 la remonter
+    par le pass\xE9 ! Il s\u2019agit du Roi L\xE9on II. C\u2019\xE9tait lors de sa
+    visite \xE0 Verd\u2019Oyant en 1484 apr\xE8s P.J.\r\nEn revanche, il semblerait
+    qu\u2019aucune loutre n\u2019est r\xE9alis\xE9e ou tent\xE9e l\u2019exploit auparavant
+    ! Tu pourrais donc \xEAtre la premi\xE8re de l\u2019Histoire \xE0 le faire !\r\nAmicalement,\r\nFlora\r\n"
+  sendedText:
+  - "J-j\u2019ai \xE9-\xE9galement u-une lettre p-pour Monsieur A-antonin et Papoutre"
+  receivedText:
+  - "Hmmm\u2026 Concentration\u2026 Je suis concentr\xE9e\u2026\r\n"
+  - "Hmm\u2026 Facteur ? C\u2019est important ? Je suis en pleine concentration\u2026"
+  - "Du courrier pour moi ? Et c\u2019est de Flora ?"
+  - "Probablement \xE0 propos de ce que je lui ai demand\xE9 !"
+  - "\u2026"
+  - "Incroyable ! \xC7a me motive encore plus ! Penser qu\u2019une telle figure a
+    pu r\xE9aliser cet exploit !"
+  - "Je le ferai aussi ! Je le r\xE9ussirai ! Et je serai alors la premi\xE8re loutre
+    \xE0 remonter la Cascade du Retour !"
+  glansGain: 0
+  stampGain: 0
+  appearingCharacter: {fileID: 0}
+  disappearingCharacter: {fileID: 0}

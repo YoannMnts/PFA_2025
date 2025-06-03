@@ -31,12 +31,14 @@ public class LetterUI : MonoBehaviour
 
     public void GetPinned()
     {
+        pinned = true;
         pinnedImage.enabled = true;
         pinIndicator.enabled = false;
     }
 
     public void GetUnpinned()
     {
+        pinned = false;
         pinnedImage.enabled = false;
         pinIndicator.enabled = true;
     }

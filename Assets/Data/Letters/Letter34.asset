@@ -1,0 +1,51 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0eeb945c88124c10989ad86d225d13c2, type: 3}
+  m_Name: Letter34
+  m_EditorClassIdentifier: 
+  sender: {fileID: 11400000, guid: 8f7f29cef723b4440b99490ea59509f9, type: 2}
+  receiver: {fileID: 11400000, guid: 6a1f131b4fc360f43b4b4751c6d1aa99, type: 2}
+  dependencies:
+  - {fileID: 11400000, guid: 59ba8904315188d43a775f9301aa9bc1, type: 2}
+  senderName: Poutre
+  text: "Bonjour Lorie,\r\nJe me tourne vers toi car j\u2019ai besoin de tes services.
+    Comme tu le sais, Papoutre a un r\xEAve. Depuis petite, elle ne songe qu\u2019\xE0
+    remonter la Cascade du Retour. Pour l\u2019encourager, je veux lui pr\xE9parer
+    un cadeau : un nouveau maillot de bain.\r\nJ\u2019ai donc besoin de tes services
+    pour faire en sorte que ce maillot de bain soit le meilleur possible pour qu\u2019elle
+    puisse atteindre son objectif !\r\nA bient\xF4t,\r\nPoutre\r\n"
+  sendedText:
+  - "Victoire ! Je peux faire une pause ! Apr\xE8s tant d'heures de travail ! J\u2019ai
+    r\xE9ussi \xE0 trouver un moment pour faire une pause !"
+  - "Je vais donc pouvoir m\u2019occuper de ma s\u0153ur. Elle me manque ma s\u0153ur,
+    tu sais. Elle m\xE9rite le meilleur ma s\u0153ur !"
+  - "C\u2019est pour \xE7a que je lui pr\xE9pare une surprise ! Vois-tu, ma s\u0153ur,
+    Papoutre est une grande nageuse et je pr\xE9vois de lui offrir un maillot digne
+    de ce nom"
+  - "Elle a besoin du meilleur maillot de bain pour remonter la Cascade du Retour
+    ! J\u2019ai donc besoin des services de Lorie. Ton travail est donc le suivant
+    :"
+  - "Livrer une lettre \xE0 ma petite s\u0153ur et une autre \xE0 Lorie. Simple,
+    non ? Allez, au travail, Facteur"
+  receivedText:
+  - "Oui ? Qui est-ce ? Oh, mais c\u2019est notre jeune facteur. Tu m\u2019excuseras,
+    je ne vois pas tr\xE8s bien et il me faut parfois un petit temps avant de reconna\xEEtre
+    quelqu\u2019un"
+  - "Tu m\u2019apportes une lettre de la part de Poutre ?"
+  - "\u2026"
+  - "Comme c\u2019est adorable, il n\u2019a pas chang\xE9 depuis qu\u2019il est petit.
+    Bien qu\u2019il soit d\xE9bord\xE9 de travail, il trouve toujours un peu de temps
+    pour s\u2019occuper de sa s\u0153ur"
+  glansGain: 0
+  stampGain: 0
+  appearingCharacter: {fileID: 0}
+  disappearingCharacter: {fileID: 0}

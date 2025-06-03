@@ -1,0 +1,50 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0eeb945c88124c10989ad86d225d13c2, type: 3}
+  m_Name: Letter25
+  m_EditorClassIdentifier: 
+  sender: {fileID: 11400000, guid: ff1efd42a7eb34e44b2f88a9294420e2, type: 2}
+  receiver: {fileID: 11400000, guid: 8fefa2137319bd2479cb9d2e0453c956, type: 2}
+  dependencies:
+  - {fileID: 11400000, guid: 8282d2008358be548bbb0a37532a5953, type: 2}
+  senderName: A.P
+  text: "Bien le bonjour, ch\xE8re fleuriste,\r\nMa noble personne est en pr\xE9paration
+    d\u2019une surprise incroyable pour le Capitaine Hans. J\u2019aimerai que vous
+    en fassiez partie ! Votre r\xF4le est tr\xE8s simple : livrer un beau bouquet
+    garni au poste du Capitaine Hans. Je suis s\xFBre que comme moi vous \xEAtes
+    reconnaissante du travail que fait notre brave Capitaine et j\u2019esp\xE8re
+    que vous contribuerez !\r\nN\u2019oubliez pas \xE9galement de v\xE9rifier en
+    dessous de votre premier pot de fleurs. Une autre lettre sign\xE9e par ma grande
+    personne doit \xEAtre remise au facteur pour qu\u2019il termine son r\xF4le.\r\nA.P\r\n"
+  sendedText:
+  - "Et il y a un petit mot pour moi. Il est \xE9crit : \"Ohohoho ! Facteur, ton
+    r\xF4le continue et cette fois, tu dois d\xE9livrer cette lettre \xE0 la magnifique
+    Marie-Chantal !\""
+  - "Bonne chance, facteur ! Et n\u2019oublie pas la lettre !"
+  receivedText:
+  - "Youplahou ! Facteur, tu as besoin d\u2019un coup de main ?"
+  - "Ah ! Tu m\u2019apportes une lettre ! Elle est de\u2026 de\u2026 A.P ?"
+  - "C\u2019est marrant, \xE7a me fait penser \xE0 quelqu\u2019un\u2026 Mais je n\u2019arrive
+    pas \xE0 me souvenir de qui..."
+  - "Bref ! De ce que je vois c\u2019est une commande que je dois ensuite livrer
+    au Capitaine Hans ! Et c\u2019est pour une surprise !"
+  - "G\xE9nial ! J\u2019adore les surprises ! Je m\u2019occupe de la commande tout
+    de suite !"
+  - "Oh ! Et je dois \xE9galement te donner une autre lettre !"
+  - "Alors\u2026 D\u2019apr\xE8s ce qui est \xE9crit, je suis cens\xE9e trouver une
+    lettre sous ce pot..."
+  - "Alors\u2026 D\u2019apr\xE8s ce qui est \xE9crit, je suis cens\xE9e trouver une
+    lettre sous ce pot..."
+  glansGain: 0
+  stampGain: 0
+  appearingCharacter: {fileID: 0}
+  disappearingCharacter: {fileID: 0}

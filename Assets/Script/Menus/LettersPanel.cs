@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
@@ -262,6 +263,16 @@ public class LettersPanel : Panel
             isReading = true;
             currentLettersData[currentLevel].GetRead();
             letterText.text = currentLettersData[currentLevel].content;
+            if (currentLettersData[currentLevel].content.Length > 500)
+            {
+                letterText.fontSize = 25;
+                letterAuthor.fontSize = 25;
+            }
+            else
+            {
+                letterText.fontSize = 30;
+                letterAuthor.fontSize = 30;
+            }
             letterAuthor.text = "De : " + "<color=#D70000><b>"+currentLettersData[currentLevel].author+"</b></color> ";
             PlaySound(clips[0],SoundType.Effects);
         }

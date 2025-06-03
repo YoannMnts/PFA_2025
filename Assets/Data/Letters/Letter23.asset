@@ -1,0 +1,60 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0eeb945c88124c10989ad86d225d13c2, type: 3}
+  m_Name: Letter23
+  m_EditorClassIdentifier: 
+  sender: {fileID: 11400000, guid: c333ba6243c47e64dac784babe641bbc, type: 2}
+  receiver: {fileID: 11400000, guid: ff1efd42a7eb34e44b2f88a9294420e2, type: 2}
+  dependencies:
+  - {fileID: 11400000, guid: 8dedc0cfd08a7024098615b5822997a8, type: 2}
+  senderName: A.P
+  text: "Bien le bonjour, ch\xE8re boulang\xE8re,\r\nJ\u2019aimerai passer une commande
+    urgente. Voyez-vous, je pr\xE9pare une petite surprise pour ce cher Capitaine
+    Hans ! Pour cela, une de vos d\xE9licieuses p\xE2tisseries sera la bienvenue
+    ! J\u2019aimerai donc que vous lui fassiez parvenir \xE0 son poste un magnifique
+    g\xE2teau au chocolat.\r\nPar ailleurs, vous trouverez une autre lettre juste
+    en dessous de votre comptoir ! Veuillez la transmettre au Facteur pour qu\u2019il
+    puisse continuer son r\xF4le et faire venir ma prochaine actrice sur sc\xE8ne
+    !\r\nA.P\r\n"
+  sendedText:
+  - "Ohohohoho ! La grande Ariane Parpin va encore frapper ! Grande Ma\xEEtresse
+    du crime, le vol est tout un art pour moi ! Une gigantesque peinture ! Une pi\xE8ce
+    de th\xE9\xE2tre !"
+  - "Et quoi de mieux que la magnifique F\xEAte des Couleurs pour \xE9clairer la
+    sc\xE8ne ! Mais, pour que cela soit parfait, il faut que tous les acteurs soient
+    en place !"
+  - "C\u2019est l\xE0 que tu entres en jeu, facteur ! Ton r\xF4le : faire en sorte
+    que tous les r\xE9cepteurs de ma lettre participent \xE0 ma grande machination
+    ! Ohohohoho !"
+  - "Hmm ? Tu as l\u2019air dubitatif ?"
+  - "\u2026"
+  - "Non\u2026 Je ne vois pas de quoi tu parles\u2026 La grande, Ariane Parpin n\u2019a
+    pas pu oublier son propre portefeuille sur les lieux de son dernier crime. Tu
+    dois faire erreur."
+  - "Quoi qu\u2019il en soit, Facteur, transmet ce message \xE0 la premi\xE8re actrice
+    : la charmante boulang\xE8re, Elise !"
+  receivedText:
+  - "Facteur ! Un plaisir de te revoir ! Tu m\u2019apportes une demande pour une
+    nouvelle commande ?\r\n"
+  - "A.P ? Je ne vois pas qui cela peut \xEAtre mais cet animal doit \xEAtre tr\xE8s
+    proche du Capitaine Hans pour lui pr\xE9parer une surprise !\r\n"
+  - "Oh l\xE0 l\xE0 ! Je suis tout excit\xE9e ! Et quel hasard ! Il me reste justement
+    un beau g\xE2teau au chocolat ! Je vais l\u2019amener moi-m\xEAme au poste du
+    Capitaine Hans ! Je suis s\xFBr qu\u2019il sera ravi !\n"
+  - "Et il est \xE9crit que je dois te remettre une autre lettre mais je ne vois
+    pas comment et \u2026"
+  - "Oh ?! Il y a une lettre sous mon comptoir ! Comme \xE9crit ! Un magicien ! Cet
+    animal doit \xEAtre un magicien ! C\u2019est incroyable !"
+  glansGain: 0
+  stampGain: 0
+  appearingCharacter: {fileID: 0}
+  disappearingCharacter: {fileID: 0}

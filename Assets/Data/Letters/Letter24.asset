@@ -1,0 +1,41 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0eeb945c88124c10989ad86d225d13c2, type: 3}
+  m_Name: Letter24
+  m_EditorClassIdentifier: 
+  sender: {fileID: 11400000, guid: a8e02d414e45cc34a93975248246175f, type: 2}
+  receiver: {fileID: 11400000, guid: ac853fc7cde38634b826552d02fa0800, type: 2}
+  dependencies:
+  - {fileID: 11400000, guid: 61087d274a00fe041a0c1cb6a0a24b56, type: 2}
+  senderName: Captain Hans
+  text: "J\u2019ai le regret de t\u2019annoncer que tu es dor\xE9navant en \xE9tat
+    d\u2019arrestation ! Des nouvelles me sont parvenues et visiblement tu n\u2019as
+    pas tenu compte de ma mise en garde. Et il semblerait qu\u2019avoir utilis\xE9
+    des feux d\u2019artifices l\u2019ann\xE9e derni\xE8re ne t\u2019a pas servi de
+    le\xE7on !\r\nDois-je te rappeler, que les utiliser comme moyen d\u2019\xE9lan
+    pour voler a failli non seulement te transformer en Steak de Tortue mais aussi
+    mettre feu au village, ruinant la F\xEAte des Couleurs.\r\nRespectueusement,\r\nCapitaine
+    Hans.\r\n"
+  sendedText:
+  - "Soldat ! Il faut neutraliser le soldat Icare ! Prends cette lettre et apporte-la-lui
+    de ce pas ! Il a d\xE9j\xE0 \xE9t\xE9 averti, maintenant il est temps de s\xE9vir
+    !"
+  receivedText:
+  - "Te revoil\xE0 ! Allez ! Donne-moi la lettre de Fr\xE9d\xE9ric !"
+  - "Mais ?! Cette lettre n\u2019est pas de Fr\xE9d\xE9ric ! Elle est du Capitaine
+    Hans !"
+  - "Non ! Non ! \xC7a ne peut pas se terminer comme \xE7a ! Trahison ! Disgr\xE2ce
+    !"
+  glansGain: 0
+  stampGain: 0
+  appearingCharacter: {fileID: 0}
+  disappearingCharacter: {fileID: 11400000, guid: ac853fc7cde38634b826552d02fa0800, type: 2}
