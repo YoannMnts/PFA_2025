@@ -41,10 +41,10 @@ MonoBehaviour:
     !"
   receivedText:
   - "HA AH ! Tu ne m\u2019as pas surpris cette fois !\r\n"
-  - "Et oui ! Le vieux <color=#D70000><b>Fr\xE9d\xE9ric<color=#D70000></b> sait s\u2019adapter
-    ! J\u2019ai c\xF4toy\xE9 <color=#D70000><b>Antonin<color=#D70000></b>  pendant
-    plus de 40 ans ! Tes petites frayeurs de facteur ne sont rien \xE0 c\xF4t\xE9
-    de \xE7a !"
+  - "Et oui ! Le vieux <color=#D70000><b>Fr\xE9d\xE9ric</color></b> sait s\u2019adapter
+    ! J\u2019ai c\xF4toy\xE9 <color=#D70000><b>Antonin</color></b>  pendant plus
+    de 40 ans ! Tes petites frayeurs de facteur ne sont rien \xE0 c\xF4t\xE9 de \xE7a
+    !"
   - "\u2026"
   - "Une nouvelle lettre d\u2019<color=#D70000><b>Antonin</b></color>, ?"
   - "Br\xFBle-la ! Noie-la ! Fais quelque chose mais d\xE9truis-la !"
