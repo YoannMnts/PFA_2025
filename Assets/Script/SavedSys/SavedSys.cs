@@ -120,6 +120,7 @@ public class SavedSys : MonoBehaviour
 
     private void StampsLoad()
     {
+        Debug.Log(stampsPanel.UnlockedStamps);
         for (int i = 0; i < stampsPanel.UnlockedStamps.Length; i++)
         {
             stampsPanel.UnlockedStamps[i] = PlayerPrefs.GetInt("UnlockedStamps" + i) == 1;
