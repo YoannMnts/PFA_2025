@@ -55,7 +55,6 @@ namespace Script
             else if (other.CompareTag("Hive"))
             {
                 other.GetComponent<Animator>().SetTrigger("HiveSwinging");
-                Debug.Log("ici");
             }
         }
         

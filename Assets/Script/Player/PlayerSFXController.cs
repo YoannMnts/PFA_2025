@@ -2,6 +2,7 @@ using System;
 using Script;
 using Unity.VisualScripting;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 public class PlayerSFXController : SoundObject
 {
@@ -9,6 +10,7 @@ public class PlayerSFXController : SoundObject
     private PlayerMovement Movement => player.Movement;
     private int JumpIndex = 2;
     private bool canPlaySound;
+    private bool playRandomVoice;
 
     private void Awake()
     {
@@ -23,6 +25,7 @@ public class PlayerSFXController : SoundObject
         Roll();
         Jump();
         Climb();
+        RandomVoice();
     }
 
     private void Climb()
@@ -30,6 +33,7 @@ public class PlayerSFXController : SoundObject
         if (Movement.IsWalled && Mathf.Abs(Movement.CurrentVelocity.y) > 3 && !Movement.IsGrounded && !Movement.IsJumping)
         {
             PlaySound(clips[0], SoundType.Effects, true);
+            playRandomVoice = true;
         }
     }
 
@@ -38,6 +42,7 @@ public class PlayerSFXController : SoundObject
         if (Movement.IsJumping && canPlaySound)
         {
             PlaySound(clips[JumpIndex], SoundType.Effects, true);
+            playRandomVoice = true;
             JumpIndex += 1;
             if (JumpIndex > 4)
                 JumpIndex = 2;
@@ -52,6 +57,7 @@ public class PlayerSFXController : SoundObject
         if (Movement.IsRolling)
         {
             PlaySound(clips[5], SoundType.Effects, true);
+            playRandomVoice = true;
         }
     }
 
@@ -76,6 +82,21 @@ public class PlayerSFXController : SoundObject
         if (Mathf.Abs(Movement.CurrentVelocity.x) > 0.1f && !Movement.IsRunning)
         {
             //PlaySound(clips[0], SoundType.Effects, true);
+        }
+    }
+
+    private void RandomVoice()
+    {
+        if (playRandomVoice)
+        {
+            int randomPlay = Random.Range(1, 4);
+            Debug.Log(randomPlay);
+            if (randomPlay > 2)
+            {
+                int randomIndex = Random.Range(7, 12);
+                PlaySound(clips[randomIndex], SoundType.Voices, true);
+            }
+            playRandomVoice = false;
         }
     }
 }
