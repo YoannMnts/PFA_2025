@@ -18,7 +18,7 @@ public class AmbiantWind : MonoBehaviour
         
         float currentY = player.transform.position.y;
         
-        float v = (currentY - minY) / distanceY;
+        float v = ((currentY - minY) / distanceY)*0.2f;
         source.volume = (float)Math.Round(v, 2);
     }
 }

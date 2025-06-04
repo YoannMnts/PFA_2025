@@ -85,7 +85,7 @@ public class Pnj : PlayerInteractable
 
     public override void Interact()
     {
-        PlaySound(clips[Random.Range(0, clips.Length)],SoundType.Voices);
+        
         deliveryManager.DeliveryCheck(this);
         if (linesLeft.Count == 0)
         {
@@ -95,6 +95,7 @@ public class Pnj : PlayerInteractable
         {
             isTalking = true;
             deliveryManager.dialoguePad.SetUp(portrait, linesLeft[0]);
+            PlaySound(clips[Random.Range(0, clips.Length)],SoundType.Voices);
             linesLeft.RemoveAt(0);
         }
         else if (linesLeft.Count <= 0)
@@ -115,6 +116,7 @@ public class Pnj : PlayerInteractable
                 } 
                 
                 deliveryManager.dialoguePad.SetUp(portrait, baseLines[currentLine]);
+                PlaySound(clips[Random.Range(0, clips.Length)],SoundType.Voices);
                 lastLineSaid = currentLine;
             }
         }

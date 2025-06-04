@@ -8,6 +8,7 @@ public class PolygonSound : MonoBehaviour
     [SerializeField] private Transform listener;
     [SerializeField] private float fadeDistance = 5f; 
     [SerializeField] private OptionsPanel optionsPanel;
+    [SerializeField] private float multiplier = 1f;
 
     void Update()
     {
@@ -17,7 +18,7 @@ public class PolygonSound : MonoBehaviour
 
         if (distance < fadeDistance)
         {
-            float t = Mathf.SmoothStep(1f, 0f, distance / fadeDistance)*optionsPanel.volumes[0]*0.1f*optionsPanel.volumes[2]*0.1f;
+            float t = Mathf.SmoothStep(1f, 0f, (distance / fadeDistance)*optionsPanel.volumes[0]*0.1f*optionsPanel.volumes[2]*0.1f)*multiplier;
             audioSource.volume = t;
         }
         else
