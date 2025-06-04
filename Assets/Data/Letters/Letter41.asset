@@ -38,7 +38,7 @@ MonoBehaviour:
     livres cette lettre \xE0 la mairie ! C\u2019est tr\xE8s important ! Il en va
     de la r\xE9ussite de notre mission !"
   receivedText:
-  - Livraisoon accomplie !
+  - Livraison accomplie !
   glansGain: 0
   stampGain: 0
   appearingCharacter: {fileID: 0}
