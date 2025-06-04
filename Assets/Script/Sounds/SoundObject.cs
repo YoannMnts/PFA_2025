@@ -5,6 +5,8 @@ using UnityEngine;
 
 public class SoundObject : MonoBehaviour
 {
+    public List<AudioSource> AudioSources => soundManager.AudioSources;
+    
     private SoundManager soundManager;
     [SerializeField] public AudioClip[] clips;
     public virtual void Start()

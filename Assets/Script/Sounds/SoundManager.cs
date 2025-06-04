@@ -3,6 +3,8 @@ using UnityEngine;
 
 public class SoundManager : MonoBehaviour
 {
+    public List<AudioSource> AudioSources => audioSources;
+    
     [SerializeField] private List<AudioSource> audioSources;
     [SerializeField] private OptionsPanel optionsPanel;
     

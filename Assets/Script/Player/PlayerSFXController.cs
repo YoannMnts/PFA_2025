@@ -56,6 +56,11 @@ public class PlayerSFXController : SoundObject
     {
         if (Movement.IsRolling)
         {
+            for (int i = 0; i < AudioSources.Count; i++)
+            {
+                if (AudioSources[i].isPlaying && AudioSources[i].clip == clips[5])
+                    return;
+            }
             PlaySound(clips[5], SoundType.Effects, true);
             playRandomVoice = true;
         }
