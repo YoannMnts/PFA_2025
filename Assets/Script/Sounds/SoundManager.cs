@@ -28,6 +28,7 @@ public class SoundManager : MonoBehaviour
                 if (audioSources[i].isPlaying == false) 
                 { 
                     audioSources[i].clip = clip; 
+                    audioSources[i].gameObject.GetComponent<SoundSource>().soundType = type;
                     if (type == SoundType.Effects) 
                     { 
                         audioSources[i].volume = optionsPanel.volumes[2]*0.1f*optionsPanel.volumes[0]*0.1f;
@@ -37,7 +38,14 @@ public class SoundManager : MonoBehaviour
                         audioSources[i].volume = optionsPanel.volumes[1]*0.1f*optionsPanel.volumes[0]*0.1f;
                     }
                     else if (type == SoundType.Voices) 
-                    { 
+                    {
+                        for (int j = 0; j < audioSources.Count; j++)
+                        {
+                            if (audioSources[j].GetComponent<SoundSource>().soundType == SoundType.Voices)
+                            {
+                                audioSources[j].Stop();
+                            }
+                        }
                         audioSources[i].volume = optionsPanel.volumes[3]*0.1f*optionsPanel.volumes[0]*0.1f;
                     } 
                     audioSources[i].Play(); 
@@ -48,7 +56,8 @@ public class SoundManager : MonoBehaviour
             if (played == false) 
             { 
                 GameObject obj = new GameObject(); 
-                obj.AddComponent<AudioSource>(); 
+                obj.AddComponent<AudioSource>();
+                obj.AddComponent<SoundSource>();
                 audioSources.Add(obj.GetComponent<AudioSource>()); 
                 int lastIndex = audioSources.Count - 1; 
                 audioSources[lastIndex].clip = clip; 
@@ -64,6 +73,7 @@ public class SoundManager : MonoBehaviour
                 { 
                     audioSources[lastIndex].volume = optionsPanel.volumes[3]*optionsPanel.volumes[0];
                 } 
+                obj.GetComponent<SoundSource>().soundType = type;
                 audioSources[lastIndex].Play(); 
                 while (audioSources.Count >= 10) 
                 { 

@@ -7,7 +7,7 @@ public class PlayerSFXController : SoundObject
 {
     private Player player;
     private PlayerMovement Movement => player.Movement;
-    private int JumpIndex = 5;
+    private int JumpIndex = 2;
     private bool canPlaySound;
 
     private void Awake()
@@ -38,9 +38,9 @@ public class PlayerSFXController : SoundObject
         if (Movement.IsJumping && canPlaySound)
         {
             PlaySound(clips[JumpIndex], SoundType.Effects, true);
-            JumpIndex += 2;
-            if (JumpIndex > 9)
-                JumpIndex = 5;
+            JumpIndex += 1;
+            if (JumpIndex > 4)
+                JumpIndex = 2;
             canPlaySound = false;
         }
         if (!Movement.IsJumping)
@@ -51,7 +51,7 @@ public class PlayerSFXController : SoundObject
     {
         if (Movement.IsRolling)
         {
-            PlaySound(clips[12], SoundType.Effects, true);
+            PlaySound(clips[5], SoundType.Effects, true);
         }
     }
 
@@ -67,7 +67,7 @@ public class PlayerSFXController : SoundObject
     {
         if (Movement.IsRunning && !Movement.IsRolling && Movement.IsGrounded)
         {
-            PlaySound(clips[14], SoundType.Effects, true);
+            PlaySound(clips[6], SoundType.Effects, true);
         }
     }
 
