@@ -18,12 +18,12 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 2f785fbd8ed659d4aab62d1bf454e210, type: 2}
   senderName: A.P
   text: "Salutations Capitaine Hans !\r\nC\u2019est moi ! La grande ! L\u2019unique
-    ! Ariane Parpin !\r\nAppr\xE9ciez-vous ma petite surprise, cher Capitaine ? Il
-    s\u2019agit d\u2019un petit entracte avant le grand spectacle que je compte livrer
-    ! Et quelle meilleure sc\xE8ne pour mon prochain crime que durant la F\xEAte
+    ! Ariane Parpin !\r\nAppr\xE9ciez-vous ma <b>petite surprise</b>, cher Capitaine
+    ? Il s\u2019agit d\u2019un petit entracte avant le grand spectacle que je compte
+    livrer ! Et quelle meilleure sc\xE8ne pour mon prochain crime que durant la F\xEAte
     des Couleurs ! Apr\xE8s tout, bien que voleuse, je reste une artiste. Mon crime
     est un art ! Et vous, Capitaine Hans est l\u2019acteur qu\u2019il me manque pour
-    que tout soit parfait !\r\nAttrapez-moi si vous le pouvez, Monsieur Hans\u2026\r\nA.P\r\n"
+    que tout soit parfait !\r\n<b>Attrapez-moi si vous le pouvez</b>, Monsieur Hans\u2026\r\nA.P\r\n"
   sendedText:
   - "Et il y a une petite note pour moi avec la lettre ! C\u2019est un message que
     je dois te transmettre !"
@@ -35,17 +35,17 @@ MonoBehaviour:
   - "Hmm\u2026 Oh ? C\u2019est toi, soldat ? Excuse-moi, j\u2019\xE9tais en pleine
     r\xE9flexion\u2026"
   - "J\u2019ai re\xE7u des colis, un g\xE2teau au chocolat et un bouquet de fleurs\u2026"
-  - "Soldat\u2026 Je d\xE9teste le chocolat. Je me suis \xE9touff\xE9 avec un carr\xE9
-    de chocolat quand je n\u2019\xE9tais qu\u2019un oisillon. Et je suis allergique
-    aux fleurs !"
+  - "Soldat\u2026 Je d\xE9teste le chocolat. Je me suis <b>\xE9touff\xE9</b> avec
+    un carr\xE9 de chocolat quand je n\u2019\xE9tais qu\u2019un oisillon. Et je suis
+    <b>allergique</b> aux fleurs !"
   - Et en plus- Ah ! Tu as du courrier pour moi ? Merci bien, soldat !
   - "\u2026"
   - "J\u2019aurais d\xFB m\u2019en douter ! A.P ! Ces initiales ! \xC7a ne peut \xEAtre
     qu\u2019elle ! Ariane Parpin"
   - "Cette satan\xE9e pie me glisse entre les plumes depuis des mois ! Mais je l\u2019attraperai
     un jour !"
-  - "Et elle compte faire son crime pendant la F\xEAte des Lumi\xE8res ! Foi de faucon,
-    elle n\u2019y arrivera pas !"
+  - "Et elle compte faire son crime pendant la <b>F\xEAte des Couleurs</b> ! Foi
+    de faucon, elle n\u2019y arrivera pas !"
   - Merci pour ton service, soldat !
   glansGain: 0
   stampGain: 0

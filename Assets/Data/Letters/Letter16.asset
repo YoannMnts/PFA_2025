@@ -21,7 +21,7 @@ MonoBehaviour:
     !\r\nAvec aigreur,\r\nFr\xE9d\xE9ric\r\n"
   sendedText:
   - "Je vais lui dire ce que je pense \xE0 ce fieff\xE9 faquin !"
-  - Donne-lui cette lettre !
+  - Donne-lui cette <b>lettre </b>!
   receivedText:
   - "Oh ? D\xE9j\xE0 une r\xE9ponse ?\r\n"
   - "\u2026\r\n"
@@ -32,6 +32,6 @@ MonoBehaviour:
   - "Cela faisait vraiment longtemps que je n\u2019avais pas ri comme \xE7a !"
   - Ha ha ha ha ha ! Je lui enverrai une autre de mes lettres assez rapidement !
   glansGain: 2
-  stampsGain: 10
+  stampGain: 0
   appearingCharacter: {fileID: 0}
   disappearingCharacter: {fileID: 0}

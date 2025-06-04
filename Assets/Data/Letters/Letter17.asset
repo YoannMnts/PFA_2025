@@ -18,18 +18,18 @@ MonoBehaviour:
   - {fileID: 11400000, guid: e159bf288cb803940b0bc684963bbd40, type: 2}
   senderName: Frederic
   text: "Bonjour,\r\nTr\xE8s ch\xE8re Madame, il semblerait qu\u2019en passant pr\xE8s
-    de mon charmant domicile, vous ayez oubli\xE9 une de vos possessions : votre
-    portefeuille. Vous devriez faire attention, des rumeurs circulent comme quoi
-    il y aurait la c\xE9l\xE8bre Ariane Parpin dans les environs. Heureusement que
-    je suis un citoyen exemplaire et que je vous avertis. Je vous invite \xE0 venir
-    le r\xE9cup\xE9rer.\r\nBien cordialement,\r\nFr\xE9d\xE9ric\r\n"
+    de mon charmant domicile, vous ayez <b>oubli\xE9 </b>une de vos possessions :
+    <b>votre portefeuille</b>. Vous devriez faire attention, des rumeurs circulent
+    comme quoi il y aurait la <b>c\xE9l\xE8bre </b>Ariane Parpin dans les environs.
+    Heureusement que je suis un citoyen exemplaire et que je vous avertis. Je vous
+    invite \xE0 venir le r\xE9cup\xE9rer.\r\nBien cordialement,\r\nFr\xE9d\xE9ric\r\n"
   sendedText:
   - "AAAAAAH ! Pr\xE9viens quand tu arrives, nom d\u2019une pipe ! J\u2019ai failli
     avoir une attaque ! Ne commence pas \xE0 choper les mauvaises manies d\u2019Antonin
     !"
   - "Mais je dois dire que tu tombes bien. J\u2019ai justement quelque chose \xE0
-    d\xE9livrer \xE0 une jeune pie qui n\u2019est pas toute seule dans sa t\xEAte.
-    Elle est juste \xE0 c\xF4t\xE9 de mon humble demeure."
+    d\xE9livrer \xE0 une<b> jeune pie </b>qui n\u2019est pas toute seule dans sa
+    t\xEAte. Elle est juste \xE0 c\xF4t\xE9 de mon humble demeure."
   - "Hein ? Vu qu\u2019elle est proche, je pourrais l\u2019amener moi-m\xEAme ?"
   - ...
   - "Silence garnement ! Depuis quand on questionne ses a\xEEn\xE9s ! Moi de mon
@@ -47,6 +47,6 @@ MonoBehaviour:
   - "Ou le septuag\xE9naire qui ne s\u2019est pas encore rendu compte du vol et me
     sermonne\u2026"
   glansGain: 3
-  stampsGain: 9
+  stampGain: 0
   appearingCharacter: {fileID: 0}
   disappearingCharacter: {fileID: 0}

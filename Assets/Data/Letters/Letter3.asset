@@ -17,12 +17,12 @@ MonoBehaviour:
   dependencies:
   - {fileID: 11400000, guid: ecc6aacc6a5a377479b401905ad1fb70, type: 2}
   senderName: Barbara
-  text: "Mes humbles remerciements,\r\nA ceux dont l\u2019appui fut noble et g\xE9n\xE9reux,\r\nJe
-    viens avec pudeur sur un air joyeux,\r\nOffrir de ma plume, ces vers de gratitude,\r\nMe
-    sortant de ma bien triste inaptitude,\r\nL\u2019inspiration, ainsi, de nouveau
-    retrouv\xE9e,\r\nRemplissant ma demeure de mille mots grav\xE9s\r\nLib\xE8re
+  text: "Mes humbles remerciements,\r\nA ceux dont l\u2019appui fut <b>noble et g\xE9n\xE9reux</b>,\r\nJe
+    viens avec pudeur sur <b>un air joyeux</b>,\r\nOffrir de ma plume, ces vers de
+    gratitude,\r\nMe sortant de ma bien triste inaptitude,\r\nL\u2019inspiration,
+    ainsi, de nouveau retrouv\xE9e,\r\nRemplissant ma demeure de mille mots grav\xE9s\r\nLib\xE8re
     mes paroles pour \xEAtre pr\xEAte \xE0 l\u2019heure,\r\nPour cette journ\xE9e
-    de la F\xEAte des Couleurs,\r\nBarbara.\r\n"
+    de la <b>F\xEAte des Couleurs</b>,\r\nBarbara.\r\n"
   sendedText:
   - "Toi, mon visiteur, \u0153uvrant comme facteur, apporte cette lettre \xE0 mes
     bienfaiteurs."

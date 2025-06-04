@@ -17,15 +17,16 @@ MonoBehaviour:
   dependencies:
   - {fileID: 11400000, guid: eb5b3b8023f8ca644a7b18ab2f4e6b91, type: 2}
   senderName: Flora
-  text: "Bonjour Papoutre,\r\nJe suis de retour de mon voyage de la ville de Fau
-    L\u2019Iaire. J\u2019ai r\xE9ussi \xE0 trouver les informations que tu recherchais
+  text: "Bonjour Papoutre,\r\nJe suis de retour de mon voyage de la ville de <b>Fau
+    L\u2019Iaire</b>. J\u2019ai r\xE9ussi \xE0 trouver les informations que tu recherchais
     sur la Cascade du Retour. Quelqu\u2019un a d\xE9j\xE0 r\xE9ussi \xE0 la remonter
     par le pass\xE9 ! Il s\u2019agit du Roi L\xE9on II. C\u2019\xE9tait lors de sa
     visite \xE0 Verd\u2019Oyant en 1484 apr\xE8s P.J.\r\nEn revanche, il semblerait
     qu\u2019aucune loutre n\u2019est r\xE9alis\xE9e ou tent\xE9e l\u2019exploit auparavant
     ! Tu pourrais donc \xEAtre la premi\xE8re de l\u2019Histoire \xE0 le faire !\r\nAmicalement,\r\nFlora\r\n"
   sendedText:
-  - "J-j\u2019ai \xE9-\xE9galement u-une lettre p-pour Monsieur A-antonin et Papoutre"
+  - "J-j\u2019ai \xE9-\xE9galement u-une <b>lettre</b> p-pour Monsieur A-antonin
+    et Papoutre"
   receivedText:
   - "Hmmm\u2026 Concentration\u2026 Je suis concentr\xE9e\u2026\r\n"
   - "Hmm\u2026 Facteur ? C\u2019est important ? Je suis en pleine concentration\u2026"
@@ -35,7 +36,7 @@ MonoBehaviour:
   - "Incroyable ! \xC7a me motive encore plus ! Penser qu\u2019une telle figure a
     pu r\xE9aliser cet exploit !"
   - "Je le ferai aussi ! Je le r\xE9ussirai ! Et je serai alors la premi\xE8re loutre
-    \xE0 remonter la Cascade du Retour !"
+    \xE0 remonter la <b>Cascade du Retour </b>!"
   glansGain: 0
   stampGain: 0
   appearingCharacter: {fileID: 0}

@@ -17,20 +17,20 @@ MonoBehaviour:
   dependencies:
   - {fileID: 11400000, guid: fd8df75db0be607499c382305e0be237, type: 2}
   senderName: Poutre
-  text: "Bonjour mon cher Jack,\r\nEn vue de la F\xEAte des Couleurs, je construis
-    un nouveau violon pour Lucina. Mais, pour pouvoir le faire, j\u2019ai besoin
-    d\u2019un peu de bois. Serait-il possible de t\u2019en emprunter un peu ? Merci
-    d\u2019avance.\r\nPoutre\r\n"
+  text: "Bonjour mon cher Jack,\r\nEn vue de la <b>F\xEAte des Couleurs</b>, je construis
+    un nouveau violon pour Lucina. Mais, pour pouvoir le faire, <b>j\u2019ai besoin
+    d\u2019un peu de bois</b>. Serait-il possible de t\u2019en emprunter un peu ?
+    Merci d\u2019avance.\r\nPoutre\r\n"
   sendedText:
   - "Travail ! Trop de travail ! Et j\u2019ai besoin de bois ! AAAAAAAH ! \u2026
     Toi ! Facteur ! J\u2019ai besoin de toi !"
   - "Non je ne veux pas que tu fasses mon travail ! J\u2019ai juste besoin que tu
-    livres cette lettre \xE0 Jack ! J\u2019ai besoin de bois !"
+    <b>livres cette lettre</b> \xE0 Jack ! J\u2019ai besoin de bois !"
   receivedText:
   - "Quel bon vent t\u2019am\xE8ne mon petiot ? Hmm ? Une lettre du petiot Poutre
     ? Laisse-moi voir\u2026\r\n"
-  - "Ah ! Je vois ! C\u2019est pour la petiote Lucina et son violon !"
+  - "Ah ! Je vois ! C\u2019est pour la petiote Lucina et son <b>violon</b> !"
   glansGain: 3
-  stampsGain: 0
+  stampGain: 0
   appearingCharacter: {fileID: 0}
   disappearingCharacter: {fileID: 0}

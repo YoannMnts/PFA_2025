@@ -18,28 +18,28 @@ MonoBehaviour:
   - {fileID: 11400000, guid: fd8df75db0be607499c382305e0be237, type: 2}
   senderName: Antonin
   text: "Salutation, mon cher ami,\r\nCela fait bien longtemps que nous ne nous sommes
-    pas revus. Je dois avouer que depuis que tu es parti \xE0 la retraite, le travail
-    n\u2019a plus la m\xEAme saveur qu\u2019avant. Qu\u2019il \xE9tait bon de pouvoir
-    te jouer mille et un tours. Tu le comprendras, je me languis du bon vieux temps,
-    lorsque l\u2019on \xE9tait jeune et insouciant. J\u2019esp\xE8re que le Festival
-    des Couleurs de cette ann\xE9e nous permettra de nous rapprocher \xE0 nouveau.\r\nTon
-    vieil ami, Antonin\r\n"
+    pas revus. Je dois avouer que depuis que tu es <b>parti \xE0 la retraite</b>,
+    le travail n\u2019a plus la m\xEAme saveur qu\u2019avant. Qu\u2019il \xE9tait
+    bon de pouvoir te jouer mille et un tours. Tu le comprendras, je me languis du
+    bon vieux temps, lorsque l\u2019on \xE9tait jeune et insouciant. J\u2019esp\xE8re
+    que le <b>Festival des Couleurs </b>de cette ann\xE9e nous permettra de nous
+    rapprocher \xE0 nouveau.\r\nTon vieil ami, Antonin\r\n"
   sendedText:
   - "La deuxi\xE8me est une lettre adress\xE9e \xE0 mon vieil ami, Fr\xE9d\xE9ric,
-    ancien conseiller immobilier, aujourd\u2019hui \xE0 la retraite."
+    ancien <b>conseiller immobilier</b>, aujourd\u2019hui \xE0 la <b>retraite</b>."
   receivedText:
   - "\u2026"
   - "\u2026"
   - "AAAAAAH ! Mais depuis quand es-tu l\xE0 ?! \xC7a t\u2019amuse de faire peur
-    \xE0 d\u2019honn\xEAte citoyen ?! Je te pr\xE9viens : je suis peut-\xEAtre vieux
-    mais pas, compl\xE8tement cass\xE9 !"
+    \xE0 un honn\xEAte citoyen ?! Je te pr\xE9viens : je suis peut-\xEAtre vieux,
+    mais pas compl\xE8tement cass\xE9 !"
   - CRACK !
-  - "A\xEFe ! Mon dos !"
+  - "<b>A\xEFe </b>! Mon dos !"
   - "Ah\u2026 Du courrier ? De la mairie, sans doute. Il faut dire que\u2026"
   - "Mais ? Cette lettre n\u2019est pas de la mairie ! Elle vient d\u2019Antonin
     !"
   - "Vite ! Br\xFBle-la ! Br\xFBle-la avec du feu !"
   glansGain: 3
-  stampsGain: 38
+  stampGain: 0
   appearingCharacter: {fileID: 0}
   disappearingCharacter: {fileID: 0}

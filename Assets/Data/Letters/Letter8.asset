@@ -17,15 +17,15 @@ MonoBehaviour:
   dependencies:
   - {fileID: 11400000, guid: d8bfa0af01484154e9996eea68f81069, type: 2}
   senderName: Elise
-  text: "Bonjour,\r\nC\u2019est avec grand plaisir que je vous confectionnerais un
-    g\xE2teau pour l\u2019anniversaire de Nelia. Je lui pr\xE9parerais son g\xE2teau
-    pr\xE9f\xE9r\xE9 : un g\xE2teau aux fraises ! Il sera pr\xEAt d\xE8s ce soir
-    ! Vous pourrez venir le chercher quand vous le souhaitez.\r\nA bient\xF4t dans
-    ma p\xE2tisserie !\r\nElise\r\n"
+  text: "Bonjour,\r\nC\u2019est avec grand plaisir que je vous confectionnerai un
+    <b>g\xE2teau pour l\u2019anniversaire de Nelia</b>. Je lui pr\xE9parerais son
+    g\xE2teau pr\xE9f\xE9r\xE9 : <b>un g\xE2teau aux fraises</b> ! Il sera pr\xEAt
+    d\xE8s ce soir ! Vous pourrez venir le chercher quand vous le souhaitez.\r\nA
+    bient\xF4t dans ma p\xE2tisserie !\r\nElise\r\n"
   sendedText:
   - "Bref, je m\u2019\xE9gare. Tu veux bien leur apporter ma r\xE9ponse ? Comme c\u2019est
-    cens\xE9 \xEAtre une surprise pour Nelia, il vaut mieux que tu d\xE9poses cette
-    lettre dans leur bo\xEEte aux lettres."
+    cens\xE9 \xEAtre une <b>surprise </b>pour Nelia, il vaut mieux que tu d\xE9poses
+    cette lettre dans leur <b>bo\xEEte aux lettres</b>."
   receivedText:
   - Livraison accomplie !
   glansGain: 2

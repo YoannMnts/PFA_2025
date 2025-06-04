@@ -25,17 +25,18 @@ MonoBehaviour:
     piti\xE9 d\u2019une pauvre loutre qui n\u2019a pas dormi depuis des ann\xE9es
     !\r\nCordialement,\r\nPoutre, une loutre en panique.\r\n"
   sendedText:
-  - "Tiens ! Vite ! Prends cette lettre et par piti\xE9 apporte l\xE0 au Capitaine
-    Hans ! Mes futures heures de sommeil et ma sant\xE9 mentale en d\xE9pendent !"
+  - "Tiens ! Vite ! <b>Prends cette lettre </b>et par piti\xE9 apporte l\xE0 au Capitaine
+    Hans ! <b>Mes futures heures de sommeil </b>et <b>ma sant\xE9 mentale </b>en
+    d\xE9pendent !"
   receivedText:
   - 'Soldat ? Une lettre pour moi ? Merci bien soldat !
 
 '
   - "Hmm\u2026 Il semblerait que Icare fasse encore des siennes\u2026"
   - "Un conseil, soldat, tu devrais te tenir \xE0 l\u2019\xE9cart de cette tortue.
-    Elle embarque toujours les braves citoyens dans ses id\xE9es farfelues."
+    Elle embarque toujours les braves citoyens dans ses <b>id\xE9es farfelues</b>."
   - "Et comme tu as pu le constater, Poutre en a fait les frais plus d\u2019une fois."
   glansGain: 4
-  stampsGain: 20
+  stampGain: 0
   appearingCharacter: {fileID: 0}
   disappearingCharacter: {fileID: 0}

@@ -18,11 +18,11 @@ MonoBehaviour:
   - {fileID: 11400000, guid: fd8df75db0be607499c382305e0be237, type: 2}
   senderName: Nelia
   text: "Bonjour Elise,\r\nMalheureusement, nous sommes tr\xE8s occup\xE9s par les
-    pr\xE9paratifs de la F\xEAte des Couleurs et nous ne pouvons pas venir te voir
-    directement. Nous t\u2019\xE9crivons donc pour savoir s\u2019il serait possible
-    de passer commande pour un g\xE2teau d\u2019anniversaire. Quelques jours apr\xE8s
-    la F\xEAte des Couleurs, ce sera l\u2019anniversaire de Nelia et nous aimerions
-    lui faire une petite surprise.\r\nLes parents de Nelia\r\n"
+    pr\xE9paratifs de la <b>F\xEAte des Couleurs </b>et nous ne pouvons pas venir
+    te voir directement. Nous t\u2019\xE9crivons donc pour savoir s\u2019il serait
+    possible de passer commande pour un g\xE2teau d\u2019anniversaire. Quelques jours
+    apr\xE8s la <b>F\xEAte des Couleurs</b>, ce sera <b>l\u2019anniversaire de Nelia</b>
+    et nous aimerions lui faire une <b>petite surprise</b>.\r\nLes parents de Nelia\r\n"
   sendedText:
   - "Dis ! Dis ! Dis ! Tu es un facteur, non ? Mes parents m\u2019ont confi\xE9 une
     lettre que je dois donner \xE0 Madame Elise. Tu peux lui donner s\u2019il te
@@ -34,9 +34,9 @@ MonoBehaviour:
   - "Oh ? Tu as une lettre pour moi ? Voyons voir\u2026"
   - "C\u2019est de la part des parents de Nelia ! "
   - "Tu ne le sais peut-\xEAtre pas mais ils travaillent \xE0 la mairie et ils ont
-    beaucoup de travail avec la F\xEAte des Couleurs qui approche ! Tu ne risques
-    donc pas de les croiser de sit\xF4t.\r\n"
+    beaucoup de travail avec la <b>F\xEAte des Couleurs </b>qui approche ! Tu ne
+    risques donc pas de les croiser de sit\xF4t.\r\n"
   glansGain: 4
-  stampsGain: 17
+  stampGain: 0
   appearingCharacter: {fileID: 0}
   disappearingCharacter: {fileID: 0}

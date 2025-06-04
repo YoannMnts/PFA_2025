@@ -19,14 +19,14 @@ MonoBehaviour:
   senderName: "Fr\xE9d\xE9ric"
   text: "Bonjour Capitaine Hans,\r\nJe vous fais part d\u2019une nouvelle urgente
     et inqui\xE9tante ! Icare m\u2019a envoy\xE9 un courrier afin que je le soutienne
-    dans son prochain projet qu\u2019il compte lancer durant la F\xEAte des Couleurs.\r\nNous
-    savons tous deux ce qu\u2019il s\u2019est pass\xE9 l\u2019ann\xE9e derni\xE8re
-    \xE0 cette m\xEAme p\xE9riode ! Son projet \"Nid de Tortue\" a bien failli devenir
-    \"Soupe de Tortue\", en entra\xEEnant le village de Verd\u2019Oyant dans ses
-    inepties ! Nous \xE9tions \xE0 peu de devoir annuler la F\xEAte !\r\nEncore une
-    fois, il pr\xE9voit d\u2019utiliser une quantit\xE9 importante de feux d\u2019artifices
-    ! Il faut l\u2019emp\xEAcher d\u2019agir pour que la F\xEAte des Couleurs se
-    passe sans encombre !\r\nCordialement,\r\nFr\xE9d\xE9ric\r\n"
+    dans son prochain projet qu\u2019il compte lancer durant la <b>F\xEAte des Couleurs</b>.\r\nNous
+    savons tous deux ce qu\u2019il s\u2019est pass\xE9 <b>l\u2019ann\xE9e derni\xE8re
+    </b>\xE0 cette m\xEAme p\xE9riode ! Son projet \"Nid de Tortue\" a bien failli
+    devenir \"Soupe de Tortue\", en entra\xEEnant le village de Verd\u2019Oyant dans
+    ses inepties ! Nous \xE9tions \xE0 peu de devoir annuler la F\xEAte !\r\nEncore
+    une fois, il pr\xE9voit d\u2019utiliser une quantit\xE9 importante de feux d\u2019artifices
+    ! Il faut l\u2019emp\xEAcher d\u2019agir pour que la <b>F\xEAte des Couleurs</b>
+    se passe sans encombre !\r\nCordialement,\r\nFr\xE9d\xE9ric\r\n"
   sendedText:
   - "Facteur ! Il faut alerter la police\u2026 Il faut faire appel \xE0 \u2026"
   - "Mais non pas \xE0 Rambouc ! Et c\u2019est qui ce Rambouc ?! Non, il faut faire

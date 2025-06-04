@@ -24,27 +24,24 @@ MonoBehaviour:
     l\u2019Histoire de Verd\u2019Oyant et la cr\xE9ation de la F\xEAte des Couleurs.
     Je suis vraiment emball\xE9e \xE0 l\u2019id\xE9e de te faire part de tout \xE7a.\r\nAmicalement,\r\nFlora\r\n"
   sendedText:
-  - 'O-oh ? B-bonjour ? E-est-ce que t-tu aimes les l-livres ?
+  - 'O-oh ? B-bonjour ? E-est-ce que t-tu aimes les <b>l-livres </b>?
 
 '
   - "M-ma petite bi-biblioth\xE8que en comporte b-beaucoup et elle va en avoir de
-    n-nou-nouveaux gr\xE2ce \xE0 l\u2019agrandissement qui est pr-pr\xE9vu"
-  - "M-ma petite bi-biblioth\xE8que en comporte b-D-dis-moi, es-tu int\xE9ress\xE9
-    par l\u2019histoire de Verd\u2019Oyant ? Si tu v-veux, tu p-peux emprunter des
-    livres ou mieux encore, je p-pourrai te l-le raconter moi-m\xEAme ! et elle va
-    en avoir de n-nou-nouveaux gr\xE2ce \xE0 l\u2019agrandissement qui est pr-pr\xE9vu."
-  - "La plupart des livres d\u2019antan ont \xE9t\xE9 perdus durant la Crise des
-    Pages Blanches. O-oh en comporte b-D-dis-moi, es-tu int\xE9ress\xE9 par l\u2019histoire
-    de Verd\u2019Oyant ? Si tu v-veux, tu p-peux emprunter des livres ou mieux encore,
-    je p-pourrai te l-le raconter moi-m\xEAme ! et elle va en avoir de n-nou-nouveaux
-    gr\xE2ce \xE0 l\u2019agrandissement qui est pr-pr\xE9vu."
+    n-nou-nouveaux gr\xE2ce \xE0 <b>l\u2019agrandissement qui est pr-pr\xE9vu</b>"
+  - "D-dis-moi, es-tu int\xE9ress\xE9 par l\u2019histoire de Verd\u2019Oyant ? Si
+    tu v-veux, tu p-peux emprunter des livres ou mieux encore, je p-pourrai te l-le
+    raconter moi-m\xEAme ! et elle va en avoir de n-nou-nouveaux gr\xE2ce \xE0 l\u2019agrandissement
+    qui est pr-pr\xE9vu."
+  - "La plupart des livres d\u2019antan ont \xE9t\xE9 perdus durant la <b>Crise des
+    Pages Blanches</b>."
   - "O-oops ! J-je suis d\xE9sol\xE9 ! Je me s-suis emport\xE9e ! J-J\u2019essayais
     de f-faire la c-conversation pour combattre m-ma timidit\xE9. C\u2019est M-marie-Chantal
     qui m-m\u2019a conseill\xE9 de f-faire \xE7a.\r\n"
-  - "P-pendant q-que \xE7a me tr-traverse l\u2019esprit, j\u2019ai u-une lettre p-pour
-    e-elle. P-peux-tu lui a-amener, s-s\u2019il te pla\xEEt ?"
-  - "P-pendant q-que \xE7a me tr-traverse l\u2019esprit, j\u2019ai u-une lettre p-pour
-    e-elle. P-peux-tu lui a-amener, s-s\u2019il te pla\xEEt ?"
+  - "P-pendant q-que \xE7a me tr-traverse l\u2019esprit, j\u2019ai u-une <b>lettre
+    </ b>p-pour e-elle. P-peux-tu lui a-amener, s-s\u2019il te pla\xEEt ?"
+  - "P-pendant q-que \xE7a me tr-traverse l\u2019esprit, j\u2019ai u-une <b>lettre
+    </b>p-pour e-elle. P-peux-tu lui a-amener, s-s\u2019il te pla\xEEt ?"
   receivedText:
   - "Facteur ! Pense \xE0 te reposer et \xE0 te d\xE9shydrater de temps en temps.
     Prendre soin de soi, c\u2019est important !"

@@ -17,18 +17,18 @@ MonoBehaviour:
   dependencies:
   - {fileID: 11400000, guid: 61087d274a00fe041a0c1cb6a0a24b56, type: 2}
   senderName: Captain Hans
-  text: "J\u2019ai le regret de t\u2019annoncer que tu es dor\xE9navant en \xE9tat
-    d\u2019arrestation ! Des nouvelles me sont parvenues et visiblement tu n\u2019as
+  text: "J\u2019ai le regret de t\u2019annoncer que tu es dor\xE9navant en <b>\xE9tat
+    d\u2019arrestation </b>! Des nouvelles me sont parvenues et visiblement tu n\u2019as
     pas tenu compte de ma mise en garde. Et il semblerait qu\u2019avoir utilis\xE9
     des feux d\u2019artifices l\u2019ann\xE9e derni\xE8re ne t\u2019a pas servi de
     le\xE7on !\r\nDois-je te rappeler, que les utiliser comme moyen d\u2019\xE9lan
     pour voler a failli non seulement te transformer en Steak de Tortue mais aussi
-    mettre feu au village, ruinant la F\xEAte des Couleurs.\r\nRespectueusement,\r\nCapitaine
+    mettre feu au village, ruinant la <b>F\xEAte des Couleurs</b>.\r\nRespectueusement,\r\nCapitaine
     Hans.\r\n"
   sendedText:
-  - "Soldat ! Il faut neutraliser le soldat Icare ! Prends cette lettre et apporte-la-lui
-    de ce pas ! Il a d\xE9j\xE0 \xE9t\xE9 averti, maintenant il est temps de s\xE9vir
-    !"
+  - "Soldat ! Il faut neutraliser le soldat Icare ! Prends cette <b>lettre </b>et
+    apporte-la-lui de ce pas ! Il a d\xE9j\xE0 \xE9t\xE9 averti, maintenant il est
+    temps de s\xE9vir !"
   receivedText:
   - "Te revoil\xE0 ! Allez ! Donne-moi la lettre de Fr\xE9d\xE9ric !"
   - "Mais ?! Cette lettre n\u2019est pas de Fr\xE9d\xE9ric ! Elle est du Capitaine

@@ -18,8 +18,8 @@ MonoBehaviour:
   - {fileID: 11400000, guid: ed61c1276d54a814a92c89bbb2d9e658, type: 2}
   senderName: Jack
   text: "Bonjour mon petiot,\r\nSans aucun probl\xE8me ! Tu peux prendre tout le
-    bois dont tu as besoin. Avec l\u2019arriv\xE9e de la F\xEAte des Couleurs, on
-    a eu un gros surplus de bois pour tout pr\xE9parer ! Fais-toi plaisir et sers-toi
+    bois dont tu as besoin. Avec l\u2019arriv\xE9e de la <b>F\xEAte des Couleurs</b>,
+    on a eu un gros surplus de bois pour tout pr\xE9parer ! Fais-toi plaisir et sers-toi
     !\r\nA plus mon petiot !\r\nJack\r\n"
   sendedText:
   - "Tiens mon petiot ! Donne cette lettre \xE0 Poutre ! \xC7a devrait le soulager
@@ -29,6 +29,6 @@ MonoBehaviour:
   - "\u2026 Ouf ! Heureusement qu\u2019il est l\xE0 ! Je vais pouvoir terminer la
     t\xE2che que Lucina m\u2019a confi\xE9e !"
   glansGain: 4
-  stampsGain: 12
+  stampGain: 0
   appearingCharacter: {fileID: 0}
   disappearingCharacter: {fileID: 0}

@@ -18,13 +18,13 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 379067b0cdc8d0d47b39b2c510749dc4, type: 2}
   senderName: "Fr\xE9d\xE9ric"
   text: "Mes sinc\xE8res salutations,\r\nComme \xE0 mon habitude, je vous tiens au
-    courant des diff\xE9rentes avanc\xE9es de la pr\xE9paration de la F\xEAte des
-    Couleurs. Les friandises et g\xE2teaux ont \xE9t\xE9 pr\xE9par\xE9s par notre
-    boulang\xE8re Elise..\r\nN\xE9anmoins, il reste encore beaucoup \xE0 faire. L\u2019aubergiste,
-    Larry, doit faire en sorte que nous ne manquons pas de nourriture pendant le
-    banquet. Nos diff\xE9rents artistes, Barbara, Duke et Lucina ne sont pas encore
-    pr\xEAts pour leur repr\xE9sentation.\r\nJe vous notifierai lorsque le reste
-    sera termin\xE9.\r\nRespectueusement,\r\nFr\xE9d\xE9ric\r\n"
+    courant des diff\xE9rentes avanc\xE9es de la pr\xE9paration de la <b>F\xEAte
+    des Couleurs</b>. Les friandises et g\xE2teaux ont \xE9t\xE9 pr\xE9par\xE9s par
+    notre boulang\xE8re Elise..\r\nN\xE9anmoins, il reste encore beaucoup \xE0 faire.
+    L\u2019aubergiste, Larry, doit faire en sorte que nous ne <b>manquons pas de
+    nourriture </b>pendant le banquet. Nos diff\xE9rents artistes, Barbara, Duke
+    et Lucina ne sont pas encore pr\xEAts pour leur repr\xE9sentation.\r\nJe vous
+    notifierai lorsque le reste sera termin\xE9.\r\nRespectueusement,\r\nFr\xE9d\xE9ric\r\n"
   sendedText:
   - "Je vois\u2026 Hmm\u2026 Bon, je vais devoir attendre et voir l\u2019\xE9volution.
     En attendant, facteur, veux-tu bien livrer cette lettre \xE0 la mairie ? Merci

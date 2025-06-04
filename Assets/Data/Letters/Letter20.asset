@@ -24,10 +24,10 @@ MonoBehaviour:
     vis mon r\xEAve : je suis entour\xE9 de livres divers et vari\xE9s !\r\nEt vous
     continuez toujours de m\u2019aider : que ce soit avec l\u2019agrandissement prochaine
     de ma biblioth\xE8que ou les voyages que vous m\u2019organisez dans diff\xE9rentes
-    villes. J\u2019ai donc pu ajouter des ouvrages, perdus lors de la Crise des Pages
-    Blanches, dans la collection de notre village. Il sera alors bient\xF4t possible
-    de red\xE9couvrir l\u2019Histoire compl\xE8te de Verd\u2019Oyant.\r\nJe n\u2019ai
-    vraiment pas les mots. Merci pour tout,\r\nFlora\r\n"
+    villes. J\u2019ai donc pu ajouter des ouvrages, perdus lors de la <b>Crise des
+    Pages Blanches</b>, dans la collection de notre village. Il sera alors bient\xF4t
+    possible de red\xE9couvrir <b>l\u2019Histoire compl\xE8te de Verd\u2019Oyant</b>.\r\nJe
+    n\u2019ai vraiment pas les mots. Merci pour tout,\r\nFlora\r\n"
   sendedText: []
   receivedText:
   - Mon jeune ami ? Que me vaut le plaisir de votre visite ?
