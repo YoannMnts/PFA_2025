@@ -39,7 +39,7 @@ MonoBehaviour:
   - "Hmm\u2026 Lui qui n\u2019a pas l\u2019habitude de faire appel \xE0 moi\u2026
     C\u2019est que \xE7a doit \xEAtre important"
   - "Mais ?! C\u2019est une blague ?! Encore ?!"
-  glansGain: 0
-  stampGain: 0
+  glansGain: 2
+  stampGain: 1
   appearingCharacter: {fileID: 0}
   disappearingCharacter: {fileID: 0}

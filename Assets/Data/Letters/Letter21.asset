@@ -52,7 +52,7 @@ MonoBehaviour:
   - "Mais non pas \xE0 <color=#D70000><b>Rambouc</b></color> ! Et c\u2019est qui
     ce <color=#D70000><b>Rambouc </b></color>?! Non, il faut faire appel au <color=#D70000><b>Capitaine
     Hans </b></color>!"
-  glansGain: 0
-  stampGain: 0
+  glansGain: 3
+  stampGain: 1
   appearingCharacter: {fileID: 0}
   disappearingCharacter: {fileID: 0}

@@ -45,7 +45,7 @@ MonoBehaviour:
   - "Stop ! Il faut que je me calme ! <color=#D70000><b>Flora</b></color> a dit qu\u2019elle
     m\u2019en dira plus lors de la f\xEAte !"
   - "\u2026 J\u2019esp\xE8re que je saurais \xEAtre patiente jusque-l\xE0 !"
-  glansGain: 0
-  stampGain: 0
+  glansGain: 2
+  stampGain: 1
   appearingCharacter: {fileID: 0}
   disappearingCharacter: {fileID: 0}

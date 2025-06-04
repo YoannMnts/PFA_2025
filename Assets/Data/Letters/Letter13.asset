@@ -44,7 +44,7 @@ MonoBehaviour:
   - "Incroyable ! Pour une fois, il sert \xE0 quelque chose ! Quelle chance ! "
   - "Je vais pouvoir \xE9tudier un sp\xE9cimen de roche spatiale directement ! Une
     vraie \xE9toile filante ! Merci pour ton service !"
-  glansGain: 5
-  stampGain: 0
+  glansGain: 3
+  stampGain: 1
   appearingCharacter: {fileID: 0}
   disappearingCharacter: {fileID: 0}

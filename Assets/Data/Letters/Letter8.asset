@@ -29,6 +29,6 @@ MonoBehaviour:
   receivedText:
   - Livraison accomplie !
   glansGain: 2
-  stampGain: 0
+  stampGain: 1
   appearingCharacter: {fileID: 0}
   disappearingCharacter: {fileID: 0}

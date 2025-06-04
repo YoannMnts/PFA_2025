@@ -38,7 +38,7 @@ MonoBehaviour:
     </b>!"
   - "Ce que j\u2019ai fait pour m\xE9riter un tel m\xE9contentement ? \u2026 C\u2019est
     de l\u2019histoire ancienne !\r\n"
-  glansGain: 5
-  stampGain: 0
+  glansGain: 4
+  stampGain: 1
   appearingCharacter: {fileID: 0}
   disappearingCharacter: {fileID: 0}

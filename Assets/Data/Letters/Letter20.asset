@@ -39,7 +39,7 @@ MonoBehaviour:
   - "Cette stupide enfant, elle devrait avoir un peu plus confiance en elle. Ce qu\u2019elle
     a r\xE9ussi, elle l\u2019a fait de ses propres mains. Je n\u2019ai fait que donner
     un petit coup de pouce"
-  glansGain: 0
-  stampGain: 0
+  glansGain: 4
+  stampGain: 1
   appearingCharacter: {fileID: 0}
   disappearingCharacter: {fileID: 0}

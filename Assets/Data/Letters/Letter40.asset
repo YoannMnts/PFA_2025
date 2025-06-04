@@ -40,7 +40,7 @@ MonoBehaviour:
     <color=#D70000><b>Barbara et l\u2019autre volatile sont tr\xE8s talentueux !
     M\xEAme sans d\u2019autres r\xE9p\xE9titions, je suis s\xFBr que ce sera g\xE9nial
     !"
-  glansGain: 0
-  stampGain: 0
+  glansGain: 2
+  stampGain: 1
   appearingCharacter: {fileID: 0}
   disappearingCharacter: {fileID: 0}

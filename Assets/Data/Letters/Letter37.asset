@@ -47,7 +47,7 @@ MonoBehaviour:
   - "\u2026"
   - "Je m\u2019en doutais ! Encore ! Ce sale petit\u2026 <b>Goujat </b>!"
   - Comment ose-t-il me faire la <b>morale</b>, non <b>nous </b>faire la morale ?!
-  glansGain: 0
-  stampGain: 0
+  glansGain: 3
+  stampGain: 1
   appearingCharacter: {fileID: 0}
   disappearingCharacter: {fileID: 0}

@@ -41,7 +41,7 @@ MonoBehaviour:
     Couleurs </b>!"
   receivedText:
   - Livraison accomplie !
-  glansGain: 0
-  stampGain: 0
+  glansGain: 2
+  stampGain: 1
   appearingCharacter: {fileID: 0}
   disappearingCharacter: {fileID: 0}

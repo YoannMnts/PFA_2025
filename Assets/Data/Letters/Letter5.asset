@@ -29,6 +29,6 @@ MonoBehaviour:
   - "\u2026 Ouf ! Heureusement qu\u2019il est l\xE0 ! Je vais pouvoir terminer la
     t\xE2che que <color=#D70000><b>Lucina</b></color> m\u2019a confi\xE9e !"
   glansGain: 4
-  stampGain: 0
+  stampGain: 1
   appearingCharacter: {fileID: 0}
   disappearingCharacter: {fileID: 0}

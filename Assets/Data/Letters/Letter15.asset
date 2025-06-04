@@ -40,6 +40,6 @@ MonoBehaviour:
     !"
   - "Vite ! Br\xFBle-la ! Br\xFBle-la avec du feu !"
   glansGain: 3
-  stampGain: 0
+  stampGain: 1
   appearingCharacter: {fileID: 0}
   disappearingCharacter: {fileID: 0}

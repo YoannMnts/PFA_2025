@@ -42,7 +42,7 @@ MonoBehaviour:
   - Une lettre de <color=#D70000><b>Larry</b></color>, ?
   - ...
   - "Les marchandises ! Il n\u2019est pas encore au courant !"
-  glansGain: 0
-  stampGain: 0
+  glansGain: 3
+  stampGain: 1
   appearingCharacter: {fileID: 0}
   disappearingCharacter: {fileID: 0}

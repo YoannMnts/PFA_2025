@@ -39,7 +39,7 @@ MonoBehaviour:
     aux lettres</b>."
   receivedText:
   - Livraison accomplie !
-  glansGain: 4
-  stampGain: 0
+  glansGain: 2
+  stampGain: 1
   appearingCharacter: {fileID: 11400000, guid: e12fe3b1bd0924141abf9f3f8ba990c5, type: 2}
   disappearingCharacter: {fileID: 0}

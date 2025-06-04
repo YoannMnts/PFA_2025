@@ -36,7 +36,7 @@ MonoBehaviour:
   - ...
   - "Fabuleux ! Quel travail et quelle bont\xE9 ! Je pense que je ne pourrais jamais
     les remercier assez !"
-  glansGain: 4
-  stampGain: 0
+  glansGain: 2
+  stampGain: 1
   appearingCharacter: {fileID: 0}
   disappearingCharacter: {fileID: 0}

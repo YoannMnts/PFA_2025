@@ -42,7 +42,7 @@ MonoBehaviour:
   - "Et je\u2026 Oh Evidemment, une lettre\u2026 ? Mon ami facteur ? Pourquoi me
     chercher \xE0 cette heure ?"
   - "\u2026"
-  glansGain: 0
-  stampGain: 0
+  glansGain: 2
+  stampGain: 1
   appearingCharacter: {fileID: 0}
   disappearingCharacter: {fileID: 0}

@@ -32,8 +32,8 @@ MonoBehaviour:
     En attendant, facteur, veux-tu bien livrer cette lettre \xE0 la mairie ? Merci
     bien"
   receivedText:
-  - "Lettre livr\xE9e !"
-  glansGain: 0
-  stampGain: 0
+  - Livraison accomplie !
+  glansGain: 2
+  stampGain: 1
   appearingCharacter: {fileID: 0}
   disappearingCharacter: {fileID: 0}

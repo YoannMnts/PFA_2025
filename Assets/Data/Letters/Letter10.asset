@@ -39,7 +39,7 @@ MonoBehaviour:
     Elle embarque toujours les braves citoyens dans ses <b>id\xE9es farfelues</b>."
   - "Et comme tu as pu le constater, <color=#D70000><b>Poutre</b></color> en a fait
     les frais plus d\u2019une fois."
-  glansGain: 4
-  stampGain: 0
+  glansGain: 2
+  stampGain: 1
   appearingCharacter: {fileID: 0}
   disappearingCharacter: {fileID: 0}

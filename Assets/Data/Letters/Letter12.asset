@@ -32,7 +32,7 @@ MonoBehaviour:
     Hans</b></color> a fait quelque chose !"
   - "Par toutes les heures de sommeil que j\u2019ai manqu\xE9 ! Victoire ! Il ne
     va pas m\u2019entra\xEEner dans ses folies \xE0 nouveau ! Merci Facteur !"
-  glansGain: 4
-  stampGain: 0
+  glansGain: 2
+  stampGain: 1
   appearingCharacter: {fileID: 0}
   disappearingCharacter: {fileID: 0}

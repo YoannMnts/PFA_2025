@@ -54,7 +54,7 @@ MonoBehaviour:
   - "Facteur ! C\u2019est incroyable ! Elle a r\xE9ussi ! On va enfin pouvoir conna\xEEtre
     l\u2019Histoire de Verd\u2019Oyant ! Notre beau village !"
   - "Oh l\xE0 l\xE0 ! Il faut absolument qu\u2019elle m\u2019en dise plus !"
-  glansGain: 2
-  stampGain: 0
+  glansGain: 3
+  stampGain: 1
   appearingCharacter: {fileID: 0}
   disappearingCharacter: {fileID: 0}

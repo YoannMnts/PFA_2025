@@ -32,6 +32,6 @@ MonoBehaviour:
   - "Cela faisait vraiment longtemps que je n\u2019avais pas ri comme \xE7a !"
   - Ha ha ha ha ha ! Je lui enverrai une autre de mes lettres assez rapidement !
   glansGain: 2
-  stampGain: 0
+  stampGain: 1
   appearingCharacter: {fileID: 0}
   disappearingCharacter: {fileID: 0}

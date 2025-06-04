@@ -56,7 +56,7 @@ MonoBehaviour:
     de chasseurs de tr\xE9sors </b>!"
   - "Avec un peu de chance, je pourrais devenir c\xE9l\xE8bre ! <color=#D70000><b>Martin</b></color>,
     le <b>grand p\xEAcheur de tr\xE9sor </b>! \xC7a sonne plut\xF4t bien !"
-  glansGain: 0
-  stampGain: 0
+  glansGain: 3
+  stampGain: 1
   appearingCharacter: {fileID: 0}
   disappearingCharacter: {fileID: 0}

@@ -33,7 +33,7 @@ MonoBehaviour:
   receivedText:
   - "Une lettre pour moi ? Mais, de qui est-ce\u2026\r\n"
   - OH NON ! NON ! .... OH NON ! PAS LUI, PAS ENCORE ! PAR PITIE, NON !
-  glansGain: 0
-  stampGain: 0
+  glansGain: 3
+  stampGain: 1
   appearingCharacter: {fileID: 0}
   disappearingCharacter: {fileID: 0}

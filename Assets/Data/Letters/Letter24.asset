@@ -36,7 +36,7 @@ MonoBehaviour:
     est du <color=#D70000><b>Capitaine Hans</b></color> !"
   - "Non ! Non ! \xC7a ne peut pas se terminer comme \xE7a ! Trahison ! Disgr\xE2ce
     !"
-  glansGain: 0
-  stampGain: 0
+  glansGain: 2
+  stampGain: 1
   appearingCharacter: {fileID: 0}
   disappearingCharacter: {fileID: 11400000, guid: ac853fc7cde38634b826552d02fa0800, type: 2}

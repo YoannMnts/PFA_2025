@@ -47,7 +47,7 @@ MonoBehaviour:
   - "Comme c\u2019est adorable, il n\u2019a pas chang\xE9 depuis qu\u2019il est petit.
     Bien qu\u2019il soit d\xE9bord\xE9 de travail, il trouve toujours un peu de temps
     pour s\u2019occuper de sa s\u0153ur"
-  glansGain: 0
-  stampGain: 0
+  glansGain: 3
+  stampGain: 1
   appearingCharacter: {fileID: 0}
   disappearingCharacter: {fileID: 0}

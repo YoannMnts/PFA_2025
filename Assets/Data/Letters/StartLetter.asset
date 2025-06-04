@@ -49,7 +49,7 @@ MonoBehaviour:
   - "Ah ! Tu m\u2019apportes une lettre du Capitaine Hans ?! Hmm\u2026 Qu\u2019est-ce
     qu\u2019il peut bien vouloir ?!\r\n"
   - "Merci bien mon petiot ! Tiens prends \xE7a en guise de <b>remerciement </b>!"
-  glansGain: 1
+  glansGain: 2
   stampGain: 0
   appearingCharacter: {fileID: 11400000, guid: a8e02d414e45cc34a93975248246175f, type: 2}
   disappearingCharacter: {fileID: 11400000, guid: 50c77299b9eff3b4bb1c63aa7f2553b9, type: 2}
