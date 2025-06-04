@@ -17,13 +17,14 @@ MonoBehaviour:
   dependencies:
   - {fileID: 11400000, guid: d6b5f7c1876fdbb4697da2a926801e65, type: 2}
   senderName: Lorie
-  text: "Bonjour Poutre,\r\nAvec grand plaisir, je m\u2019occuperais de confectionner
-    un nouveau maillot de bain pour Papoutre ! Cela ne devrait pas me poser de probl\xE8me
-    ni trop de temps. Apr\xE8s tout, toutes les commandes et pr\xE9parations en vue
-    de la F\xEAte des Couleurs sont termin\xE9es de mon c\xF4t\xE9. Je vais donc
-    pouvoir me consacrer enti\xE8rement \xE0 la cr\xE9ation de son maillot de bain.
-    Ne t\u2019inqui\xE8te pas, je ferai en sorte que ce soit le meilleur qui soit
-    ! Ta commande sera pr\xEAte demain.\r\nPasse une bonne journ\xE9e,\r\nLorie\r\n"
+  text: "Bonjour <color=#D70000><b>Poutre</b></color>,\r\nAvec grand plaisir, je
+    m\u2019occuperais de confectionner un <b>nouveau maillot</b> de bain pour <color=#D70000><b>Papoutre</b></color>
+    ! Cela ne devrait pas me poser de probl\xE8me ni me prendre trop de temps. Apr\xE8s
+    tout, toutes les commandes et pr\xE9parations en vue de la F\xEAte des Couleurs
+    sont termin\xE9es de mon c\xF4t\xE9. Je vais donc pouvoir me consacrer enti\xE8rement
+    \xE0 la cr\xE9ation de son maillot de bain. Ne t\u2019inqui\xE8te pas, je ferai
+    en sorte que ce soit le meilleur qui soit ! Ta commande sera pr\xEAte demain.\r\nPasse
+    une bonne journ\xE9e,\r\n<color=#D70000><b>Lorie</b></color>\r\n"
   sendedText:
   - "Tr\xE8s bien, je vais pr\xE9parer sa commande de ce pas !"
   receivedText:
@@ -33,9 +34,9 @@ MonoBehaviour:
   - "Comme tu peux le constater, j\u2019ai encore du travail !"
   - Et ma pause ?
   - "Tout \xE0 l\u2019heure, c\u2019\xE9tait exceptionnel, \xE7a n\u2019arrive qu\u2019une
-    fois tous les trois ans environ"
+    fois tous les <b>trois ans </b>environ"
   - "Bref, on n\u2019est pas l\xE0 pour parler de ma vie ! J\u2019imagine que si
-    tu es l\xE0 c\u2019est parce que tu as une r\xE9ponse de Lorie."
+    tu es l\xE0 c\u2019est parce que tu as une r\xE9ponse de <color=#D70000><b>Lorie</b></color>."
   - "Je le savais ! Voyons voir\u2026"
   - "\u2026"
   glansGain: 0

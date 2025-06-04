@@ -17,18 +17,20 @@ MonoBehaviour:
   dependencies:
   - {fileID: 11400000, guid: c84573aeadef636479a5aaa4fc34ba5f, type: 2}
   senderName: Captain Hans
-  text: "Bonjour citoyen Icare,\r\nIl semblerait que tu recommences tes folies et
-    que tu tentes non seulement d\u2019inclure le soldat Poutre mais aussi notre
-    nouvelle recrue. Citoyen Icare, je me dois te mettre en garde et qu\u2019une
+  text: "Bonjour citoyen <color=#D70000><b>Icare</b></color>,\r\nIl semblerait que
+    tu recommences tes folies et que tu tentes non seulement d\u2019inclure le soldat
+    <color=#D70000><b>Poutre</b></color> mais aussi notre nouvelle recrue. Citoyen
+    <color=#D70000><b>Icare</b></color>, je me dois te mettre en garde et qu\u2019une
     quelconque autre plainte venant d\u2019un autre brave citoyen me verra dans l\u2019obligation
-    de t\u2019appr\xE9hender. Pour l\u2019heure, seuls <b>tes plans te seront confisqu\xE9s</b>.\r\nRespectueusement,\r\nCapitaine
-    Hans\r\n"
+    de t\u2019appr\xE9hender. Pour l\u2019heure, seuls <b>tes plans te seront confisqu\xE9s</b>.\r\nRespectueusement,\r\n<color=#D70000><b>Capitaine
+    Hans</b></color>\r\n"
   sendedText:
   - "Tiens, soldat, d\xE9livre cette lettre \xE0 Icare ! C\u2019est une <b>mise en
     garde</b>, il n\u2019a pas int\xE9r\xEAt \xE0 recommencer ses b\xEAtises !"
   receivedText:
   - "Te revoil\xE0 ! J\u2019imagine que tu m\u2019apportes de bonnes nouvelles !"
-  - "Mais cette lettre n\u2019est pas de Poutre mais du Capitaine Hans !"
+  - "Mais cette lettre n\u2019est pas de <color=#D70000><b>Poutre</b></color> mais
+    du <color=#D70000><b>Capitaine Hans </b></color>!"
   - "Comment il veut que j\u2019arr\xEAte mon g\xE9nie ?! Confisquer mes <b>merveilleux
     plans </b>?!"
   - "\xC7a ne m\u2019\xE9tonne pas, venant de quelqu\u2019un avec une cervelle de

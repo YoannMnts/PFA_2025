@@ -18,7 +18,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 830867d8243ad1d4bb8070d956381b71, type: 2}
   senderName: Frederic
   text: "Bonjour, fieff\xE9 faquin,\r\n\u2026\r\n\u2026\r\nD\xE9gage de mon courrier
-    !\r\nAvec aigreur,\r\nFr\xE9d\xE9ric\r\n"
+    !\r\nAvec aigreur,\r\n<color=#D70000><b>Fr\xE9d\xE9ric</b></color>\r\n"
   sendedText:
   - "Je vais lui dire ce que je pense \xE0 ce fieff\xE9 faquin !"
   - Donne-lui cette <b>lettre </b>!

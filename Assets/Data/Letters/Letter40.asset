@@ -17,27 +17,29 @@ MonoBehaviour:
   dependencies:
   - {fileID: 11400000, guid: be7ce70ab8c783f4b9e0fd156a0627a8, type: 2}
   senderName: Lucina
-  text: "Bonjour Fr\xE9d\xE9ric,\r\nJe suppose que Duke, comme \xE0 son habitude,
-    ne t\u2019a pas tenu au courant des progr\xE8s de la com\xE9die musicale. Permets-moi
-    donc de t\u2019\xE9clairer. Pendant des jours durant, nous avons r\xE9p\xE9t\xE9.
-    La derni\xE8re en date, fut le jour d\u2019avant. Je peux te dire avec certitude
-    que nous sommes pr\xEAts !\r\nAssur\xE9ment, nous continuerons \xE0 faire d\u2019autres
-    s\xE9ances de r\xE9p\xE9tition afin de ne rien perdre de nos entra\xEEnements
-    ! Cependant, nous n\u2019accepterons pas les s\xE9ances \xE0 rallonge de ce satan\xE9
-    hibou et de son fichu orgueil ! Il nous \xE9puisera avant m\xEAme que nous n\u2019ayons
-    commenc\xE9 !\r\nRespectueusement,\r\nLucina \r\n"
+  text: "Bonjour <color=#D70000><b>Fr\xE9d\xE9ric</b></color>,\r\nJe suppose que
+    <color=#D70000><b>Duke, comme \xE0 son habitude, ne t\u2019a pas tenu au courant
+    des progr\xE8s de la <b>com\xE9die musicale</b>. Permets-moi donc de t\u2019\xE9clairer.
+    Pendant des jours durant, nous avons r\xE9p\xE9t\xE9. La derni\xE8re en date,
+    fut le jour d\u2019avant. Je peux te dire avec certitude que nous sommes <b>pr\xEAts
+    </b>!\r\nAssur\xE9ment, nous continuerons \xE0 faire d\u2019autres s\xE9ances
+    de r\xE9p\xE9tition afin de ne rien perdre de nos entra\xEEnements ! Cependant,
+    nous n\u2019accepterons pas les s\xE9ances \xE0 rallonge de ce <b>satan\xE9 hibou
+    </b>et de son fichu orgueil ! Il nous \xE9puisera avant m\xEAme que nous n\u2019ayons
+    commenc\xE9 !\r\nRespectueusement,\r\n<color=#D70000><b>Lucina </b></color>\r\n"
   sendedText: []
   receivedText:
   - "AAAAAH ! Mais \xE7a suffit \xE0 la fin ! Sale petit gredin ! Je commence \xE0
     en avoir assez ! Et-"
   - "Une lettre ? Tu ne pouvais pas le dire plus t\xF4t ?"
   - "\u2026"
-  - "Enfin ! Des nouvelles de la com\xE9die musicale que nos artistes pr\xE9parent
-    ! Heureusement que Lucina est l\xE0 ! Duke, cens\xE9 mener le projet n\u2019a
-    jamais donn\xE9 l\u2019ombre d\u2019une nouvelle !"
-  - "Et elle n\u2019a pas \xE0 s\u2019inqui\xE9ter ! Lucina, Barbara et l\u2019autre
-    volatile sont tr\xE8s talentueux ! M\xEAme sans d\u2019autres r\xE9p\xE9titions,
-    je suis s\xFBr que ce sera g\xE9nial !"
+  - "Enfin ! Des nouvelles de la <b>com\xE9die musicale </b>que nos artistes pr\xE9parent
+    ! Heureusement que <color=#D70000><b>Lucina est l\xE0 ! Duke, cens\xE9 mener
+    le projet n\u2019a jamais donn\xE9 l\u2019ombre d\u2019une nouvelle !"
+  - "Et elle n\u2019a <b>pas \xE0 s\u2019inqui\xE9ter </b>! <color=#D70000><b>Lucina,
+    <color=#D70000><b>Barbara et l\u2019autre volatile sont tr\xE8s talentueux !
+    M\xEAme sans d\u2019autres r\xE9p\xE9titions, je suis s\xFBr que ce sera g\xE9nial
+    !"
   glansGain: 0
   stampGain: 0
   appearingCharacter: {fileID: 0}

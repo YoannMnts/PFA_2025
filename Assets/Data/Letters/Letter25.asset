@@ -18,31 +18,33 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 8282d2008358be548bbb0a37532a5953, type: 2}
   senderName: A.P
   text: "Bien le bonjour, ch\xE8re fleuriste,\r\nMa noble personne est en pr\xE9paration
-    d\u2019une surprise incroyable pour le Capitaine Hans. J\u2019aimerai que vous
-    en fassiez partie ! Votre r\xF4le est tr\xE8s simple : livrer un beau <b>bouquet
-    garni </b>au poste du Capitaine Hans. Je suis s\xFBre que comme moi vous \xEAtes
-    reconnaissante du travail que fait notre brave Capitaine et j\u2019esp\xE8re
-    que vous contribuerez !\r\nN\u2019oubliez pas \xE9galement de v\xE9rifier en
-    dessous de votre premier pot de fleurs. Une autre lettre sign\xE9e par ma grande
-    personne doit \xEAtre remise au facteur pour qu\u2019il termine son r\xF4le.\r\nA.P\r\n"
+    d\u2019une surprise incroyable pour le <color=#D70000><b>Capitaine Hans</b></color>,.
+    J\u2019aimerai que vous en fassiez partie ! Votre r\xF4le est tr\xE8s simple
+    : livrer un beau <b>bouquet garni </b>au poste du <color=#D70000><b>Capitaine
+    Hans</b></color>,. Je suis s\xFBre que comme moi vous \xEAtes reconnaissante
+    du travail que fait notre brave Capitaine et j\u2019esp\xE8re que vous contribuerez
+    !\r\nN\u2019oubliez pas \xE9galement de v\xE9rifier en dessous de votre premier
+    pot de fleurs. Une autre lettre sign\xE9e par ma grande personne doit \xEAtre
+    remise au facteur pour qu\u2019il termine son r\xF4le.\r\n<color=#D70000><b>A.P</b></color>,\r\n"
   sendedText:
   - "Et il y a un petit mot pour moi. Il est \xE9crit : \"Ohohoho ! Facteur, ton
     r\xF4le continue et cette fois, tu dois d\xE9livrer cette lettre \xE0 la magnifique
-    Marie-Chantal !\""
+    <color=#D70000><b>Marie-Chantal</b></color> !\""
   - "Bonne chance, facteur ! Et n\u2019oublie pas la lettre !"
   receivedText:
   - "Youplahou ! Facteur, tu as besoin d\u2019un coup de main ?"
-  - "Ah ! Tu m\u2019apportes une lettre ! Elle est de\u2026 de\u2026 A.P ?"
+  - "Ah ! Tu m\u2019apportes une lettre ! Elle est de\u2026 de\u2026 <color=#D70000><b>A.P</b></color>
+    ?"
   - "C\u2019est marrant, \xE7a me fait penser \xE0 quelqu\u2019un\u2026 Mais je n\u2019arrive
     pas \xE0 me souvenir de <b>qui</b>..."
   - "Bref ! De ce que je vois c\u2019est une commande que je dois ensuite livrer
-    au Capitaine Hans ! Et c\u2019est pour une <b>surprise </b>!"
+    au <color=#D70000><b>Capitaine Hans</b></color> ! Et c\u2019est pour une <b>surprise
+    </b>!"
   - "G\xE9nial ! J\u2019adore les surprises ! Je m\u2019occupe de la commande tout
     de suite !"
   - "Oh ! Et je dois \xE9galement te donner une autre lettre !"
   - "Alors\u2026 D\u2019apr\xE8s ce qui est \xE9crit, je suis cens\xE9e trouver une
     lettre sous ce pot</b>..."
-  - 
   glansGain: 0
   stampGain: 0
   appearingCharacter: {fileID: 0}

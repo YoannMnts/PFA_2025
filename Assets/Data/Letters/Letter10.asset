@@ -17,25 +17,28 @@ MonoBehaviour:
   dependencies:
   - {fileID: 11400000, guid: dfb2efba82d7b3d40810c97c81cebb58, type: 2}
   senderName: Poutre
-  text: "Salutations Capitaine Hans,\r\nPour l\u2019amour de tout ce qui existe,
-    par piti\xE9, fa\xEEtes cesser la folie d\u2019Icare ! Je n\u2019en peux plus
-    ! Je viens ENCORE de recevoir une de ses lettres ! Il a ENCORE un plan ! Il va
-    ENCORE utiliser des feux d\u2019artifices ! Vous savez tr\xE8s bien ce qu\u2019il
-    s\u2019est pass\xE9 la derni\xE8re fois ! Je ne veux pas revivre \xE7a ! Ayez
-    piti\xE9 d\u2019une pauvre loutre qui n\u2019a pas dormi depuis des ann\xE9es
-    !\r\nCordialement,\r\nPoutre, une loutre en panique.\r\n"
+  text: "Salutations <color=#D70000><b>Capitaine Hans</b></color>,\r\nPour l\u2019amour
+    de tout ce qui existe, par piti\xE9, fa\xEEtes cesser la folie d\u2019<color=#D70000><b>Icare</b></color>
+    ! Je n\u2019en peux plus ! Je viens ENCORE de recevoir une de ses lettres ! Il
+    a ENCORE un plan ! Il va ENCORE utiliser des feux d\u2019artifices ! Vous savez
+    tr\xE8s bien ce qu\u2019il s\u2019est pass\xE9 la derni\xE8re fois ! Je ne veux
+    pas revivre \xE7a ! Ayez piti\xE9 d\u2019une pauvre loutre qui n\u2019a pas dormi
+    depuis des ann\xE9es !\r\nCordialement,\r\n<color=#D70000><b>Poutre</b></color>,
+    une loutre en panique.\r\n"
   sendedText:
-  - "Tiens ! Vite ! <b>Prends cette lettre </b>et par piti\xE9 apporte l\xE0 au Capitaine
-    Hans ! <b>Mes futures heures de sommeil </b>et <b>ma sant\xE9 mentale </b>en
-    d\xE9pendent !"
+  - "Tiens ! Vite ! <b>Prends cette lettre </b>et par piti\xE9 apporte l\xE0 au <color=#D70000><b>Capitaine
+    Hans</b></color> ! <b>Mes futures heures de sommeil </b>et <b>ma sant\xE9 mentale
+    </b>en d\xE9pendent !"
   receivedText:
   - 'Soldat ? Une lettre pour moi ? Merci bien soldat !
 
 '
-  - "Hmm\u2026 Il semblerait que Icare fasse encore des siennes\u2026"
+  - "Hmm\u2026 Il semblerait que <color=#D70000><b>Icare</b></color> fasse encore
+    des siennes\u2026"
   - "Un conseil, soldat, tu devrais te tenir \xE0 l\u2019\xE9cart de cette tortue.
     Elle embarque toujours les braves citoyens dans ses <b>id\xE9es farfelues</b>."
-  - "Et comme tu as pu le constater, Poutre en a fait les frais plus d\u2019une fois."
+  - "Et comme tu as pu le constater, <color=#D70000><b>Poutre</b></color> en a fait
+    les frais plus d\u2019une fois."
   glansGain: 4
   stampGain: 0
   appearingCharacter: {fileID: 0}

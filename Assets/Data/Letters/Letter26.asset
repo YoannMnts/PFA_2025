@@ -17,19 +17,21 @@ MonoBehaviour:
   dependencies:
   - {fileID: 11400000, guid: 2f785fbd8ed659d4aab62d1bf454e210, type: 2}
   senderName: A.P
-  text: "Salutations Capitaine Hans !\r\nC\u2019est moi ! La grande ! L\u2019unique
-    ! Ariane Parpin !\r\nAppr\xE9ciez-vous ma <b>petite surprise</b>, cher Capitaine
-    ? Il s\u2019agit d\u2019un petit entracte avant le grand spectacle que je compte
-    livrer ! Et quelle meilleure sc\xE8ne pour mon prochain crime que durant la F\xEAte
-    des Couleurs ! Apr\xE8s tout, bien que voleuse, je reste une artiste. Mon crime
-    est un art ! Et vous, Capitaine Hans est l\u2019acteur qu\u2019il me manque pour
-    que tout soit parfait !\r\n<b>Attrapez-moi si vous le pouvez</b>, Monsieur Hans\u2026\r\nA.P\r\n"
+  text: "Salutations <color=#D70000><b>Capitaine Hans</b></color>, !\r\nC\u2019est
+    moi ! La grande ! L\u2019unique ! <color=#D70000><b>Ariane Parpin</b></color>,
+    !\r\nAppr\xE9ciez-vous ma <b>petite surprise</b>, cher Capitaine ? Il s\u2019agit
+    d\u2019un petit entracte avant le grand spectacle que je compte livrer ! Et quelle
+    meilleure sc\xE8ne pour mon prochain crime que durant la F\xEAte des Couleurs
+    ! Apr\xE8s tout, bien que voleuse, je reste une artiste. Mon crime est un art
+    ! Et vous, Capitaine Hans est l\u2019acteur qu\u2019il me manque pour que tout
+    soit parfait !\r\n<b>Attrapez-moi si vous le pouvez</b>, Monsieur <color=#D70000><b>Hans</b></color>,\u2026\r\n<color=#D70000><b>A.P</b></color>,\r\n"
   sendedText:
   - "Et il y a une petite note pour moi avec la lettre ! C\u2019est un message que
     je dois te transmettre !"
   - "\"Ohohohoho ! Tu travailles durement, ami facteur ! Maintenant ta derni\xE8re
     t\xE2che est de livrer une ultime lettre \xE0 la star de ma prochaine sc\xE8ne.
-    Je parle bien \xE9videmment du Capitaine Hans !\""
+    Je parle bien \xE9videmment du <color=#D70000><b>Capitaine Hans</b></color>,
+    !\""
   - "Tiens ! Voil\xE0 la lettre ! D\xE9p\xEAche-toi d\u2019aller le voir !"
   receivedText:
   - "Hmm\u2026 Oh ? C\u2019est toi, soldat ? Excuse-moi, j\u2019\xE9tais en pleine
@@ -40,8 +42,9 @@ MonoBehaviour:
     <b>allergique</b> aux fleurs !"
   - Et en plus- Ah ! Tu as du courrier pour moi ? Merci bien, soldat !
   - "\u2026"
-  - "J\u2019aurais d\xFB m\u2019en douter ! A.P ! Ces initiales ! \xC7a ne peut \xEAtre
-    qu\u2019elle ! Ariane Parpin"
+  - "J\u2019aurais d\xFB m\u2019en douter ! <color=#D70000><b>A.P</b></color>, !
+    Ces initiales ! \xC7a ne peut \xEAtre qu\u2019elle ! <color=#D70000><b>Ariane
+    Parpin</b></color>,"
   - "Cette satan\xE9e pie me glisse entre les plumes depuis des mois ! Mais je l\u2019attraperai
     un jour !"
   - "Et elle compte faire son crime pendant la <b>F\xEAte des Couleurs</b> ! Foi

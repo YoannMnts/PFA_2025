@@ -17,29 +17,31 @@ MonoBehaviour:
   dependencies:
   - {fileID: 11400000, guid: ed4039af06327e746bfb2bdd9d5b30f1, type: 2}
   senderName: Anotnin
-  text: "Bonjour, Jack,\r\nJe n\u2019ai malheureusement pas de temps \xE0 perdre
-    en \xE9locution et autre formulation, tu me pardonneras donc d\u2019aller droit
-    au but. La biblioth\xE8que de Flora a de gros probl\xE8mes ! Elle a trouv\xE9
-    dans sa collection de livres des mangeurs d\u2019encres ! Si l\u2019on ne fait
-    rien rapidement, la Crise des Pages Blanches se r\xE9p\xE9tera et nous perdrons
-    tous les livres de Verd\u2019Oyant en plus de ceux que Flora a mis tant d\u2019effort
-    \xE0 r\xE9cup\xE9rer.\r\nBien que trop tard, par le pass\xE9, ce fut ton grand-p\xE8re
-    qui a d\xE9couvert ces petites chenilles blanches. Il avait r\xE9ussi \xE0 mettre
-    au point un moyen de nous en d\xE9barrasser. Tu dois donc sans doute savoir comment
-    le faire aussi ! D\xE8s que tu as ma lettre, rejoint-moi imm\xE9diatement chez
-    Flora !\r\nAvec pression et gratitude,\r\nAntonin\r\n"
+  text: "Bonjour, <color=#D70000><b>Jack,\r\nJe n\u2019ai malheureusement pas de
+    temps \xE0 perdre en \xE9locution et autre formulation, tu me pardonneras donc
+    d\u2019aller droit au but. La <b>biblioth\xE8que </b>de <color=#D70000><b>Flora
+    a de <b>gros probl\xE8mes </b>! Elle a trouv\xE9 dans sa collection de livres
+    des <b>mangeurs d\u2019encres </b>! Si l\u2019on ne fait rien rapidement, la
+    <b>Crise des Pages Blanches </b>se r\xE9p\xE9tera et nous perdrons tous les livres
+    de Verd\u2019Oyant en plus de ceux que Flora a mis tant d\u2019effort \xE0 r\xE9cup\xE9rer.\r\nBien
+    que trop tard, par le pass\xE9, ce fut ton grand-p\xE8re qui a d\xE9couvert ces
+    petites chenilles blanches. Il avait r\xE9ussi \xE0 mettre au point un moyen
+    de nous en d\xE9barrasser. Tu dois donc sans doute savoir comment le faire aussi
+    ! D\xE8s que tu as ma lettre, rejoint-moi imm\xE9diatement chez <color=#D70000><b>Flora
+    !\r\nAvec pression et gratitude,\r\n<color=#D70000><b>Antonin\r\n"
   sendedText:
-  - "Facteur, le temps presse. Tu dois te d\xE9p\xEAcher et livrer cette lettre \xE0
-    Jack ! La petite Flora a des ennuis et je dois agir !"
+  - "Facteur, le temps presse. Tu dois te d\xE9p\xEAcher et livrer cette <b>lettre
+    </b>\xE0 Jack ! La petite <color=#D70000><b>Flora a des ennuis et je dois agir
+    !"
   - "Je suis son parrain apr\xE8s tout !"
   receivedText:
   - "Oh ! mon petiot ! Comment tu vas ? \xC7a fait un moment que t\u2019es pas venu
     me voir ! Le travail se passe bien ?"
-  - "Tu m\u2019apportes une lettre ? D\u2019Antonin ?"
+  - "Tu m\u2019apportes une <b>lettre </b>? <color=#D70000><b>D\u2019Antonin ?"
   - "Curieux\u2026 Il n\u2019a pourtant pas l'habitude de m'envoyer du courrier\u2026"
   - "\u2026 !"
   - "Sacr\xE9 nom de nom ! Petiot ! Le temps presse ! Il faut que je te laisse !
-    Je dois vite rentrer chez moi pour prendre mes affaires !"
+    Je dois vite rentrer chez moi pour <b>prendre mes affaires </b>!"
   - Bonne chance pour le reste de ton travail, petiot !
   glansGain: 0
   stampGain: 0

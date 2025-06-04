@@ -17,26 +17,27 @@ MonoBehaviour:
   dependencies:
   - {fileID: 11400000, guid: 2d354cb95ce49de45b77a335509aa6df, type: 2}
   senderName: Officier Bobby
-  text: "Mes salutations\r\nUne nouvelle importante nous est parvenue et sur ordre
-    du Capitaine Hans, je me dois de vous en faire part ! La c\xE9l\xE8bre voleuse
-    Arianne Parpin est sur un prochain coup ! Elle a ouvertement provoqu\xE9 le Capitaine
-    Hans en lui offrant un g\xE2teau dont il est allergique !\r\nNous savons de sources
-    s\xFBres qu\u2019elle portera son prochain coup lors de la F\xEAte des Couleurs.
-    Le Capitaine Hans et moi nous chargerons de la surveillance durant les festivit\xE9s
-    ! Cette voleuse ne nous \xE9chappera pas !\r\nSinc\xE8rement,\r\nBobby\r"
+  text: "Mes salutations\r\nUne <b>nouvelle importante </b>nous est parvenue et sur
+    ordre du Capitaine Hans, je me dois de vous en faire part ! La <b>c\xE9l\xE8bre
+    voleuse </b><color=#D70000><b>Arianne Parpin est sur un prochain coup ! Elle
+    a ouvertement provoqu\xE9 le <color=#D70000><b>Capitaine Hans</b></color> en
+    lui offrant un g\xE2teau dont il est allergique !\r\nNous savons de sources s\xFBres
+    qu\u2019elle portera son prochain coup lors de la <b>F\xEAte des Couleurs</b>.
+    Le <color=#D70000><b>Capitaine Hans et moi nous chargerons de la surveillance
+    durant les festivit\xE9s ! Cette <b>voleuse </b>ne nous \xE9chappera pas !\r\nSinc\xE8rement,\r\n<color=#D70000><b>Bobby</b></color>\r"
   sendedText:
-  - "T-tu sais, il n\u2019en a p-pas l\u2019air, m-mais Monsieur Antonin est u-une
-    per-personne tr\xE8s gen-gentille. Il m\u2019a beau-beaucoup aid\xE9 et i-il
-    continue tou-toujours !"
-  - "Alors ? Qu\u2019en penses-tu ? Je ressemble au Capitaine Hans, n\u2019est-ce
-    pas ?"
+  - "T-tu sais, il n\u2019en a p-pas l\u2019air, m-mais Monsieur <color=#D70000><b>Antonin</b></color>
+    est u-une per-personne tr\xE8s gen-gentille. Il m\u2019a beau-beaucoup aid\xE9
+    et i-il continue tou-toujours !"
+  - "Alors ? Qu\u2019en penses-tu ? Je ressemble au <color=#D70000><b>Capitaine Hans</b></color>,
+    n\u2019est-ce pas ?"
   - "Mais il me reste encore beaucoup \xE0 apprendre avant de pouvoir \xEAtre de
-    la m\xEAme trempe que lui ! Le capitaine est incroyable !"
-  - "Il n\u2019a peur de rien et il attrape toujours les criminels ! Ariane Parpin
-    ne lui \xE9chappera pas pour tr\xE8s longtemps !"
+    la m\xEAme trempe que lui ! Le capitaine est <b>incroyable </b>!"
+  - "Il n\u2019a peur de rien et il attrape toujours les criminels ! <color=#D70000><b>Ariane
+    Parpin</b></color> ne lui <b>\xE9chappera pas </b>pour tr\xE8s longtemps !"
   - "A part \xE7a, j\u2019ai une mission \xE0 te confier, soldat ! Il faut que tu
-    livres cette lettre \xE0 la mairie ! C\u2019est tr\xE8s important ! Il en va
-    de la r\xE9ussite de notre mission !"
+    livres cette <b>lettre </b>\xE0 la <b>mairie </b>! C\u2019est tr\xE8s important
+    ! Il en va de la r\xE9ussite de notre mission !"
   receivedText:
   - Livraison accomplie !
   glansGain: 0

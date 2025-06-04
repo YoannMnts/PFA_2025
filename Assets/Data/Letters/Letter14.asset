@@ -17,23 +17,23 @@ MonoBehaviour:
   dependencies:
   - {fileID: 11400000, guid: fd8df75db0be607499c382305e0be237, type: 2}
   senderName: Antonin
-  text: "Bonjour Flora,\r\nJ\u2019ai des nouvelles qui te combleront de joie ! En
-    tant que ton merveilleux conseiller immobilier, j\u2019ai d\xE9fendu avec ferveur
-    ton dossier devant les employ\xE9s de la mairie et la mairesse. Finalement, il
-    fut convenu d\u2019un accord pour l\u2019autorisation de remettre \xE0 neuf ta
-    modeste biblioth\xE8que.\r\nApr\xE8s tout ce que tu as fait pour recouvrer l\u2019Histoire
-    de Verd\u2019Oyant, c\u2019est bien plus que simplement m\xE9rit\xE9. Tu auras
-    \xE9galement un petit stand de pr\xEAt pour toi lors de la F\xEAte des Couleurs
-    </b>ou tu pourras pr\xE9senter aux enfants la riche Histoire de notre beau village.\r\nAvec
-    joie et fiert\xE9\r\nAntonin\r\n"
+  text: "Bonjour <color=#D70000><b>Flora</b></color>,\r\nJ\u2019ai des nouvelles
+    qui te combleront de joie ! En tant que ton merveilleux conseiller immobilier,
+    j\u2019ai d\xE9fendu avec ferveur ton dossier devant les employ\xE9s de la mairie
+    et la mairesse. Finalement, il fut convenu d\u2019un accord pour l\u2019autorisation
+    de remettre \xE0 neuf ta modeste biblioth\xE8que.\r\nApr\xE8s tout ce que tu
+    as fait pour recouvrer l\u2019Histoire de Verd\u2019Oyant, c\u2019est bien plus
+    que simplement m\xE9rit\xE9. Tu auras \xE9galement un petit stand de pr\xEAt
+    pour toi lors de la F\xEAte des Couleurs </b>ou tu pourras pr\xE9senter aux enfants
+    la riche Histoire de notre beau village.\r\nAvec joie et fiert\xE9\r\n<color=#D70000><b>Antonin</b></color>\r\n"
   sendedText:
   - "Cher monsieur, un plaisir de vous voir ici. Je dois dire que vous tombez \xE0
     point mon cher. J\u2019ai justement en ma possession du <b>courrier </b>qui n\u2019attend
     qu\u2019\xE0 \xEAtre livr\xE9.\r\n"
-  - "Ma premi\xE8re lettre est pour cette ch\xE8re Flora. Tu ne l\u2019as sans doute
-    pas encore crois\xE9e et c\u2019est normal. "
-  - "Vois-tu, mon tr\xE8s jeune ami, Flora est en train de se pr\xE9parer pour la
-    <b>F\xEAte des Couleurs</b>."
+  - "Ma premi\xE8re lettre est pour cette ch\xE8re <color=#D70000><b>Flora</b></color>.
+    Tu ne l\u2019as sans doute pas encore crois\xE9e et c\u2019est normal. "
+  - "Vois-tu, mon tr\xE8s jeune ami, <color=#D70000><b>Flora</b></color> est en train
+    de se pr\xE9parer pour la <b>F\xEAte des Couleurs</b>."
   - "Elle est partie \xE0 <b>Fau L\u2019Iaire </b>pour rapporter quelques <b>archives
     historiques</b>. Je te demanderai donc de lui porter cette lettre dans sa <b>bo\xEEte
     aux lettres</b>."

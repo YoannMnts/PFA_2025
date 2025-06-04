@@ -17,18 +17,19 @@ MonoBehaviour:
   dependencies:
   - {fileID: 11400000, guid: c84573aeadef636479a5aaa4fc34ba5f, type: 2}
   senderName: Captain Hans
-  text: "Bonjour soldat Poutre,\r\nNe te fais pas de soucis, le citoyen Icare a \xE9t\xE9
-    averti. Un <b>premier avertissement </b>a \xE9t\xE9 envoy\xE9 comme la proc\xE9dure
-    l\u2019exige. Ses plans ont donc \xE9t\xE9 confisqu\xE9s CEPENDANT dans le cas
-    o\xF9 le citoyen Icare recommencerait une fois encore ses excentricit\xE9s, il
-    sera <b>appr\xE9hend\xE9 </b>dans le respect de la loi.\r\nBonne journ\xE9e,
-    soldat Poutre.\r\n"
+  text: "Bonjour soldat <color=#D70000><b>Poutre</b></color>,\r\nNe te fais pas de
+    soucis, le citoyen <color=#D70000><b>Icare</b></color> a \xE9t\xE9 averti. Un
+    <b>premier avertissement </b>a \xE9t\xE9 envoy\xE9 comme la proc\xE9dure l\u2019exige.
+    Ses plans ont donc \xE9t\xE9 confisqu\xE9s CEPENDANT dans le cas o\xF9 le citoyen
+    Icare recommencerait une fois encore ses excentricit\xE9s, il sera <b>appr\xE9hend\xE9
+    </b>dans le respect de la loi.\r\nBonne journ\xE9e, soldat <color=#D70000><b>Poutre</b></color>.\r\n"
   sendedText:
-  - "L\u2019autre lettre est pour le soldat Poutre. Vu ce qu\u2019il a subi <b>l\u2019ann\xE9e
-    derni\xE8re </b>avec les id\xE9es d\u2019Icare, il a besoin d\u2019\xEAtre rassur\xE9."
+  - "L\u2019autre lettre est pour le soldat <color=#D70000><b>Poutre</b></color>.
+    Vu ce qu\u2019il a subi <b>l\u2019ann\xE9e derni\xE8re </b>avec les id\xE9es
+    d\u2019<color=#D70000><b>Icare</b></color>, il a besoin d\u2019\xEAtre rassur\xE9."
   receivedText:
-  - "Facteur ! Alors ?! Tu l\u2019as envoy\xE9 ?! Piti\xE9, dis-moi que le Capitaine
-    Hans a fait quelque chose !"
+  - "Facteur ! Alors ?! Tu l\u2019as envoy\xE9 ?! Piti\xE9, dis-moi que le <color=#D70000><b>Capitaine
+    Hans</b></color> a fait quelque chose !"
   - "Par toutes les heures de sommeil que j\u2019ai manqu\xE9 ! Victoire ! Il ne
     va pas m\u2019entra\xEEner dans ses folies \xE0 nouveau ! Merci Facteur !"
   glansGain: 4

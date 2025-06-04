@@ -18,25 +18,27 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 8dedc0cfd08a7024098615b5822997a8, type: 2}
   - {fileID: 11400000, guid: 03057faad39589e4889e66de5308b831, type: 2}
   senderName: Marie-Chantal
-  text: "Salut Flora,\r\nJe suis d\xE9sol\xE9e, mais je ne peux pas attendre ! J\u2019ai
-    beaucoup trop envie d\u2019en savoir plus sur la F\xEAte des Couleurs ! Je t\u2019en
-    supplie, dis-m\u2019en plus ! Tu as l\u2019air d\u2019avoir d\xE9couvert tellement
-    de choses sur notre village ! J\u2019ai vraiment envie que tu me racontes tout
-    ce que tu as pu apprendre !\r\nDes bisous,\r\nMarie-Chantal\r\n"
+  text: "Salut <color=#D70000><b>Flora</b></color>,\r\nJe suis d\xE9sol\xE9e, mais
+    je ne peux pas attendre ! J\u2019ai beaucoup trop envie d\u2019en savoir plus
+    sur la <b>F\xEAte des Couleurs </b>! Je t\u2019en supplie, dis-m\u2019en plus
+    ! Tu as l\u2019air d\u2019avoir d\xE9couvert tellement de choses sur notre village
+    ! J\u2019ai vraiment envie que tu me <b>racontes </b>tout ce que tu as pu <b>apprendre
+    </b>!\r\nDes bisous,\r\n<color=#D70000><b>Marie-Chantal</b></color>\r\n"
   sendedText:
   - "Oh l\xE0 l\xE0 ! J\u2019ai tellement envie d\u2019en savoir plus ! Je suis s\xFBre
     que toi aussi, facteur !"
-  - "Savoir plus sur quoi ? Mais voyons sur l\u2019origine de la F\xEAte des Couleurs
+  - "Savoir plus sur quoi ? Mais voyons sur l\u2019origine de la <b>F\xEAte des Couleurs
+    </b>!"
+  - "Je ne peux pas attendre ! Il faut que <color=#D70000><b>Flora</b></color> m\u2019en
+    dise plus ! Tiens, facteur, donne-lui cette <b>lettre</b>, s\u2019il te pla\xEEt
     !"
-  - "Je ne peux pas attendre ! Il faut que Flora m\u2019en dise plus ! Tiens, facteur,
-    donne-lui cette lettre, s\u2019il te pla\xEEt !"
   receivedText:
   - "\u2026"
   - "\u2026"
   - "Oh ! M-mes excuses, f-facteur\u2026 Je ne t\u2019avais p-pas vu\u2026"
   - "J\u2019ai juste un pe-petit s-souci qui me pr\xE9occupe\u2026"
   - "T-tu m\u2019apporte u-une lettre ?"
-  - "Oh ! C-c\u2019est de ma meilleure ami !"
+  - "Oh ! C-c\u2019est de ma <b>meilleure amie</b> !"
   - "\u2026"
   glansGain: 0
   stampGain: 0

@@ -17,12 +17,13 @@ MonoBehaviour:
   dependencies:
   - {fileID: 11400000, guid: eb5b3b8023f8ca644a7b18ab2f4e6b91, type: 2}
   senderName: Flora
-  text: "Bonjour Marie-Chantal,\r\nApr\xE8s quelques jours d'absence, me voici de
-    retour dans le beau village de Verd\u2019Oyant. Je suis \xE9galement tr\xE8s
-    heureuse de t\u2019annoncer la r\xE9organisation de mon humble biblioth\xE8que
-    et l'arriv\xE9e de nouveaux livres. Parmi eux, certains ouvrages d\xE9crivent
-    l\u2019Histoire de Verd\u2019Oyant et la cr\xE9ation de la F\xEAte des Couleurs.
-    Je suis vraiment emball\xE9e \xE0 l\u2019id\xE9e de te faire part de tout \xE7a.\r\nAmicalement,\r\nFlora\r\n"
+  text: "Bonjour <color=#D70000><b>Marie-Chantal</b></color>,\r\nApr\xE8s quelques
+    jours d'absence, me voici de retour dans le beau village de Verd\u2019Oyant.
+    Je suis \xE9galement tr\xE8s heureuse de t\u2019annoncer la r\xE9organisation
+    de mon humble biblioth\xE8que et l'arriv\xE9e de nouveaux livres. Parmi eux,
+    certains ouvrages d\xE9crivent l\u2019Histoire de Verd\u2019Oyant et la cr\xE9ation
+    de la F\xEAte des Couleurs. Je suis vraiment emball\xE9e \xE0 l\u2019id\xE9e
+    de te faire part de tout \xE7a.\r\nAmicalement,\r\n<color=#D70000><b>Flora</b></color>\r\n"
   sendedText:
   - 'O-oh ? B-bonjour ? E-est-ce que t-tu aimes les <b>l-livres </b>?
 
@@ -36,7 +37,7 @@ MonoBehaviour:
   - "La plupart des livres d\u2019antan ont \xE9t\xE9 perdus durant la <b>Crise des
     Pages Blanches</b>."
   - "O-oops ! J-je suis d\xE9sol\xE9 ! Je me s-suis emport\xE9e ! J-J\u2019essayais
-    de f-faire la c-conversation pour combattre m-ma timidit\xE9. C\u2019est M-marie-Chantal
+    de f-faire la c-conversation pour combattre m-ma timidit\xE9. C\u2019est <color=#D70000><b>M-marie-Chantal</b></color>
     qui m-m\u2019a conseill\xE9 de f-faire \xE7a.\r\n"
   - "P-pendant q-que \xE7a me tr-traverse l\u2019esprit, j\u2019ai u-une <b>lettre
     </ b>p-pour e-elle. P-peux-tu lui a-amener, s-s\u2019il te pla\xEEt ?"
@@ -46,8 +47,9 @@ MonoBehaviour:
   - "Facteur ! Pense \xE0 te reposer et \xE0 te d\xE9shydrater de temps en temps.
     Prendre soin de soi, c\u2019est important !"
   - Mais passons ! Tu as une lettre pour moi, facteur ?
-  - "Youplahou ! Elle est de Flora ! C\u2019est ma meilleure amie ! \xC7a fait longtemps
-    que je ne l\u2019ai pas vu. Qu\u2019est-ce qu\u2019elle me dit de beau ?"
+  - "Youplahou ! Elle est de <color=#D70000><b>Flora</b></color> ! C\u2019est ma
+    meilleure amie ! \xC7a fait longtemps que je ne l\u2019ai pas vu. Qu\u2019est-ce
+    qu\u2019elle me dit de beau ?"
   - "Waouh ! C\u2019est g\xE9nial !"
   - "Facteur ! C\u2019est incroyable ! Elle a r\xE9ussi ! On va enfin pouvoir conna\xEEtre
     l\u2019Histoire de Verd\u2019Oyant ! Notre beau village !"

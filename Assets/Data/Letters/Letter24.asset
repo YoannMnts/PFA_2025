@@ -23,16 +23,17 @@ MonoBehaviour:
     des feux d\u2019artifices l\u2019ann\xE9e derni\xE8re ne t\u2019a pas servi de
     le\xE7on !\r\nDois-je te rappeler, que les utiliser comme moyen d\u2019\xE9lan
     pour voler a failli non seulement te transformer en Steak de Tortue mais aussi
-    mettre feu au village, ruinant la <b>F\xEAte des Couleurs</b>.\r\nRespectueusement,\r\nCapitaine
-    Hans.\r\n"
+    mettre feu au village, ruinant la <b>F\xEAte des Couleurs</b>.\r\nRespectueusement,\r\n<color=#D70000><b>Capitaine
+    Hans</b></color>.\r\n"
   sendedText:
-  - "Soldat ! Il faut neutraliser le soldat Icare ! Prends cette <b>lettre </b>et
-    apporte-la-lui de ce pas ! Il a d\xE9j\xE0 \xE9t\xE9 averti, maintenant il est
-    temps de s\xE9vir !"
+  - "Soldat ! Il faut neutraliser le soldat <color=#D70000><b>Icare</b></color> !
+    Prends cette <b>lettre </b>et apporte-la-lui de ce pas ! Il a d\xE9j\xE0 \xE9t\xE9
+    averti, maintenant il est temps de s\xE9vir !"
   receivedText:
-  - "Te revoil\xE0 ! Allez ! Donne-moi la lettre de Fr\xE9d\xE9ric !"
-  - "Mais ?! Cette lettre n\u2019est pas de Fr\xE9d\xE9ric ! Elle est du Capitaine
-    Hans !"
+  - "Te revoil\xE0 ! Allez ! Donne-moi la lettre de <color=#D70000><b>Fr\xE9d\xE9ric</b></color>
+    !"
+  - "Mais ?! Cette lettre n\u2019est pas de <color=#D70000><b>Fr\xE9d\xE9ric ! Elle
+    est du <color=#D70000><b>Capitaine Hans</b></color> !"
   - "Non ! Non ! \xC7a ne peut pas se terminer comme \xE7a ! Trahison ! Disgr\xE2ce
     !"
   glansGain: 0

@@ -18,28 +18,28 @@ MonoBehaviour:
   - {fileID: 11400000, guid: bc03438b7723f4d4e8d24f20d5471e79, type: 2}
   senderName: Poutre
   text: "Bonjour, ma ch\xE8re s\u0153ur,\r\nJe trouve enfin le temps de t\u2019\xE9crire
-    car crois-le ou non mais j\u2019ai r\xE9ussi \xE0 prendre une pause ! Et avec
-    une grande surprise !\r\nJe sais \xE0 quel point cela te tient \xE0 c\u0153ur
-    de remonter la Cascade du Retour. J\u2019ai donc pris la libert\xE9 de contacter
-    Lorie pour te confectionner le meilleur des maillots de bain !\r\nIl sera pr\xEAt
-    d\u2019ici demain, juste avant la F\xEAte des Couleurs. J\u2019esp\xE8re qu\u2019il
-    te plaira ! Sache que je serais aux premi\xE8res loges pour admirer ton exploit
-    lors des festivit\xE9s !\r\nAvec affection,\r\nPoutre\r\n"
+    car crois-le ou non mais j\u2019ai r\xE9ussi \xE0 <b>prendre une pause </b>!
+    Et avec une <b>grande surprise </b>!\r\nJe sais \xE0 quel point cela te tient
+    \xE0 c\u0153ur de remonter la Cascade du Retour. J\u2019ai donc pris la libert\xE9
+    de contacter <color=#D70000><b>Lorie</b></color> pour te confectionner le meilleur
+    des <b>maillots de bain </b>!\r\nIl sera pr\xEAt d\u2019ici demain, juste avant
+    la <b>F\xEAte des Couleurs</b>. J\u2019esp\xE8re qu\u2019il te plaira ! Sache
+    que je serais aux premi\xE8res loges pour admirer ton exploit lors des festivit\xE9s
+    !\r\nAvec affection,\r\n<color=#D70000><b>Poutre</b></color>\r\n"
   sendedText:
-  - "G\xE9nial ! Papoutre sera ravie ! Tiens je te confie cette lettre ! Moi je retourne
-    travailler ! Avec un peu de chance, je pourrais profiter d\u2019un bon repos
-    lors de la F\xEAte des Couleurs !"
+  - "G\xE9nial ! <color=#D70000><b>Papoutre</b></color> sera ravie ! Tiens je te
+    confie cette lettre ! Moi je retourne travailler ! Avec un peu de chance, je
+    pourrais profiter d\u2019un bon repos lors de la <b>F\xEAte des Couleurs </b>!"
   receivedText:
   - Et un ! Et deux ! Et un ! Et deux !
-  - "C\u2019est important de bien s\u2019\xE9chauffer avant de faire de l\u2019exercice
+  - "C\u2019est important de bien <b>s\u2019\xE9chauffer </b>avant de faire de l\u2019exercice
     afin d\u2019\xE9viter toute blessure !"
-  - "C\u2019est mon fr\xE8re qui m\u2019a appris \xE7a !"
   - "C\u2019est mon fr\xE8re qui m\u2019a appris \xE7a !"
   - "Tu m\u2019apportes justement une lettre de lui ? Super, \xE7a fait longtemps
     que je n\u2019ai pas pu lui parler ! Il a tout le temps trop de travail !"
   - "\u2026"
-  - "Hourra ! Mon fr\xE8re, c\u2019est le meilleur ! Je suis s\xFBr que gr\xE2ce
-    \xE0 \xE7a, remonter la Cascade du Retour ne sera qu\u2019un jeu d\u2019enfant
+  - "Hourra ! Mon fr\xE8re, c\u2019est le <b>meilleur </b>! Je suis s\xFBr que gr\xE2ce
+    \xE0 \xE7a, remonter la <b>Cascade du Retour </b>ne sera qu\u2019un jeu d\u2019enfant
     !"
   - "Mais il ne faut pas que je n\xE9glige mon entra\xEEnement pour autant !"
   - "Allez ! Hop hop hop ! Me voil\xE0 repartie !"

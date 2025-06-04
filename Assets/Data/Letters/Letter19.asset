@@ -17,20 +17,22 @@ MonoBehaviour:
   dependencies:
   - {fileID: 11400000, guid: eb5b3b8023f8ca644a7b18ab2f4e6b91, type: 2}
   senderName: Flora
-  text: "Bonjour Papoutre,\r\nJe suis de retour de mon voyage de la ville de <b>Fau
-    L\u2019Iaire</b>. J\u2019ai r\xE9ussi \xE0 trouver les informations que tu recherchais
-    sur la Cascade du Retour. Quelqu\u2019un a d\xE9j\xE0 r\xE9ussi \xE0 la remonter
-    par le pass\xE9 ! Il s\u2019agit du Roi L\xE9on II. C\u2019\xE9tait lors de sa
-    visite \xE0 Verd\u2019Oyant en 1484 apr\xE8s P.J.\r\nEn revanche, il semblerait
-    qu\u2019aucune loutre n\u2019est r\xE9alis\xE9e ou tent\xE9e l\u2019exploit auparavant
-    ! Tu pourrais donc \xEAtre la premi\xE8re de l\u2019Histoire \xE0 le faire !\r\nAmicalement,\r\nFlora\r\n"
+  text: "Bonjour <color=#D70000><b>Papoutre</b></color>,\r\nJe suis de retour de
+    mon voyage de la ville de <b>Fau L\u2019Iaire</b>. J\u2019ai r\xE9ussi \xE0 trouver
+    les informations que tu recherchais sur la Cascade du Retour. Quelqu\u2019un
+    a d\xE9j\xE0 r\xE9ussi \xE0 la remonter par le pass\xE9 ! Il s\u2019agit du <color=#D70000><b>Roi
+    L\xE9on II</b></color>. C\u2019\xE9tait lors de sa visite \xE0 Verd\u2019Oyant
+    en 1484 apr\xE8s P.J.\r\nEn revanche, il semblerait qu\u2019aucune loutre n\u2019est
+    r\xE9alis\xE9e ou tent\xE9e l\u2019exploit auparavant ! Tu pourrais donc \xEAtre
+    la premi\xE8re de l\u2019Histoire \xE0 le faire !\r\nAmicalement,\r\n<color=#D70000><b>Flora</b></color>\r\n"
   sendedText:
-  - "J-j\u2019ai \xE9-\xE9galement u-une <b>lettre</b> p-pour Monsieur A-antonin
-    et Papoutre"
+  - "J-j\u2019ai \xE9-\xE9galement u-une <b>lettre</b> p-pour <color=#D70000><b>Monsieur
+    A-antonin</b></color> et <color=#D70000><b>Papoutre</b></color>"
   receivedText:
   - "Hmmm\u2026 Concentration\u2026 Je suis concentr\xE9e\u2026\r\n"
   - "Hmm\u2026 Facteur ? C\u2019est important ? Je suis en pleine concentration\u2026"
-  - "Du courrier pour moi ? Et c\u2019est de Flora ?"
+  - "Du courrier pour moi ? Et c\u2019est de <color=#D70000><b>Flora</b></color>
+    ?"
   - "Probablement \xE0 propos de ce que je lui ai demand\xE9 !"
   - "\u2026"
   - "Incroyable ! \xC7a me motive encore plus ! Penser qu\u2019une telle figure a

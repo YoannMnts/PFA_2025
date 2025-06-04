@@ -23,9 +23,9 @@ MonoBehaviour:
     bon de pouvoir te jouer mille et un tours. Tu le comprendras, je me languis du
     bon vieux temps, lorsque l\u2019on \xE9tait jeune et insouciant. J\u2019esp\xE8re
     que le <b>Festival des Couleurs </b>de cette ann\xE9e nous permettra de nous
-    rapprocher \xE0 nouveau.\r\nTon vieil ami, Antonin\r\n"
+    rapprocher \xE0 nouveau.\r\nTon vieil ami,<color=#D70000><b> Antonin</b></color>\r\n"
   sendedText:
-  - "La deuxi\xE8me est une lettre adress\xE9e \xE0 mon vieil ami, Fr\xE9d\xE9ric,
+  - "La deuxi\xE8me est une lettre adress\xE9e \xE0 mon vieil ami, <color=#D70000><b>Fr\xE9d\xE9ric</b></color>,
     ancien <b>conseiller immobilier</b>, aujourd\u2019hui \xE0 la <b>retraite</b>."
   receivedText:
   - "\u2026"
@@ -36,7 +36,7 @@ MonoBehaviour:
   - CRACK !
   - "<b>A\xEFe </b>! Mon dos !"
   - "Ah\u2026 Du courrier ? De la mairie, sans doute. Il faut dire que\u2026"
-  - "Mais ? Cette lettre n\u2019est pas de la mairie ! Elle vient d\u2019Antonin
+  - "Mais ? Cette lettre n\u2019est pas de la mairie ! Elle vient d\u2019<color=#D70000><b>Antonin</b></color>
     !"
   - "Vite ! Br\xFBle-la ! Br\xFBle-la avec du feu !"
   glansGain: 3

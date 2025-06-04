@@ -17,22 +17,22 @@ MonoBehaviour:
   dependencies:
   - {fileID: 11400000, guid: eb5b3b8023f8ca644a7b18ab2f4e6b91, type: 2}
   senderName: Flora
-  text: "Bonjour Monsieur Antonin,\r\nJe vous \xE9cris pour vous remercier de tout
-    ce que vous avez fait pour moi et ma petite biblioth\xE8que. C\u2019est vous
-    qui m\u2019avez aid\xE9 \xE0 trouver ce magnifique b\xE2timent en bois lorsque
-    je ne savais pas o\xF9 me mettre avec tous mes livres. Gr\xE2ce \xE0 vous, je
-    vis mon r\xEAve : je suis entour\xE9 de livres divers et vari\xE9s !\r\nEt vous
-    continuez toujours de m\u2019aider : que ce soit avec l\u2019agrandissement prochaine
-    de ma biblioth\xE8que ou les voyages que vous m\u2019organisez dans diff\xE9rentes
-    villes. J\u2019ai donc pu ajouter des ouvrages, perdus lors de la <b>Crise des
-    Pages Blanches</b>, dans la collection de notre village. Il sera alors bient\xF4t
-    possible de red\xE9couvrir <b>l\u2019Histoire compl\xE8te de Verd\u2019Oyant</b>.\r\nJe
-    n\u2019ai vraiment pas les mots. Merci pour tout,\r\nFlora\r\n"
+  text: "Bonjour Monsieur <color=#D70000><b>Antonin</b></color>,\r\nJe vous \xE9cris
+    pour vous remercier de tout ce que vous avez fait pour moi et ma petite biblioth\xE8que.
+    C\u2019est vous qui m\u2019avez aid\xE9 \xE0 trouver ce magnifique b\xE2timent
+    en bois lorsque je ne savais pas o\xF9 me mettre avec tous mes livres. Gr\xE2ce
+    \xE0 vous, je vis mon r\xEAve : je suis entour\xE9 de livres divers et vari\xE9s
+    !\r\nEt vous continuez toujours de m\u2019aider : que ce soit avec l\u2019agrandissement
+    prochaine de ma biblioth\xE8que ou les voyages que vous m\u2019organisez dans
+    diff\xE9rentes villes. J\u2019ai donc pu ajouter des ouvrages, perdus lors de
+    la <b>Crise des Pages Blanches</b>, dans la collection de notre village. Il sera
+    alors bient\xF4t possible de red\xE9couvrir <b>l\u2019Histoire compl\xE8te de
+    Verd\u2019Oyant</b>.\r\nJe n\u2019ai vraiment pas les mots. Merci pour tout,\r\n<color=#D70000><b>Flora</b></color>\r\n"
   sendedText: []
   receivedText:
   - Mon jeune ami ? Que me vaut le plaisir de votre visite ?
-  - "Une lettre de la jeune Flora ? Elle doit enfin \xEAtre de retour de son petit
-    voyage"
+  - "Une lettre de la jeune <color=#D70000><b>Flora</b></color> ? Elle doit enfin
+    \xEAtre de retour de son petit voyage"
   - "\u2026"
   - "Voyez-vous cela\u2026 Comme c\u2019est touchant. J\u2019en ai la larme \xE0
     l\u2019\u0153il"

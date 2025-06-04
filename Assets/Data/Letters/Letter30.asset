@@ -17,14 +17,15 @@ MonoBehaviour:
   dependencies:
   - {fileID: 11400000, guid: 65da283338f66fc4b88882c1f8f6e7d6, type: 2}
   senderName: Poutre
-  text: "Bonjour Larry,\r\nTu as bien fait de me le demander ! Je viens de recevoir
-    toutes les marchandises dont tu as besoin ! J\u2019\xE9tais sur le point de t\u2019envoyer
-    un courrier !\r\nJe ne peux malheureusement pas venir te livrer moi-m\xEAme cette
-    fois ! J\u2019ai beaucoup trop de travail ! Je ne peux pas me permettre de m\u2019absenter.
-    Tu pourras me trouver chez moi\r\nD\u2019ailleurs, en plus des r\xE9serves de
-    nourriture pour le banquet, je t\u2019ai \xE9galement pr\xE9par\xE9 des merveilleux
+  text: "Bonjour <color=#D70000><b>Larry</b></color>,\r\nTu as bien fait de me le
+    demander ! Je viens de recevoir toutes les <b>marchandises </b>dont tu as besoin
+    ! J\u2019\xE9tais sur le point de t\u2019envoyer un courrier !\r\nJe ne peux
+    malheureusement pas venir te livrer moi-m\xEAme cette fois ! J\u2019ai beaucoup
+    trop de travail ! Je ne peux pas me permettre de m\u2019absenter. Tu pourras
+    me trouver <b>chez moi</b>\r\nD\u2019ailleurs, en plus des <b>r\xE9serves de
+    nourriture pour le banquet</b>, je t\u2019ai \xE9galement pr\xE9par\xE9 des merveilleux
     jus de fruits dont j\u2019ai le secret ! Tu pourras les utiliser avec tes plats
-    pendant le banquet !\r\nA tr\xE8s vite !\r\nPoutre\r\n"
+    pendant le banquet !\r\nA tr\xE8s vite !\r\n<color=#D70000><b>Poutre</b></color>,\r\n"
   sendedText:
   - "Vite ! Apporte-lui \xE7a !"
   - "J\u2019ai encore du travail ! Je dois te laisser !"
@@ -32,10 +33,11 @@ MonoBehaviour:
   - "De retour l\u2019ami ? Alors, une r\xE9ponse pour moi ?"
   - "\u2026"
   - "Quel soulagement ! Les marchandises sont bien arriv\xE9es !"
-  - "Mon ami ! Merci beaucoup ! Tu pourras d\xE9guster en exclusivit\xE9 notre Ratatouille
+  - "Mon ami ! Merci beaucoup ! Tu pourras d\xE9guster en exclusivit\xE9 notre <b>Ratatouille</b>
     !"
-  - "Mon ami ! Merci beaucoup ! Tu pourras d\xE9guster en exclusivit\xE9 notre Ratatouille
-    !"
+  - "Je te conseille \xE9galement de la d\xE9guster avec un des merveilleux <b>jus
+    de fruits </b>de <color=#D70000><b>Poutre</b></color>, ! Ils se marient \xE0
+    merveille avec ce plat !\r\n"
   glansGain: 0
   stampGain: 0
   appearingCharacter: {fileID: 0}

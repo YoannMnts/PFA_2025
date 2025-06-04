@@ -24,7 +24,7 @@ MonoBehaviour:
     <b>et je ne pourrais pas pr\xE9parer le plat signature de notre village : la
     Ratatouille. Je sais que tu es d\xE9bord\xE9 de travail et je suis d\xE9sol\xE9
     de te mettre la pression.\r\nDans l\u2019attente de ta r\xE9ponse, mon ami, je
-    te souhaite une bonne journ\xE9e.\r\nLarry\r\n"
+    te souhaite une bonne journ\xE9e.\r\n<color=#D70000><b>Larry</b></color>,\r\n"
   sendedText:
   - "Bonjour l\u2019ami. Tu as un moment \xE0 m\u2019accorder ? J\u2019ai besoin
     d\u2019un coup de patte.\r\n"
@@ -39,7 +39,7 @@ MonoBehaviour:
     il faut que j\u2019aille l\xE0 !"
   - "QUOI ?! QU\u2019EST-CE QU\u2019IL Y A ?!"
   - "J\u2019ai du travail ! Trop de travail ! C\u2019est important ?!"
-  - Une lettre de Larry ?
+  - Une lettre de <color=#D70000><b>Larry</b></color>, ?
   - ...
   - "Les marchandises ! Il n\u2019est pas encore au courant !"
   glansGain: 0

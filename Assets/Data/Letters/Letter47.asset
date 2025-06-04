@@ -17,26 +17,28 @@ MonoBehaviour:
   dependencies:
   - {fileID: 11400000, guid: ae26aea55b685624e9130d8070779997, type: 2}
   senderName: Flora
-  text: "Bonjour, monsieur Antonin,\r\nJe suis navr\xE9e de vous d\xE9ranger, mais
-    je suis face \xE0 un \xE9norme probl\xE8me. Vous souvenez-vous de la Crise des
-    Pages Blanches ? C\u2019\xE9tait un \xE9v\xE9nement tragique o\xF9 le contenu
-    entier des livres fut effac\xE9, ne laissant que des pages blanches.\r\nIl se
-    trouve que l\u2019origine est un tout petit insecte tout blanc, ressemblant \xE0
-    une chenille. Il se nourrit de l\u2019encre pour vivre d\u2019o\xF9 son nom,
-    le mangeur d\u2019encre. Le probl\xE8me, c\u2019est que j\u2019en ai trouv\xE9
-    un dans ma biblioth\xE8que ! J\u2019ai d\xE9j\xE0 une dizaine de mes livres qui
-    n\u2019ont plus que des pages blanches ! Si cela continue, je vais perdre toute
-    la collection et l\u2019histoire r\xE9cemment retrouv\xE9e de Verd\u2019Oyant
-    ! S\u2019il vous pla\xEEt, Monsieur Antonin, aidez-moi !\r\nAvec d\xE9tresse,\r\nFlora\r\n"
+  text: "Bonjour, monsieur <color=#D70000><b>Antonin</b></color>,\r\nJe suis navr\xE9e
+    de vous d\xE9ranger, mais je suis face \xE0 un \xE9norme probl\xE8me. Vous souvenez-vous
+    de la <b>Crise des Pages Blanches </b>? C\u2019\xE9tait un \xE9v\xE9nement tragique
+    o\xF9 le contenu entier des livres fut <b>effac\xE9</b>, ne laissant que des
+    <b>pages blanches</b>.\r\nIl se trouve que l\u2019origine est un tout petit <b>insecte
+    </b>tout blanc, ressemblant \xE0 une chenille. Il se <b>nourrit de l\u2019encre
+    </b>pour vivre d\u2019o\xF9 son nom, le <b>mangeur d\u2019encre</b>. Le probl\xE8me,
+    c\u2019est que j\u2019en ai trouv\xE9 un dans ma biblioth\xE8que ! J\u2019ai
+    d\xE9j\xE0 une dizaine de mes livres qui n\u2019ont plus que des <b>pages blanches
+    </b>! Si cela continue, je vais perdre toute la collection et l\u2019histoire
+    r\xE9cemment retrouv\xE9e de Verd\u2019Oyant ! S\u2019il vous pla\xEEt, Monsieur
+    Antonin, aidez-moi !\r\nAvec d\xE9tresse,\r\n<color=#D70000><b>Flora</b></color>\r\n"
   sendedText:
-  - "Aussi\u2026 Est-ce que tu peux aussi livrer cette lettre \xE0 Monsieur Antonin\u2026
-    J\u2019ai un probl\xE8me et j\u2019ai besoin de son aide"
+  - "Aussi\u2026 Est-ce que tu peux aussi livrer cette <b>lettre </b>\xE0 Monsieur
+    <color=#D70000><b>Antonin</b></color>\u2026 J\u2019ai un probl\xE8me et j\u2019ai
+    besoin de son aide"
   receivedText:
   - "Mais ? Si ce n\u2019est pas notre jeune facteur ? Par hasard, mon cher, aurais-tu
-    une lettre \xE0 me livrer ?\r\n"
+    une <b>lettre </b>\xE0 me livrer ?\r\n"
   - Oui ? Excellent ! Je te remercie !
   - "\u2026"
-  - "Voil\xE0 qui est pour le moins surprenant et inattendu, je dois dire\u2026"
+  - "Voil\xE0 qui est pour le moins surprenant et <b>inattendu</b>, je dois dire\u2026"
   glansGain: 0
   stampGain: 0
   appearingCharacter: {fileID: 0}

@@ -17,16 +17,17 @@ MonoBehaviour:
   dependencies:
   - {fileID: 11400000, guid: 43157929053e7bb46b3122b1c45ab675, type: 2}
   senderName: Icare
-  text: "Bonjour Fr\xE9d\xE9ric,\r\nLe reste de Verd\u2019Oyant ne comprend pas mon
-    g\xE9nie ! Ils n\u2019ont pas la <b>vision </b>! Mais je suis s\xFBr que tu es
-    diff\xE9rent Fr\xE9d\xE9ric !\r\nJ\u2019ai un projet, un grand projet ! Celui-l\xE0
-    me permettra enfin de <b>voler </b>! Ce sera grandiose, un \xE9v\xE8nement qui
-    m\xE9riterait d\u2019\xEAtre retranscrit dans les livres d\u2019Histoire. C\u2019est
-    un projet qui m\xE9lange intelligence, savoir-faire manuel et beaucoup de feux
-    d\u2019artifices.\r\nIl d\xE9passera de loin toutes mes pr\xE9c\xE9dentes tentatives,
-    m\xEAme le projet Nid de Tortue de l\u2019ann\xE9e derni\xE8re. Mais j\u2019ai
-    besoin de ton appui pour permettre \xE0 ce dessein de prendre forme et faire
-    taire les rageux !\r\nA bient\xF4t dans les cieux !\r\nIcare, tortue volante\r\n"
+  text: "Bonjour <color=#D70000><b>Fr\xE9d\xE9ric</b></color>,\r\nLe reste de Verd\u2019Oyant
+    ne comprend pas mon g\xE9nie ! Ils n\u2019ont pas la <b>vision </b>! Mais je
+    suis s\xFBr que tu es diff\xE9rent <color=#D70000><b>Fr\xE9d\xE9ric</b></color>
+    !\r\nJ\u2019ai un projet, un grand projet ! Celui-l\xE0 me permettra enfin de
+    <b>voler </b>! Ce sera grandiose, un \xE9v\xE8nement qui m\xE9riterait d\u2019\xEAtre
+    retranscrit dans les livres d\u2019Histoire. C\u2019est un projet qui m\xE9lange
+    intelligence, savoir-faire manuel et beaucoup de feux d\u2019artifices.\r\nIl
+    d\xE9passera de loin toutes mes pr\xE9c\xE9dentes tentatives, m\xEAme le projet
+    Nid de Tortue de l\u2019ann\xE9e derni\xE8re. Mais j\u2019ai besoin de ton appui
+    pour permettre \xE0 ce dessein de prendre forme et faire taire les rageux !\r\nA
+    bient\xF4t dans les cieux !\r\n<color=#D70000><b>Icare</b></color>, tortue volante\r\n"
   sendedText:
   - "Je ne m\u2019arr\xEAterai pas ! Ils ne m\u2019arr\xEAteront pas ! Ils peuvent
     <b>tenter </b>de me faire taire mais ils ne tueront pas <b>mon r\xEAve </b>!"
@@ -34,8 +35,8 @@ MonoBehaviour:
     fra\xEEche ! <b>Rien </b>ne peut arr\xEAter une tortue qui n\u2019a rien \xE0
     perdre !"
   - "Facteur ! Toi qui me soutiens, d\xE9livre cette lettre ! Elle doit \xEAtre apport\xE9e
-    \xE0 Fr\xE9d\xE9ric ! Je suis s\xFBr que lui soutiendra mon g\xE9nie comme toi
-    !"
+    \xE0 <color=#D70000><b>Fr\xE9d\xE9ric</b></color> ! Je suis s\xFBr que lui soutiendra
+    mon g\xE9nie comme toi !"
   receivedText:
   - "Hmm\u2026"
   - "AAAAH\u2026 Pr\xE9viens quand tu es l\xE0 ! C\u2019est une manie chez vous les
@@ -48,8 +49,9 @@ MonoBehaviour:
     les idioties de l\u2019ann\xE9e pass\xE9e ?!"
   - "\u2026 Je suis vraiment trop vieux pour ses sottises\u2026"
   - "Facteur ! Il faut alerter la police\u2026 Il faut faire appel \xE0 \u2026"
-  - "Mais non pas \xE0 Rambouc ! Et c\u2019est qui ce Rambouc ?! Non, il faut faire
-    appel au Capitaine Hans !"
+  - "Mais non pas \xE0 <color=#D70000><b>Rambouc</b></color> ! Et c\u2019est qui
+    ce <color=#D70000><b>Rambouc </b></color>?! Non, il faut faire appel au <color=#D70000><b>Capitaine
+    Hans </b></color>!"
   glansGain: 0
   stampGain: 0
   appearingCharacter: {fileID: 0}

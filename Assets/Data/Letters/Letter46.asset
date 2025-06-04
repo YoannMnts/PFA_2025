@@ -17,32 +17,33 @@ MonoBehaviour:
   dependencies:
   - {fileID: 11400000, guid: ae26aea55b685624e9130d8070779997, type: 2}
   senderName: Flora
-  text: "Bonjour Marie-Chantal,\r\nAvec grand plaisir, je peux t\u2019en dire plus
-    ! Je ne vais pas pouvoir t\u2019\xE9crire tous les d\xE9tails mais je peux te
-    raconter ce qu\u2019il s\u2019est pass\xE9 dans les grandes lignes.\r\nLe roi
-    L\xE9on II est venu faire une escale dans notre village durant l\u2019\xE9t\xE9
-    1484 apr\xE8s P.J, le 6 du mois de la Nouvelle Crini\xE8re. Le village a tout
-    pr\xE9parer pour l\u2019accueillir et les enfants ont voulu participer. Ils ont
-    donc dessin\xE9 et paint sur l\u2019enti\xE8ret\xE9 du village pour que ce soit
-    plus beau. Les adultes n\u2019\xE9taient pas contents et craignaient que la visite
-    ne soit g\xE2ch\xE9e. En revanche, L\xE9on II a beaucoup appr\xE9ci\xE9 le geste
-    et la volont\xE9 des enfants de bien faire. Il aurait m\xEAme dit : \"J\u2019esp\xE8re
+  text: "Bonjour <color=#D70000>Marie-Chantal</b></color>,\r\nAvec <b>grand plaisir</b>,
+    je peux t\u2019en dire plus ! Je ne vais pas pouvoir t\u2019\xE9crire tous les
+    d\xE9tails mais je peux te raconter ce qu\u2019il s\u2019est pass\xE9 dans les
+    <b>grandes lignes</b>.\r\nLe roi L\xE9on II est venu faire une escale dans notre
+    village durant l\u2019\xE9t\xE9 <b>1484 apr\xE8s P.J</b>, le 6 du mois de la
+    <b>Nouvelle Crini\xE8re</b>. Le village a tout pr\xE9parer pour l\u2019accueillir
+    et les enfants ont voulu participer. Ils ont donc <b>dessin\xE9 </b>et <b>paint
+    </b>sur l\u2019enti\xE8ret\xE9 du village pour que ce soit <b>plus beau</b>.
+    Les adultes n\u2019\xE9taient pas contents et craignaient que la visite ne soit
+    g\xE2ch\xE9e. En revanche, L\xE9on II a beaucoup appr\xE9ci\xE9 le geste et la
+    volont\xE9 des enfants de bien faire. Il aurait m\xEAme dit : \"J\u2019esp\xE8re
     que cet endroit restera toujours aussi color\xE9\". Depuis, c\u2019est devenu
-    une tradition d\u2019ajouter des couleurs sur l\u2019enti\xE8ret\xE9 du village.\r\nVoil\xE0,
-    l\u2019histoire ! Si tu veux en savoir plus, nous pourrons en discuter pendant
-    la F\xEAte des Couleurs !\r\nAvec amiti\xE9s,\r\nFlora\r\n"
+    une <b>tradition </b>d\u2019ajouter des couleurs sur l\u2019enti\xE8ret\xE9 du
+    village.\r\nVoil\xE0, l\u2019histoire ! Si tu veux en savoir plus, nous pourrons
+    en discuter pendant la F\xEAte des Couleurs !\r\nAvec amiti\xE9s,\r\n<color=#D70000>Flora</b></color>\r\n"
   sendedText:
   - "Je vois\u2026 H\xE9h\xE9h\xE9 ! \xC7a m-me fait p-plaisir qu\u2019elle s\u2019in-int\xE9resse\u2026
     Je vais lui env-envoyer une r\xE9ponse\u2026 Transmet-lui la bi-bien, f-facteur\u2026"
   receivedText:
   - "Une r\xE9ponse de Flora ? Vite, vite ! J\u2019ai tellement h\xE2te de savoir
-    ! D\u2019o\xF9 peut bien venir la F\xEAte des Couleurs ?"
+    ! D\u2019o\xF9 peut bien venir la <b>F\xEAte des Couleurs </b>?"
   - "\u2026"
   - "Oooooh ! C\u2019est trop adorable ! \u2026"
   - "Mais j\u2019ai envie d\u2019en savoir plus ! J\u2019ai encore plein de questions
     !"
-  - "Stop ! Il faut que je me calme ! Flora a dit qu\u2019elle m\u2019en dira plus
-    lors de la f\xEAte !"
+  - "Stop ! Il faut que je me calme ! <color=#D70000><b>Flora</b></color> a dit qu\u2019elle
+    m\u2019en dira plus lors de la f\xEAte !"
   - "\u2026 J\u2019esp\xE8re que je saurais \xEAtre patiente jusque-l\xE0 !"
   glansGain: 0
   stampGain: 0

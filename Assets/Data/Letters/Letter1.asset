@@ -17,22 +17,22 @@ MonoBehaviour:
   dependencies:
   - {fileID: 11400000, guid: 7431f899d205c3d4a95dc48e03670356, type: 2}
   senderName: Jack
-  text: "Salut ma petiote,\r\nComment tu vas ? Je viens de la part du Capitaine Hans.
-    Je vais devoir passer pour <b>quelques am\xE9nagements</b> dans la <b>Grotte
-    des Inspirations</b>. J\u2019ai tous le matos qu\u2019il me faut et \xE7a prendra
-    pas longtemps. T\u2019auras m\xEAme pas le temps de dire \"Sacrebois\" que \xE7a
-    sera d\xE9j\xE0 fini !\r\nA plus, ma petiote !\r\nJack\r"
+  text: "Salut ma petiote,\r\nComment tu vas ? Je viens de la part du <color=#D70000><b>Capitaine
+    Hans</b></color>. Je vais devoir passer pour <b>quelques am\xE9nagements</b>
+    dans la <b>Grotte des Inspirations</b>. J\u2019ai tous le matos qu\u2019il me
+    faut et \xE7a prendra pas longtemps. T\u2019auras m\xEAme pas le temps de dire
+    \"Sacrebois\" que \xE7a sera d\xE9j\xE0 fini !\r\nA plus, ma petiote !\r\n<color=#D70000><b>Jack</b></color>\r"
   sendedText:
   - " \u2026 Tr\xE8s bien ! \u2026 Je vois ! Mon petiot ! Pendant que je t\u2019ai
     sous le coude, donne-moi deux secondes ! "
-  - "Eeeeeeet ! Tiens ! Tu veux bien apporter ce courrier \xE0 Barbara ?! La connaissant,
-    c\u2019est pas s\xFBre qu\u2019elle capte ta pr\xE9sence ! Tu devrais donc le
-    laisser dans sa <b>bo\xEEte aux lettres</b> !"
+  - "Eeeeeeet ! Tiens ! Tu veux bien apporter ce courrier \xE0 <color=#D70000><b>Barbara</b></color>
+    ?! La connaissant, c\u2019est pas s\xFBre qu\u2019elle capte ta pr\xE9sence !
+    Tu devrais donc le laisser dans sa <b>bo\xEEte aux lettres</b> !"
   receivedText:
   - "Une nouvelle inspiration\u2026 Une nouvelle id\xE9e\u2026"
   - "Elles viennent par milliers ! Et je- \u2026 Oh ? Un visiteur. Que me vaut le
     plaisir de ta venue dans mon <b>humble foyer</b>."
-  - Des nouvelles de Monsieur Jack ?
+  - Des nouvelles de <color=#D70000><b>Monsieur Jack</b></color> ?
   - ...
   - "Fabuleux ! Quel travail et quelle bont\xE9 ! Je pense que je ne pourrais jamais
     les remercier assez !"

@@ -24,11 +24,11 @@ MonoBehaviour:
     g\xE2teau au chocolat.\r\nPar ailleurs, vous trouverez une autre lettre juste
     en dessous de votre comptoir ! Veuillez la transmettre au Facteur pour qu\u2019il
     puisse continuer son r\xF4le et faire venir ma prochaine actrice sur sc\xE8ne
-    !\r\nA.P\r\n"
+    !\r\n<color=#D70000><b>A.P</b></color>\r\n"
   sendedText:
-  - "Ohohohoho ! La grande Ariane Parpin va encore frapper ! Grande <b>Ma\xEEtresse
-    du crime</b>, le vol est tout un art pour moi ! Une gigantesque peinture ! Une
-    pi\xE8ce de th\xE9\xE2tre !"
+  - "Ohohohoho ! La grande <color=#D70000><b>Ariane Parpin</b></color> va encore
+    frapper ! Grande <b>Ma\xEEtresse du crime</b>, le vol est tout un art pour moi
+    ! Une gigantesque peinture ! Une pi\xE8ce de th\xE9\xE2tre !"
   - "Et quoi de mieux que la magnifique <b>F\xEAte des Couleurs </b>pour \xE9clairer
     la sc\xE8ne ! Mais, pour que cela soit parfait, il faut que tous les acteurs
     soient en place !"
@@ -37,19 +37,21 @@ MonoBehaviour:
     ! Ohohohoho !"
   - "Hmm ? Tu as l\u2019air dubitatif ?"
   - "\u2026"
-  - "Non\u2026 Je ne vois pas de quoi tu parles\u2026 La grande Ariane Parpin n\u2019a
-    pas pu oublier son propre portefeuille sur les lieux de son dernier crime. Tu
-    dois faire erreur."
+  - "Non\u2026 Je ne vois pas de quoi tu parles\u2026 La grande <color=#D70000><b>Ariane
+    Parpin</b></color> n\u2019a pas pu oublier son propre portefeuille sur les lieux
+    de son dernier crime. Tu dois faire erreur."
   - "Quoi qu\u2019il en soit, Facteur, transmet ce message \xE0 la premi\xE8re actrice
     : la <b>charmante boulang\xE8re</b>, Elise !"
   receivedText:
   - "Facteur ! Un plaisir de te revoir ! Tu m\u2019apportes une demande pour une
     nouvelle commande ?\r\n"
   - "A.P ? Je ne vois pas qui cela peut \xEAtre mais cet animal doit \xEAtre tr\xE8s
-    proche</b> du Capitaine Hans pour lui pr\xE9parer une surprise !\r\n"
+    proche</b> du <color=#D70000><b>Capitaine Hans pour lui pr\xE9parer une surprise
+    !\r\n"
   - "Oh l\xE0 l\xE0 ! Je suis tout excit\xE9e ! Et quel hasard ! Il me reste justement
     un <b>beau g\xE2teau au chocolat </ b>! Je vais l\u2019amener moi-m\xEAme au
-    poste du Capitaine Hans ! Je suis s\xFBr qu\u2019il sera ravi !\n"
+    poste du <color=#D70000><b>Capitaine Hans ! Je suis s\xFBr qu\u2019il sera ravi
+    !\n"
   - "Et il est \xE9crit que je dois te <b>remettre une autre lettre </b>mais je ne
     vois pas comment et \u2026"
   - "Oh ?! Il y a une lettre sous mon comptoir ! Comme \xE9crit ! Un magicien ! Cet

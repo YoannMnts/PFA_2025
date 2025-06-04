@@ -17,15 +17,16 @@ MonoBehaviour:
   dependencies:
   - {fileID: 11400000, guid: d9a28b0a4e0ddd045b41d3d0aee7b6cc, type: 2}
   senderName: Poutre
-  text: "Bonjour Fr\xE9d\xE9ric,\r\nJe t\u2019\xE9cris car il y a du nouveau pour
-    la <b>pr\xE9paration des festivit\xE9s</b>. Notre violoniste, Lucina, a maintenant
-    son nouveau violon. Il ne lui reste plus qu\u2019\xE0 le tester et \xE0 le mettre
-    au point pour le jour de la F\xEAte. J\u2019attends donc des nouvelles de leur
-    part tr\xE8s prochainement. En revanche, je n\u2019ai toujours pas de nouvelles
-    concernant les <b>stocks de nourriture </b>pour Larry. Sans cela, nous risquons
-    de ne pas avoir assez pour tout le monde. Et bien que d\xE9licieux, ce ne sont
-    pas les g\xE2teaux d\u2019Elise qui nous rassasieront.\r\nJe te mets au courant
-    rapidement\r\nRespectueusement,\r\nPoutre.\r\n"
+  text: "Bonjour <color=#D70000><b>Fr\xE9d\xE9ric</b></color>,,\r\nJe t\u2019\xE9cris
+    car il y a du nouveau pour la <b>pr\xE9paration des festivit\xE9s</b>. Notre
+    violoniste, <color=#D70000><b>Lucina</b></color>,, a maintenant son nouveau violon.
+    Il ne lui reste plus qu\u2019\xE0 le tester et \xE0 le mettre au point pour le
+    jour de la F\xEAte. J\u2019attends donc des nouvelles de leur part tr\xE8s prochainement.
+    En revanche, je n\u2019ai toujours pas de nouvelles concernant les <b>stocks
+    de nourriture </b>pour <color=#D70000><b>Larry</b></color>,. Sans cela, nous
+    risquons de ne pas avoir assez pour tout le monde. Et bien que d\xE9licieux,
+    ce ne sont pas les g\xE2teaux d\u2019<color=#D70000><b>Elise qui nous rassasieront.\r\nJe
+    te mets au courant rapidement\r\nRespectueusement,\r\nPoutre.\r\n"
   sendedText:
   - "Oui ? C\u2019est pourquoi ?"
   - "Rien n\u2019a chang\xE9 ici ! J\u2019ai toujours trop de travail !"
@@ -34,7 +35,7 @@ MonoBehaviour:
   - "Moi non plus ! Mais c\u2019est \xE9norme !"
   - AAAAAAAAAAAH !
   - Mais ne nous affolons pas. Tout va bien se passer.
-  - "Et pour que tout se passe bien, d\xE9livre cette lettre \xE0 Fr\xE9d\xE9ric
+  - "Et pour que tout se passe bien, d\xE9livre cette lettre \xE0 <color=#D70000><b>Fr\xE9d\xE9ric</b></color>,
     je te prie"
   receivedText:
   - "Hmm\u2026"
@@ -44,7 +45,8 @@ MonoBehaviour:
   - "Tu m\u2019apportes du courrier ? \u2026"
   - "Ce n\u2019est pas une raison pour faire sursauter les honn\xEAtes gens ! Les
     jeunes, je vous jure !"
-  - "Bon\u2026 Assez tergivers\xE9. Voyons ce que Poutre m\u2019annonce de nouveau"
+  - "Bon\u2026 Assez tergivers\xE9. Voyons ce que <color=#D70000><b>Poutre m\u2019annonce
+    de nouveau"
   - "\u2026"
   glansGain: 0
   stampGain: 0

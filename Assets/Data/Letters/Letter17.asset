@@ -20,12 +20,12 @@ MonoBehaviour:
   text: "Bonjour,\r\nTr\xE8s ch\xE8re Madame, il semblerait qu\u2019en passant pr\xE8s
     de mon charmant domicile, vous ayez <b>oubli\xE9 </b>une de vos possessions :
     <b>votre portefeuille</b>. Vous devriez faire attention, des rumeurs circulent
-    comme quoi il y aurait la <b>c\xE9l\xE8bre </b>Ariane Parpin dans les environs.
-    Heureusement que je suis un citoyen exemplaire et que je vous avertis. Je vous
-    invite \xE0 venir le r\xE9cup\xE9rer.\r\nBien cordialement,\r\nFr\xE9d\xE9ric\r\n"
+    comme quoi il y aurait la <b>c\xE9l\xE8bre </b><color=#D70000><b>Ariane Parpin</b></color>
+    dans les environs. Heureusement que je suis un citoyen exemplaire et que je vous
+    avertis. Je vous invite \xE0 venir le r\xE9cup\xE9rer.\r\nBien cordialement,\r\n<color=#D70000><b>Fr\xE9d\xE9ric</b></color>\r\n"
   sendedText:
   - "AAAAAAH ! Pr\xE9viens quand tu arrives, nom d\u2019une pipe ! J\u2019ai failli
-    avoir une attaque ! Ne commence pas \xE0 choper les mauvaises manies d\u2019Antonin
+    avoir une attaque ! Ne commence pas \xE0 choper les mauvaises manies d\u2019<color=#D70000><b>Antonin</b></color>
     !"
   - "Mais je dois dire que tu tombes bien. J\u2019ai justement quelque chose \xE0
     d\xE9livrer \xE0 une<b> jeune pie </b>qui n\u2019est pas toute seule dans sa
@@ -36,14 +36,15 @@ MonoBehaviour:
     temps !"
   - "Hey ! Reviens ! Je n\u2019ai pas fini de te faire la morale !"
   receivedText:
-  - "Ohohohoho ! Encore un coup r\xE9ussi pour la seule, l\u2019unique, Ariane Parpin.
-    Que me vaux l\u2019honneur de ta venue, cher facteur ?\r\n"
+  - "Ohohohoho ! Encore un coup r\xE9ussi pour la seule, l\u2019unique, <color=#D70000><b>Ariane
+    Parpin</b></color>. Que me vaux l\u2019honneur de ta venue, cher facteur ?\r\n"
   - "Une lettre pour la charmante moi ? Ohohohoho ! Sans aucun doute un admirateur
     ! Voyons voir\u2026"
   - "\u2026"
   - "Je\u2026 Je n\u2019ai pas les mots."
-  - "Je ne sais pas ce qui est le plus embarrassant : la grande Ariane Parpin qui
-    perd son portefeuille sur les lieux de sa derni\xE8re \u0153uvre\u2026"
+  - "Je ne sais pas ce qui est le plus embarrassant : la grande <color=#D70000><b>Ariane
+    Parpin</b></color> qui perd son portefeuille sur les lieux de sa derni\xE8re
+    \u0153uvre\u2026"
   - "Ou le septuag\xE9naire qui ne s\u2019est pas encore rendu compte du vol et me
     sermonne\u2026"
   glansGain: 3

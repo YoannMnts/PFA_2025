@@ -17,20 +17,21 @@ MonoBehaviour:
   dependencies:
   - {fileID: 11400000, guid: 41b48bdfd39083b438ce027a1d8ff4fb, type: 2}
   senderName: Poutre
-  text: "Bonjour Lucina,\r\nJ\u2019ai le plaisir de t\u2019annoncer que gr\xE2ce
-    \xE0 Jack qui me procure le bois, <b>je vais pouvoir terminer ton nouveau violon</b>
-    ! Il sera termin\xE9 aujourd\u2019hui. Tu pourras venir le r\xE9cup\xE9rer tout
-    \xE0 l\u2019heure et tu pourras l\u2019essayer avant de donner ton <b>petit concert
-    </b>pour la <b>F\xEAte des Couleurs</b>. D\u2019ailleurs, Fr\xE9d\xE9ric devrait
-    bient\xF4t te contacter pour <b>l\u2019organisation des festivit\xE9s</b>.\r\nAvec
-    amiti\xE9s,\r\nPoutre\r\n"
+  text: "Bonjour <color=#D70000><b>Lucina</b></color>,\r\nJ\u2019ai le plaisir de
+    t\u2019annoncer que gr\xE2ce \xE0 Jack qui me procure le bois, <b>je vais pouvoir
+    terminer ton nouveau violon</b> ! Il sera termin\xE9 aujourd\u2019hui. Tu pourras
+    venir le r\xE9cup\xE9rer tout \xE0 l\u2019heure et tu pourras l\u2019essayer
+    avant de donner ton <b>petit concert </b>pour la <b>F\xEAte des Couleurs</b>.
+    D\u2019ailleurs, <color=#D70000><b>Fr\xE9d\xE9ric</b></color> devrait bient\xF4t
+    te contacter pour <b>l\u2019organisation des festivit\xE9s</b>.\r\nAvec amiti\xE9s,\r\n<color=#D70000><b>Poutre</b></color>\r\n"
   sendedText:
   - "D\u2019ailleurs, tu veux bien <b>lui livrer cette lettre</b>? Elle sera ravie
     d\u2019apprendre l\u2019avanc\xE9e de sa commande !"
   receivedText:
   - "Oui, mon ami ? Pour quelle raison interromps-tu mon <b>entra\xEEnement musical</b>
     ?\r\n"
-  - Une lettre de ce cher Poutre ? Sans doute pour mon nouveau violon.
+  - Une lettre de ce cher <color=#D70000><b>Poutre</b></color> ? Sans doute pour
+    mon nouveau violon.
   - "Merveilleux ! J\u2019aurais de quoi honorer cette magnifique f\xEAte ! Merci
     mon jeune ami ! J\u2019esp\xE8re te voir au <b>concert </b>pendant la <b>F\xEAte
     des Couleurs </b>!"

@@ -20,14 +20,14 @@ MonoBehaviour:
   text: "Bonjour mon petiot,\r\nSans aucun probl\xE8me ! Tu peux prendre tout le
     bois dont tu as besoin. Avec l\u2019arriv\xE9e de la <b>F\xEAte des Couleurs</b>,
     on a eu un gros surplus de bois pour tout pr\xE9parer ! Fais-toi plaisir et sers-toi
-    !\r\nA plus mon petiot !\r\nJack\r\n"
+    !\r\nA plus mon petiot !\r\n<color=#D70000><b>Jack\r\n"
   sendedText:
-  - "Tiens mon petiot ! Donne cette lettre \xE0 Poutre ! \xC7a devrait le soulager
-    d\u2019un poids !"
+  - "Tiens mon petiot ! Donne cette lettre \xE0 <color=#D70000><b>Poutre</b></color>
+    ! \xC7a devrait le soulager d\u2019un poids !"
   receivedText:
-  - "Une r\xE9ponse de Jack ! Vite, donne-la-moi !"
+  - "Une r\xE9ponse de <color=#D70000><b>Jack </b></color>! Vite, donne-la-moi !"
   - "\u2026 Ouf ! Heureusement qu\u2019il est l\xE0 ! Je vais pouvoir terminer la
-    t\xE2che que Lucina m\u2019a confi\xE9e !"
+    t\xE2che que <color=#D70000><b>Lucina</b></color> m\u2019a confi\xE9e !"
   glansGain: 4
   stampGain: 0
   appearingCharacter: {fileID: 0}

@@ -22,7 +22,7 @@ MonoBehaviour:
     gratitude,\r\nMe sortant de ma bien triste inaptitude,\r\nL\u2019inspiration,
     ainsi, de nouveau retrouv\xE9e,\r\nRemplissant ma demeure de mille mots grav\xE9s\r\nLib\xE8re
     mes paroles pour \xEAtre pr\xEAte \xE0 l\u2019heure,\r\nPour cette journ\xE9e
-    de la <b>F\xEAte des Couleurs</b>,\r\nBarbara.\r\n"
+    de la <b>F\xEAte des Couleurs</b>,\r\n<color=#D70000><b>Barbara</b></color>.\r\n"
   sendedText:
   - "Toi, mon visiteur, \u0153uvrant comme facteur, apporte cette lettre \xE0 mes
     bienfaiteurs."

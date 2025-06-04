@@ -17,18 +17,20 @@ MonoBehaviour:
   dependencies:
   - {fileID: 11400000, guid: fd8df75db0be607499c382305e0be237, type: 2}
   senderName: Martin
-  text: "Bonjour Annie,\r\nJ\u2019ai fait une <b>d\xE9couverte </b>pendant mes heures
-    de p\xEAche. Un caillou, mais pas n\u2019importe quel caillou, <b>un \xE9norme
-    caillou qui brille </b>est tomb\xE9 du ciel ! Et ce truc a fait fuir mes tr\xE9sors
-    ! Bref\u2026 Ce caillou ne me sert \xE0 rien mais \xE7a devrait t\u2019int\xE9resser
-    vu que ce truc est tomb\xE9 du ciel.\r\nA la prochaine.\r\nMartin\r\n"
+  text: "Bonjour <color=#D70000><b>Annie</b></color>,\r\nJ\u2019ai fait une <b>d\xE9couverte
+    </b>pendant mes heures de p\xEAche. Un caillou, mais pas n\u2019importe quel
+    caillou, <b>un \xE9norme caillou qui brille </b>est tomb\xE9 du ciel ! Et ce
+    truc a fait fuir mes tr\xE9sors ! Bref\u2026 Ce caillou ne me sert \xE0 rien
+    mais \xE7a devrait t\u2019int\xE9resser vu que ce truc est tomb\xE9 du ciel.\r\nA
+    la prochaine.\r\n<color=#D70000><b>Martin</b></color>\r\n"
   sendedText:
   - "Facteur ! J\u2019ai une t\xE2che pour toi. Vois-tu, un soir pendant que <b>je
     p\xEAchais tranquillement</b>, <b>une pierre est tomb\xE9e du ciel </b>! "
   - "Alors que j\u2019allais enfin r\xE9ussir \xE0 p\xEAcher un tr\xE9sor ! Cette
     caillasse a tout g\xE2ch\xE9 !\r\n"
   - "Bref\u2026 Cette pierre ne me sert \xE0 rien mais je suis s\xFBr qu\u2019elle
-    fera le bonheur d\u2019Annie qui travaille \xE0 <b>l\u2019observatoire</b>.\r\n"
+    fera le bonheur d\u2019<color=#D70000><b>Annie</b></color> qui travaille \xE0
+    <b>l\u2019observatoire</b>.\r\n"
   - "J\u2019aimerais bien aller lui donner mais j\u2019ai peur de louper la prise
     du si\xE8cle."
   - "Tu veux donc bien lui donner cette <b>lettre </b>? Je l\u2019attendrai ici."
@@ -38,7 +40,7 @@ MonoBehaviour:
     <b>\xE9toile filante</b>. D\u2019apr\xE8s mes observations et mes calculs, j\u2019aurais
     d\xFB en apercevoir une.\r\n"
   - "Mais tr\xEAve de mondanit\xE9s, tu m\u2019apportes une <b>lettre</b>, facteur
-    ? De la part de Martin ?\r\n"
+    ? De la part de <color=#D70000><b>Martin</b></color> ?\r\n"
   - "Incroyable ! Pour une fois, il sert \xE0 quelque chose ! Quelle chance ! "
   - "Je vais pouvoir \xE9tudier un sp\xE9cimen de roche spatiale directement ! Une
     vraie \xE9toile filante ! Merci pour ton service !"

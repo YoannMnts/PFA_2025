@@ -17,34 +17,36 @@ MonoBehaviour:
   dependencies:
   - {fileID: 11400000, guid: 9cb274e99011902488e3ddd2c36597fa, type: 2}
   senderName: Duke
-  text: "Bonjour Lucina,\r\nJe me permets de t\u2019envoyer ce courrier afin de faire
-    le point. La F\xEAte des Couleurs approche et nous ne sommes pas pr\xEAts ! Cela
-    ne va pas du tout ! C\u2019est toute mon image qui est en jeu ! Que vont penser
-    mes fans de la repr\xE9sentation m\xE9diocre que je risque de leur montrer ?!\r\nPr\xE9viens
-    Barbara ! Nous allons continuer \xE0 faire des entra\xEEnements pour notre com\xE9die
-    musicale, d\xE8s maintenant ! Il faut qu\u2019elle soit parfaite ! Le lieu de
-    rendez-vous ? Mais bien \xE9videmment, dans ma charmante maison !\r\nAllez, on
-    s\u2019active, je vous retrouve toutes les deux l\xE0-bas !\r\nDuke\r\n"
+  text: "Bonjour <color=#D70000><b> Lucina</b></color>,\r\nJe me permets de t\u2019envoyer
+    ce courrier afin de faire le point. La F\xEAte des Couleurs approche et nous
+    ne sommes pas pr\xEAts ! Cela ne va pas du tout ! C\u2019est toute mon image
+    qui est en jeu ! Que vont penser mes fans de la repr\xE9sentation m\xE9diocre
+    que je risque de leur montrer ?!\r\nPr\xE9viens <color=#D70000><b>Barbara ! Nous
+    allons continuer \xE0 faire des entra\xEEnements pour notre com\xE9die musicale,
+    d\xE8s maintenant ! Il faut qu\u2019elle soit parfaite ! Le lieu de rendez-vous
+    ? Mais bien \xE9videmment, dans ma charmante maison !\r\nAllez, on s\u2019active,
+    je vous retrouve toutes les deux l\xE0-bas !\r\n<color=#D70000><b> Duke </b></color>\r\n"
   sendedText:
   - "Bonjour, facteur\u2026"
   - "\u2026"
-  - "Oui, c\u2019est bien moi, l\u2019illustre Duke, le meilleur chanteur de tout
-    le pays. Je te prie de ne pas faire courir le bruit de ma pr\xE9sence ici"
-  - "Je ne veux pas que des ru\xE9es de fans viennent perturber ma retraite"
-  - "Bref, nous parlerons de moi plus tard\u2026"
-  - "L\u2019heure est grave, facteur ! Vois-tu la personne incroyable que je suis,
-    est en train de mettre en place une \u0153uvre musicale des plus magistrales
-    !"
+  - "Oui, c\u2019est bien moi, l\u2019illustre <color=#D70000><b>Duke</b></color>,
+    le <b>meilleur chanteur </b>de tout le pays. Je te prie de ne pas faire courir
+    le bruit de ma pr\xE9sence ici"
+  - "Je ne veux pas que des <b>ru\xE9es de fans </b>viennent perturber ma retraite"
+  - "Bref, nous parlerons de <b>moi </b>plus tard\u2026"
+  - "L\u2019heure est grave, facteur ! Vois-tu la <b>personne incroyable </b>que
+    je suis, est en train de mettre en place une <b>\u0153uvre musicale </b>des plus
+    magistrales !"
   - "Cependant, mes chers coll\xE8gues de travail ne font que me ralentir ! Nous
-    ne sommes absolument pas en \xE9tat de jouer devant qui que ce soit !"
-  - "Je te prie donc de te h\xE2ter et de leur livrer cette lettre \xE0 Lucina !
-    Elle se chargera du reste !"
+    ne sommes absolument <b>pas en \xE9tat de jouer </b>devant qui que ce soit !"
+  - "Je te prie donc de te h\xE2ter et de leur livrer cette lettre \xE0 <color=#D70000><b>Lucina</b></color>
+    ! Elle se chargera du reste !"
   receivedText:
   - "Facteur ? Est-ce important ? Je suis un peu fatigu\xE9e avec tous mes entra\xEEnements"
   - "Du courrier ?... Ne me dis pas que\u2026"
   - "\u2026"
-  - "Je m\u2019en doutais ! Encore ! Ce sale petit\u2026 Goujat !"
-  - Comment ose-t-il me faire la morale, non nous faire la morale ?!
+  - "Je m\u2019en doutais ! Encore ! Ce sale petit\u2026 <b>Goujat </b>!"
+  - Comment ose-t-il me faire la <b>morale</b>, non <b>nous </b>faire la morale ?!
   glansGain: 0
   stampGain: 0
   appearingCharacter: {fileID: 0}

@@ -17,11 +17,11 @@ MonoBehaviour:
   dependencies:
   - {fileID: 11400000, guid: fd8df75db0be607499c382305e0be237, type: 2}
   senderName: Icare
-  text: "Bonjour Poutre,\r\nJ\u2019ai un grand projet ! Et quand je dis grand projet,
-    je dis <b>GRAND <b>! Pour que ce magnifique <b>chef-d'\u0153uvre <b>puisse voir
-    le jour, j\u2019ai besoin de tes comp\xE9tences et de mat\xE9riel. Du bois, du
-    tissu et des feux d\u2019artifices feront l\u2019affaire. Rejoins-moi et crois
-    en mon g\xE9nie !\r\nA tr\xE8s vite !\r\nIcare\r\n"
+  text: "Bonjour <color=#D70000><b>Poutre</b></color>,\r\nJ\u2019ai un grand projet
+    ! Et quand je dis grand projet, je dis <b>GRAND <b>! Pour que ce magnifique <b>chef-d'\u0153uvre
+    <b>puisse voir le jour, j\u2019ai besoin de tes comp\xE9tences et de mat\xE9riel.
+    Du bois, du tissu et des feux d\u2019artifices feront l\u2019affaire. Rejoins-moi
+    et crois en mon g\xE9nie !\r\nA tr\xE8s vite !\r\n<color=#D70000><b>Icare</b></color>\r\n"
   sendedText:
   - "Pouvoir voler un jour\u2026 Sans retour\u2026 Ils disent tous que je suis fou
     mais ils verront tous !"

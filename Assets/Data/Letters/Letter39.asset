@@ -18,27 +18,27 @@ MonoBehaviour:
   - {fileID: 11400000, guid: be7ce70ab8c783f4b9e0fd156a0627a8, type: 2}
   senderName: Barbara
   text: "Mes irr\xE9v\xE9rencieuses salutations,\r\nPour la premi\xE8re fois depuis
-    que j\u2019ai pris une plume, je ne r\xE9pondrais pas de mani\xE8re m\xE9lodieuse
-    et raffin\xE9e. Mon agacement est tel, que les mots ne me viennent. Depuis le
-    d\xE9but, nous nous acharnons \xE0 r\xE9p\xE9ter pour qu\u2019au final notre
+    que j\u2019ai pris une plume, je ne <b>r\xE9pondrais pas de mani\xE8re m\xE9lodieuse
+    et raffin\xE9e</b>. Mon agacement est tel, que les mots ne me viennent. Depuis
+    le d\xE9but, nous nous acharnons \xE0 r\xE9p\xE9ter pour qu\u2019au final notre
     pers\xE9v\xE9rance soit vaine.\r\nTous ces jours de r\xE9p\xE9titions, nous les
-    avons support\xE9s pour que le jour venu, nos amis puissent profiter des festivit\xE9s.
+    avons support\xE9s pour que le jour venu, nos amis puissent <b>profiter des festivit\xE9s</b>.
     Certes, nous comprenons la n\xE9cessit\xE9 ! Cependant, nous sommes \xE9reint\xE9s
     ! Comme toujours, tu montres ton c\xF4t\xE9 \xE9go\xEFste qui ne devrait jamais
     avoir \xE0 appara\xEEtre chez un artiste !\r\nJe me permets donc, en empruntant
-    son nom, de parler \xE9galement au nom de Lucina, pour dire que cette fois, nous
-    n\u2019irons point !\r\n Aussi, pour ne pas te laisser dans l\u2019inconnu, je
-    te rappelle avec aigreur, que nous nous reverrons \xE0 la date et lieu convenu,
-    pour la mise en place de notre chef-d\u2019\u0153uvre, le jour de la F\xEAte
-    des Couleurs.\r\nBarbara\r\n"
+    son nom, de parler \xE9galement au nom de <color=#D70000><b>Lucina</b></color>,
+    pour dire que cette fois, nous n\u2019irons point !\r\n Aussi, pour ne pas te
+    laisser dans l\u2019inconnu, je te rappelle avec aigreur, que nous nous reverrons
+    \xE0 la date et lieu convenu, pour la mise en place de notre chef-d\u2019\u0153uvre,
+    le jour de la <b>F\xEAte des Couleurs</b>.\r\n<color=#D70000><b>Barbara</b></color>\r\n"
   sendedText:
   - "Quel odieux petit tra\xEEtre !"
-  - "Facteur ! Livre ma r\xE9ponse sans tarder ! A ce hibou de malheur, je vais lui
-    montrer !"
+  - "Facteur ! Livre ma r\xE9ponse sans tarder ! A ce <b>hibou de malheur</b>, je
+    vais lui montrer !"
   receivedText:
   - "Ah ! Enfin ! Une r\xE9ponse ! Ce qu\u2019elles peuvent mettre du temps !"
   - "Mais je suis s\xFBr qu\u2019elles doivent \xEAtre enjou\xE9es \xE0 l\u2019id\xE9e
-    de r\xE9p\xE9ter notre pi\xE8ce une nouvelle fois en ma compagnie !"
+    de r\xE9p\xE9ter notre pi\xE8ce une <b>nouvelle fois en ma compagnie </b>!"
   - Voyons voir !
   - "\u2026"
   - "Blablabla\u2026 Que du blabla\u2026"

@@ -17,15 +17,15 @@ MonoBehaviour:
   dependencies:
   - {fileID: 11400000, guid: a8adea44a830db146a1a25687b2fa8ba, type: 2}
   senderName: Martin
-  text: "Bonjour,\r\nAvec grand plaisir, Val\xE9rie, tu peux venir jeter un coup
-    d\u2019\u0153il \xE0 mon incroyable prise ! Tu ne verras pas un tr\xE9sor aussi
-    beau de toute ta vie ailleurs ! Si tu n\u2019es pas press\xE9 par le temps, je
-    compte exhiber ma prise lors de la F\xEAte des Couleurs, nous pourrons en discuter
-    \xE0 ce moment-l\xE0 !\r\nEn tout cas, je suis fascin\xE9 ! C\u2019est incroyable
-    que tu aies pu prendre connaissance de ma prise avant tout le monde ! Il faut
-    absolument que tu m\u2019apprennes comment d\xE9velopper cet instinct ! Je suis
-    s\xFBr qu\u2019avec, je pourrais p\xEAcher des tr\xE9sors par milliers !\r\nA
-    bient\xF4t,\r\nMartin\r\n"
+  text: "Bonjour,\r\nAvec grand plaisir, <color=#D70000><b>Val\xE9rie</b></color>,
+    tu peux venir jeter un coup d\u2019\u0153il \xE0 mon <b>incroyable prise </b>!
+    Tu ne verras pas un <b>tr\xE9sor </b>aussi beau de toute ta vie ailleurs ! Si
+    tu n\u2019es pas press\xE9 par le temps, je compte exhiber ma prise lors de la
+    <b>F\xEAte des Couleurs</b>, nous pourrons en discuter \xE0 ce moment-l\xE0 !\r\nEn
+    tout cas, je suis fascin\xE9 ! C\u2019est incroyable que tu aies pu prendre connaissance
+    de ma prise avant tout le monde ! Il faut absolument que tu m\u2019apprennes
+    comment d\xE9velopper cet <b>instinct </b>! Je suis s\xFBr qu\u2019avec, je pourrais
+    p\xEAcher des tr\xE9sors par <b>milliers </b>!\r\nA bient\xF4t,\r\n<color=#D70000><b>Martin</b></color>\r\n"
   sendedText:
   - "Vite, il faut que je lui donne une r\xE9ponse ! Tu veux bien la lui apporter
     ? Merci, facteur !"
@@ -34,12 +34,12 @@ MonoBehaviour:
     connais d\xE9j\xE0 la r\xE9ponse\u2026"
   - "\u2026"
   - "Je dois dire\u2026 Que je ne m\u2019attendais pas \xE0 \xE7a\u2026"
-  - "Je crois que c\u2019est la premi\xE8re fois que cela m\u2019arrive\u2026 Un
-    animal qui a h\xE2te de l\u2019arriv\xE9e du fisc\u2026"
+  - "Je crois que c\u2019est la <b>premi\xE8re fois </b>que cela m\u2019arrive\u2026
+    Un animal qui a <b>h\xE2te </b>de l\u2019arriv\xE9e du fisc\u2026"
   - "\u2026"
   - "Excellent ! Je sens une potentielle recrue ! J\u2019ai d\xE9cid\xE9 !"
-  - "Je vais lui faire une fleur et lui laisser jusqu\u2019\xE0 la F\xEAte des Couleurs
-    avant d\u2019inspecter son tr\xE9sor !"
+  - "Je vais lui faire une fleur et lui laisser jusqu\u2019\xE0 la <b>F\xEAte des
+    Couleurs </b>avant d\u2019inspecter son tr\xE9sor !"
   glansGain: 0
   stampGain: 0
   appearingCharacter: {fileID: 0}

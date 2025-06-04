@@ -16,38 +16,40 @@ MonoBehaviour:
   receiver: {fileID: 11400000, guid: ed1c784f61a160d49b72a96823946ba0, type: 2}
   dependencies: []
   senderName: Hans
-  text: "Salutation citoyen Jack,\r\nJe t\u2019ecris puisque j\u2019ai besoin d\u2019un
-    coup de patte. Pour se preparer \xE0 la Fete des Couleurs, Barbara a d\xE9cid\xE9
-    d\u2019emm\xE9nager la Grotte des Inspirations pour trouver de\u2026 L\u2019inspiration...
+  text: "Salutation citoyen <color=#D70000><b>Jack</b></color>,\r\nJe t\u2019ecris
+    puisque j\u2019ai besoin d\u2019un coup de patte. Pour se preparer \xE0 la <b>Fete
+    des Couleurs</b>, <color=#D70000><b>Barbara</b></color> a d\xE9cid\xE9 d\u2019emm\xE9nager
+    la <b>Grotte des Inspirations </b>pour trouver de\u2026 L\u2019inspiration...
     Vu qu\u2019elle s\u2019est installee tr\xE8s recemment, il reste des retouches
     a faire. Et c\u2019est la que tu entres en jeu, soldat ! Il faudrait que tu t\u2019occupes
     des travaux n\xE9cessaires ! Peux-tu te charger de cette mission, soldat ?\r\nAvec
-    amitie,\r\nCapitaine Hans\r"
+    amitie,\r\n<color=#D70000><b>Capitaine Hans</b></color>\r"
   sendedText:
   - "Salutations, citoyen ordinaire ! Police de Verd\u2019Oyant, Commandant Hans
     \xE0 ton service. "
-  - "J\u2019ai ouie dire que nous accueillons une nouvelle recrue dans nos rangs,
-    un postier qui plus est. Tu es bien le nouveau postier, n\u2019est-ce pas ?\r\n"
+  - "J\u2019ai ouie dire que nous accueillons une <b>nouvelle recrue </b>dans nos
+    rangs, un postier qui plus est. Tu es bien le nouveau <b>postier</b>, n\u2019est-ce
+    pas ?\r\n"
   - "Merveilleux, soldat !  En tant que repr\xE9sentant des forces de l\u2019ordre,
-    il est de mon devoir de t\u2019aider \xE0 te familiariser \xE0 ta nouvelle vie
-    ici\r\n"
+    il est de mon devoir de t\u2019aider \xE0 te familiariser \xE0 ta <b>nouvelle
+    vie </b>ici\r\n"
   - "Actuellement, les autres villageois ne voudront sans doute pas te confier leur
-    courrier. Tu vas donc devoir faire tes preuves avec une premi\xE8re livraison\r\n"
+    courrier. Tu vas donc devoir faire tes preuves avec une <b>premi\xE8re livraison</b>\r\n"
   - " Et \xE7a tombe bien ! Puisque j\u2019ai une mission pour toi, soldat. Ta toute
-    premi\xE8re ! J\u2019ai une lettre \xE0 envoyer \xE0 Jack. Pourrais-tu lui apporter
-    ?\r\n"
-  - "Hahaha ! J\u2019aime cet etat d\u2019esprit ! Tiens, voici la lettre\r\n"
-  - "Bien entendu, il va de soi qu\u2019en tant que postier tu ne dois pas regarder
-    le contenu des lettres que tu livres. Sinon, cela constituerait un crime et il
-    serait alors de mon devoir de t\u2019appr\xE9hender. Mais j\u2019ai foi en toi
-    ! Bonne chance soldat !"
+    premi\xE8re ! J\u2019ai une <b>lettre </b>\xE0 envoyer \xE0 <color=#D70000><b>Jack</b></color>.
+    Pourrais-tu lui apporter ?\r\n"
+  - "Hahaha ! J\u2019aime cet etat d\u2019esprit ! Tiens, voici la <b>lettre</b>\r\n"
+  - "Bien entendu, il va de soi qu\u2019en tant que postier <b>tu ne dois pas regarder
+    le contenu des lettres que tu livres</b>. Sinon, cela constituerait un crime
+    et il serait alors de mon devoir de t\u2019appr\xE9hender. Mais j\u2019ai foi
+    en toi ! Bonne chance soldat !"
   receivedText:
   - "Salut mon petiot ! T\u2019es le nouveau facteur ?! Quel bon vent t\u2019am\xE8ne
     !?"
   - "Ah ! Tu m\u2019apportes une lettre du Capitaine Hans ?! Hmm\u2026 Qu\u2019est-ce
     qu\u2019il peut bien vouloir ?!\r\n"
-  - "Merci bien mon petiot ! Tiens prends \xE7a en guise de remerciement !"
+  - "Merci bien mon petiot ! Tiens prends \xE7a en guise de <b>remerciement </b>!"
   glansGain: 1
-  stampsGain: 2
+  stampGain: 0
   appearingCharacter: {fileID: 11400000, guid: a8e02d414e45cc34a93975248246175f, type: 2}
   disappearingCharacter: {fileID: 11400000, guid: 50c77299b9eff3b4bb1c63aa7f2553b9, type: 2}

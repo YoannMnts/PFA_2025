@@ -17,26 +17,30 @@ MonoBehaviour:
   dependencies:
   - {fileID: 11400000, guid: ed4039af06327e746bfb2bdd9d5b30f1, type: 2}
   senderName: Antonin
-  text: "Bonjour Flora,\r\nN\u2019aie crainte ! J\u2019ai pr\xE9venu Jack de ce qui
-    \xE9tait en train d\u2019arriver ! Nous accourons tous deux \xE0 ta biblioth\xE8que
-    pour r\xE9soudre ton probl\xE8me ! Nous n\u2019allons pas laisser ces quelques
-    chenilles de pacotille ruiner le travail de toute une vie !\r\nEt quand nous
-    nous serons d\xE9barrass\xE9s une nouvelle fois d\u2019eux, nous l\u2019\xE9crirons
-    dans les livres d\u2019Histoire ! Je le vois d\xE9j\xE0 d\u2019ici : La jeune
-    et vaillante Flora a stopp\xE9 \xE0 temps une nouvelle Crise des Pages Blanches
-    ! Quelle figure historique tu feras !\r\nC\u2019est pourquoi, reste forte ma
-    grande ! Comme toujours, tu surmonteras cette \xE9preuve !\r\nAntonin\r\n"
+  text: "Bonjour <color=#D70000><b>Flora</b></color>,\r\nN\u2019aie crainte ! J\u2019ai
+    pr\xE9venu <color=#D70000><b>Jack</b></color> de ce qui \xE9tait en train d\u2019arriver
+    ! Nous accourons tous deux \xE0 ta <b>biblioth\xE8que </b>pour r\xE9soudre ton
+    probl\xE8me ! Nous n\u2019allons pas laisser ces quelques <b>chenilles </b>de
+    pacotille ruiner le travail de toute une vie !\r\nEt quand nous nous serons d\xE9barrass\xE9s
+    une nouvelle fois d\u2019eux, nous l\u2019\xE9crirons dans les livres d\u2019Histoire
+    ! Je le vois d\xE9j\xE0 d\u2019ici : La jeune et vaillante Flora a stopp\xE9
+    \xE0 temps une nouvelle <b>Crise des Pages Blanches </b>! Quelle figure historique
+    tu feras !\r\nC\u2019est pourquoi, <b>reste forte </b>ma grande ! Comme toujours,
+    tu surmonteras cette \xE9preuve !\r\n<color=#D70000><b>Antonin</b></color>\r\n"
   sendedText:
-  - "Oh ! D\xE9livre aussi cette lettre \xE0 Flora ! Cela la rassurera !"
+  - "Oh ! D\xE9livre aussi cette lettre \xE0 <color=#D70000><b>Flora</b></color>
+    ! Cela la rassurera !"
   receivedText:
-  - "T-tu as u-une r\xE9ponse de Mon-monsieur Antonin ?"
+  - "T-tu as u-une r\xE9ponse de Mon-monsieur <color=#D70000><b>Antonin</b></color>
+    ?"
   - "Vi-vite ! Do-donne-la-moi, s\u2019il t-te pl-pla\xEEt !"
   - "\u2026"
-  - "O-ouf\u2026 Monsieur An-Antonin arrive\u2026 Le pr-probl\xE8me sera r\xE9-r\xE9gl\xE9\u2026"
+  - "O-ouf\u2026 Monsieur <color=#D70000><b>An-Antonin</b></color> arrive\u2026 Le
+    pr-probl\xE8me sera r\xE9-r\xE9gl\xE9\u2026"
   - "Mer-merci, facteur d\u2019avoir li-livr\xE9 ma let-lettre."
-  - "T-tu sais, il n\u2019en a p-pas l\u2019air, m-mais Monsieur Antonin est u-une
-    per-personne tr\xE8s gen-gentille. Il m\u2019a beau-beaucoup aid\xE9 et i-il
-    continue tou-toujours !"
+  - "T-tu sais, il n\u2019en a p-pas l\u2019air, m-mais Monsieur <color=#D70000><b>Antonin</b></color>
+    est u-une per-personne tr\xE8s gen-gentille. Il m\u2019a beau-beaucoup aid\xE9
+    et i-il continue tou-toujours !"
   glansGain: 0
   stampGain: 0
   appearingCharacter: {fileID: 0}
