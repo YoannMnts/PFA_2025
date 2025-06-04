@@ -267,6 +267,11 @@ public class LettersPanel : Panel
             {
                 letterText.fontSize = 25;
                 letterAuthor.fontSize = 25;
+                if (currentLettersData[currentLevel].content.Length > 550)
+                {
+                    letterAuthor.fontSize = 20;
+                    letterAuthor.fontSize = 20;
+                }
             }
             else
             {
