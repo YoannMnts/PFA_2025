@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: fc88507f79b0b2a4ea73d3ee9fca898c
+guid: 44e1fb6a9da081441ad9e32fb8304f37
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -3584815090317316086
-    second: Timbre_11_0
+      213: -1576577967288847263
+    second: Mairie_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -72,7 +72,7 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 4
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 256
+    maxTextureSize: 512
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Timbre_11_0
+      name: Mairie_0
       rect:
         serializedVersion: 2
-        x: 56
-        y: 31
-        width: 144
-        height: 194
+        x: 181
+        y: 122
+        width: 151
+        height: 268
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: a003d242bad204ec0800000000000000
-      internalID: -3584815090317316086
+      spriteID: 1647a0b11bede1ae0800000000000000
+      internalID: -1576577967288847263
       vertices: []
       indices: 
       edges: []
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Timbre_11_0: -3584815090317316086
+      Mairie_0: -1576577967288847263
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -1,0 +1,43 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0eeb945c88124c10989ad86d225d13c2, type: 3}
+  m_Name: Letter49
+  m_EditorClassIdentifier: 
+  sender: {fileID: 11400000, guid: 5c6e884f0beeccc4889768905bf01ea3, type: 2}
+  receiver: {fileID: 11400000, guid: e12fe3b1bd0924141abf9f3f8ba990c5, type: 2}
+  dependencies:
+  - {fileID: 11400000, guid: ed4039af06327e746bfb2bdd9d5b30f1, type: 2}
+  senderName: Antonin
+  text: "Bonjour Flora,\r\nN\u2019aie crainte ! J\u2019ai pr\xE9venu Jack de ce qui
+    \xE9tait en train d\u2019arriver ! Nous accourons tous deux \xE0 ta biblioth\xE8que
+    pour r\xE9soudre ton probl\xE8me ! Nous n\u2019allons pas laisser ces quelques
+    chenilles de pacotille ruiner le travail de toute une vie !\r\nEt quand nous
+    nous serons d\xE9barrass\xE9s une nouvelle fois d\u2019eux, nous l\u2019\xE9crirons
+    dans les livres d\u2019Histoire ! Je le vois d\xE9j\xE0 d\u2019ici : La jeune
+    et vaillante Flora a stopp\xE9 \xE0 temps une nouvelle Crise des Pages Blanches
+    ! Quelle figure historique tu feras !\r\nC\u2019est pourquoi, reste forte ma
+    grande ! Comme toujours, tu surmonteras cette \xE9preuve !\r\nAntonin\r\n"
+  sendedText:
+  - "Oh ! D\xE9livre aussi cette lettre \xE0 Flora ! Cela la rassurera !"
+  receivedText:
+  - "T-tu as u-une r\xE9ponse de Mon-monsieur Antonin ?"
+  - "Vi-vite ! Do-donne-la-moi, s\u2019il t-te pl-pla\xEEt !"
+  - "\u2026"
+  - "O-ouf\u2026 Monsieur An-Antonin arrive\u2026 Le pr-probl\xE8me sera r\xE9-r\xE9gl\xE9\u2026"
+  - "Mer-merci, facteur d\u2019avoir li-livr\xE9 ma let-lettre."
+  - "T-tu sais, il n\u2019en a p-pas l\u2019air, m-mais Monsieur Antonin est u-une
+    per-personne tr\xE8s gen-gentille. Il m\u2019a beau-beaucoup aid\xE9 et i-il
+    continue tou-toujours !"
+  glansGain: 0
+  stampGain: 0
+  appearingCharacter: {fileID: 0}
+  disappearingCharacter: {fileID: 0}

@@ -12,20 +12,33 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0eeb945c88124c10989ad86d225d13c2, type: 3}
   m_Name: Letter41
   m_EditorClassIdentifier: 
-  sender: {fileID: 0}
-  receiver: {fileID: 0}
-  dependencies: []
-  senderName: 
-  text: 
+  sender: {fileID: 11400000, guid: 914f917205a653b4799ec6060bf836fd, type: 2}
+  receiver: {fileID: 11400000, guid: cbd256541d269584abec53bdad300610, type: 2}
+  dependencies:
+  - {fileID: 11400000, guid: 2d354cb95ce49de45b77a335509aa6df, type: 2}
+  senderName: Officier Bobby
+  text: "Mes salutations\r\nUne nouvelle importante nous est parvenue et sur ordre
+    du Capitaine Hans, je me dois de vous en faire part ! La c\xE9l\xE8bre voleuse
+    Arianne Parpin est sur un prochain coup ! Elle a ouvertement provoqu\xE9 le Capitaine
+    Hans en lui offrant un g\xE2teau dont il est allergique !\r\nNous savons de sources
+    s\xFBres qu\u2019elle portera son prochain coup lors de la F\xEAte des Couleurs.
+    Le Capitaine Hans et moi nous chargerons de la surveillance durant les festivit\xE9s
+    ! Cette voleuse ne nous \xE9chappera pas !\r\nSinc\xE8rement,\r\nBobby\r"
   sendedText:
-  - "C\u2019est merveilleux ! Mon travail est presque fini ! Et tu sais ce que \xE7a
-    veut dire ?"
-  - "Exact ! Encore plus de travail ! Mais avant, il faut que Fr\xE9d\xE9ric le sache
-    !"
-  - "S\u2019il ne conna\xEEt pas la progression des pr\xE9paratifs de la F\xEAte
-    des Couleurs, il risque de paniquer et de devenir aigri !"
-  - "Ce qui ne change pas grand-chose d'habitude\u2026"
-  receivedText: []
+  - "T-tu sais, il n\u2019en a p-pas l\u2019air, m-mais Monsieur Antonin est u-une
+    per-personne tr\xE8s gen-gentille. Il m\u2019a beau-beaucoup aid\xE9 et i-il
+    continue tou-toujours !"
+  - "Alors ? Qu\u2019en penses-tu ? Je ressemble au Capitaine Hans, n\u2019est-ce
+    pas ?"
+  - "Mais il me reste encore beaucoup \xE0 apprendre avant de pouvoir \xEAtre de
+    la m\xEAme trempe que lui ! Le capitaine est incroyable !"
+  - "Il n\u2019a peur de rien et il attrape toujours les criminels ! Ariane Parpin
+    ne lui \xE9chappera pas pour tr\xE8s longtemps !"
+  - "A part \xE7a, j\u2019ai une mission \xE0 te confier, soldat ! Il faut que tu
+    livres cette lettre \xE0 la mairie ! C\u2019est tr\xE8s important ! Il en va
+    de la r\xE9ussite de notre mission !"
+  receivedText:
+  - Livraisoon accomplie !
   glansGain: 0
   stampGain: 0
   appearingCharacter: {fileID: 0}

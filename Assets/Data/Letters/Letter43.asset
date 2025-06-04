@@ -1,0 +1,61 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0eeb945c88124c10989ad86d225d13c2, type: 3}
+  m_Name: Letter43
+  m_EditorClassIdentifier: 
+  sender: {fileID: 11400000, guid: 1b4ad3d6af63b274ea5d29b40ebdcab0, type: 2}
+  receiver: {fileID: 11400000, guid: 1ecef972dcb04e64fac03dc0709271b0, type: 2}
+  dependencies:
+  - {fileID: 11400000, guid: 3bbe57a018855a54582b57c7d4004260, type: 2}
+  senderName: "Val\xE9rie"
+  text: "Bonjour, cher monsieur,\r\nSi je ne me trompe gu\xE8re, mon instinct affut\xE9
+    de chasseur d\u2019or me dit que vous venez de prendre possession d\u2019un grand
+    tr\xE9sor. J\u2019ignore comment vous avez pu obtenir une telle merveille mais
+    en tant que repr\xE9sentant de toute l\xE9galisation sur la fortune, je me dois
+    de venir v\xE9rifier que tout soit en ordre !\r\nDe ce fait, veuillez vous pr\xE9parer
+    rapidement pour une de mes visites tr\xE8s prochainement. N\u2019essayez-en aucun
+    de me duper ! Le fisc est peut-\xEAtre aveugle mais il a du flair !\r\nCordialement,\r\nVal\xE9rie\r\n"
+  sendedText:
+  - "Mais quelle id\xE9e de me faire venir jusqu\u2019ici ! Franchement ! Ce n\u2019est
+    pas comme si dans ce trou pomm\xE9 ; je pourrais-"
+  - "Sniff sniff sniff\u2026 Par le fisc et le saint esprit !"
+  - "Cette odeur ! Et ce bruit ! Aucun doute l\xE0-dessus ! \xC7a ne peut \xEAtre
+    que cela !"
+  - "En prenant en compte la distance et le sens de direction du vent ainsi que ma
+    position, l\u2019animal concern\xE9 ne peut \xEAtre que\u2026"
+  - "\u2026"
+  - "Je ne peux pas le croire\u2026"
+  - "Facteur, ton m\xE9tier, c\u2019est de livrer des lettres, non ? Alors d\xE9p\xEAche-toi
+    de livrer celle-l\xE0 !"
+  receivedText:
+  - "La chance me sourit enfin ! Facteur, tu tombes \xE0 pic ! Apr\xE8s des ann\xE9es
+    de patience, j\u2019ai enfin r\xE9ussi \xE0 p\xEAcher un magnifique tr\xE9sor
+    !\r\n"
+  - "J\u2019ai h\xE2te de montrer ma prise \xE0 l\u2019int\xE9gralit\xE9 du village
+    ! Ils vont en tirer une t\xEAte, \xE7a, je peux te le garantir !"
+  - "Quelle journ\xE9e ! Mais quelle journ\xE9e ! Je n\u2019ai jamais \xE9t\xE9 aussi
+    heureux !"
+  - "D\xE9sol\xE9, je dois t\u2019emb\xEAter avec toutes mes manies ! Mais dis-moi,
+    qu\u2019est-ce qui t'am\xE8ne ici ?"
+  - Du courrier ? Mais de qui ?
+  - "\u2026"
+  - "Wao ! Incroyable ! L\u2019animal qui vient de m\u2019envoyer la lettre est sp\xE9cialiste
+    des tr\xE9sors ! Il saura plus que moi sur cette merveille que je viens d\u2019attraper
+    !"
+  - "Et il dit qu\u2019il fait partie du fisc ! Sans doute une grande association
+    de chasseurs de tr\xE9sors !"
+  - "Avec un peu de chance, je pourrais devenir c\xE9l\xE8bre ! Martin, le grand
+    p\xEAcheur de tr\xE9sor ! \xC7a sonne plut\xF4t bien !"
+  glansGain: 0
+  stampGain: 0
+  appearingCharacter: {fileID: 0}
+  disappearingCharacter: {fileID: 0}

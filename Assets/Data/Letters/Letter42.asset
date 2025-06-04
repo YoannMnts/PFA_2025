@@ -1,0 +1,45 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0eeb945c88124c10989ad86d225d13c2, type: 3}
+  m_Name: Letter42
+  m_EditorClassIdentifier: 
+  sender: {fileID: 11400000, guid: 1a080252247be3b4a87fed0f00c2172c, type: 2}
+  receiver: {fileID: 11400000, guid: cbd256541d269584abec53bdad300610, type: 2}
+  dependencies:
+  - {fileID: 11400000, guid: e3c4b09a4cf38b146bf308cead1baf47, type: 2}
+  senderName: "Fr\xE9d\xE9ric"
+  text: "Mes sinc\xE8res salutations,\r\nJ\u2019ai l\u2019honneur de vous annoncer
+    que les derni\xE8res pr\xE9parations pour la F\xEAte des Couleurs viennent d\u2019aboutir
+    ! Tout est enfin pr\xEAt et nous pouvons commencer l'installation des \xE9choppes,
+    les peintures, et tous les autres \xE9l\xE9ments que nous avons.\r\nLarry nous
+    concoctera de d\xE9licieux plats et nos artistes nous r\xE9servent une belle
+    com\xE9die musicale. Poutre a m\xEAme r\xE9ussi \xE0 nous concocter un jus de
+    fruit incroyable ! Je vous laisse le plaisir de le d\xE9couvrir lors de la f\xEAte
+    !\r\nEt cette ann\xE9e, pour la premi\xE8re fois, nous pourrons lancer de magnifiques
+    couleurs dans le ciel avec des feux d\u2019artifices ! Comment est-ce possible
+    me direz-vous ? Tout cela est possible gr\xE2ce au Capitaine Hans qui a confisqu\xE9
+    les feux d\u2019artifices de Icare. D\u2019ailleurs, nous nous questionnons toujours
+    comment il a r\xE9ussi \xE0 s\u2019en procurer\u2026\r\nQuoiqu\u2019il en soit,
+    je pense que cette ann\xE9e, la F\xEAte des Couleurs sera la plus r\xE9ussie
+    depuis des ann\xE9es !\r\nRespectueusement,\r\nFr\xE9d\xE9ric\r\n"
+  sendedText:
+  - Hahahaha ! Quelle joie ! Tout se goupille ! Ce sera-
+  - "HAAAAAA ! Nom de nom de\u2026 Mais tu es un grand malade ! Combien de fois tu
+    vas continuer de faire \xE7a ?!"
+  - "Mais je dois dire que tu tombes bien ! Prends cette lettre ! Am\xE8ne-l\xE0
+    \xE0 la mairie ! Et ne la perds pas ! Cela concerne la F\xEAte des Couleurs !"
+  receivedText:
+  - Livraison accomplie !
+  glansGain: 0
+  stampGain: 0
+  appearingCharacter: {fileID: 0}
+  disappearingCharacter: {fileID: 0}
