@@ -16,7 +16,7 @@ MonoBehaviour:
   receiver: {fileID: 11400000, guid: 8f7f29cef723b4440b99490ea59509f9, type: 2}
   dependencies:
   - {fileID: 11400000, guid: c84573aeadef636479a5aaa4fc34ba5f, type: 2}
-  senderName: Captain Hans
+  senderName: Capitaine Hans
   text: "Bonjour soldat <color=#D70000><b>Poutre</b></color>,\r\nNe te fais pas de
     soucis, le citoyen <color=#D70000><b>Icare</b></color> a \xE9t\xE9 averti. Un
     <b>premier avertissement </b>a \xE9t\xE9 envoy\xE9 comme la proc\xE9dure l\u2019exige.

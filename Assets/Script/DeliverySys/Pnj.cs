@@ -70,7 +70,7 @@ public class Pnj : PlayerInteractable
         }
         else
         {
-            for (int i = 0; i < letter.letterData.receivedText.Length; i++)
+            for (int i = 0; i < letter.letterData.sendedText.Length; i++)
             {
                 linesLeft.Add(letter.letterData.sendedText[i]);
             }

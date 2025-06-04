@@ -15,7 +15,7 @@ public class Credits : MonoBehaviour
     {
         if (context.performed)
         {
-            SceneManager.LoadScene(1);
+            SceneManager.LoadScene(0);
         }
     }
     IEnumerator Scrolling()

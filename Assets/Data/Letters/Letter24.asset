@@ -16,7 +16,7 @@ MonoBehaviour:
   receiver: {fileID: 11400000, guid: ac853fc7cde38634b826552d02fa0800, type: 2}
   dependencies:
   - {fileID: 11400000, guid: 61087d274a00fe041a0c1cb6a0a24b56, type: 2}
-  senderName: Captain Hans
+  senderName: Capitaine Hans
   text: "J\u2019ai le regret de t\u2019annoncer que tu es dor\xE9navant en <b>\xE9tat
     d\u2019arrestation </b>! Des nouvelles me sont parvenues et visiblement tu n\u2019as
     pas tenu compte de ma mise en garde. Et il semblerait qu\u2019avoir utilis\xE9

@@ -16,7 +16,7 @@ MonoBehaviour:
   receiver: {fileID: 11400000, guid: ed1c784f61a160d49b72a96823946ba0, type: 2}
   dependencies:
   - {fileID: 11400000, guid: ed4039af06327e746bfb2bdd9d5b30f1, type: 2}
-  senderName: Anotnin
+  senderName: Antonin
   text: "Bonjour, <color=#D70000><b>Jack,\r\nJe n\u2019ai malheureusement pas de
     temps \xE0 perdre en \xE9locution et autre formulation, tu me pardonneras donc
     d\u2019aller droit au but. La <b>biblioth\xE8que </b>de <color=#D70000><b>Flora

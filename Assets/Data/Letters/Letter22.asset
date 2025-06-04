@@ -30,8 +30,8 @@ MonoBehaviour:
     se passe sans encombre !\r\nCordialement,\r\n<color=#D70000><b>Fr\xE9d\xE9ric\r\n"
   sendedText:
   - "Facteur ! Il faut alerter la police\u2026 Il faut faire appel \xE0 \u2026"
-  - "Mais non pas \xE0 <color=#D70000><b>Rambouc ! Et c\u2019est qui ce <color=#D70000><b>Rambouc</b></color>
-    ?! Non, il faut faire appel au <color=#D70000><b>Capitaine Hans</b></color> !\r\n"
+  - "Mais non pas \xE0 Rambouc ! Et c\u2019est qui ce Rambouc ?! Non, il faut faire
+    appel au <color=#D70000><b>Capitaine Hans</b></color> !\r\n"
   receivedText:
   - "Un plaisir de te revoir, soldat ! Quel bon vent t\u2019am\xE8ne ?"
   - "Encore une lettre ? Et celle-ci vient de <color=#D70000><b>Fr\xE9d\xE9ric</b></color>

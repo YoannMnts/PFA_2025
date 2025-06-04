@@ -16,7 +16,7 @@ MonoBehaviour:
   receiver: {fileID: 11400000, guid: ac853fc7cde38634b826552d02fa0800, type: 2}
   dependencies:
   - {fileID: 11400000, guid: c84573aeadef636479a5aaa4fc34ba5f, type: 2}
-  senderName: Captain Hans
+  senderName: Capitaine Hans
   text: "Bonjour citoyen <color=#D70000><b>Icare</b></color>,\r\nIl semblerait que
     tu recommences tes folies et que tu tentes non seulement d\u2019inclure le soldat
     <color=#D70000><b>Poutre</b></color> mais aussi notre nouvelle recrue. Citoyen

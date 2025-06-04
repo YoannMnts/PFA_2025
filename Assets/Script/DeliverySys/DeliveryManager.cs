@@ -158,7 +158,6 @@ public class DeliveryManager : MonoBehaviour
     {
         if (pnj1 != null)
         {
-            Debug.Log("tss");
             GameObject pnjToAppear = null;
             for (int i = 0; i < pnjsTab.Length; i++)
             {
@@ -173,9 +172,9 @@ public class DeliveryManager : MonoBehaviour
                 float distance = Vector3.Distance(pnjToAppear.transform.position, player.transform.position);
                 while (distance < 15)
                 {
+                    distance = Vector3.Distance(pnjToAppear.transform.position, player.transform.position);
                     yield return null;
                 }
-                Debug.Log(pnjToAppear.name);
                 pnjToAppear.GetComponent<SpriteRenderer>().enabled = true;
                 Collider2D[] colliders = pnjToAppear.GetComponents<BoxCollider2D>();
                 for (int i = 0; i < colliders.Length; i++)
