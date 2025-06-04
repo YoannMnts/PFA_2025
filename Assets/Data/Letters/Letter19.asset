@@ -39,7 +39,7 @@ MonoBehaviour:
     pu r\xE9aliser cet exploit !"
   - "Je le ferai aussi ! Je le r\xE9ussirai ! Et je serai alors la premi\xE8re loutre
     \xE0 remonter la <b>Cascade du Retour </b>!"
-  glansGain: 0
-  stampGain: 0
+  glansGain: 2
+  stampGain: 1
   appearingCharacter: {fileID: 0}
   disappearingCharacter: {fileID: 0}

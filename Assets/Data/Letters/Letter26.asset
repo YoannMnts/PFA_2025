@@ -50,7 +50,7 @@ MonoBehaviour:
   - "Et elle compte faire son crime pendant la <b>F\xEAte des Couleurs</b> ! Foi
     de faucon, elle n\u2019y arrivera pas !"
   - Merci pour ton service, soldat !
-  glansGain: 0
-  stampGain: 0
+  glansGain: 2
+  stampGain: 1
   appearingCharacter: {fileID: 0}
   disappearingCharacter: {fileID: 0}

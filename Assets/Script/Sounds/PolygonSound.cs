@@ -7,7 +7,7 @@ public class PolygonSound : MonoBehaviour
     [SerializeField] private PolygonCollider2D shape;
     [SerializeField] private Transform listener;
     [SerializeField] private float fadeDistance = 5f; 
-    [SerializeField] private OptionsPanel optionsPanel;
+    [SerializeField] public OptionsPanel optionsPanel;
     [SerializeField] private float multiplier = 1f;
 
     void Update()

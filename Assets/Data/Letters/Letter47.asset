@@ -39,7 +39,7 @@ MonoBehaviour:
   - Oui ? Excellent ! Je te remercie !
   - "\u2026"
   - "Voil\xE0 qui est pour le moins surprenant et <b>inattendu</b>, je dois dire\u2026"
-  glansGain: 0
-  stampGain: 0
+  glansGain: 3
+  stampGain: 1
   appearingCharacter: {fileID: 0}
   disappearingCharacter: {fileID: 0}

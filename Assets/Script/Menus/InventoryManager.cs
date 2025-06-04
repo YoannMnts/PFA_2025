@@ -61,7 +61,7 @@ public class InventoryManager : SoundObject
             else
             {
                 inventoryTopPanel.SetActive(true);
-                acornsText.text = acornsCount+" / 50";
+                acornsText.text = acornsCount+" / 100";
                 panels[0].GetComponent<Panel>().Open();
             }
         }

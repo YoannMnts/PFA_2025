@@ -43,7 +43,7 @@ MonoBehaviour:
     !"
   - "Mais il ne faut pas que je n\xE9glige mon entra\xEEnement pour autant !"
   - "Allez ! Hop hop hop ! Me voil\xE0 repartie !"
-  glansGain: 0
-  stampGain: 0
+  glansGain: 2
+  stampGain: 1
   appearingCharacter: {fileID: 0}
   disappearingCharacter: {fileID: 0}

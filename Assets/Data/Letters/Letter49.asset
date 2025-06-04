@@ -41,7 +41,7 @@ MonoBehaviour:
   - "T-tu sais, il n\u2019en a p-pas l\u2019air, m-mais Monsieur <color=#D70000><b>Antonin</b></color>
     est u-une per-personne tr\xE8s gen-gentille. Il m\u2019a beau-beaucoup aid\xE9
     et i-il continue tou-toujours !"
-  glansGain: 0
-  stampGain: 0
+  glansGain: 2
+  stampGain: 1
   appearingCharacter: {fileID: 0}
   disappearingCharacter: {fileID: 0}

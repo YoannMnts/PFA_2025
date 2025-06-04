@@ -45,7 +45,7 @@ MonoBehaviour:
   - "Oh ! Et je dois \xE9galement te donner une autre lettre !"
   - "Alors\u2026 D\u2019apr\xE8s ce qui est \xE9crit, je suis cens\xE9e trouver une
     lettre sous ce pot</b>..."
-  glansGain: 0
-  stampGain: 0
+  glansGain: 4
+  stampGain: 1
   appearingCharacter: {fileID: 0}
   disappearingCharacter: {fileID: 0}

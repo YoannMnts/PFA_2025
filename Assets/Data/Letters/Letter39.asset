@@ -45,7 +45,7 @@ MonoBehaviour:
   - "Ah ! Enfin, \"Nous nous reverrons \xE0 la date et lieu convenu\""
   - "Hahahaha ! Je le savais ! Merveilleux ! Je ferais mieux de me h\xE2ter pour
     les accueillir et encha\xEEner directement sur l\u2019entra\xEEnement !"
-  glansGain: 0
-  stampGain: 0
+  glansGain: 3
+  stampGain: 1
   appearingCharacter: {fileID: 0}
   disappearingCharacter: {fileID: 0}

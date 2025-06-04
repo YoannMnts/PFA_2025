@@ -38,7 +38,7 @@ MonoBehaviour:
   - "Je te conseille \xE9galement de la d\xE9guster avec un des merveilleux <b>jus
     de fruits </b>de <color=#D70000><b>Poutre</b></color>, ! Ils se marient \xE0
     merveille avec ce plat !\r\n"
-  glansGain: 0
-  stampGain: 0
+  glansGain: 3
+  stampGain: 1
   appearingCharacter: {fileID: 0}
   disappearingCharacter: {fileID: 0}

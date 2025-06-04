@@ -50,7 +50,7 @@ MonoBehaviour:
     lorsque la situation l\u2019exige !"
   - "M\xEAme si je dois admettre que les r\xE9actions de <color=#D70000><b>Fr\xE9d\xE9ric</b></color>,
     sont les plus d\xE9licieuses."
-  glansGain: 5
-  stampGain: 0
+  glansGain: 2
+  stampGain: 1
   appearingCharacter: {fileID: 0}
   disappearingCharacter: {fileID: 0}

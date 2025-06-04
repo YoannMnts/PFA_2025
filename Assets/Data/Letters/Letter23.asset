@@ -56,7 +56,7 @@ MonoBehaviour:
     vois pas comment et \u2026"
   - "Oh ?! Il y a une lettre sous mon comptoir ! Comme \xE9crit ! Un magicien ! Cet
     animal doit \xEAtre un <b>magicien </b>! C\u2019est incroyable !"
-  glansGain: 0
-  stampGain: 0
+  glansGain: 3
+  stampGain: 1
   appearingCharacter: {fileID: 0}
   disappearingCharacter: {fileID: 0}

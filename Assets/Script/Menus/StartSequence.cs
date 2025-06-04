@@ -44,8 +44,8 @@ public class StartSequence : SoundObject
         yield return new WaitForSeconds(3f);
         fillBar.gameObject.SetActive(true);
         fillBar.fillAmount = 0;
-        AsyncOperation loading = SceneManager.LoadSceneAsync(0);
-        while (SceneManager.GetSceneAt(0).isLoaded == false)
+        AsyncOperation loading = SceneManager.LoadSceneAsync(1);
+        while (SceneManager.GetSceneAt(1).isLoaded == false)
         {
             fillBar.fillAmount = loading.progress;
             yield return null;
@@ -118,8 +118,8 @@ public class StartSequence : SoundObject
         yield return new WaitForSeconds(2f);
         fillBar.gameObject.SetActive(true);
         fillBar.fillAmount = 0;
-        AsyncOperation loading = SceneManager.LoadSceneAsync(0);
-        while (SceneManager.GetSceneAt(0).isLoaded == false)
+        AsyncOperation loading = SceneManager.LoadSceneAsync(1);
+        while (SceneManager.GetSceneAt(1).isLoaded == false)
         {
             fillBar.fillAmount = loading.progress;
             yield return null;

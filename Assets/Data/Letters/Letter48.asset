@@ -43,7 +43,7 @@ MonoBehaviour:
   - "Sacr\xE9 nom de nom ! Petiot ! Le temps presse ! Il faut que je te laisse !
     Je dois vite rentrer chez moi pour <b>prendre mes affaires </b>!"
   - Bonne chance pour le reste de ton travail, petiot !
-  glansGain: 0
-  stampGain: 0
+  glansGain: 4
+  stampGain: 1
   appearingCharacter: {fileID: 0}
   disappearingCharacter: {fileID: 0}

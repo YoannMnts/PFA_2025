@@ -24,7 +24,7 @@ public class Notification : SoundObject
 
     public IEnumerator ShowUpLetter(string receiver)
     {
-        PlaySound(clips[0],SoundType.Effects);
+        PlaySound(clips[0],SoundType.Effects,true);
         letterPopUp.anchoredPosition = new Vector3(-1300, 400,0);
         letterText.text = "Nouvelle lettre pour <color=#D70000><b>" + receiver + " </b></color>!";
         while (letterPopUp.anchoredPosition.x < -760)
@@ -50,7 +50,7 @@ public class Notification : SoundObject
     }
     public IEnumerator ShowUpReward(int acornsCount, bool stampAcquired = false)
     {
-        PlaySound(clips[0],SoundType.Effects);
+        PlaySound(clips[0],SoundType.Effects,true);
         rewardPopUp.anchoredPosition = new Vector3(-1300, 200,0);
         if (acornsCount > 1)
         {

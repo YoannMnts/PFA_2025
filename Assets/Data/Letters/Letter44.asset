@@ -40,7 +40,7 @@ MonoBehaviour:
   - "Excellent ! Je sens une potentielle recrue ! J\u2019ai d\xE9cid\xE9 !"
   - "Je vais lui faire une fleur et lui laisser jusqu\u2019\xE0 la <b>F\xEAte des
     Couleurs </b>avant d\u2019inspecter son tr\xE9sor !"
-  glansGain: 0
-  stampGain: 0
+  glansGain: 3
+  stampGain: 1
   appearingCharacter: {fileID: 0}
   disappearingCharacter: {fileID: 0}

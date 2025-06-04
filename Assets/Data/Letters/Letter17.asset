@@ -48,6 +48,6 @@ MonoBehaviour:
   - "Ou le septuag\xE9naire qui ne s\u2019est pas encore rendu compte du vol et me
     sermonne\u2026"
   glansGain: 3
-  stampGain: 0
+  stampGain: 1
   appearingCharacter: {fileID: 0}
   disappearingCharacter: {fileID: 0}

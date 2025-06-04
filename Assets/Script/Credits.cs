@@ -21,7 +21,7 @@ public class Credits : MonoBehaviour
     IEnumerator Scrolling()
     {
         float speed =40f;
-        while (creditsObject.anchoredPosition.y <= 3000)
+        while (creditsObject.anchoredPosition.y <= 5000)
         {
             Vector3 pos = creditsObject.anchoredPosition;
             pos.y += speed * Time.deltaTime;
@@ -29,6 +29,6 @@ public class Credits : MonoBehaviour
             yield return null;
         }
         yield return new WaitForSeconds(2f);
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene(0);
     }
 }

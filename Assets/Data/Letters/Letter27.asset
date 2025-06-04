@@ -48,7 +48,7 @@ MonoBehaviour:
   - "Bon\u2026 Assez tergivers\xE9. Voyons ce que <color=#D70000><b>Poutre m\u2019annonce
     de nouveau"
   - "\u2026"
-  glansGain: 0
-  stampGain: 0
+  glansGain: 3
+  stampGain: 1
   appearingCharacter: {fileID: 0}
   disappearingCharacter: {fileID: 0}

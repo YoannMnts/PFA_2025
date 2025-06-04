@@ -213,6 +213,6 @@ public class QuitPanel : Panel
             yield return null;
         }
 
-        SceneManager.LoadSceneAsync(1);
+        SceneManager.LoadSceneAsync(0);
     }
 }
