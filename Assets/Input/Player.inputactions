@@ -266,8 +266,30 @@
                 },
                 {
                     "name": "",
+                    "id": "3449a3fd-8a1a-4204-9668-c8b6d6a81037",
+                    "path": "<Keyboard>/e",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Interact",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
                     "id": "04e00c3a-2aca-4bc0-b1a2-b90a63075e80",
                     "path": "<Gamepad>/buttonNorth",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "OpenMenu",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "ef73bd8e-2716-46b7-b21a-4bd70ce2ea7f",
+                    "path": "<Keyboard>/tab",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -288,8 +310,30 @@
                 },
                 {
                     "name": "",
+                    "id": "6c3aa507-a05b-4d79-bb35-e8b80f8732ae",
+                    "path": "<Keyboard>/b",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "OpenTuto",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
                     "id": "8d87711f-a2b5-4b28-bc3f-11d3e8138d7d",
                     "path": "<Gamepad>/start",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "OpenMap",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "74d70531-4184-499f-a305-2a0c223064c2",
+                    "path": "<Keyboard>/semicolon",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -428,6 +472,17 @@
                 },
                 {
                     "name": "",
+                    "id": "a7d1b5d4-d6d2-4be6-bf70-1e01d2b4f024",
+                    "path": "<Keyboard>/tab",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "CloseMenu",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
                     "id": "3cc81044-c3c1-4586-8eaa-d1e0ec84760c",
                     "path": "<Gamepad>/rightShoulder",
                     "interactions": "Press(behavior=1)",
@@ -439,9 +494,31 @@
                 },
                 {
                     "name": "",
+                    "id": "6e5616c5-7001-401f-b23c-eec9bee509c8",
+                    "path": "<Keyboard>/rightArrow",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "SwitchPanelRight",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
                     "id": "ef4aa9f5-a44c-4159-b59a-cf0f05818e06",
                     "path": "<Gamepad>/leftShoulder",
                     "interactions": "Press(behavior=1)",
+                    "processors": "",
+                    "groups": "",
+                    "action": "SwitchPanelLeft",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "91aae6ae-e838-4e10-9776-b57f43fa84ca",
+                    "path": "<Keyboard>/leftArrow",
+                    "interactions": "",
                     "processors": "",
                     "groups": "",
                     "action": "SwitchPanelLeft",
@@ -463,6 +540,17 @@
                     "name": "",
                     "id": "b9a5dbf5-9d48-4e4d-9337-65dca1a13f30",
                     "path": "<Gamepad>/leftStick/left",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "DPadLeft",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "c7a996c5-eb44-4b43-90c8-9433639ac2aa",
+                    "path": "<Keyboard>/a",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -494,6 +582,17 @@
                 },
                 {
                     "name": "",
+                    "id": "47eddb8b-3f7e-43b9-ba5a-c4ccd86d9f38",
+                    "path": "<Keyboard>/d",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "DPadRight",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
                     "id": "1735d729-928d-4c0d-b41e-349c3a536158",
                     "path": "<Gamepad>/dpad/up",
                     "interactions": "Press(behavior=1)",
@@ -507,6 +606,17 @@
                     "name": "",
                     "id": "31389d77-b850-449a-8013-ef2397a830c1",
                     "path": "<Gamepad>/leftStick/up",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "DPadTop",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "841480bb-7aa4-443a-b6b5-dcc95c8ab9f7",
+                    "path": "<Keyboard>/w",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -538,9 +648,31 @@
                 },
                 {
                     "name": "",
+                    "id": "3d74e491-fada-480a-acae-64a700e60282",
+                    "path": "<Keyboard>/s",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "DPadBottom",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
                     "id": "e5228569-386a-40cf-a6b9-07af653a9bd7",
                     "path": "<Gamepad>/buttonSouth",
                     "interactions": "Press(behavior=1)",
+                    "processors": "",
+                    "groups": "",
+                    "action": "SouthButton",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "4e21bff8-fe2b-407c-a622-9621157f1743",
+                    "path": "<Keyboard>/downArrow",
+                    "interactions": "",
                     "processors": "",
                     "groups": "",
                     "action": "SouthButton",
@@ -560,6 +692,17 @@
                 },
                 {
                     "name": "",
+                    "id": "506a6bd3-7c3c-4132-a62a-01fe240b2c80",
+                    "path": "<Keyboard>/rightArrow",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "EastButton",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
                     "id": "3c24db73-ac2d-401a-907f-5469b2e53b68",
                     "path": "<Gamepad>/buttonWest",
                     "interactions": "Press(behavior=1)",
@@ -571,8 +714,30 @@
                 },
                 {
                     "name": "",
+                    "id": "7ac4925d-d792-43b2-a59c-a950c1bf443d",
+                    "path": "<Keyboard>/leftArrow",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "WestButton",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
                     "id": "e71bbfe7-8b12-4e8f-b25b-525aab43b25d",
                     "path": "<Gamepad>/start",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "CloseMap",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "d3596ffb-d53a-4745-b583-23e6125646bd",
+                    "path": "<Keyboard>/semicolon",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -607,6 +772,17 @@
                     "action": "Interact",
                     "isComposite": false,
                     "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "c28fca64-fd9a-49cf-8076-38add5ea26eb",
+                    "path": "<Keyboard>/leftArrow",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Interact",
+                    "isComposite": false,
+                    "isPartOfComposite": false
                 }
             ]
         },
@@ -629,6 +805,17 @@
                     "name": "",
                     "id": "557506b3-0793-43c7-870f-bcbf71714b3d",
                     "path": "<Gamepad>/buttonWest",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Continue",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "32b96100-cd55-419a-8378-f42c02da34ff",
+                    "path": "<Keyboard>/leftArrow",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
