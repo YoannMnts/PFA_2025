@@ -30,15 +30,14 @@ MonoBehaviour:
   - "Je suis s\xFBr que tu as \xE9t\xE9 exceptionnel et que les autres villageois
     te font pleinement confiance.\r\n"
   - "Maintenant soldat, j\u2019ai une autre mission pour toi ! J\u2019ai une <b>lettre
-    </b>\xE0 remettre \xE0 <color=#D70000><b>Terry<color=#D70000><b>, le majordome
-    de <color=#D70000><b>Fr\xE9d\xE9ric<color=#D70000><b>. Soit exemplaire et apporte-lui
-    la lettre !"
+    </b>\xE0 remettre \xE0 <color=#D70000><b>Terry</color></b>, le majordome de <color=#D70000><b>Fr\xE9d\xE9ric</color></b>.
+    Soit exemplaire et apporte-lui la lettre !"
   receivedText:
   - "Bien le bonjour, Monsieur le facteur. Votre pr\xE9sence en ces lieux me pousse
     \xE0 me dire que vous \xEAtes en possession d\u2019un courrier qui m\u2019est
     destin\xE9."
   - "Voyez-vous cela ? Une lettre du tr\xE8s estim\xE9 <color=#D70000><b>Capitaine
-    Hans<color=#D70000><b>. Que peut bien me valoir cet honneur ?\r\n"
+    Hans</color><b>. Que peut bien me valoir cet honneur ?\r\n"
   - "\u2026\r\n"
   - "Je vois\u2026 Une voleuse\u2026 Voil\xE0 qui est inqui\xE9tant\u2026"
   - "Cependant je ne pense pas qu\u2019il trouve de quelconques traces de cette personne.
