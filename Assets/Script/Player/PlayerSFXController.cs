@@ -95,7 +95,6 @@ public class PlayerSFXController : SoundObject
         if (playRandomVoice)
         {
             int randomPlay = Random.Range(1, 4);
-            Debug.Log(randomPlay);
             if (randomPlay > 2)
             {
                 int randomIndex = Random.Range(7, 12);

@@ -250,7 +250,13 @@ public class PlayerMovement : MonoBehaviour
     private void HandleWalls()
     {
         if (isWalled)
+        {
             wallCheckDirection = -wallNormal;
+            if (rb2d.linearVelocityY < -10.5f)
+            {
+                rb2d.linearVelocityY = 0;
+            }
+        }
         else if (Mathf.Abs(targetVelocity.x) > .05f && !isJumping)
             wallCheckDirection = targetVelocity.x > 0 ? Vector2.right : Vector2.left;
         else if(!isWallJumping)

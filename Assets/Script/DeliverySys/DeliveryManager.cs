@@ -35,7 +35,8 @@ public class DeliveryManager : MonoBehaviour
     public Player player;
     [SerializeField] 
     private List<Letter> activeLetter;
-    [SerializeField] LetterData saveLetterData;
+    [SerializeField] 
+    private LetterData saveLetterData;
     
     private Dictionary<PnjData, Pnj> pnjs;
     private bool alreadyInActiveLetters;
